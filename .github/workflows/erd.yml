@@ -6,6 +6,9 @@ on:
     - cron: "21 * * * *"
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
