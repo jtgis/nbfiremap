@@ -35,7 +35,7 @@
         "PERCENT_CONTAINED": 100,
         "FIRE_SIZE": 0.1,
         "SHAPE": null,
-        "FETCHED_FROM_ERD": 1764164855
+        "FETCHED_FROM_ERD": 1764168065
       }
     },
     {
@@ -64,9 +64,9 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FIRE_SIZE": 1.0,
+        "FIRE_SIZE": 3.7,
         "SHAPE": null,
-        "FETCHED_FROM_ERD": 1764164855
+        "FETCHED_FROM_ERD": 1764168065
       }
     }
   ]
