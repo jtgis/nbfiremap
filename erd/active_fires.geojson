@@ -9,37 +9,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 70942,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.08110903479272,
-          47.902449776800964
-        ]
-      },
-      "properties": {
-        "OBJECTID": 70942,
-        "FIRE_NUMBER": "2025445",
-        "FIRE_NUMBER_SHORT": "445",
-        "FIRE_NAME": "445",
-        "DEGREES_LAT": 47.90244,
-        "DEGREES_LONG": 66.08111,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "TIME_DETECTED": 1764091800000,
-        "FIRE_STAT_DATE": 1764144600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_SIZE": 3.7,
-        "SHAPE": null,
-        "FETCHED_FROM_ERD": 1764218483
-      }
-    },
-    {
-      "type": "Feature",
       "id": 70882,
       "geometry": {
         "type": "Point",
@@ -66,7 +35,38 @@
         "PERCENT_CONTAINED": 100,
         "FIRE_SIZE": 0.1,
         "SHAPE": null,
-        "FETCHED_FROM_ERD": 1764218483
+        "FETCHED_FROM_ERD": 1764221858
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70942,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.08110903479272,
+          47.902449776800964
+        ]
+      },
+      "properties": {
+        "OBJECTID": 70942,
+        "FIRE_NUMBER": "2025445",
+        "FIRE_NUMBER_SHORT": "445",
+        "FIRE_NAME": "445",
+        "DEGREES_LAT": 47.90244,
+        "DEGREES_LONG": 66.08111,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "TIME_DETECTED": 1764091800000,
+        "FIRE_STAT_DATE": 1764144600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_SIZE": 3.7,
+        "SHAPE": null,
+        "FETCHED_FROM_ERD": 1764221858
       }
     }
   ]
