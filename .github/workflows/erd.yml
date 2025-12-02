@@ -172,7 +172,15 @@ jobs:
               payloads, sigs = [], []
               for i in range(copies):
                   base_geo = fetch_geojson(url)
-                  attrs_json_resp = arcgis_get(url, {"where":"1=1","outFields":"*","returnGeometry":"false","f":"json"}).json()
+                  attrs_json_resp = arcgis_get(
+                      url,
+                      {
+                          "where":"1=1",
+                          "outFields":"*",
+                          "returnGeometry":"false",
+                          "f":"json"
+                      }
+                  ).json()
                   attrs_by_oid = attributes_index_by_oid(attrs_json_resp, oid_field)
                   merged = merge_geojson_with_attrs(base_geo, attrs_by_oid, all_fields, oid_field)
                   count, sig = features_to_signature(merged)
@@ -223,7 +231,7 @@ jobs:
                   r = arcgis_get(url, params)
                   data = r.json()
 
-                  # ArcGIS error block: log, write empty GeoJSON, and return success
+                  # ArcGIS error → write empty + continue safely
                   if isinstance(data, dict) and data.get("error"):
                       err = data["error"]
                       print(f"{kind}: ArcGIS error {err.get('code')}: {err.get('message')}")
@@ -234,9 +242,11 @@ jobs:
                       final = add_timestamp_to_geojson(empty, ts)
                       with open(outfile, "w", encoding="utf-8") as f:
                           json.dump(final, f, ensure_ascii=False, indent=2)
+
                       print(f"{kind}: wrote {outfile} (features=0)")
                       return True
 
+                  # Valid GeoJSON required
                   if data.get("type") != "FeatureCollection":
                       raise RuntimeError(f"{kind}: GeoJSON did not contain a FeatureCollection")
 
@@ -250,6 +260,7 @@ jobs:
               final = add_timestamp_to_geojson(payloads[0], ts)
               with open(outfile, "w", encoding="utf-8") as f:
                   json.dump(final, f, ensure_ascii=False, indent=2)
+
               print(f"{kind}: wrote {outfile}")
               return True
 
@@ -384,3 +395,100 @@ jobs:
                           "Number": num,
                           "Fire Name": fire_name,
                           "Updated": updated,
+                          "Latitude": lat,
+                          "Longitude": lon,
+                          "Size": size,
+                          "Pers": ints[0],
+                          "Eng": ints[1],
+                          "Tend": ints[2],
+                          "Trac": ints[3],
+                          "Air": ints[4],
+                          "Heli": ints[5],
+                          "Ovr": ints[6],
+                      }
+
+                  def try_region_total(line):
+                      m = re.match(
+                          r"^Total for (.+?) Region\s+([0-9,]+(?:\.\d+)?)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)$",
+                          line
+                      )
+                      if not m: return None
+                      return {
+                          "Region": m.group(1),
+                          "Size": m.group(2),
+                          "Pers": m.group(3),
+                          "Eng": m.group(4),
+                          "Tend": m.group(5),
+                          "Trac": m.group(6),
+                          "Air": m.group(7),
+                          "HeliOvr": m.group(8)
+                      }
+
+                  def try_province_total(line):
+                      m = re.match(
+                          r"^Total for Province\s+([0-9,]+(?:\.\d+)?)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)$",
+                          line
+                      )
+                      if not m: return None
+                      return {
+                          "Size": m.group(1),
+                          "Pers": m.group(2),
+                          "Eng": m.group(3),
+                          "Tend": m.group(4),
+                          "Trac": m.group(5),
+                          "Air": m.group(6),
+                          "HeliOvr": m.group(7)
+                      }
+
+                  for page in pdf.pages:
+                      text = page.extract_text() or ""
+                      lines = [clean(x) for x in text.splitlines() if clean(x)]
+                      current_region = ""
+                      for line in lines:
+                          if re.fullmatch(r".+ Region", line):
+                              current_region = line.replace(" Region","")
+                              continue
+                          rt = try_region_total(line)
+                          if rt:
+                              region_totals.append(rt)
+                              continue
+                          pt = try_province_total(line)
+                          if pt:
+                              province_total = pt
+                              continue
+                          row = parse_data_line(line, current_region)
+                          if row:
+                              rows.append(row)
+
+                  if rows:
+                      result["tables"].append({"page": 0, "headers": headers, "rows": rows})
+
+                  if region_totals:
+                      result["region_totals"] = region_totals
+                  if province_total:
+                      result["province_total"] = province_total
+
+          with open(out_json, "w", encoding="utf-8") as f:
+              json.dump(result, f, ensure_ascii=False, indent=2)
+
+          print(
+              f"Wrote {out_json}. Tables: {len(result.get('tables', []))}; "
+              f"rows: {sum(len(t['rows']) for t in result.get('tables', [])) if result.get('tables') else 0}"
+          )
+
+      - name: Commit and push (if changed)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected; committing…"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add "${ACTIVE_FIRES_FILE}" "${OUT_FIRES_FILE}" "${SUMS_TABLE_FILE}" "${GNB_SUM_FILE}" "${ERD_FIRE_LOCATIONS_FILE}" || true
+            # Use Atlantic Time (America/Moncton) for the commit message timestamp
+            git commit -m "Updated $(TZ=America/Moncton date +'%Y/%m/%d %I:%M %p')"
+            git push
+            echo "Pushed updates."
+          else
+            echo "No changes to commit."
+          fi
