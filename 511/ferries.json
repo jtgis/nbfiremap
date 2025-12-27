@@ -9,7 +9,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766834056,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 14,
@@ -21,7 +21,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1762919337,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 15,
@@ -33,7 +33,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766744358,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 16,
@@ -45,7 +45,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766846365,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 17,
@@ -57,7 +57,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766839905,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 18,
@@ -69,7 +69,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766224609,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 19,
@@ -81,7 +81,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764584096,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 20,
@@ -93,7 +93,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764551198,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 21,
@@ -105,18 +105,18 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766772444,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "downloaded_at": "2025-12-27T18:33:49Z"
   },
   {
     "Id": 22,
     "Latitude": 45.591669,
     "Longitude": -66.028549,
     "Name": "Evandale",
-    "Status": "Service Suspended (weather)",
+    "Status": "In Service",
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1766455224,
-    "downloaded_at": "2025-12-27T17:29:41Z"
+    "LastUpdated": 1766857767,
+    "downloaded_at": "2025-12-27T18:33:49Z"
   }
 ]
