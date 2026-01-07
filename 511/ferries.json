@@ -9,7 +9,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767781396,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 14,
@@ -21,7 +21,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1762919337,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 15,
@@ -33,7 +33,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766938294,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 16,
@@ -45,19 +45,19 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767779356,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 17,
     "Latitude": 45.051745,
     "Longitude": -66.894569,
     "Name": "Deer Island",
-    "Status": "In Service",
+    "Status": "Service reduced to 1 ferry",
     "Delays": "None",
-    "ServiceDisruption": "None",
+    "ServiceDisruption": "1 hour",
     "Area": "Saint John",
-    "LastUpdated": 1766839905,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "LastUpdated": 1767783435,
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 18,
@@ -69,7 +69,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767135864,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 19,
@@ -81,7 +81,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764584096,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 20,
@@ -93,7 +93,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764551198,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 21,
@@ -105,7 +105,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767205790,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   },
   {
     "Id": 22,
@@ -117,6 +117,6 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766857767,
-    "downloaded_at": "2026-01-07T10:33:23Z"
+    "downloaded_at": "2026-01-07T11:30:25Z"
   }
 ]
