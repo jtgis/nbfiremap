@@ -9,7 +9,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767862830,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 14,
@@ -21,7 +21,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1762919337,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 15,
@@ -33,7 +33,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766938294,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 16,
@@ -45,7 +45,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767866321,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 17,
@@ -57,7 +57,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767785567,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 18,
@@ -69,7 +69,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767135864,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 19,
@@ -81,7 +81,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764584096,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 20,
@@ -93,19 +93,19 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764551198,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 21,
     "Latitude": 45.610799,
     "Longitude": -65.902226,
     "Name": "Belleisle Bay ",
-    "Status": "In Service",
+    "Status": "Service Suspended (scheduled maintenance)",
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1767796334,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "LastUpdated": 1767874608,
+    "downloaded_at": "2026-01-08T12:35:30Z"
   },
   {
     "Id": 22,
@@ -117,6 +117,6 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767802064,
-    "downloaded_at": "2026-01-08T11:31:07Z"
+    "downloaded_at": "2026-01-08T12:35:30Z"
   }
 ]
