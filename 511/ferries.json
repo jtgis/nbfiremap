@@ -4,12 +4,12 @@
     "Latitude": 45.348138,
     "Longitude": -66.224483,
     "Name": "Westfield",
-    "Status": "Service reduced to 1 ferry",
+    "Status": "In Service",
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1769692468,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "LastUpdated": 1769700754,
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 14,
@@ -21,7 +21,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1762919337,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 15,
@@ -33,7 +33,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766938294,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 16,
@@ -45,7 +45,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1769679760,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 17,
@@ -57,7 +57,7 @@
     "ServiceDisruption": "2 hours",
     "Area": "Saint John",
     "LastUpdated": 1769695678,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 18,
@@ -69,7 +69,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767135864,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 19,
@@ -81,7 +81,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764584096,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 20,
@@ -93,19 +93,19 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764551198,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 21,
     "Latitude": 45.610799,
     "Longitude": -65.902226,
     "Name": "Belleisle Bay ",
-    "Status": "In Service",
+    "Status": "Service Suspended (scheduled maintenance)",
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1769670416,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "LastUpdated": 1769699264,
+    "downloaded_at": "2026-01-29T15:34:44Z"
   },
   {
     "Id": 22,
@@ -117,6 +117,6 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1768939670,
-    "downloaded_at": "2026-01-29T14:35:46Z"
+    "downloaded_at": "2026-01-29T15:34:44Z"
   }
 ]
