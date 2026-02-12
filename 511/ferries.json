@@ -8,8 +8,8 @@
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1770905249,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "LastUpdated": 1770910819,
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 14,
@@ -21,7 +21,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1762919337,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 15,
@@ -33,7 +33,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1766938294,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 16,
@@ -45,7 +45,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1770904368,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 17,
@@ -57,7 +57,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1770402223,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 18,
@@ -69,7 +69,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1767135864,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 19,
@@ -81,7 +81,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764584096,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 20,
@@ -93,7 +93,7 @@
     "ServiceDisruption": "None",
     "Area": "Saint John",
     "LastUpdated": 1764551198,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 21,
@@ -104,8 +104,8 @@
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1770826232,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "LastUpdated": 1770913716,
+    "downloaded_at": "2026-02-12T16:41:18Z"
   },
   {
     "Id": 22,
@@ -116,7 +116,7 @@
     "Delays": "None",
     "ServiceDisruption": "None",
     "Area": "Saint John",
-    "LastUpdated": 1768939670,
-    "downloaded_at": "2026-02-12T14:38:58Z"
+    "LastUpdated": 1770910654,
+    "downloaded_at": "2026-02-12T16:41:18Z"
   }
 ]
