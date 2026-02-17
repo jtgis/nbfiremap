@@ -196,6 +196,9 @@ See README.md for full setup and usage documentation.
     <button id="mapToggleBtn" class="control-btn" type="button" aria-pressed="false" aria-expanded="false" title="Toggle layers">
       <i class="fa-solid fa-layer-group"></i>
     </button>
+    <button id="shareBtn" class="control-btn" type="button" title="Share or export map">
+      <i class="fa-solid fa-share-nodes"></i>
+    </button>
     <button class="control-btn" type="button" title="Find my location">
       <i class="fa-solid fa-location-crosshairs"></i>
     </button>
@@ -300,7 +303,27 @@ See README.md for full setup and usage documentation.
     </div>
   </div>
 
-  <!-- 4e. Nearby Fires bottom sheet (shown after geolocation) -->
+  <!-- 4e. Share menu (appears above share button) -->
+  <div id="shareMenu" class="share-menu" hidden>
+    <div class="share-menu-arrow"></div>
+    <div class="share-menu-title">Share This Map</div>
+    <button id="shareLink" class="share-menu-item" type="button">
+      <i class="fa-solid fa-link"></i>
+      <div>
+        <div class="share-item-label">Copy Link</div>
+        <div class="share-item-desc">Share current view &amp; layers</div>
+      </div>
+    </button>
+    <button id="shareMapPdf" class="share-menu-item" type="button">
+      <i class="fa-solid fa-file-pdf"></i>
+      <div>
+        <div class="share-item-label">Export Map PDF</div>
+        <div class="share-item-desc">Map screenshot + fire details</div>
+      </div>
+    </button>
+  </div>
+
+  <!-- 4f. Nearby Fires bottom sheet (shown after geolocation) -->
   <div id="nearbyPanel" class="nearby-panel" hidden>
     <header>
       <div class="nearby-title" id="nearbyTitle">Nearby Fires</div>
@@ -325,10 +348,11 @@ See README.md for full setup and usage documentation.
   <script defer src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
   <script defer src="https://unpkg.com/esri-leaflet-cluster/dist/esri-leaflet-cluster.js"></script>
 
-  <!-- Export utilities (PDF, Excel) -->
+  <!-- Export utilities (PDF, Excel, Map Screenshot) -->
   <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
   <!-- Routing decoder + main app -->
   <script defer src="https://unpkg.com/@mapbox/polyline@1.2.1/src/polyline.js"></script>

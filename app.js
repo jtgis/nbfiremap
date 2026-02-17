@@ -326,10 +326,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
           createBasemaps(CONFIG) {
             return {
-              imagery: L.esri.basemapLayer('Imagery'),
+              imagery: L.tileLayer(
+                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                { maxZoom: CONFIG.MAP.MAX_ZOOM, attribution: 'Tiles &copy; Esri', crossOrigin: 'anonymous' }
+              ),
               osm: L.tileLayer(CONFIG.SERVICES.OSM_TILES, {
                 maxZoom: CONFIG.MAP.MAX_ZOOM,
-                attribution: '&copy; OpenStreetMap contributors'
+                attribution: '&copy; OpenStreetMap contributors',
+                crossOrigin: 'anonymous'
               })
             };
           },
@@ -5102,12 +5106,38 @@ if (typeof map !== 'undefined' && map && map.on){
           !label.closest('.fire-filter-block')
         );
         
+        /* Icon map for individual layer items */
+        const LAYER_ICONS = {
+          'Fire Perimeters':          'fa-solid fa-draw-polygon',
+          'Active Fire Perimeters':   'fa-solid fa-vector-square',
+          'CWFIS Hotspots (24h)':     'fa-solid fa-location-dot',
+          'CWFIS Hotspots (7d)':      'fa-solid fa-location-dot',
+          'NB Burn Bans':             'fa-solid fa-ban',
+          'Fire Risk':                'fa-solid fa-gauge-high',
+          'Fire Weather':             'fa-solid fa-wind',
+          'Fire Behavior':            'fa-solid fa-chart-line',
+          'Smoke':                    'fa-solid fa-smog',
+          'Weather Stations':         'fa-solid fa-tower-observation',
+          'Weather Radar':            'fa-solid fa-satellite-dish',
+          'Lightning':                'fa-solid fa-bolt',
+          'AQHI Risk':                'fa-solid fa-lungs',
+          'Road Events':              'fa-solid fa-triangle-exclamation',
+          'Winter Roads':             'fa-solid fa-snowplow',
+          'Ferries':                  'fa-solid fa-ferry',
+          'Road Webcams':             'fa-solid fa-video',
+          'Aircraft':                 'fa-solid fa-plane',
+          'Cities & Towns':           'fa-solid fa-city',
+          'Crown Land':               'fa-solid fa-tree',
+          'Counties':                 'fa-solid fa-map',
+          'Satellite Imagery':        'fa-solid fa-satellite'
+        };
+
         const groups = [
-          { title: 'Fire & Emergency', items: ['Fire Perimeters', 'Active Fire Perimeters', 'CWFIS Hotspots (24h)', 'CWFIS Hotspots (7d)', 'NB Burn Bans'] },
-          { title: 'Fire Weather', items: ['Fire Risk', 'Fire Weather', 'Fire Behavior', 'Smoke'] },
-          { title: 'Weather & Environment', items: ['Weather Stations', 'Weather Radar', 'Lightning', 'AQHI Risk'] },
-          { title: 'Transportation', items: ['Road Events', 'Winter Roads', 'Ferries', 'Road Webcams', 'Aircraft'] },
-          { title: 'Geographic', items: ['Cities & Towns', 'Crown Land', 'Counties', 'Satellite Imagery'] }
+          { title: 'Fire & Emergency', icon: 'fa-solid fa-fire-flame-curved', items: ['Fire Perimeters', 'Active Fire Perimeters', 'CWFIS Hotspots (24h)', 'CWFIS Hotspots (7d)', 'NB Burn Bans'] },
+          { title: 'Fire Weather', icon: 'fa-solid fa-temperature-three-quarters', items: ['Fire Risk', 'Fire Weather', 'Fire Behavior', 'Smoke'] },
+          { title: 'Weather & Environment', icon: 'fa-solid fa-cloud-sun', items: ['Weather Stations', 'Weather Radar', 'Lightning', 'AQHI Risk'] },
+          { title: 'Transportation', icon: 'fa-solid fa-road', items: ['Road Events', 'Winter Roads', 'Ferries', 'Road Webcams', 'Aircraft'] },
+          { title: 'Geographic', icon: 'fa-solid fa-earth-americas', items: ['Cities & Towns', 'Crown Land', 'Counties', 'Satellite Imagery'] }
         ];
         
         // Create a map of layer name to original element
@@ -5134,7 +5164,7 @@ if (typeof map !== 'undefined' && map && map.on){
           
           const header = D.createElement('div');
           header.className = 'legend-group-header';
-          header.textContent = group.title;
+          header.innerHTML = `<i class="${group.icon} legend-group-icon"></i> ${group.title}`;
           
           const collapseBtn = D.createElement('button');
           collapseBtn.type = 'button';
@@ -5154,6 +5184,17 @@ if (typeof map !== 'undefined' && map && map.on){
           group.items.forEach(itemName => {
             const originalLabel = layerMap.get(itemName);
             if (originalLabel) {
+              // Inject per-layer icon into the swatch column if not already present
+              const iconClass = LAYER_ICONS[itemName];
+              if (iconClass && !originalLabel.querySelector('.layer-item-icon')) {
+                const swatchSlot = originalLabel.querySelector('span:first-of-type') || originalLabel.children[1];
+                if (swatchSlot) {
+                  const iconEl = D.createElement('span');
+                  iconEl.className = 'layer-item-icon';
+                  iconEl.innerHTML = `<i class="${iconClass}"></i>`;
+                  swatchSlot.parentNode.insertBefore(iconEl, swatchSlot);
+                }
+              }
               container.appendChild(originalLabel);
             }
           });
@@ -5200,7 +5241,7 @@ if (typeof map !== 'undefined' && map && map.on){
         block.className = 'fire-filter-block';
         block.innerHTML = `
           <div class="fire-filter-header">
-            <div class="fire-filter-title">Fire Status</div>
+            <div class="fire-filter-title"><i class="fa-solid fa-fire legend-group-icon" style="color:var(--oc)"></i> Fire Status</div>
             <div class="fire-filter-controls">
               <button type="button" class="fire-toggle-all" title="Toggle all fire status points">
                 <i class="fa-solid fa-eye"></i>
@@ -5298,8 +5339,8 @@ if (typeof map !== 'undefined' && map && map.on){
         const currentBase = localStorage.getItem('basemap') || 'imagery';
         baseCtl.innerHTML = `
           <fieldset class="basemap-seg" role="radiogroup" aria-label="Basemap">
-            <label><input type="radio" name="basemap" value="imagery" ${currentBase!=='osm'?'checked':''}> Imagery</label>
-            <label><input type="radio" name="basemap" value="osm" ${currentBase==='osm'?'checked':''}> Street Map</label>
+            <label><input type="radio" name="basemap" value="imagery" ${currentBase!=='osm'?'checked':''}> <i class="fa-solid fa-satellite"></i> Imagery</label>
+            <label><input type="radio" name="basemap" value="osm" ${currentBase==='osm'?'checked':''}> <i class="fa-solid fa-map"></i> Street Map</label>
           </fieldset>
         `;
         baseCtl.addEventListener('change', (e)=>{
@@ -5367,6 +5408,486 @@ if (typeof map !== 'undefined' && map && map.on){
         }
       }
       setupNewUIButtons();
+
+      // ---- Share button & menu ------------------------------------------------
+      (function initShareFeature(){
+        const shareBtn = $('#shareBtn');
+        const shareMenu = $('#shareMenu');
+        const shareLinkBtn = $('#shareLink');
+        const shareMapPdfBtn = $('#shareMapPdf');
+        if (!shareBtn || !shareMenu) return;
+
+        // Position menu to the right of the share button
+        function positionMenu(){
+          const r = shareBtn.getBoundingClientRect();
+          shareMenu.style.left = (r.right + 10) + 'px';
+          shareMenu.style.top  = (r.top + r.height/2 - shareMenu.offsetHeight/2) + 'px';
+        }
+
+        let open = false;
+        function toggleMenu(){
+          open = !open;
+          shareMenu.hidden = !open;
+          if(open) requestAnimationFrame(positionMenu);
+        }
+        function closeMenu(){ open = false; shareMenu.hidden = true; }
+
+        shareBtn.addEventListener('click', (e)=>{ e.stopPropagation(); toggleMenu(); });
+        D.addEventListener('click', (e)=>{ if(open && !shareMenu.contains(e.target)) closeMenu(); });
+        D.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && open) closeMenu(); });
+
+        // Toast helper
+        function showToast(msg){
+          let t = D.querySelector('.share-toast');
+          if(!t){ t = D.createElement('div'); t.className='share-toast'; D.body.appendChild(t); }
+          t.textContent = msg;
+          t.classList.add('show');
+          clearTimeout(t._tid);
+          t._tid = setTimeout(()=> t.classList.remove('show'), 2400);
+        }
+
+        // ---- Share Link ----
+        shareLinkBtn.addEventListener('click', ()=>{
+          const c = map.getCenter();
+          const z = map.getZoom();
+          const base = localStorage.getItem('basemap') || 'imagery';
+
+          // Collect enabled overlay names
+          const enabled = [];
+          for(const [name, layer] of Object.entries(overlays)){
+            if(map.hasLayer(layer)) enabled.push(name);
+          }
+
+          const params = new URLSearchParams();
+          params.set('lat', c.lat.toFixed(5));
+          params.set('lng', c.lng.toFixed(5));
+          params.set('z', z);
+          params.set('base', base);
+          if(enabled.length) params.set('layers', enabled.join('|'));
+
+          // Capture history mode state if active
+          if(document.body.classList.contains('history-mode')){
+            params.set('history', '1');
+            const slider = D.getElementById('historyTime');
+            if(slider){
+              params.set('hslider', slider.value);
+            }
+          }
+
+          const url = window.location.origin + window.location.pathname + '#' + params.toString();
+          navigator.clipboard.writeText(url).then(()=>{
+            showToast('Link copied to clipboard!');
+          }).catch(()=>{
+            // Fallback: prompt
+            prompt('Copy this link:', url);
+          });
+          closeMenu();
+        });
+
+        // ---- Export Map PDF ----
+        shareMapPdfBtn.addEventListener('click', async ()=>{
+          closeMenu();
+          showToast('Generating PDF…');
+
+          try {
+            if(typeof window.jspdf === 'undefined'){ showToast('PDF library still loading, try again.'); return; }
+
+            const { jsPDF } = window.jspdf;
+
+            // ---- 1. Build a canvas from the map tiles + vectors + markers ----
+            const mapEl = D.getElementById('map');
+            const mapSize = map.getSize(); // L.Point
+            const scale = 2; // retina sharpness
+            const canvas = D.createElement('canvas');
+            canvas.width  = mapSize.x * scale;
+            canvas.height = mapSize.y * scale;
+            const ctx = canvas.getContext('2d');
+            ctx.scale(scale, scale);
+
+            // Background fill (in case some tiles haven't loaded)
+            ctx.fillStyle = '#dde3ef';
+            ctx.fillRect(0, 0, mapSize.x, mapSize.y);
+
+            // -- Draw basemap tiles --
+            const activeTileLayer = map.hasLayer(basemaps.imagery) ? basemaps.imagery : basemaps.osm;
+            const mapContainerRect = mapEl.getBoundingClientRect();
+
+            // Helper: re-fetch a tile image with CORS enabled
+            async function loadImgCORS(src){
+              return new Promise(res => {
+                const im = new Image();
+                im.crossOrigin = 'anonymous';
+                im.onload  = () => res(im);
+                im.onerror = () => res(null);
+                im.src = src;
+              });
+            }
+
+            // Helper: draw a set of tiles, re-fetching with CORS if needed
+            async function drawTilesToCanvas(tiles, ctx, mapRect){
+              const ops = tiles.map(tileObj => {
+                const img = tileObj.el;
+                const r = img.getBoundingClientRect();
+                return {
+                  x: r.left - mapRect.left, y: r.top - mapRect.top,
+                  w: r.width, h: r.height,
+                  img, needsCORS: !(img.crossOrigin != null && img.crossOrigin !== '')
+                };
+              });
+              // Pre-fetch CORS tiles in parallel
+              await Promise.all(ops.filter(op => op.needsCORS)
+                .map(async op => { op.corsImg = await loadImgCORS(op.img.src); }));
+              for(const op of ops){
+                const drawImg = op.needsCORS ? op.corsImg : op.img;
+                if(drawImg) try { ctx.drawImage(drawImg, op.x, op.y, op.w, op.h); } catch(e){}
+              }
+            }
+
+            if(activeTileLayer._tiles){
+              const sortedTiles = Object.values(activeTileLayer._tiles)
+                .filter(t => t.el && t.el.complete && t.el.naturalWidth > 0);
+              await drawTilesToCanvas(sortedTiles, ctx, mapContainerRect);
+            }
+
+            // -- Draw other visible tile/WMS layers (overlays like fire weather, smoke) --
+            const otherTileLayers = [];
+            map.eachLayer(lyr => {
+              if(lyr === activeTileLayer) return;
+              if(lyr instanceof L.TileLayer && lyr._tiles) otherTileLayers.push(lyr);
+            });
+            for(const lyr of otherTileLayers){
+              const tiles = Object.values(lyr._tiles).filter(t => t.el && t.el.complete && t.el.naturalWidth > 0);
+              await drawTilesToCanvas(tiles, ctx, mapContainerRect);
+            }
+
+            // -- Draw vector overlays directly on canvas (boundary, perimeters, etc.) --
+            // This avoids SVG transform/viewBox misalignment that occurs with serialization.
+            // Resolve CSS variable colors (e.g. 'var(--boundary)') to actual hex values
+            function resolveColor(c){
+              if(!c || typeof c !== 'string') return '#3388ff';
+              if(c.startsWith('var(')) return getComputedStyle(D.documentElement).getPropertyValue(c.slice(4,-1)).trim() || '#3388ff';
+              return c;
+            }
+
+            // Collect all vector layers currently on the map
+            const vecLayers = [];
+            map.eachLayer(lyr => {
+              if(lyr instanceof L.TileLayer) return;   // tiles already drawn
+              if(lyr instanceof L.Marker) return;       // fire markers drawn in step 4
+              if(L.MarkerClusterGroup && lyr instanceof L.MarkerClusterGroup) return;
+              if(lyr instanceof L.CircleMarker){ vecLayers.push(lyr); return; }
+              if(lyr instanceof L.Polyline){ vecLayers.push(lyr); return; }
+            });
+
+            // Trace LatLng arrays onto the canvas (handles nested rings / multi-polygons)
+            function traceRings(arr, isPolygon){
+              if(!arr || !arr.length) return;
+              if(arr[0] && typeof arr[0].lat === 'number'){
+                const first = map.latLngToContainerPoint(arr[0]);
+                ctx.moveTo(first.x, first.y);
+                for(let i = 1; i < arr.length; i++){
+                  const p = map.latLngToContainerPoint(arr[i]);
+                  ctx.lineTo(p.x, p.y);
+                }
+                if(isPolygon) ctx.closePath();
+              } else {
+                for(const sub of arr) traceRings(sub, isPolygon);
+              }
+            }
+
+            for(const lyr of vecLayers){
+              const opts = lyr.options || {};
+
+              // Circle markers (VIIRS hotspots, historical hotspots, etc.)
+              if(lyr instanceof L.CircleMarker && !(lyr instanceof L.Circle)){
+                const pt = map.latLngToContainerPoint(lyr.getLatLng());
+                const r = lyr.getRadius ? lyr.getRadius() : (opts.radius || 4);
+                ctx.beginPath();
+                ctx.arc(pt.x, pt.y, r, 0, Math.PI*2);
+                if(opts.fill !== false){
+                  ctx.fillStyle = resolveColor(opts.fillColor || opts.color);
+                  ctx.globalAlpha = opts.fillOpacity ?? 0.8;
+                  ctx.fill();
+                }
+                ctx.strokeStyle = resolveColor(opts.color);
+                ctx.lineWidth = opts.weight ?? 1;
+                ctx.globalAlpha = opts.opacity ?? 1;
+                ctx.stroke();
+                ctx.globalAlpha = 1;
+                continue;
+              }
+
+              // Polylines / Polygons (boundary, perimeters, counties, etc.)
+              if(lyr instanceof L.Polyline){
+                const isPoly = lyr instanceof L.Polygon;
+                ctx.beginPath();
+                traceRings(lyr.getLatLngs(), isPoly);
+                if(isPoly && opts.fill !== false){
+                  ctx.fillStyle = resolveColor(opts.fillColor || opts.color);
+                  ctx.globalAlpha = opts.fillOpacity ?? 0.2;
+                  ctx.fill();
+                  ctx.globalAlpha = 1;
+                }
+                if(opts.stroke !== false){
+                  ctx.strokeStyle = resolveColor(opts.color);
+                  ctx.lineWidth = opts.weight ?? 3;
+                  ctx.globalAlpha = opts.opacity ?? 1;
+                  ctx.stroke();
+                  ctx.globalAlpha = 1;
+                }
+              }
+            }
+
+            // ---- 2. Determine which fire statuses are currently enabled ----
+            const enabledStatuses = new Set();
+            D.querySelectorAll('.fire-filter-block input[type="checkbox"]').forEach(cb => {
+              if(cb.checked){
+                const s = cb.getAttribute('data-status');
+                if(s) enabledStatuses.add(norm(s));
+              }
+            });
+
+            // ---- 3. Collect fires that are in-bounds AND pass the status filter ----
+            const bounds = map.getBounds();
+            const visibleFires = [];
+            for(const rec of fireStore.values()){
+              if(!rec.latlng || !bounds.contains(rec.latlng)) continue;
+              const sk = norm(rec.statusKey || rec.props?.FIRE_STAT_DESC_E || '');
+              if(!enabledStatuses.has(sk)) continue;
+              visibleFires.push(rec);
+            }
+
+            // ---- 4. Draw fire markers + fire # labels on the canvas ----
+            const statusColorMap = {
+              'out of control':'#ef4444', 'being monitored':'#9D00FF', 'contained':'#FFA500',
+              'under control':'#facc15', 'being patrolled':'#22c55e', 'extinguished':'#0000FF'
+            };
+            ctx.textBaseline = 'middle';
+            for(const rec of visibleFires){
+              const pt = map.latLngToContainerPoint(rec.latlng);
+              const sk = norm(rec.statusKey || '');
+              const color = statusColorMap[sk] || '#ef4444';
+              const fireNum = rec.props?.FIRE_NUMBER_SHORT ?? rec.props?.FIRE_ID ?? '';
+
+              // Draw filled circle
+              ctx.beginPath();
+              ctx.arc(pt.x, pt.y, 10, 0, Math.PI*2);
+              ctx.fillStyle = color;
+              ctx.fill();
+              ctx.lineWidth = 2;
+              ctx.strokeStyle = '#fff';
+              ctx.stroke();
+
+              // Draw fire number label
+              if(fireNum){
+                ctx.font = 'bold 14px sans-serif';
+                ctx.fillStyle = '#fff';
+                ctx.strokeStyle = 'rgba(0,0,0,0.75)';
+                ctx.lineWidth = 4;
+                ctx.strokeText(fireNum, pt.x + 14, pt.y);
+                ctx.fillText(fireNum, pt.x + 14, pt.y);
+              }
+            }
+
+            // Encode canvas to image
+            let mapImg;
+            try {
+              mapImg = canvas.toDataURL('image/jpeg', 0.92);
+            } catch(taintErr){
+              // Canvas tainted by cross-origin tiles — fall back to html2canvas
+              console.warn('Canvas tainted, falling back to html2canvas:', taintErr);
+              if(typeof window.html2canvas !== 'undefined'){
+                const uiEls = [
+                  D.getElementById('bottomPanel'), D.getElementById('leftControls'),
+                  D.getElementById('mapLogo'), D.querySelector('.leaflet-control-layers'),
+                  D.querySelector('.leaflet-control-zoom'), D.querySelector('.leaflet-control-attribution'),
+                  D.getElementById('smokeControls'), D.querySelector('.nearby-panel'),
+                  D.querySelector('.history-panel'), D.querySelector('.share-toast'), D.getElementById('shareMenu')
+                ].filter(Boolean);
+                const saved = uiEls.map(el => el.style.display);
+                uiEls.forEach(el => el.style.display = 'none');
+                await new Promise(r => setTimeout(r, 300));
+                const fbCanvas = await html2canvas(mapEl, { useCORS:true, allowTaint:true, scale:2, logging:false, backgroundColor:'#f7f8fc' });
+                uiEls.forEach((el, i) => el.style.display = saved[i]);
+                mapImg = fbCanvas.toDataURL('image/jpeg', 0.92);
+              } else {
+                showToast('Export failed — cross-origin tiles.'); return;
+              }
+            }
+
+            // ---- 5. Build PDF — page 1: map (landscape A4) ----
+            const doc = new jsPDF({ orientation: 'landscape', unit: 'pt', format: 'a4' });
+            const pageW = doc.internal.pageSize.getWidth();
+            const pageH = doc.internal.pageSize.getHeight();
+            const marginX = 30;
+            let y = 30;
+
+            // Title — show historical date if in history mode
+            const inHistory = document.body.classList.contains('history-mode');
+            let histDateStr = '';
+            if(inHistory){
+              const stamp = D.getElementById('historyStamp');
+              if(stamp && stamp.textContent) histDateStr = stamp.textContent.trim();
+            }
+            doc.setFont('helvetica','bold');
+            doc.setFontSize(18);
+            doc.text(inHistory ? 'NB Fire Map — Historical' : 'NB Fire Map', marginX, y); y += 16;
+
+            // Timestamp
+            const atl = new Date().toLocaleString('en-CA', {
+              timeZone:'America/Moncton', year:'numeric', month:'short',
+              day:'2-digit', hour:'2-digit', minute:'2-digit'
+            });
+            doc.setFont('helvetica','normal');
+            doc.setFontSize(10);
+            doc.text(inHistory ? `Archive Date: ${histDateStr}  ·  Generated: ${atl}` : `Generated: ${atl}`, marginX, y);
+
+            // Map location
+            const ctr = map.getCenter();
+            doc.text(`View: ${ctr.lat.toFixed(4)}°N, ${Math.abs(ctr.lng).toFixed(4)}°W  ·  Zoom ${map.getZoom()}`, pageW - marginX, y, { align:'right' });
+            y += 16;
+
+            // Map image (fill remaining page)
+            const imgW = pageW - 2*marginX;
+            const imgH = pageH - y - 20;
+            const aspect = canvas.width / canvas.height;
+            let drawW = imgW, drawH = imgW / aspect;
+            if(drawH > imgH){ drawH = imgH; drawW = imgH * aspect; }
+            const drawX = marginX + (imgW - drawW)/2;
+            doc.addImage(mapImg, 'JPEG', drawX, y, drawW, drawH);
+
+            // ---- Page 2: Fire details table (only enabled & in-view fires) ----
+            if(visibleFires.length > 0){
+              doc.addPage('a4', 'portrait');
+              const p2W = doc.internal.pageSize.getWidth();
+              const p2mx = 40;
+              let p2y = 36;
+
+              doc.setFont('helvetica','bold');
+              doc.setFontSize(16);
+              const p2Title = inHistory ? `Fires in View — ${histDateStr} (${visibleFires.length})` : `Fires in View (${visibleFires.length})`;
+              doc.text(p2Title, p2mx, p2y); p2y += 14;
+              doc.setFont('helvetica','normal');
+              doc.setFontSize(9);
+              doc.text(`Bounds: ${bounds.getSouth().toFixed(3)}°N to ${bounds.getNorth().toFixed(3)}°N, ${Math.abs(bounds.getWest()).toFixed(3)}°W to ${Math.abs(bounds.getEast()).toFixed(3)}°W`, p2mx, p2y);
+              p2y += 4;
+
+              // Show which statuses are included
+              const statusList = [...enabledStatuses].map(s => s.replace(/\b\w/g, c => c.toUpperCase())).join(', ');
+              doc.setFontSize(8);
+              doc.text(`Showing: ${statusList}`, p2mx, p2y + 10);
+              p2y += 20;
+
+              // Build table rows
+              const fireRows = visibleFires.map(rec => {
+                const p = rec.props || {};
+                const statusKey = norm(rec.statusKey || p.FIRE_STAT_DESC_E || '—');
+                const sizeHa = Number(p.FIRE_SIZE ?? p.SIZE_HA ?? p.AREA);
+                const containPct = getContainPct(p);
+                const detMs = getDetectedMs(p);
+                return [
+                  p.FIRE_NUMBER_SHORT ?? p.FIRE_ID ?? '',
+                  p.FIRE_NAME || p.FIRE_ID || 'Unnamed',
+                  statusKey.replace(/\b\w/g, c => c.toUpperCase()),
+                  Number.isFinite(sizeHa) ? sizeHa.toFixed(1) : '',
+                  containPct != null ? containPct + '%' : '',
+                  detMs ? new Date(detMs).toISOString().slice(0,10) : '',
+                  rec.latlng ? rec.latlng.lat.toFixed(4) : '',
+                  rec.latlng ? rec.latlng.lng.toFixed(4) : ''
+                ];
+              });
+
+              // Sort by status severity
+              const statusOrder = {'out of control':0,'being monitored':1,'contained':2,'under control':3,'being patrolled':4,'extinguished':5};
+              fireRows.sort((a,b) => (statusOrder[a[2].toLowerCase()]??9) - (statusOrder[b[2].toLowerCase()]??9));
+
+              doc.autoTable({
+                startY: p2y,
+                margin: { left: p2mx, right: p2mx },
+                head: [['Fire #','Name','Status','Size (ha)','Cont.','Detected','Lat','Lng']],
+                body: fireRows,
+                styles: { fontSize: 8, cellPadding: 4 },
+                headStyles: { fillColor:[55,65,81], fontStyle:'bold' },
+                columnStyles: { 3:{halign:'right'}, 4:{halign:'right'}, 6:{halign:'right'}, 7:{halign:'right'} },
+                didDrawPage: ()=>{
+                  const pgSize = doc.internal.pageSize;
+                  doc.setFontSize(8);
+                  doc.text(`Page ${doc.internal.getNumberOfPages()}`, pgSize.getWidth() - p2mx, pgSize.getHeight() - 14, {align:'right'});
+                  doc.text('nbfiremap.ca', p2mx, pgSize.getHeight() - 14);
+                }
+              });
+            }
+
+            // Footer on page 1
+            doc.setPage(1);
+            doc.setFontSize(8);
+            doc.setFont('helvetica','normal');
+            doc.text('nbfiremap.ca', marginX, pageH - 12);
+            doc.text(`Page 1 of ${doc.internal.getNumberOfPages()}`, pageW - marginX, pageH - 12, {align:'right'});
+
+            const dateSuffix = inHistory && histDateStr ? `_Historical_${histDateStr.replace(/[^a-zA-Z0-9]/g,'_')}` : '';
+            const filename = `NB_Fire_Map_${new Date().toISOString().slice(0,10)}${dateSuffix}.pdf`;
+            doc.save(filename);
+            showToast('PDF saved!');
+          } catch(err){
+            console.error('Map PDF export error:', err);
+            showToast('PDF export failed — see console.');
+          }
+        });
+      })();
+
+      // ---- Restore shared URL state on load ---
+      (function restoreSharedState(){
+        if(!window.location.hash) return;
+        try {
+          const params = new URLSearchParams(window.location.hash.slice(1));
+          const lat = parseFloat(params.get('lat'));
+          const lng = parseFloat(params.get('lng'));
+          const z   = parseInt(params.get('z'), 10);
+          const base = params.get('base');
+          const layerStr = params.get('layers');
+
+          if(Number.isFinite(lat) && Number.isFinite(lng) && Number.isFinite(z)){
+            map.setView([lat, lng], z);
+          }
+          if(base === 'osm' || base === 'imagery'){
+            setBasemap(base);
+            // Also sync the radio button in the legend
+            const radio = D.querySelector(`input[name="basemap"][value="${base}"]`);
+            if(radio) radio.checked = true;
+          }
+          if(layerStr){
+            const requested = new Set(layerStr.split('|'));
+            for(const [name, layer] of Object.entries(overlays)){
+              if(requested.has(name)){
+                if(!map.hasLayer(layer)) map.addLayer(layer);
+              } else {
+                if(map.hasLayer(layer)) map.removeLayer(layer);
+              }
+            }
+            // Sync checkboxes in the legend control (skip fire-filter-block checkboxes)
+            D.querySelectorAll('.leaflet-control-layers-overlays label').forEach(label => {
+              if(label.closest('.fire-filter-block')) return;
+              const text = label.querySelector('.text');
+              const cb = label.querySelector('input[type="checkbox"]');
+              if(text && cb){
+                cb.checked = requested.has(text.textContent.trim());
+              }
+            });
+          }
+
+          // Restore history mode if it was shared
+          const histFlag = params.get('history');
+          const hslider = params.get('hslider');
+          if(histFlag === '1'){
+            // Store pending state for the history module to pick up on init
+            window._pendingHistoryRestore = hslider || '0';
+          }
+
+          // Clean hash after restoring so it doesn't persist on refresh
+          history.replaceState(null, '', window.location.pathname);
+        } catch(e){ console.warn('Failed to restore shared state:', e); }
+      })();
 
       // ---- Summary (benchmarks + current) -----------------------------------
       let SUMS_BENCH = null;
@@ -7608,6 +8129,21 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
         · Data from GNB ERD & CWFIS archives
       </div>
     `;
+  }
+
+  // ---- Restore shared history state if pending ----
+  if(window._pendingHistoryRestore){
+    const pendingSlider = window._pendingHistoryRestore;
+    delete window._pendingHistoryRestore;
+    (async ()=>{
+      await enterHistoryMode();
+      // Seek to the requested slider position
+      const idx = parseInt(pendingSlider, 10);
+      if(Number.isFinite(idx) && idx >= 0 && idx < archiveDates.length){
+        historyTime.value = String(idx);
+        await loadHistoricalDate(archiveDates[idx]);
+      }
+    })();
   }
 
   // ---- Season report events ----
