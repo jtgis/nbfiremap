@@ -7041,4 +7041,632 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
       // Final sizing after legend mount
       requestAnimationFrame(() => { sizeLegend(); });
 
+// ===========================================================================
+// SECTION 11: HISTORICAL VIEWER & SEASON REPORT
+// ===========================================================================
+// Loads archived fire data (points + perimeters) from archive/ directory.
+// Defaults to live data; history mode replaces map markers with archive data.
+// Season report aggregates archive data to generate an end-of-season summary.
+
+(function initHistoricalViewer() {
+  // ---- DOM Elements ----
+  const historyBtn     = $('#historyBtn');
+  const historyPanel   = $('#historyPanel');
+  const historyPlay    = $('#historyPlay');
+  const historyTime    = $('#historyTime');
+  const historyStamp   = $('#historyStamp');
+  const historyStats   = $('#historyStats');
+  const historyLiveBtn = $('#historyLiveBtn');
+  const historySeasonBtn = $('#historySeasonBtn');
+  const seasonOverlay  = $('#seasonReportOverlay');
+  const srBody         = $('#sr-body');
+  const srClose        = $('#sr-close');
+  const srExportPdf    = $('#sr-export-pdf');
+
+  if (!historyBtn || !historyPanel) return;
+
+  // ---- State ----
+  let archiveDates = [];        // sorted YYYYMMDD strings
+  let isHistoryMode = false;
+  let historyTimer = null;
+  let historyPerimeterLayer = null;
+  let historyHotspotLayer = null;
+  let lastReportYear = null;    // year selected for most recent season report
+  let lastReportDates = [];     // archive dates for that year
+  const HISTORY_FRAME_MS = 2000;
+  const archiveCache = new Map();
+
+  // ---- Load manifest ----
+  async function loadManifest() {
+    try {
+      const r = await fetch('archive/manifest.json');
+      if (!r.ok) throw new Error('manifest fetch failed');
+      const data = await r.json();
+      archiveDates = (data.dates || []).sort();
+      return true;
+    } catch (e) {
+      console.warn('Could not load archive manifest, falling back to date scan:', e);
+      return false;
+    }
+  }
+
+  // ---- Fetch archived data with cache ----
+  async function fetchArchive(path) {
+    if (archiveCache.has(path)) return archiveCache.get(path);
+    try {
+      const r = await fetch(path);
+      if (!r.ok) return null;
+      const data = await r.json();
+      archiveCache.set(path, data);
+      return data;
+    } catch { return null; }
+  }
+
+  // ---- Format YYYYMMDD → display string ----
+  function formatArchiveDate(d) {
+    return `${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`;
+  }
+
+  function formatArchiveDateLong(d) {
+    const dt = new Date(+d.slice(0,4), +d.slice(4,6)-1, +d.slice(6,8));
+    return dt.toLocaleDateString('en-CA', { year:'numeric', month:'long', day:'numeric' });
+  }
+
+  // ---- Enter history mode ----
+  async function enterHistoryMode() {
+    if (archiveDates.length === 0) {
+      const ok = await loadManifest();
+      if (!ok || archiveDates.length === 0) {
+        alert('No archived data available.');
+        return;
+      }
+    }
+
+    isHistoryMode = true;
+    document.body.classList.add('history-mode');
+
+    // Setup slider
+    historyTime.min = '0';
+    historyTime.max = String(archiveDates.length - 1);
+    historyTime.value = String(archiveDates.length - 1); // start at most recent
+
+    // Create perimeter layer if needed
+    if (!historyPerimeterLayer) {
+      historyPerimeterLayer = L.geoJSON(null, {
+        pane: 'perimetersPane',
+        className: 'history-perimeter',
+        style: () => ({
+          color: '#ef4444', weight: 2, opacity: 0.8,
+          fillColor: '#ef4444', fillOpacity: 0.15
+        }),
+        onEachFeature: (feature, layer) => {
+          const p = feature.properties || {};
+          const area = p.area ? toNum(p.area, 1) + ' ha' : 'Unknown';
+          const first = p.firstdate ? new Date(p.firstdate).toLocaleDateString() : '—';
+          const last = p.lastdate ? new Date(p.lastdate).toLocaleDateString() : '—';
+          layer.bindPopup(`
+            <div class="popup-header">Archived Perimeter</div>
+            <div class="popup-body">
+              <p><strong>Area:</strong> ${area}</p>
+              <p><strong>First detected:</strong> ${first}</p>
+              <p><strong>Last detected:</strong> ${last}</p>
+              <p><strong>Hotspot count:</strong> ${p.hcount || '—'}</p>
+            </div>
+          `);
+        }
+      }).addTo(map);
+    }
+
+    // Create hotspot layer if needed
+    if (!historyHotspotLayer) {
+      historyHotspotLayer = L.geoJSON(null, {
+        pane: 'viirsPane',
+        pointToLayer: (_f, latlng) =>
+          L.circleMarker(latlng, { radius: 4, color: 'var(--modis)', fillColor: 'var(--modis)', fillOpacity: 0.8 })
+      }).addTo(map);
+    }
+
+    // Clear live fire data from map
+    if (fireClusters) fireClusters.clearLayers();
+
+    // Show panel, hide bottom panel
+    historyPanel.hidden = false;
+    historyPanel.style.display = 'block';
+    $('#bottomPanel').style.display = 'none';
+
+    // Load initial date
+    await loadHistoricalDate(archiveDates[+historyTime.value]);
+  }
+
+  // ---- Exit history mode ----
+  function exitHistoryMode() {
+    isHistoryMode = false;
+    document.body.classList.remove('history-mode');
+    pauseHistory();
+
+    // Remove history layers
+    if (historyPerimeterLayer) { historyPerimeterLayer.clearLayers(); }
+    if (historyHotspotLayer) { historyHotspotLayer.clearLayers(); }
+
+    // Hide panel, restore bottom panel
+    historyPanel.hidden = true;
+    historyPanel.style.display = 'none';
+    $('#bottomPanel').style.display = '';
+
+    // Restore live fire data
+    fireStore.clear();
+    activeFireMarkers.length = 0;
+    outFireMarkers.length = 0;
+    loadLocalFires();
+  }
+
+  // ---- Load data for a specific archived date ----
+  async function loadHistoricalDate(dateStr) {
+    historyStamp.textContent = formatArchiveDateLong(dateStr);
+    historyStats.textContent = 'Loading…';
+
+    const [activeData, outData, perimData, hotspotsData] = await Promise.all([
+      fetchArchive(`archive/erd/active_fires_${dateStr}.geojson`),
+      fetchArchive(`archive/erd/out_fires_${dateStr}.geojson`),
+      fetchArchive(`archive/cwfis/fire_perimeters_${dateStr}.geojson`),
+      fetchArchive(`archive/cwfis/24_hour_spots_${dateStr}.geojson`)
+    ]);
+
+    // Clear existing markers
+    fireStore.clear();
+    activeFireMarkers.length = 0;
+    outFireMarkers.length = 0;
+
+    // Process fire points
+    const activeMarkers = FireDataManager.processFireGeoJSON(activeData, null, false);
+    const outMarkers = FireDataManager.processFireGeoJSON(outData, 'Extinguished', true);
+    activeFireMarkers.push(...activeMarkers);
+    outFireMarkers.push(...outMarkers);
+    applyFireFilter();
+
+    // Process perimeters — only show those with a nearby active fire whose
+    // detection time falls within the perimeter's date range.
+    // Archived CWFIS perimeters use lowercase ISO-string props (firstdate/lastdate)
+    // while ERD active fires use uppercase epoch-ms props (TIME_DETECTED).
+    // The perimeter dataset accumulates all season's burns, so temporal matching
+    // prevents old perimeters from re-appearing when a new fire ignites nearby.
+    if (historyPerimeterLayer) {
+      historyPerimeterLayer.clearLayers();
+      if (perimData?.features && activeData?.features) {
+        const activePts = activeData.features.filter(f => f.geometry?.coordinates);
+        const DAY_MS = 86400000;
+
+        const filtered = perimData.features.filter(perim => {
+          if (!perim.geometry) return false;
+          const props = perim.properties || {};
+
+          // Parse perimeter date range (ISO strings, lowercase)
+          const fd = props.firstdate || props.FIRSTDATE;
+          const ld = props.lastdate || props.LASTDATE;
+          if (!fd || !ld) return false;
+
+          const perimStart = new Date(typeof fd === 'number' ? fd : fd).getTime();
+          const perimEnd   = new Date(typeof ld === 'number' ? ld : ld).getTime();
+          if (isNaN(perimStart) || isNaN(perimEnd)) return false;
+
+          // ±2 day tolerance around the perimeter window
+          const rangeStart = perimStart - 2 * DAY_MS;
+          const rangeEnd   = perimEnd   + 2 * DAY_MS;
+
+          // Extract polygon ring(s)
+          let rings = [];
+          if (perim.geometry.type === 'Polygon') {
+            rings = [perim.geometry.coordinates[0]];
+          } else if (perim.geometry.type === 'MultiPolygon') {
+            rings = perim.geometry.coordinates.map(p => p[0]);
+          }
+          if (!rings.length) return false;
+
+          // Need at least one active fire that is both temporally and spatially matched
+          for (const fire of activePts) {
+            const fp = fire.properties || {};
+
+            // Parse fire detection time (epoch ms or ISO string)
+            const td = fp.TIME_DETECTED || fp.time_detected;
+            if (!td) continue;
+            const fireTime = typeof td === 'number' ? td : new Date(td).getTime();
+            if (isNaN(fireTime)) continue;
+
+            // Temporal check — fire detected within perimeter's active window
+            if (fireTime < rangeStart || fireTime > rangeEnd) continue;
+
+            // Spatial check — fire point within 5 km of perimeter edge
+            const [fLng, fLat] = fire.geometry.coordinates;
+            for (const ring of rings) {
+              if (pointToPolygonDistance(fLat, fLng, ring) <= 5000) return true;
+            }
+          }
+          return false;
+        });
+        if (filtered.length) {
+          historyPerimeterLayer.addData({ type: 'FeatureCollection', features: filtered });
+        }
+      }
+    }
+
+    // Process hotspots
+    if (historyHotspotLayer) {
+      historyHotspotLayer.clearLayers();
+      if (hotspotsData?.features) historyHotspotLayer.addData(hotspotsData);
+    }
+
+    // Update stats display
+    const activeCount = activeData?.features?.length || 0;
+    const outCount = outData?.features?.length || 0;
+    const perimCount = historyPerimeterLayer ? historyPerimeterLayer.getLayers().length : 0;
+    const hotspotCount = hotspotsData?.features?.length || 0;
+    const totalArea = (activeData?.features || []).reduce((sum, f) => sum + (Number(f.properties?.FIRE_SIZE) || 0), 0);
+    historyStats.textContent = `${activeCount} active · ${outCount} out · ${toNum(totalArea,0)} ha · ${perimCount} perimeters · ${hotspotCount} hotspots`;
+  }
+
+  // ---- Playback controls ----
+  function playHistory() {
+    if (historyTimer) return;
+    historyPlay.textContent = '⏸';
+    historyTimer = setInterval(() => {
+      const max = parseInt(historyTime.max, 10);
+      let i = parseInt(historyTime.value, 10);
+      i = (i + 1) % (max + 1);
+      historyTime.value = String(i);
+      loadHistoricalDate(archiveDates[i]);
+    }, HISTORY_FRAME_MS);
+  }
+
+  function pauseHistory() {
+    if (!historyTimer) return;
+    clearInterval(historyTimer);
+    historyTimer = null;
+    historyPlay.textContent = '▶';
+  }
+
+  // ---- Event bindings ----
+  historyBtn.addEventListener('click', () => {
+    if (isHistoryMode) {
+      exitHistoryMode();
+    } else {
+      enterHistoryMode();
+    }
+  });
+
+  historyLiveBtn.addEventListener('click', exitHistoryMode);
+
+  historyPlay.addEventListener('click', () => {
+    historyTimer ? pauseHistory() : playHistory();
+  });
+
+  historyTime.addEventListener('input', () => {
+    pauseHistory();
+    const dateStr = archiveDates[+historyTime.value];
+    if (dateStr) loadHistoricalDate(dateStr);
+  });
+
+  // ---- Season Report ----
+
+  /** Show year picker, then generate report for the chosen year */
+  async function generateSeasonReport() {
+    if (archiveDates.length === 0) {
+      const ok = await loadManifest();
+      if (!ok || archiveDates.length === 0) { alert('No archived data available.'); return; }
+    }
+
+    // Determine which years are available in the archive
+    const yearSet = new Set(archiveDates.map(d => d.slice(0,4)));
+    const availableYears = [...yearSet].sort();
+
+    // If only one year, skip the picker
+    let selectedYear;
+    if (availableYears.length === 1) {
+      selectedYear = availableYears[0];
+    } else {
+      // Show year picker inside the overlay
+      seasonOverlay.hidden = false;
+      seasonOverlay.style.display = 'flex';
+      selectedYear = await new Promise(resolve => {
+        srBody.innerHTML = `
+          <div style="text-align:center;padding:32px 16px;">
+            <div style="font-size:20px;font-weight:700;margin-bottom:6px;">Select Report Year</div>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">
+              Choose the fire season year to generate a report for.
+            </p>
+            <div id="sr-year-picker" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+              ${availableYears.map(y => {
+                const count = archiveDates.filter(d => d.slice(0,4) === y).length;
+                return `<button class="sr-year-btn" data-year="${y}" style="
+                  padding:14px 28px;border-radius:12px;border:2px solid var(--border);
+                  background:var(--glass);cursor:pointer;font-size:16px;font-weight:700;
+                  transition:all .15s;min-width:120px;
+                ">
+                  ${y}
+                  <div style="font-size:11px;font-weight:400;color:var(--muted);margin-top:2px;">
+                    ${count} snapshot${count !== 1 ? 's' : ''}
+                  </div>
+                </button>`;
+              }).join('')}
+            </div>
+          </div>`;
+
+        srBody.querySelectorAll('.sr-year-btn').forEach(btn => {
+          btn.addEventListener('mouseenter', () => { btn.style.borderColor = '#ef4444'; btn.style.background = 'rgba(239,68,68,0.06)'; });
+          btn.addEventListener('mouseleave', () => { btn.style.borderColor = ''; btn.style.background = ''; });
+          btn.addEventListener('click', () => resolve(btn.dataset.year));
+        });
+
+        // Allow closing without picking (resolves null)
+        const closeHandler = () => { resolve(null); };
+        srClose.addEventListener('click', closeHandler, { once: true });
+      });
+
+      if (!selectedYear) {
+        seasonOverlay.style.display = 'none';
+        seasonOverlay.hidden = true;
+        return;
+      }
+    }
+
+    // Filter archive dates to the selected year
+    const yearDates = archiveDates.filter(d => d.slice(0,4) === selectedYear);
+    lastReportYear = selectedYear;
+    lastReportDates = yearDates;
+    if (yearDates.length === 0) { alert(`No archive data for ${selectedYear}.`); return; }
+
+    seasonOverlay.hidden = false;
+    seasonOverlay.style.display = 'flex';
+    srBody.innerHTML = `<div style="text-align:center;padding:40px;"><i class="fa-solid fa-spinner fa-spin" style="font-size:24px;"></i><p style="margin-top:12px;">Analyzing ${selectedYear} archive data…</p></div>`;
+
+    const firstDate = yearDates[0];
+    const lastDate = yearDates[yearDates.length - 1];
+
+    // Gather daily snapshots for timeline analysis
+    const dailyStats = [];
+    let peakActive = 0, peakDate = '', peakArea = 0, peakAreaDate = '';
+    let allFireNumbers = new Set();
+    let totalAreaBurned = 0;
+    const causeMap = new Map();
+
+    // Sample every Nth date for efficiency (or all if < 60)
+    const step = yearDates.length > 60 ? Math.max(1, Math.floor(yearDates.length / 60)) : 1;
+    const sampled = yearDates.filter((_, i) => i % step === 0 || i === yearDates.length - 1);
+
+    for (const dateStr of sampled) {
+      const [activeData, outData] = await Promise.all([
+        fetchArchive(`archive/erd/active_fires_${dateStr}.geojson`),
+        fetchArchive(`archive/erd/out_fires_${dateStr}.geojson`)
+      ]);
+
+      const activeCount = activeData?.features?.length || 0;
+      const outCount = outData?.features?.length || 0;
+      let dayArea = 0;
+
+      if (activeData?.features) {
+        for (const f of activeData.features) {
+          const p = f.properties || {};
+          const size = Number(p.FIRE_SIZE) || 0;
+          dayArea += size;
+          if (p.FIRE_NUMBER) allFireNumbers.add(p.FIRE_NUMBER);
+        }
+      }
+      if (outData?.features) {
+        for (const f of outData.features) {
+          const p = f.properties || {};
+          if (p.FIRE_NUMBER) allFireNumbers.add(p.FIRE_NUMBER);
+        }
+      }
+
+      dailyStats.push({ date: dateStr, active: activeCount, out: outCount, area: dayArea });
+
+      if (activeCount > peakActive) { peakActive = activeCount; peakDate = dateStr; }
+      if (dayArea > peakArea) { peakArea = dayArea; peakAreaDate = dateStr; }
+    }
+
+    // Load the last out_fires for total extinguished count and cause data
+    const lastOutData = await fetchArchive(`archive/erd/out_fires_${lastDate}.geojson`);
+    const totalExtinguished = lastOutData?.features?.length || 0;
+    if (lastOutData?.features) {
+      for (const f of lastOutData.features) {
+        const p = f.properties || {};
+        totalAreaBurned += Number(p.FIRE_SIZE) || 0;
+        if (p.FIRE_NUMBER) allFireNumbers.add(p.FIRE_NUMBER);
+      }
+    }
+
+    // Try to load fire_locations for cause data
+    const lastLocDate = yearDates.find(d => d >= '20251009') ? yearDates[yearDates.length - 1] : null;
+    if (lastLocDate) {
+      const locData = await fetchArchive(`archive/erd/fire_locations_${lastLocDate}.geojson`);
+      if (locData?.features) {
+        for (const f of locData.features) {
+          const cause = f.properties?.FIELD_AGENCY_FIRE_CAUSE || 'Unknown';
+          const cleaned = FireDataManager.cleanFireCause ? FireDataManager.cleanFireCause(cause) : cause;
+          causeMap.set(cleaned, (causeMap.get(cleaned) || 0) + 1);
+        }
+      }
+    }
+
+    // Also add area from the last active fires
+    const lastActiveData = await fetchArchive(`archive/erd/active_fires_${lastDate}.geojson`);
+    if (lastActiveData?.features) {
+      for (const f of lastActiveData.features) {
+        totalAreaBurned += Number(f.properties?.FIRE_SIZE) || 0;
+      }
+    }
+
+    // Build chart SVG (active fires over time)
+    const chartW = 640, chartH = 160, padL = 50, padR = 16, padT = 20, padB = 28;
+    const innerW = chartW - padL - padR, innerH = chartH - padT - padB;
+    const maxActive = Math.max(1, ...dailyStats.map(s => s.active));
+    const xStep = innerW / Math.max(1, dailyStats.length - 1);
+
+    let pathD = '';
+    let areaD = '';
+    const labels = [];
+    dailyStats.forEach((s, i) => {
+      const x = Math.round(padL + i * xStep);
+      const y = Math.round(padT + innerH - (s.active / maxActive) * innerH);
+      pathD += (i === 0 ? 'M' : 'L') + `${x},${y}`;
+      if (i === 0) areaD += `M${x},${padT + innerH}L${x},${y}`;
+      else areaD += `L${x},${y}`;
+      if (i === dailyStats.length - 1) areaD += `L${x},${padT + innerH}Z`;
+
+      // Add month labels
+      if (i === 0 || (i > 0 && s.date.slice(4,6) !== dailyStats[i-1].date.slice(4,6))) {
+        const monthName = new Date(+s.date.slice(0,4), +s.date.slice(4,6)-1, 1).toLocaleDateString('en-CA', { month:'short' });
+        labels.push(`<text x="${x}" y="${chartH - 4}" text-anchor="middle" font-size="10" fill="#6b7280">${monthName}</text>`);
+      }
+    });
+
+    // Y-axis ticks
+    const yTicks = [];
+    for (let v = 0; v <= maxActive; v += Math.max(1, Math.ceil(maxActive / 4))) {
+      const y = Math.round(padT + innerH - (v / maxActive) * innerH);
+      yTicks.push(`<text x="${padL - 6}" y="${y + 4}" text-anchor="end" font-size="10" fill="#6b7280">${v}</text>`);
+      yTicks.push(`<line x1="${padL}" y1="${y}" x2="${chartW - padR}" y2="${y}" stroke="#e5e7eb" stroke-width="1"/>`);
+    }
+
+    const chartSVG = `
+      <div style="border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden;box-shadow:var(--shadow-soft);margin:10px 0">
+        <div style="font-size:12px;font-weight:600;padding:6px 10px;color:#374151">Active Fires Over Time</div>
+        <svg viewBox="0 0 ${chartW} ${chartH}" style="display:block;width:100%;height:auto">
+          ${yTicks.join('')}
+          <path d="${areaD}" fill="rgba(239,68,68,0.1)"/>
+          <path d="${pathD}" fill="none" stroke="#ef4444" stroke-width="2"/>
+          ${labels.join('')}
+        </svg>
+      </div>`;
+
+    // Build cause breakdown
+    let causeHTML = '';
+    if (causeMap.size > 0) {
+      const causeArr = [...causeMap.entries()].sort((a, b) => b[1] - a[1]);
+      const totalCause = causeArr.reduce((s, [, v]) => s + v, 0);
+      causeHTML = `
+        <div style="margin:10px 0"><b>Fire Causes</b></div>
+        <table class="pro-table compact">
+          <thead><tr><th>Cause</th><th>Count</th><th>%</th></tr></thead>
+          <tbody>
+            ${causeArr.map(([cause, count]) => `
+              <tr>
+                <td>${cause}</td>
+                <td style="text-align:right">${count}</td>
+                <td style="text-align:right">${((count / totalCause) * 100).toFixed(1)}%</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>`;
+    }
+
+    // Build final report HTML
+    srBody.innerHTML = `
+      <div style="text-align:center;margin-bottom:16px;">
+        <div style="font-size:24px;font-weight:800;margin-bottom:4px">${selectedYear} Fire Season Report</div>
+        <div style="color:var(--muted);font-size:13px">New Brunswick, Canada</div>
+        <div style="color:var(--muted);font-size:12px;margin-top:4px">
+          Archive period: ${formatArchiveDateLong(firstDate)} — ${formatArchiveDateLong(lastDate)}
+          (${yearDates.length} snapshots)
+        </div>
+      </div>
+
+      <div style="margin:10px 0"><b>Season Summary</b></div>
+      <table class="pro-table compact">
+        <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Total Unique Fires Tracked</td><td class="pro-kpi">${toNum(allFireNumbers.size, 0)}</td></tr>
+          <tr><td>Total Extinguished (latest snapshot)</td><td>${toNum(totalExtinguished, 0)}</td></tr>
+          <tr><td>Total Area Burned (latest snapshot)</td><td class="pro-kpi">${toNum(totalAreaBurned, 1)} ha</td></tr>
+          <tr><td>Peak Active Fires</td><td>${peakActive} on ${formatArchiveDateLong(peakDate)}</td></tr>
+          <tr><td>Peak Area Under Active Fire</td><td>${toNum(peakArea, 1)} ha on ${formatArchiveDateLong(peakAreaDate)}</td></tr>
+          <tr><td>Archive Coverage</td><td>${yearDates.length} days from ${formatArchiveDate(firstDate)} to ${formatArchiveDate(lastDate)}</td></tr>
+        </tbody>
+      </table>
+
+      ${chartSVG}
+      ${causeHTML}
+
+      <div style="margin:16px 0 6px"><b>Daily Snapshots (sampled)</b></div>
+      <div style="max-height:300px;overflow:auto;border:1px solid var(--border);border-radius:12px;">
+        <table class="pro-table compact" style="margin:0;border:none;border-radius:0;">
+          <thead style="position:sticky;top:0;z-index:1"><tr><th>Date</th><th>Active</th><th>Out</th><th style="text-align:right">Area (ha)</th></tr></thead>
+          <tbody>
+            ${dailyStats.map(s => `
+              <tr>
+                <td>${formatArchiveDate(s.date)}</td>
+                <td style="text-align:right">${s.active}</td>
+                <td style="text-align:right">${s.out}</td>
+                <td style="text-align:right">${toNum(s.area, 1)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:16px;font-size:11px;color:var(--muted);text-align:center;">
+        Generated ${new Date().toLocaleDateString('en-CA', { year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit', timeZone: ATLANTIC_TZ })} AT
+        · Data from GNB ERD & CWFIS archives
+      </div>
+    `;
+  }
+
+  // ---- Season report events ----
+  historySeasonBtn.addEventListener('click', generateSeasonReport);
+
+  srClose.addEventListener('click', () => {
+    seasonOverlay.style.display = 'none';
+    seasonOverlay.hidden = true;
+  });
+  seasonOverlay.addEventListener('click', (e) => {
+    if (e.target === seasonOverlay) {
+      seasonOverlay.style.display = 'none';
+      seasonOverlay.hidden = true;
+    }
+  });
+
+  // ---- Season report PDF export ----
+  if (srExportPdf) {
+    srExportPdf.addEventListener('click', () => {
+      if (typeof window.jspdf === 'undefined') { alert('jsPDF not loaded yet.'); return; }
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      const marginX = 40;
+      let y = 42;
+
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(18);
+      doc.text('NB Fire Season Report', marginX, y); y += 24;
+
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      doc.text(`Generated: ${new Date().toISOString().slice(0,10)}`, marginX, y); y += 16;
+      doc.text(`Archive: ${formatArchiveDate(lastReportDates[0])} to ${formatArchiveDate(lastReportDates[lastReportDates.length - 1])} (${lastReportDates.length} snapshots)`, marginX, y); y += 20;
+
+      // Extract table data from the rendered report
+      const tables = srBody.querySelectorAll('table.pro-table');
+      tables.forEach((tbl) => {
+        const headers = [...tbl.querySelectorAll('thead th')].map(th => th.textContent.trim());
+        const rows = [...tbl.querySelectorAll('tbody tr')].map(tr =>
+          [...tr.querySelectorAll('td')].map(td => td.textContent.trim())
+        );
+        if (headers.length && rows.length) {
+          doc.autoTable({
+            head: [headers],
+            body: rows,
+            startY: y,
+            margin: { left: marginX, right: marginX },
+            styles: { fontSize: 9, cellPadding: 4 },
+            headStyles: { fillColor: [55, 65, 81], fontStyle: 'bold' }
+          });
+          y = doc.lastAutoTable.finalY + 16;
+        }
+      });
+
+      const filename = `NB_Fire_Season_Report_${lastReportYear}.pdf`;
+      doc.save(filename);
+    });
+  }
+
+})();
+
 });

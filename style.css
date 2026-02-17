@@ -558,10 +558,10 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
         /* Nearby fires bottom sheet */
     /* Nearby fires bottom sheet - isolated layout */
     .nearby-panel{
-      position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));
-      z-index:2100; display:none; background:var(--panel);
+      position:fixed;left:12px;right:12px;bottom:calc(110px + env(safe-area-inset-bottom));
+      z-index:2600; display:none; background:var(--panel);
       border:1px solid var(--border); border-radius:12px; padding:10px 12px;
-      box-shadow:var(--shadow); backdrop-filter:blur(6px); max-height:40vh; overflow:auto;
+      box-shadow:var(--shadow); backdrop-filter:blur(6px); max-height:35vh; overflow:auto;
       font-size:var(--fs-14); contain:layout style;
     }
     .nearby-panel[hidden]{ display:none; }
@@ -569,6 +569,45 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
     .nearby-title{ font-weight:800; }
     .nearby-close{ background:var(--btn-bg); border:1px solid var(--btn-border); border-radius:8px; padding:6px 10px; font-weight:800; cursor:pointer; }
     .nearby-close:focus-visible{ outline:none; box-shadow:var(--focus); }
+
+/* =============================================================================
+   SECTION 6b: HISTORICAL VIEWER PANEL
+   ============================================================================= */
+    .history-panel{
+      position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));
+      z-index:2600;display:none;background:var(--panel);
+      border:1px solid var(--border);border-radius:12px;padding:10px 14px;
+      box-shadow:var(--shadow);backdrop-filter:blur(12px);
+      font-size:var(--fs-14);contain:layout style;
+      max-width:min(96vw,720px);margin:0 auto;
+    }
+    .history-panel:not([hidden]){ display:block; }
+    .history-panel header{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap;
+    }
+    .history-title{font-weight:800;display:flex;align-items:center;gap:8px;}
+    .history-controls{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+    .history-info{display:flex;align-items:center;gap:8px;font-size:var(--fs-12);opacity:.95;flex-wrap:wrap;}
+    .history-live-btn{
+      background:#059669!important;color:#fff!important;border-color:#047857!important;
+    }
+    .history-live-btn:hover{background:#047857!important;}
+    /* Pulsing live indicator when in history mode */
+    body.history-mode #mapLogo::after{
+      content:'HISTORICAL';font-size:9px;font-weight:800;color:#fff;
+      background:#dc2626;padding:2px 6px;border-radius:4px;margin-left:8px;
+      animation:pulse-badge 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse-badge{0%,100%{opacity:1}50%{opacity:.5}}
+    /* History mode perimeter styling */
+    .history-perimeter{fill:rgba(239,68,68,.15);stroke:#ef4444;stroke-width:2;}
+
+    @media(max-width:560px){
+      .history-panel{padding:8px 10px;}
+      .history-panel header{gap:6px;}
+      .history-live-btn span,.history-title span{font-size:12px;}
+    }
+
     .nearby-list{ list-style:decimal; padding-left:12px; margin:6px 0 0; }
     .nearby-list a{ color:var(--link); text-decoration:none; font-weight:700; }
     .nearby-list a:hover{ text-decoration:underline; }
@@ -734,6 +773,10 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
   .bottom-panel {
     gap: 15px;
     padding: 10px 15px;
+  }
+
+  .nearby-panel {
+    bottom: calc(90px + env(safe-area-inset-bottom));
   }
 }
 

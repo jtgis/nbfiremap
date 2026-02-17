@@ -201,7 +201,7 @@ See README.md for full setup and usage documentation.
     </button>
   </div>
 
-  <!-- 3c. Bottom action panel (Fire Watch, Summary, Help) -->
+  <!-- 3c. Bottom action panel (Fire Watch, Summary, History, Help) -->
   <div id="bottomPanel" class="bottom-panel">
     <button id="fireWatchBtn" class="action-btn" type="button">
       <i class="fa-solid fa-fire"></i>
@@ -210,6 +210,10 @@ See README.md for full setup and usage documentation.
     <button id="fireSummaryBtn" class="action-btn" type="button">
       <i class="fa-solid fa-list"></i>
       <span>fire summary</span>
+    </button>
+    <button id="historyBtn" class="action-btn" type="button">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <span>history</span>
     </button>
     <button id="helpBtn" class="action-btn" type="button">
       <i class="fa-solid fa-question"></i>
@@ -254,7 +258,49 @@ See README.md for full setup and usage documentation.
     </div>
   </div>
 
-  <!-- 4c. Nearby Fires bottom sheet (shown after geolocation) -->
+  <!-- 4c. Historical Viewer panel -->
+  <div id="historyPanel" class="history-panel" hidden>
+    <header>
+      <div class="history-title"><i class="fa-solid fa-clock-rotate-left"></i> Historical Viewer</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button id="historySeasonBtn" class="close-summary" type="button" title="Generate Season Report">
+          <span class="icon"><i class="fa-solid fa-file-lines"></i></span> Season Report
+        </button>
+        <button id="historyLiveBtn" class="close-summary history-live-btn" type="button" title="Return to live data">
+          <span class="icon"><i class="fa-solid fa-tower-broadcast"></i></span> Return to Live
+        </button>
+      </div>
+    </header>
+    <div class="history-controls">
+      <button id="historyPlay" class="cwfis-play" type="button" title="Play/Pause" aria-label="Play historical animation">▶</button>
+      <input id="historyTime" class="cwfis-time" type="range" min="0" max="0" value="0" step="1" aria-label="Historical date slider" />
+    </div>
+    <div class="history-info">
+      <span id="historyStamp" class="cwfis-stamp">Select a date</span>
+      <span class="dot-sep">•</span>
+      <span id="historyStats" style="font-size:12px;opacity:.85"></span>
+    </div>
+  </div>
+
+  <!-- 4d. Season Report modal -->
+  <div id="seasonReportOverlay" class="fire-summary-overlay" role="presentation" hidden>
+    <div class="fire-summary" role="dialog" aria-modal="true" aria-labelledby="sr-title" style="width:min(780px,calc(100% - 24px))">
+      <header>
+        <h2 id="sr-title">Season Report</h2>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button id="sr-export-pdf" class="close-summary" type="button" title="Download PDF">
+            <span class="icon"><i class="fa-solid fa-file-pdf"></i></span> Export PDF
+          </button>
+          <button id="sr-close" class="close-summary" type="button">
+            <span class="icon"><i class="fa-solid fa-xmark"></i></span> Close
+          </button>
+        </div>
+      </header>
+      <div id="sr-body" class="body"></div>
+    </div>
+  </div>
+
+  <!-- 4e. Nearby Fires bottom sheet (shown after geolocation) -->
   <div id="nearbyPanel" class="nearby-panel" hidden>
     <header>
       <div class="nearby-title" id="nearbyTitle">Nearby Fires</div>
