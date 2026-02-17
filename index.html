@@ -1,3 +1,29 @@
+<!--
+================================================================================
+NB FIRE MAP - index.html
+Interactive wildfire monitoring application for New Brunswick, Canada.
+
+DOCUMENT STRUCTURE
+==================
+1. HEAD           - Meta tags, fonts, stylesheets (lines 15-33)
+2. MAP CONTAINER  - Main Leaflet map element (line 37)
+3. LAYER CONTROLS - Smoke, Fire Risk, FWI, FBP sliders (lines 40-113)
+4. UI CHROME      - Logo, left controls, bottom panel (lines 116-150)
+5. MODALS         - Fire Summary, Help, Nearby Fires sheets (lines 153-195)
+6. SCRIPTS        - Leaflet, ESRI, plugins, app.js (lines 199-217)
+
+EXTERNAL DEPENDENCIES
+=====================
+- Leaflet 1.x + ESRI Leaflet + ImageMapLayer extension
+- Leaflet LocateControl, MarkerCluster
+- Font Awesome 6.5 icons
+- jsPDF + AutoTable (PDF export)
+- XLSX (Excel export)
+- Mapbox Polyline decoder
+
+See README.md for full setup and usage documentation.
+================================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +31,59 @@
   <title>nbfiremap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
+  <meta name="description" content="Real-time wildfire monitoring map for New Brunswick, Canada" />
 
-  <!-- Fonts / Leaflet / Plugins -->
+  <!-- DNS prefetch for external domains (parallel connection setup) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://services.arcgis.com" />
+  <link rel="dns-prefetch" href="https://geonb.snb.ca" />
+
+  <!-- Critical CSS: Leaflet (render-blocking, needed for map layout) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
-  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/svgs/solid/fire.svg">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Non-critical CSS: loaded async to avoid blocking first paint -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" media="print" onload="this.media='all'" />
+
+  <!-- Fonts: loaded async (text renders with fallback, swaps in when ready) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <!-- Icons: loaded async (FA icons appear once stylesheet loads) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/svgs/solid/fire.svg">
+
+  <!-- Fallbacks for browsers with JS disabled -->
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </noscript>
 </head>
+
 <body>
+  <!-- ====================================================================
+       SECTION 1: MAP CONTAINER
+       Main Leaflet map canvas - all layers render here
+       ==================================================================== -->
   <div id="map" aria-label="Interactive wildfire map"></div>
 
-  <!-- Smoke timeline controls -->
+  <!-- ====================================================================
+       SECTION 2: LAYER TIMELINE CONTROLS
+       Animated timeline sliders for smoke, fire risk, weather, behavior layers.
+       Each control panel includes: play/pause, date slider, legend, error msg.
+       ==================================================================== -->
+
+  <!-- 2a. NOAA HMS Wildfire Smoke timeline -->
   <div id="smokeControls" aria-live="polite">
     <div class="sc-top">
       <button id="smokePlay" type="button" title="Play/Pause" aria-label="Play animation">▶</button>
@@ -33,8 +94,7 @@
     </div>
   </div>
 
-  
-  <!-- CWFIS: Fire Risk controls (inline under “Fire Risk”) -->
+  <!-- 2b. CWFIS Fire Risk (Fire Danger Rating) -->
   <div id="riskControls" class="cwfis-controls" aria-live="polite">
     <div class="cwfis-top">
       <label for="riskTime">Date</label>
@@ -42,13 +102,13 @@
       <span class="cwfis-stamp" id="riskStamp">Loading…</span>
     </div>
 
-  <div class="cwfis-row">
-    <button id="riskPlay" class="cwfis-play" type="button" title="Play/Pause" aria-label="Play Fire Risk animation">▶</button>
-    <input id="riskTime" class="cwfis-time" type="range" min="0" max="0" value="0" step="1" aria-label="Fire Risk date slider" />
-  </div>
+    <div class="cwfis-row">
+      <button id="riskPlay" class="cwfis-play" type="button" title="Play/Pause" aria-label="Play Fire Risk animation">▶</button>
+      <input id="riskTime" class="cwfis-time" type="range" min="0" max="0" value="0" step="1" aria-label="Fire Risk date slider" />
+    </div>
 
     <div class="cwfis-legend">
-      <span>Legend:</span><img id="riskLegend" alt="Fire Danger legend" />
+      <span>Legend:</span><img id="riskLegend" alt="Fire Danger legend" loading="lazy" />
     </div>
     <div id="riskErr" class="cwfis-err">Layer for this date may be unavailable.</div>
   </div>
@@ -77,7 +137,7 @@
   </div>
 
     <div class="cwfis-legend">
-      <span>Legend:</span><img id="fwiLegend" alt="FWI legend" />
+      <span>Legend:</span><img id="fwiLegend" alt="FWI legend" loading="lazy" />
     </div>
     <div id="fwiErr" class="cwfis-err">Layer for this date/component may be unavailable.</div>
   </div>
@@ -106,18 +166,23 @@
   </div>
 
     <div class="cwfis-legend">
-      <span>Legend:</span><img id="fbpLegend" alt="FBP legend" />
+      <span>Legend:</span><img id="fbpLegend" alt="FBP legend" loading="lazy" />
     </div>
     <div id="fbpErr" class="cwfis-err">Layer for this date/metric may be unavailable.</div>
   </div>
 
-  <!-- Centered Logo -->
-  <div id="mapLogo" class="map-logo">
-    <i class="fa-solid fa-fire"></i>
+  <!-- ====================================================================
+       SECTION 3: UI CHROME (Logo, Controls, Action Buttons)
+       Fixed-position interface elements overlaying the map
+       ==================================================================== -->
+
+  <!-- 3a. Centered branding logo -->
+  <div id="mapLogo" class="map-logo" role="banner" aria-label="NB Fire Map">
+    <i class="fa-solid fa-fire" aria-hidden="true"></i>
     <span>nbfiremap</span>
   </div>
 
-  <!-- Left Control Panel -->
+  <!-- 3b. Left-side map controls (zoom, reset, layers, locate) -->
   <div id="leftControls" class="left-controls">
     <button id="resetViewBtn" class="control-btn" type="button" title="Reset map view">
       <i class="fa-solid fa-refresh"></i>
@@ -128,7 +193,7 @@
     <button class="control-btn" type="button" title="Zoom out">
       <i class="fa-solid fa-minus"></i>
     </button>
-    <button id="mapToggleBtn" class="control-btn" type="button" aria-pressed="false" title="Toggle layers">
+    <button id="mapToggleBtn" class="control-btn" type="button" aria-pressed="false" aria-expanded="false" title="Toggle layers">
       <i class="fa-solid fa-layer-group"></i>
     </button>
     <button class="control-btn" type="button" title="Find my location">
@@ -136,8 +201,7 @@
     </button>
   </div>
 
-
-  <!-- Bottom Action Panel -->
+  <!-- 3c. Bottom action panel (Fire Watch, Summary, Help) -->
   <div id="bottomPanel" class="bottom-panel">
     <button id="fireWatchBtn" class="action-btn" type="button">
       <i class="fa-solid fa-fire"></i>
@@ -153,7 +217,12 @@
     </button>
   </div>
 
-  <!-- Fire Summary Modal -->
+  <!-- ====================================================================
+       SECTION 4: MODALS & OVERLAYS
+       Full-screen dialogs for fire summary, help documentation, nearby fires
+       ==================================================================== -->
+
+  <!-- 4a. Fire Summary modal - tabular fire data with export options -->
   <div id="fireSummaryOverlay" class="fire-summary-overlay" role="presentation" hidden>
     <div class="fire-summary" role="dialog" aria-modal="true" aria-labelledby="fs-title">
       <header>
@@ -174,7 +243,7 @@
     </div>
   </div>
 
-  <!-- Map Help Modal -->
+  <!-- 4b. Help modal - layer documentation and usage guide -->
   <div id="mapHelpOverlay" class="fire-summary-overlay" role="presentation" hidden>
     <div class="fire-summary" role="dialog" aria-modal="true" aria-labelledby="mh-title">
       <header>
@@ -185,7 +254,7 @@
     </div>
   </div>
 
-    <!-- Nearby Fires bottom sheet -->
+  <!-- 4c. Nearby Fires bottom sheet (shown after geolocation) -->
   <div id="nearbyPanel" class="nearby-panel" hidden>
     <header>
       <div class="nearby-title" id="nearbyTitle">Nearby Fires</div>
@@ -194,24 +263,28 @@
     <div id="nearbyBody"></div>
   </div>
 
-
-
-  <!-- Safe-area probe -->
+  <!-- iOS safe-area-inset detection helper -->
   <div id="sai-probe" aria-hidden="true"></div>
 
+  <!-- ====================================================================
+       SECTION 5: SCRIPTS (deferred loading)
+       External libraries loaded asynchronously after DOM is ready
+       ==================================================================== -->
 
-
-  <!-- JS (deferred) -->
+  <!-- Leaflet core + ESRI plugins -->
   <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script defer src="https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"></script>
   <script defer src="https://unpkg.com/esri-leaflet-image/dist/esri-leaflet-image.js"></script>
   <script defer src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
   <script defer src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
   <script defer src="https://unpkg.com/esri-leaflet-cluster/dist/esri-leaflet-cluster.js"></script>
+
+  <!-- Export utilities (PDF, Excel) -->
   <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
+  <!-- Routing decoder + main app -->
   <script defer src="https://unpkg.com/@mapbox/polyline@1.2.1/src/polyline.js"></script>
   <script defer src="app.js?v=2"></script>
 </body>
