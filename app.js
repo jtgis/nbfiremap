@@ -1,12 +1,44 @@
-/* =========================================================================
-       NB Fire Map — refactored for clarity and maintainability.
-       ========================================================================= */
+/**
+ * ===========================================================================
+ * NB FIRE MAP — Interactive Wildfire Monitoring for New Brunswick, Canada
+ * ===========================================================================
+ * 
+ * Real-time visualization of wildfires, weather, and emergency data.
+ * 
+ * DATA SOURCES:
+ *   - GNB Emergency Response Division (fires, burn bans, crown land)
+ *   - Canadian Wildland Fire Information System (hotspots, perimeters, FWI/FBP)
+ *   - NASA FIRMS (thermal anomalies via MODIS/VIIRS)
+ *   - NOAA (smoke forecasts, weather radar)
+ *   - Environment Canada (weather stations, lightning, AQHI)
+ *   - OpenSky Network (aircraft tracking)
+ * 
+ * FILE STRUCTURE:
+ *   1. Configuration (NBFireMapConstants) .............. Line ~30
+ *   2. Utilities (NBFireMapUtils) ...................... Line ~170
+ *   3. Layer Management (LayerManager) ................. Line ~250
+ *   4. Data Loading (DataLoadingManager) ............... Line ~830
+ *   5. Fire Data Processing (FireDataManager) .......... Line ~1600
+ *   6. UI Panel Management (UIPanelManager) ............ Line ~2500
+ *   7. Popup Utilities (PopupUtils) .................... Line ~2900
+ *   8. Map Initialization & Controls ................... Line ~3200
+ *   9. Feature Layers (fires, weather, transport) ...... Line ~3700
+ *  10. Summary, Export & Help Systems .................. Line ~5500
+ * 
+ * @see https://www.gnb.ca/en/topic/laws-safety/emergency-preparedness-alerts/fire-watch.html
+ * ===========================================================================
+ */
 
-    window.addEventListener('DOMContentLoaded', () => {
-      'use strict';
+window.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-      // ---- Constants Configuration -------------------------------------------
-      window.NBFireMapConstants = {
+  // ===========================================================================
+  // SECTION 1: CONFIGURATION CONSTANTS
+  // ===========================================================================
+  // Central configuration for all map settings, service endpoints, and UI params.
+  // Exposed globally via window.NBFireMapConstants for cross-module access.
+  
+  window.NBFireMapConstants = {
         
         // ---- Map Configuration ------------------------------------------------
         MAP: {
@@ -33,10 +65,8 @@
           // Aviation data
           OPEN_SKY_URL: 'https://opensky-network.org/api/states/all',
           
-          // NOAA smoke forecasts
-          NOAA_SMOKE_WMS: 'https://mapservices.weather.noaa.gov/raster/rest/services/air_quality/ndgd_smoke_sfc_1hr_avg_time/ImageServer/WMSServer',
-          NOAA_SMOKE_WMS_BASE_URL: 'https://mapservices.weather.noaa.gov/raster/rest/services/air_quality/ndgd_smoke_sfc_1hr_avg_time/ImageServer/WMSServer',
-          NOAA_SMOKE_WMS_LAYER: 'ndgd_smoke_sfc_1hr_avg_time',
+          // NOAA smoke forecasts (ESRI ImageServer REST)
+          NOAA_SMOKE: 'https://mapservices.weather.noaa.gov/raster/rest/services/air_quality/ndgd_smoke_sfc_1hr_avg_time/ImageServer',
           NOAA_RADAR: 'https://mapservices.weather.noaa.gov/eventdriven/rest/services/radar/radar_base_reflectivity_time/ImageServer',
           
           // Canadian weather and fire services
@@ -146,9 +176,8 @@
         }
       };
 
-      // Backwards compatibility - expose individual constants
+      // Legacy aliases for backwards compatibility (preserves existing code dependencies)
       Object.assign(window.NBFireMapConstants, {
-        // Legacy constant names for backwards compatibility
         CONTROLLED_ZOOM_LEVEL: window.NBFireMapConstants.MAP.CONTROLLED_ZOOM_LEVEL,
         NB_BOUNDS: window.NBFireMapConstants.MAP.NB_BOUNDS,
         INITIAL_VIEW: window.NBFireMapConstants.MAP.INITIAL_VIEW,
@@ -156,9 +185,7 @@
         ATLANTIC_TZ: window.NBFireMapConstants.TIMEZONE.ATLANTIC_TZ,
         OPEN_SKY_URL: window.NBFireMapConstants.SERVICES.OPEN_SKY_URL,
         PLANES_REFRESH_MS: window.NBFireMapConstants.REFRESH.PLANES,
-        NOAA_SMOKE_WMS: window.NBFireMapConstants.SERVICES.NOAA_SMOKE_WMS,
-        NOAA_SMOKE_WMS_BASE_URL: window.NBFireMapConstants.SERVICES.NOAA_SMOKE_WMS_BASE_URL,
-        NOAA_SMOKE_WMS_LAYER: window.NBFireMapConstants.SERVICES.NOAA_SMOKE_WMS_LAYER,
+        NOAA_SMOKE: window.NBFireMapConstants.SERVICES.NOAA_SMOKE,
         SMOKE_HOURS_FORWARD: window.NBFireMapConstants.SMOKE.HOURS_FORWARD,
         SMOKE_FRAME_MS: window.NBFireMapConstants.SMOKE.FRAME_MS,
         LIGHTNING_REFRESH_MS: window.NBFireMapConstants.REFRESH.LIGHTNING,
@@ -167,20 +194,49 @@
         CROWN_VECT_MIN_ZOOM: window.NBFireMapConstants.CROWN_LAND.VECTOR_MIN_ZOOM
       });
 
-      // ---- Utilities Module -------------------------------------------------
-      // Pure utility functions with no side effects
+      // ===========================================================================
+      // SECTION 2: UTILITY FUNCTIONS
+      // ===========================================================================
+      // Pure utility functions with no side effects. These are used throughout
+      // the application for formatting, conversion, and data manipulation.
       
-      // Compass direction conversion
+      /**
+       * Compass direction lookup table (16-point).
+       * Index with: Math.round(degrees / 22.5)
+       */
       const COMPASS_16 = ['N','NNE','NE','ENE','E','ESE','SE','S','SSW','SW','WSW','W','WNW','NW','NNW','N'];
+      
+      /**
+       * Convert degrees to compass direction (N, NE, E, etc.)
+       * @param {number} deg - Degrees (0-360)
+       * @returns {string} Compass direction or em-dash if invalid
+       */
       const degToCompass = (deg) => Number.isFinite(deg) ? COMPASS_16[Math.round((((deg % 360)+360)%360) / 22.5)] : '—';
 
-      // Number formatting
+      /**
+       * Format number with locale-aware thousands separators.
+       * @param {*} v - Value to format
+       * @param {number} d - Maximum decimal places (default: 1)
+       * @returns {string} Formatted number or em-dash if invalid
+       */
       const toNum = (v, d=1) => (v==null || Number.isNaN(Number(v))) ? '—' : Number(v).toLocaleString(undefined, { maximumFractionDigits: d });
 
-      // Date/time formatting
+      // Atlantic timezone constant (Moncton for NB)
       const ATLANTIC_TZ = 'America/Moncton';
+      
+      /**
+       * Format timestamp as localized date/time string.
+       * @param {number} ms - Unix timestamp in milliseconds
+       * @returns {string} Formatted date or em-dash if null
+       */
       const fmtDateTime = (ms) => ms == null ? '—' : new Date(+ms).toLocaleString(undefined, { year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit' });
 
+      /**
+       * Format timestamp with explicit timezone.
+       * @param {number} ms - Unix timestamp in milliseconds
+       * @param {string} tz - IANA timezone identifier
+       * @returns {string} Formatted date or em-dash if null
+       */
       const fmtDateTimeTz = (ms, tz = ATLANTIC_TZ) =>
         ms == null ? '—' : new Date(+ms).toLocaleString(undefined, {
           year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit', timeZone: tz
@@ -188,7 +244,10 @@
 
       const fmtDateTZ = (ms, tz=ATLANTIC_TZ) => ms == null ? '—' : new Date(+ms).toLocaleDateString(undefined, { year:'numeric', month:'2-digit', day:'2-digit', timeZone: tz });
 
-      // Date comparisons (in a TZ) - Advanced version
+      /**
+       * Extract year/month/day in a specific timezone.
+       * Used for date comparisons that respect local time.
+       */
       const ymdInTz = (ms, tz = ATLANTIC_TZ) => {
         const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit' });
         const parts = fmt.formatToParts(new Date(ms));
@@ -207,16 +266,20 @@
         return Date.UTC(t.y, t.m - 1, t.d);
       };
 
-      // String normalization
+      // String normalization (lowercase, trimmed)
       const norm = (s) => (s || '').toString().trim().toLowerCase();
 
-      // HTML escaping
+      /**
+       * Escape HTML special characters to prevent XSS.
+       * @param {*} s - String to escape
+       * @returns {string} Escaped string
+       */
       const escHTML = (s) => (s??'').toString().replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 
-      // Responsive detection
+      /** Check if viewport is mobile width (<768px) */
       const isMobile = () => innerWidth < 768;
 
-      // Export utilities to global for backward compatibility
+      // Export utilities to global scope for cross-module access
       window.NBFireMapUtils = {
         degToCompass,
         toNum,
@@ -232,13 +295,20 @@
         ATLANTIC_TZ
       };
       
-      // ---- Constants Reference -----------------------------------------------
+      // Configuration shorthand reference
       const CONFIG = window.NBFireMapConstants;
       
-      // ---- Layer Management Utilities -------
-      // Provides utilities for managing map layers, including:
-      // - Basemap switching, Layer state management, Crown land staged loading
-      // - Fire clustering and filtering, Layer group management, Conditional layer loading
+      // ===========================================================================
+      // SECTION 3: LAYER MANAGEMENT (LayerManager)
+      // ===========================================================================
+      // Centralized utilities for managing Leaflet layers:
+      //   - Basemap switching (Esri Imagery / OpenStreetMap)
+      //   - Layer state persistence and management
+      //   - Crown land staged/lazy loading
+      //   - Fire marker clustering and filtering
+      //   - Label visibility management
+      //   - Conditional loading on overlay enable
+      
       const LayerManager = {
 
         // ---- Basemap Management -----------------------------------------------
@@ -526,11 +596,9 @@
 
             // Remove the animationend event listener since we'll try a different approach
             clusterGroup.on('clusteringstart', function() {
-              console.log('Clustering started...');
             });
             
             clusterGroup.on('clusteringend', function() {
-              console.log('Clustering ended, repositioning clusters...');
               
               // Wait a bit for clusters to be fully rendered, then reposition
               setTimeout(() => {
@@ -560,7 +628,6 @@
                       if (Math.abs(currentPos.lat - bestPos.lat) > 0.001 || Math.abs(currentPos.lng - bestPos.lng) > 0.001) {
                         layer._latlng = bestPos;
                         layer.update();
-                        console.log(`Repositioned cluster from [${currentPos.lat.toFixed(5)}, ${currentPos.lng.toFixed(5)}] to [${bestPos.lat.toFixed(5)}, ${bestPos.lng.toFixed(5)}] for fire: severity=${bestMarker.options._severity}, area=${bestMarker.options._area}ha`);
                       }
                     }
                   }
@@ -828,8 +895,17 @@
         }
       };
       
-      // ---- Data Loading Services Module -------
-      // Handles all external API data fetching and local file loading
+      // ===========================================================================
+      // SECTION 4: DATA LOADING MANAGER
+      // ===========================================================================
+      // IIFE module handling all external API fetching and local file loading.
+      // Features:
+      //   - Smart local file fetching with ERD folder awareness
+      //   - Retry logic for unreliable endpoints
+      //   - CWFIS WFS data loading
+      //   - 511 data layer management (ferries, webcams, events, winter roads)
+      //   - Event categorization and styling
+      
       const DataLoadingManager = (() => {
         'use strict';
 
@@ -846,66 +922,36 @@
         // ---- Utility Functions ------------------------------------------------
 
         /**
-         * Smart local file fetcher with fallback attempts
+         * Smart local file fetcher with fallback attempts.
+         * Routes ERD fire data to erd/ folder, tries .geojson/.json extensions.
+         * @param {string} base - Base filename without extension
+         * @returns {Promise<Object>} Parsed JSON data
          */
         async function fetchLocalAny(base) {
-          // ERD fire-related files are now in the erd/ folder
-          const erdFiles = ['active_fires', 'out_fires', 'erd_fire_locations', 'sums_table', 'GNBfireActSum'];
-          const isErdFile = erdFiles.includes(base);
-          
-          // Determine if file is typically .geojson (fire data) or .json (other data)
-          const geojsonFiles = ['active_fires', 'out_fires', 'erd_fire_locations'];
-          const isGeojsonFile = geojsonFiles.includes(base);
-          
-          // 511-related files are now in the 511/ folder
-          const files511 = ['events', 'ferries', 'webcams', 'winterroads'];
-          const is511File = files511.includes(base);
-          
-          let attempts;
-          if (isErdFile) {
-            if (isGeojsonFile) {
-              attempts = [
-                `erd/${base}.geojson`, `./erd/${base}.geojson`,
-                `${base}.geojson`, `./${base}.geojson`,
-                `data/${base}.geojson`, `./data/${base}.geojson`,
-                `erd/${base}.json`, `./erd/${base}.json`,
-                `${base}.json`, `./${base}.json`,
-                `data/${base}.json`, `./data/${base}.json`,
-              ];
-            } else {
-              // For sums_table.json and other ERD JSON files
-              attempts = [
-                `erd/${base}.json`, `./erd/${base}.json`,
-                `${base}.json`, `./${base}.json`,
-                `data/${base}.json`, `./data/${base}.json`,
-                `erd/${base}.geojson`, `./erd/${base}.geojson`,
-                `${base}.geojson`, `./${base}.geojson`,
-                `data/${base}.geojson`, `./data/${base}.geojson`,
-              ];
-            }
-          } else if (is511File) {
-            attempts = [
-              `511/${base}.json`, `./511/${base}.json`,
-              `${base}.json`, `./${base}.json`,
-              `data/${base}.json`, `./data/${base}.json`,
-              `511/${base}.geojson`, `./511/${base}.geojson`,
-              `${base}.geojson`, `./${base}.geojson`,
-              `data/${base}.geojson`, `./data/${base}.geojson`,
-            ];
-          } else {
-            attempts = [
-              `${base}.json`, `./${base}.json`,
-              `data/${base}.json`, `./data/${base}.json`,
-              `${base}.geojson`, `./${base}.geojson`,
-              `data/${base}.geojson`, `./data/${base}.geojson`,
-            ];
+          // Map file basenames to their known folder + preferred extension.
+          // './foo' and 'foo' are identical in browsers, so only list each path once.
+          const FOLDERS = { erd: 'erd/', '511': '511/' };
+          const erdFiles = new Set(['active_fires', 'out_fires', 'fire_locations', 'sums_table', 'GNBfireActSum']);
+          const geojsonFirst = new Set(['active_fires', 'out_fires', 'fire_locations']);
+          const files511 = new Set(['events', 'ferries', 'webcams', 'winterroads']);
+
+          // Determine folder prefix and extension order
+          const folder = erdFiles.has(base) ? FOLDERS.erd : files511.has(base) ? FOLDERS['511'] : '';
+          const exts = geojsonFirst.has(base) ? ['.geojson', '.json'] : ['.json', '.geojson'];
+
+          // Build candidate URLs: folder/base.ext → base.ext (3 paths × 2 extensions = 6 max)
+          const attempts = [];
+          for (const ext of exts) {
+            if (folder) attempts.push(`${folder}${base}${ext}`);
+            attempts.push(`${base}${ext}`);
+            attempts.push(`data/${base}${ext}`);
           }
-          
+
           for (const url of attempts) {
-            try { 
-              const r = await fetch(url, { cache: 'no-store' }); 
-              if (r.ok) return await r.json(); 
-            } catch {}
+            try {
+              const r = await fetch(url);
+              if (r.ok) return await r.json();
+            } catch { /* next candidate */ }
           }
           return null;
         }
@@ -1309,30 +1355,6 @@
         // ---- Local File Loading -----------------------------------------------
 
         /**
-         * Load local fire data
-         */
-        async function loadLocalFires() {
-          try {
-            const [activeData, outData, sumsData, locationsData] = await Promise.all([
-              fetchLocalAny('active_fires'),
-              fetchLocalAny('out_fires'),
-              fetchLocalAny('sums_table'),
-              fetchLocalAny('erd_fire_locations')
-            ]);
-
-            return {
-              active: activeData,
-              out: outData,
-              sums: sumsData,
-              locations: locationsData
-            };
-          } catch (error) {
-            console.warn('Failed to load local fire data:', error);
-            return { active: null, out: null, sums: null, locations: null };
-          }
-        }
-
-        /**
          * Load benchmarks data
          */
         async function loadSumsBenchmarks() {
@@ -1413,7 +1435,6 @@
               ferriesLayer.addLayer(marker);
             });
 
-            console.log(`Loaded ${data.length} ferry terminals`);
           } catch (error) {
             console.warn('Failed to load ferries:', error);
           } finally {
@@ -1479,7 +1500,6 @@
               }
             });
 
-            console.log(`Loaded ${data.length} road events`);
           } catch (error) {
             console.warn('Failed to load events:', error);
           } finally {
@@ -1585,7 +1605,6 @@
               }
             });
 
-            console.log(`Loaded ${data.length} winter road segments`);
           } catch (error) {
             console.warn('Failed to load winter roads:', error);
           } finally {
@@ -1640,7 +1659,6 @@
                 .addTo(aircraftLayer);
             });
 
-            console.log(`Loaded ${data.states.length} aircraft`);
           } catch (error) {
             console.warn('Failed to load aircraft data:', error);
           } finally {
@@ -1684,7 +1702,6 @@
 
           // Local file loading
           fetchLocalAny,
-          loadLocalFires,
           loadSumsBenchmarks,
 
           // CWFIS services
@@ -1722,8 +1739,18 @@
         };
       })();
       
-      // ---- Fire Data Management Module -------------
-      // Handles all fire-related data processing, status management, and marker creation
+      // ===========================================================================
+      // SECTION 5: FIRE DATA MANAGER
+      // ===========================================================================
+      // IIFE module for all fire-related data processing:
+      //   - Fire status colors and severity ranking
+      //   - Property extraction (size, ID, name, dates)
+      //   - Marker creation with proper popup content
+      //   - GNB activity data integration (resources deployed)
+      //   - ERD fire locations data (cause information)
+      //   - Fire statistics and filtering
+      //   - Cause analysis (natural vs human)
+      
       const FireDataManager = (() => {
         'use strict';
 
@@ -1741,7 +1768,6 @@
         
         // ERD Fire Locations data store for fire cause information
         let erdFireLocationsData = null;
-        
         // Load GNB fire activity data
         async function loadGNBFireActivityData() {
           if (gnbFireActivityData !== null) return gnbFireActivityData;
@@ -1762,7 +1788,7 @@
         async function loadERDFireLocationsData() {
           if (erdFireLocationsData !== null) return erdFireLocationsData;
           try {
-            const data = await fetchLocalAny('erd_fire_locations');
+            const data = await fetchLocalAny('fire_locations');
             // Create a map for quick lookups by FIELD_AGENCY_FIRE_ID
             erdFireLocationsData = new Map();
             if (data?.features && Array.isArray(data.features)) {
@@ -2057,16 +2083,17 @@
           const erdLocation = findERDFireLocation(props);
           
           // Get retrieved information - use GNB timestamp when there's a match, otherwise ERD
-          let retrievedStr;
+          let retrievedStr = null;
           if (gnbActivity && gnbFullData?.fetched_utc) {
             // Use GNB fetched timestamp when we have activity data for this fire
             retrievedStr = fmtDateTime(gnbFullData.fetched_utc * 1000); // Convert Unix timestamp to milliseconds
           } else {
             // Fall back to ERD retrieved info
             const retrieved = getRetrievedInfo(props);
-            retrievedStr = (retrieved.ms != null)
-              ? fmtDateTime(retrieved.ms)
-              : (retrieved.bool != null ? (retrieved.bool ? 'Yes' : 'No') : (retrieved.raw ?? '—'));
+            if (retrieved.ms != null) {
+              retrievedStr = fmtDateTime(retrieved.ms);
+            }
+            // Ignore non-date values (bool, raw text) — they aren't useful timestamps
           }
           
           // Determine appropriate date field and label
@@ -2104,9 +2131,9 @@
             
             if (resources.length > 0) {
               gnbActivityHTML = `
-                <div style="margin-top:4px;padding:4px 6px;background-color:#fff3cd;border:1px solid #ffeaa7;border-radius:3px">
-                  <div style="font-size:10px;line-height:1.2;color:#333">
-                    <strong style="color:#856404">Resources:</strong> ${resources.join(' • ')}
+                <div class="resource-box">
+                  <div class="resource-label">
+                    <strong>Resources:</strong> ${resources.join(' • ')}
                   </div>
                 </div>
               `;
@@ -2115,17 +2142,17 @@
           
           return `
             <div class="fire-popup">
-              <div class="popup-header" style="font-size:16px;font-weight:700;color:#333;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #eee">
+              <div class="popup-header">
                 #${escHTML(shortId)} ${escHTML(name)}
               </div>
-              <div class="popup-body" style="font-size:13px;line-height:1.4">
-                <div style="margin-bottom:6px">
-                  <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:12px;background:#f8f9fa;border:1px solid #dee2e6;font-weight:600;font-size:12px">
-                    <span class="dot" style="background:${getStatusColor(status)};width:8px;height:8px;border-radius:50%;display:inline-block"></span>${escHTML(status)}
+              <div class="popup-body">
+                <div class="detail-row">
+                  <span class="status-badge">
+                    <span class="dot" style="background:${getStatusColor(status)}"></span>${escHTML(status)}
                   </span>
                 </div>
-                <div style="margin-bottom:4px"><b>Area:</b> ${size.toFixed(1)} ha</div>
-                ${showContained ? `<div style="margin-bottom:4px"><b>Contained:</b> ${pctStr}</div>` : ''}
+                <div class="detail-row"><b>Area:</b> ${size.toFixed(1)} ha</div>
+                ${showContained ? `<div class="detail-row"><b>Contained:</b> ${pctStr}</div>` : ''}
                 ${(() => {
                   const rawCause = erdLocation?.FIELD_AGENCY_FIRE_CAUSE;
                   const cleanedCause = cleanFireCause(rawCause);
@@ -2134,20 +2161,18 @@
                   if (cleanedCause) {
                     causeDisplay = cleanedCause;
                   } else if (rawCause && rawCause.trim() && rawCause.trim() !== '/' && rawCause.trim() !== ' / ') {
-                    // There is actual cause content but it didn't clean properly - likely contains "Unknown"
                     causeDisplay = 'Unknown';
                   } else {
-                    // No cause data available (null, empty, or just "/")
                     causeDisplay = 'No data';
                   }
-                  return `<div style="margin-bottom:4px"><b>Cause:</b> ${escHTML(causeDisplay)}</div>`;
+                  return `<div class="detail-row"><b>Cause:</b> ${escHTML(causeDisplay)}</div>`;
                 })()}
-                ${detectedMs ? `<div style="margin-bottom:4px"><b>Detected:</b> ${fmtDateTime(detectedMs)}</div>` : ''}
-                ${dateValue ? `<div style="margin-bottom:4px"><b>${dateLabel}:</b> ${fmtDateTime(dateValue)}</div>` : ''}
+                ${detectedMs ? `<div class="detail-row"><b>Detected:</b> ${fmtDateTime(detectedMs)}</div>` : ''}
+                ${dateValue ? `<div class="detail-row"><b>${dateLabel}:</b> ${fmtDateTime(dateValue)}</div>` : ''}
                 ${gnbActivityHTML}
-                <div style="margin-top:8px;padding:6px 8px;background-color:#f8f9fa;border-radius:4px;font-size:11px;color:#6c757d;text-align:center;font-style:italic">
+                ${retrievedStr ? `<div class="popup-footer">
                   Downloaded from ERD • ${retrievedStr}
-                </div>
+                </div>` : ''}
               </div>
             </div>
           `;
@@ -2158,8 +2183,8 @@
          */
         function bindFirePopup(props, layer, explicitStatus, isOutFire = false) {
           // Create popup with loading placeholder and async update
-          layer.bindPopup('Loading...', { 
-            maxWidth: 240, 
+          layer.bindPopup('<div class="fire-popup"><div class="popup-body" style="text-align:center">Loading\u2026</div></div>', { 
+            maxWidth: 280, 
             minWidth: 200,
             maxHeight: 350,
             className: 'fire-popup-container',
@@ -2169,10 +2194,11 @@
             keepInView: true
           });
           
-          // Update popup content when opened
+          // Update popup content when opened (cached after first build)
+          let _cachedPopup = null;
           layer.on('popupopen', async () => {
-            const content = await createFirePopupContent(props, explicitStatus, isOutFire);
-            layer.setPopupContent(content);
+            if (!_cachedPopup) _cachedPopup = await createFirePopupContent(props, explicitStatus, isOutFire);
+            layer.setPopupContent(_cachedPopup);
           });
           
           // Store fire data in registry
@@ -2431,6 +2457,14 @@
           getDetectedMs,
           getExtinguishedMs,
           
+          // Property extraction helpers
+          firstProp,
+          clamp01,
+          parseMaybeNumber,
+          parseDateFlexible,
+          getContainPct,
+          getRetrievedInfo,
+          
           // Date helpers
           isToday,
           isYesterday,
@@ -2462,12 +2496,19 @@
           getColorConfig: () => COLORS
         };
         
-        // Initialize GNB fire activity data loading and ERD fire locations data loading
+        // Initialize data loading on module creation
         loadGNBFireActivityData();
         loadERDFireLocationsData();
       })();
 
-      // ---- UI Panel Management Module -------------------------------
+      // ===========================================================================
+      // SECTION 6: UI PANEL MANAGER
+      // ===========================================================================
+      // IIFE module for panel state management:
+      //   - Fire Summary modal (statistics, pie charts, export)
+      //   - Nearby Fires panel (proximity search results)
+      //   - Event listener tracking for cleanup
+      //   - Panel state queries
       
       const UIPanelManager = (() => {
         // ---- State Variables -----------------------------------------------
@@ -2635,14 +2676,12 @@
         function hideOverviewPanel() {
           // This function is referenced in the code but the actual overview panel
           // implementation may be in a different part of the application
-          console.log('hideOverviewPanel called - implement if overview panel exists');
         }
 
         /**
          * Show overview panel (placeholder for overview panel functionality)
          */
         function showOverviewPanel() {
-          console.log('showOverviewPanel called - implement if overview panel exists');
         }
 
         // ---- Event Management -------------------------------------------------
@@ -2893,10 +2932,16 @@
         cityProximityLayer.clearLayers();
       });
 
-      // ---- End of UI Panel Manager Module ---------------------------
-
-      // ---- Popup Creation Utilities Module ---------------------------------
-      // Handles all popup content generation and interaction logic
+      // ===========================================================================
+      // SECTION 7: POPUP UTILITIES
+      // ===========================================================================
+      // IIFE module for popup content generation:
+      //   - Generic popup container creation
+      //   - Road event popups (closures, construction)
+      //   - Webcam popups with image loading
+      //   - Winter road condition popups
+      //   - Hover/click behavior binding
+      
       const PopupUtils = (() => {
         'use strict';
 
@@ -2906,11 +2951,14 @@
         // ---- Generic Popup Creation Functions ---------------------------------
 
         /**
-         * Create a styled popup container with header and body
+         * Create a styled popup container with header and body.
+         * @param {string} title - Popup title/header text
+         * @param {string} content - HTML content for popup body
+         * @param {Object} options - Configuration options
+         * @returns {string} Complete popup HTML
          */
         function createPopupContainer(title, content, options = {}) {
           const { className = 'popup', headerIcon = '', maxWidth = 300, escapeTitle = true } = options;
-          
           return `
             <div class="${className}" style="min-width:240px;max-width:${maxWidth}px">
               <div class="popup-header">
@@ -2977,17 +3025,17 @@
             const dates = [];
             if (event.StartDate) {
               const isUpcoming = event.StartDate > Date.now() / 1000;
-              dates.push(`<div style="margin-bottom:2px"><strong${isUpcoming ? ' style="color:#059669"' : ''}>Start:</strong> ${fmtDateTimeTz(event.StartDate * 1000)}</div>`);
+              dates.push(`<div class="date-row"><strong${isUpcoming ? ' class="date-upcoming"' : ''}>Start:</strong> ${fmtDateTimeTz(event.StartDate * 1000)}</div>`);
             }
             if (event.PlannedEndDate) {
-              dates.push(`<div style="margin-bottom:2px"><strong>End:</strong> ${fmtDateTimeTz(event.PlannedEndDate * 1000)}</div>`);
+              dates.push(`<div class="date-row"><strong>End:</strong> ${fmtDateTimeTz(event.PlannedEndDate * 1000)}</div>`);
             }
             if (event.LastUpdated) {
               dates.push(`<div><strong>Updated:</strong> ${fmtDateTimeTz(event.LastUpdated * 1000)}</div>`);
             }
             
             return dates.length > 0 ? `
-              <div style="margin:6px 0;padding:6px;background:#f8f9fa;border:1px solid #e9ecef;border-radius:4px;font-size:11px;line-height:1.4">
+              <div class="date-box">
                 ${dates.join('')}
               </div>
             ` : '';
@@ -2999,45 +3047,45 @@
           const dateSection = buildDateSection();
           
           return `
-            <div style="width:260px;max-width:90vw;overflow-wrap:break-word">
-              <div style="font-size:15px;font-weight:700;color:#333;margin-bottom:6px;padding-bottom:3px;border-bottom:1px solid #eee">
+            <div class="event-popup">
+              <div class="popup-header">
                 ${escHTML(typeDisplay)}
               </div>
-              <div style="font-size:12px;line-height:1.3">
+              <div class="popup-body">
                 <div style="margin-bottom:6px">
-                  <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 6px;border-radius:10px;background:#f8f9fa;border:1px solid #dee2e6;font-weight:600;font-size:11px">
-                    <span style="background:${statusColor};width:6px;height:6px;border-radius:50%;display:inline-block"></span>${event.IsFullClosure ? 'Full Closure' : 'Partial'}
+                  <span class="status-badge">
+                    <span class="dot" style="background:${statusColor}"></span>${event.IsFullClosure ? 'Full Closure' : 'Partial'}
                   </span>
                 </div>
                 
                 ${location ? `
-                  <div style="margin:6px 0;padding:6px;background:#fff;border:1px solid #e9ecef;border-radius:4px">
-                    <div style="word-wrap:break-word"><strong>Location:</strong> ${escHTML(location)}</div>
+                  <div class="info-box">
+                    <div><strong>Location:</strong> ${escHTML(location)}</div>
                   </div>
                 ` : ''}
                 
                 ${event.Description ? `
-                  <div style="margin:6px 0;padding:6px;background:#fff;border:1px solid #e9ecef;border-radius:4px">
-                    <div style="word-wrap:break-word"><strong>Details:</strong> ${escHTML(event.Description)}</div>
+                  <div class="info-box">
+                    <div><strong>Details:</strong> ${escHTML(event.Description)}</div>
                   </div>
                 ` : ''}
                 
                 ${restrictionsText ? `
-                  <div style="margin:6px 0;padding:6px;background:#fefce8;border:1px solid #fde047;border-radius:4px">
-                    <div style="word-wrap:break-word"><strong>Restrictions:</strong> ${escHTML(restrictionsText)}</div>
+                  <div class="restriction-box">
+                    <div><strong>Restrictions:</strong> ${escHTML(restrictionsText)}</div>
                   </div>
                 ` : ''}
                 
                 ${event.DetourInstructions ? `
-                  <div style="margin:6px 0;padding:6px;background:#fefce8;border:1px solid #fde047;border-radius:4px">
-                    <div style="word-wrap:break-word"><strong>Detour:</strong> ${escHTML(Array.isArray(event.DetourInstructions) ? event.DetourInstructions.join(' ') : event.DetourInstructions)}</div>
+                  <div class="restriction-box">
+                    <div><strong>Detour:</strong> ${escHTML(Array.isArray(event.DetourInstructions) ? event.DetourInstructions.join(' ') : event.DetourInstructions)}</div>
                   </div>
                 ` : ''}
                 
                 ${dateSection}
                 
                 ${event.downloaded_at ? `
-                  <div style="margin-top:6px;padding:4px 6px;background-color:#f1f5f9;border-radius:3px;font-size:10px;color:#64748b;text-align:center;font-style:italic">
+                  <div class="popup-footer">
                     Downloaded from DTI: ${new Date(event.downloaded_at).toLocaleString()}
                   </div>
                 ` : ''}
@@ -3300,10 +3348,8 @@
       const OPEN_SKY_URL = CONFIG.OPEN_SKY_URL;
       const PLANES_REFRESH_MS = CONFIG.PLANES_REFRESH_MS;
 
-      // NEW: WMS endpoint + layer for surface smoke (direct WMS access)
-      const NOAA_SMOKE_WMS = CONFIG.SERVICES.NOAA_SMOKE_WMS;
-      const NOAA_SMOKE_WMS_BASE_URL = CONFIG.SERVICES.NOAA_SMOKE_WMS_BASE_URL;
-      const NOAA_SMOKE_WMS_LAYER = CONFIG.SERVICES.NOAA_SMOKE_WMS_LAYER;
+      // NOAA ESRI ImageServer for surface smoke
+      const NOAA_SMOKE_URL = CONFIG.SERVICES.NOAA_SMOKE;
       const SMOKE_HOURS_FORWARD = CONFIG.SMOKE_HOURS_FORWARD;
       const SMOKE_FRAME_MS = CONFIG.SMOKE_FRAME_MS;
 
@@ -3315,38 +3361,15 @@
       const isToday = FireDataManager.isToday;
       const isYesterday = FireDataManager.isYesterday;
 
-      // Property extraction helpers
-      const firstProp = (p, keys) => { for (const k of keys) { const v = p?.[k]; if (v !== undefined && v !== null && v !== '') return [k, v]; } return [null, null]; };
-      const clamp01 = (n) => Math.max(0, Math.min(100, n));
-      const parseMaybeNumber = (v) => { if (v == null) return null; const n = Number(v); if (Number.isFinite(n)) return n; const m = String(v).match(/-?\d+(\.\d+)?/); return m ? Number(m[0]) : null; };
-      const parseDateFlexible = (v) => {
-        if (v == null || v === '') return null;
-        const s = String(v).trim(); const ymd = s.match(/^(\d{4})(\d{2})(\d{2})$/);
-        if (ymd) { const y=+ymd[1], m=+ymd[2], d=+ymd[3]; if(m>=1 && m<=12 && d>=1 && d<=31) return Date.UTC(y, m-1, d); }
-        const parsed = Date.parse(s); if (!Number.isNaN(parsed)) return parsed;
-        const n = Number(s); if (!Number.isFinite(n) || n <= 0) return null; return n < 1e12 ? n * 1000 : n;
-      };
-      const getContainPct = (p) => {
-        const [, v] = firstProp(p, ['PCT_CONTAINED','PERCENT_CONTAINED','CONTAINMENT_PCT','CONTAINED_PCT','PCTCONTAINED','CONTAINMENT','CONTAINMENT_PERCENT']);
-        const num = parseMaybeNumber(v); return num == null ? null : clamp01(num);
-      };
+      // Property extraction helpers (aliased from FireDataManager)
+      const firstProp = FireDataManager.firstProp;
+      const clamp01 = FireDataManager.clamp01;
+      const parseMaybeNumber = FireDataManager.parseMaybeNumber;
+      const parseDateFlexible = FireDataManager.parseDateFlexible;
+      const getContainPct = FireDataManager.getContainPct;
       const getDetectedMs = FireDataManager.getDetectedMs;
       const getExtinguishedMs = FireDataManager.getExtinguishedMs;
-      const getRetrievedInfo = (p) => {
-        const [, v] = firstProp(p, ['FETCHED_FROM_ERD','FETCHED_FROM_GNB','GNB_FETCHED','GNB_RETRIEVED_AT','RETRIEVED_FROM_GNB','FETCHED_AT','FETCH_TIMESTAMP','SOURCE_FETCHED_AT','ERD_FETCHED_AT']);
-        if (v == null) return { ms:null, bool:null, raw:null };
-        const ms = parseDateFlexible(v); if (ms != null) return { ms, bool:null, raw:v };
-        const sv = String(v).trim().toLowerCase();
-        if (typeof v === 'boolean' || ['true','yes','y','1'].includes(sv))  return { ms:null, bool:true,  raw:v };
-        if (['false','no','n','0'].includes(sv))                           return { ms:null, bool:false, raw:v };
-        return { ms:null, bool:null, raw:v };
-      };
-
-      // ---- Logo layout (no guards needed with new design) ------------------
-      function layoutTitleBox(){
-        // Logo is now centered and doesn't need dynamic layout
-        // This function is kept for compatibility but does nothing
-      }
+      const getRetrievedInfo = FireDataManager.getRetrievedInfo;
 
       // ---- Map init & panes -------------------------------------------------
       const saved = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
@@ -3464,21 +3487,6 @@
           </table>`;
       };
 
-      function wireSummaryClicks(){
-        const cont = $('#fs-scroll'); if(!cont) return;
-        cont.addEventListener('click', (e)=>{
-          const a = e.target.closest('a[data-fireid]'); if(!a) return;
-          e.preventDefault();
-          const rec = fireStore.get(a.getAttribute('data-fireid')); if(!rec) return;
-          const statusKey = rec.statusKey || norm(rec.props?.FIRE_STAT_DESC_E || '');
-          if (statusKey) ensureStatusEnabled(statusKey);
-          closeSummary();
-          hideOverviewPanel();
-          zoomUtils.flyToTarget(rec.latlng);
-          map.once('moveend', ()=> rec.layer?.openPopup && rec.layer.openPopup());
-        }, { passive: false });
-      }
-
       function wirePieLegendClicks(){
         const legend = fsBody.querySelector('.pie-legend'); if(!legend) return;
         legend.querySelectorAll('.pie-legend-item').forEach(item => {
@@ -3486,26 +3494,6 @@
             const status = item.dataset.status;
             const section = fsBody.querySelector(`h4:contains('${status}')`);
             if(section) section.scrollIntoView({behavior: 'smooth'});
-          });
-        });
-      }
-
-      function wireTrendHover(){
-        const wrap = $('.fs-mini-chart');
-        if(!wrap) return;
-        const bars = wrap.querySelectorAll('.fs-bar');
-        bars.forEach(bar => {
-          bar.addEventListener('mouseenter', (e) => {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fs-tooltip';
-            tooltip.textContent = `${e.target.dataset.date}: ${e.target.dataset.count} fires`;
-            document.body.appendChild(tooltip);
-            const rect = e.target.getBoundingClientRect();
-            tooltip.style.left = rect.left + 'px';
-            tooltip.style.top = (rect.top - 30) + 'px';
-          });
-          bar.addEventListener('mouseleave', () => {
-            document.querySelectorAll('.fs-tooltip').forEach(t => t.remove());
           });
         });
       }
@@ -3669,17 +3657,9 @@
         }
       }
 
-      // Function to calculate distance between two lat/lng points in meters
-      function calculateDistance(lat1, lng1, lat2, lng2) {
-        const R = 6371000; // Earth's radius in meters
-        const dLat = (lat2 - lat1) * Math.PI / 180;
-        const dLng = (lng2 - lng1) * Math.PI / 180;
-        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                  Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                  Math.sin(dLng/2) * Math.sin(dLng/2);
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-        return R * c;
-      }
+      /** Distance between two lat/lng points in meters (delegates to Leaflet's Haversine) */
+      const calculateDistance = (lat1, lng1, lat2, lng2) =>
+        L.latLng(lat1, lng1).distanceTo(L.latLng(lat2, lng2));
 
       // Function to check if a point is inside a polygon using ray casting
       function pointInPolygon(lat, lng, coords) {
@@ -3763,9 +3743,6 @@
                            (dateRangeEnd.getMonth() >= 8 || dateRangeStart.getMonth() <= 9); // Sept-Oct
         
         // Log all NB perimeters with fall dates since there should be fewer now
-        if (hasFallDate) {
-          console.log(`Perimeter ${perimeterProps.OBJECTID}: Range ${dateRangeStart.toISOString().split('T')[0]} to ${dateRangeEnd.toISOString().split('T')[0]}`);
-        }
         
         // Get perimeter geometry for proper distance calculation
         let perimeterGeometry = null;
@@ -3789,13 +3766,10 @@
         }
         
         if (!perimeterGeometry) {
-          if (hasFallDate) {
-            console.log(`  ✗ No geometry found for perimeter ${perimeterProps.OBJECTID}`);
-          }
           return false;
         }
         
-        // Calculate centroid for logging purposes only
+        // Calculate centroid
         let perimeterCenter = null;
         if (perimeterGeometry) {
           let sumLat = 0, sumLng = 0;
@@ -3807,10 +3781,6 @@
             lat: sumLat / (perimeterGeometry.length - 1),
             lng: sumLng / (perimeterGeometry.length - 1)
           };
-        }
-        
-        if (hasFallDate) {
-          console.log(`  Center: ${perimeterCenter.lat.toFixed(5)}, ${perimeterCenter.lng.toFixed(5)}`);
         }
         
         // Check each active fire
@@ -3835,41 +3805,20 @@
           );
           
           // Log close fires for all NB perimeters
-          if (distance <= 5000) {
-            if (distance === 0) {
-              console.log(`    Fire ${fireProps.FIRE_NUMBER}: INSIDE perimeter`);
-            } else {
-              console.log(`    Fire ${fireProps.FIRE_NUMBER}: ${Math.round(distance)}m from perimeter edge`);
-            }
-          }
           
           if (distance <= 2000) { // 2km buffer from perimeter edge
             nearbyFires++;
-            if (distance === 0) {
-              console.log(`  - Fire ${fireProps.FIRE_NUMBER} INSIDE perimeter, detected: ${fireDetectedDate.toISOString().split('T')[0]}`);
-            } else {
-              console.log(`  - Fire ${fireProps.FIRE_NUMBER} nearby (${Math.round(distance)}m from edge), detected: ${fireDetectedDate.toISOString().split('T')[0]}`);
-            }
-            console.log(`    Perimeter ${perimeterProps.OBJECTID} dates: ${perimeterFirstDate.toISOString().split('T')[0]} to ${perimeterLastDate.toISOString().split('T')[0]} (+/- 1 day = ${dateRangeStart.toISOString().split('T')[0]} to ${dateRangeEnd.toISOString().split('T')[0]})`);
             
             // Check if fire detection time falls within perimeter date range (+/- 1 day)
             if (fireDetectedDate >= dateRangeStart && fireDetectedDate <= dateRangeEnd) {
               dateMatches++;
               hasMatch = true;
-              console.log(`    ✓ Date match! Fire detected within perimeter range`);
-            } else {
-              console.log(`    ✗ Date outside range (${fireDetectedDate.toISOString().split('T')[0]} not in ${dateRangeStart.toISOString().split('T')[0]} - ${dateRangeEnd.toISOString().split('T')[0]})`);
             }
           }
         }
         
-        if (nearbyFires > 0) {
-          console.log(`  Total nearby fires: ${nearbyFires}, date matches: ${dateMatches}`);
-        }
         
         return hasMatch;
-        
-        return false;
       }
 
       // Create a custom layer group for active fire perimeters
@@ -3881,22 +3830,8 @@
         if (activeFirePerimetersLoaded) return;
         
         try {
-          console.log('Loading active fire perimeters...');
-          
           // Load active fires data first
           const activeFires = await loadActiveFiresData();
-          console.log(`Loaded ${activeFires.length} active fires for filtering`);
-          
-          // Debug: Show all active fire dates
-          console.log('Active fire detection dates:');
-          activeFires.forEach(fire => {
-            const props = fire.properties || {};
-            const timeDetected = props.TIME_DETECTED;
-            if (timeDetected) {
-              const fireDate = new Date(parseInt(timeDetected));
-              console.log(`  - Fire ${props.FIRE_NUMBER}: ${fireDate.toISOString().split('T')[0]}`);
-            }
-          });
           
           // Create a temporary layer to fetch only New Brunswick perimeters
           const tempLayer = L.esri.featureLayer({
@@ -3911,7 +3846,6 @@
               return;
             }
             
-            console.log(`Processing ${featureCollection.features.length} perimeters...`);
             let filteredCount = 0;
             
             // Filter features and add matching ones to our layer group
@@ -3919,7 +3853,6 @@
               const matchResult = hasNearbyActiveFire(feature, activeFires);
               if (matchResult) {
                 filteredCount++;
-                console.log(`✓ MATCH: Perimeter ${feature.properties.OBJECTID} will be added to map`);
                 
                 // Create a GeoJSON layer for this filtered perimeter
                 const layer = L.geoJSON(feature, {
@@ -3973,7 +3906,6 @@
               }
             });
             
-            console.log(`Filtered to ${filteredCount} active fire perimeters`);
             activeFirePerimetersLoaded = true;
             
             // Update labels if the layer is currently visible
@@ -4036,14 +3968,14 @@
         const kmh = Number(p.WindSpeed_kmh);
         const temp = p.Temperature_C !== '' && p.Temperature_C != null ? Math.round(Number(p.Temperature_C)) : null;
         const hum  = p.Humidity_Percent !== '' && p.Humidity_Percent != null ? Math.round(Number(p.Humidity_Percent)) : null;
-        const name = p.StationName || p.location_name_en || 'Weather station';
-        const when = p.observation_datetime_text_en || '';
+        const name = escHTML(p.StationName || p.location_name_en || 'Weather station');
+        const when = escHTML(p.observation_datetime_text_en || '');
         return `
-          <div style="min-width:240px">
-            <div style="font-weight:800;margin-bottom:4px">${name}</div>
+          <div class="station-popup">
+            <div class="station-name">${name}</div>
             <div><b>Wind:</b> ${Number.isFinite(kmh) ? kmh : '—'} km/h • From ${degToCompass(fromDeg)}${Number.isFinite(fromDeg) ? ' ('+Math.round(fromDeg)+'°)' : ''}</div>
             <div><b>Temp:</b> ${temp != null ? temp + '°C' : '—'}${hum != null ? ' • ' + hum + '%' : ''}</div>
-            ${when ? `<div style="opacity:.8">${when}</div>` : ''}
+            ${when ? `<div class="obs-time">${when}</div>` : ''}
           </div>`;
       }
       function stationSVG(p, size=84){
@@ -4138,6 +4070,11 @@
 
           smokePause();
         }
+        // Stop webcam refresh timer when layer is removed
+        if(e.layer===webcamsLayer && window._webcamRefreshTimer) {
+          clearInterval(window._webcamRefreshTimer);
+          window._webcamRefreshTimer = null;
+        }
       });
 
         /* ===================== CWFIS (Fire Risk / Weather / Behavior) ===================== */
@@ -4189,18 +4126,15 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
   });
 
       // ---- NOAA Smoke timeline ----------------------------------------------
-      // NOAA smoke service supports WMS capabilities via WMSServer endpoint
-      const smokeWmsUrl = 'https://mapservices.weather.noaa.gov/raster/services/air_quality/ndgd_smoke_sfc_1hr_avg_time/ImageServer/WMSServer';
-      const smokeLayer = L.tileLayer.wms(smokeWmsUrl, {
-        layers: 'ndgd_smoke_sfc_1hr_avg_time:smoke_don_0921:massden@htgl',
-        format: 'image/png',
-        transparent: true,
+      // ESRI ImageServer layer with smoke_don_0921 rendering rule
+      const smokeLayer = L.esri.imageMapLayer({
+        url: NOAA_SMOKE_URL,
+        renderingRule: { rasterFunction: 'smoke_don_0921' },
         opacity: CONFIG.OPACITY.SMOKE,
         pane: 'smokePane',
         attribution: 'NOAA',
-        version: '1.3.0',
-        crs: L.CRS.EPSG3857
-      }); // Removed .addTo(map) - smoke layer is now off by default
+        format: 'png32'
+      }); // Off by default — added via layer control
 
       const smokeControls   = $('#smokeControls');
       const smokePlayBtn    = $('#smokePlay');
@@ -4227,27 +4161,13 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
       };
 
       function smokeSetIndex(i){
-        if (!smokeTimesMs.length) {
-          console.warn('No smoke times available');
-          return;
-        }
+        if (!smokeTimesMs.length) return;
         smokeIdx = Math.max(0, Math.min(smokeTimesMs.length - 1, i));
         const t = smokeTimesMs[smokeIdx];
-        const dt = new Date(t);
-        const timeParam = dt.toISOString().split('.')[0]; // Remove milliseconds
-
-        
-        // Set the time parameter for the WMS layer (NOAA uses StdTime)
-        smokeLayer.setParams({ 
-          StdTime: timeParam,
-          _: Date.now() // Cache busting parameter
-        });
-        
+        // ESRI ImageServer time filter — bracket the exact hour
+        smokeLayer.setTimeRange(new Date(t), new Date(t));
         smokeSlider.value = String(smokeIdx);
         smokeTsLabel.textContent = smokeFmt(t);
-        
-        // Force a refresh
-        smokeLayer.redraw();
       }
       function smokePlay(){
         if (smokeTimer || !smokeTimesMs.length) return;
@@ -4262,129 +4182,60 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
 
       
 async function initSmokeTimes(){
-  const setLabel = (txt)=> smokeTsLabel.textContent = txt;
-  try{
+  const setLabel = (txt) => smokeTsLabel.textContent = txt;
+  try {
     setLabel('Loading…');
+
+    // Query the ESRI ImageServer REST endpoint for time info
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), 10_000);
+    const res = await fetch(`${NOAA_SMOKE_URL}?f=json`, { signal: ac.signal });
+    clearTimeout(timer);
+    if (!res.ok) throw new Error(`ImageServer responded ${res.status}`);
+    const meta = await res.json();
+
     let times = [];
-    
-
-    
-    try {
-      // Fetch WMS capabilities to get actual available times
-      const capabilitiesUrl = `${NOAA_SMOKE_WMS_BASE_URL}?request=GetCapabilities&service=WMS`;
-      const response = await fetch(capabilitiesUrl);
-      const xmlText = await response.text();
-      
-      // Parse the XML to extract time dimension values
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-      
-      // Find the Dimension element with name="StdTime"
-      const timeDimensions = xmlDoc.querySelectorAll('Dimension[name="StdTime"]');
-      
-      if (timeDimensions.length > 0) {
-        const timeValues = timeDimensions[0].textContent.trim();
-        // Split by comma and parse each time
-        times = timeValues.split(',').map(timeStr => {
-          return new Date(timeStr.trim()).getTime();
-        }).filter(time => !isNaN(time)).sort((a, b) => a - b);
-        
-
-      } else {
-        throw new Error('No StdTime dimension found in capabilities');
-      }
-    } catch (capError) {
-      console.warn('Failed to fetch WMS capabilities, falling back to known time range:', capError.message);
-      
-      // Fallback: Use known NOAA service time range 
-
-      
-      // Create times based on known service range but limit to recent times
-      const serviceStart = new Date('2025-07-22T03:00:00Z');
-      const serviceEnd = new Date('2025-09-27T06:00:00Z');
-      const currentTime = new Date();
-      
-      // Find a reasonable recent time range within the service bounds
-      let startTime = new Date(Math.max(
-        serviceStart.getTime(),
-        currentTime.getTime() - (48 * 3600000) // 48 hours ago
-      ));
-      let endTime = new Date(Math.min(
-        serviceEnd.getTime(),
-        currentTime.getTime() + (48 * 3600000) // 48 hours ahead
-      ));
-      
-      // Round start time to nearest hour
-      startTime = new Date(startTime.getFullYear(), startTime.getMonth(), startTime.getDate(), startTime.getHours(), 0, 0, 0);
-      
-      // Generate hourly timestamps
-      for (let time = new Date(startTime); time <= endTime; time.setHours(time.getHours() + 1)) {
-        times.push(time.getTime());
-      }
-      
-
+    const ti = meta.timeInfo;
+    if (ti && ti.timeExtent && ti.timeExtent.length === 2) {
+      const [startMs, endMs] = ti.timeExtent;
+      // Service provides 1-hour intervals; generate hourly steps
+      for (let t = startMs; t <= endMs; t += 3_600_000) times.push(t);
     }
 
-    if(!times.length){ setLabel('No time frames available'); return; }
+    // Fallback: 48 hourly slots centred on now
+    if (!times.length) {
+      const now = Date.now();
+      const base = now - (now % 3_600_000) - 24 * 3_600_000;
+      for (let i = 0; i < 48; i++) times.push(base + i * 3_600_000);
+    }
 
-    // Use available times
     smokeTimesMs = times;
     smokeSlider.max = String(times.length - 1);
-    
-    // Find the closest time to current hour or use most recent
-    const currentTime = new Date();
-    let closestIdx = 0;
-    let minDiff = Math.abs(times[0] - currentTime.getTime());
-    
-    for (let i = 1; i < times.length; i++) {
-      const diff = Math.abs(times[i] - currentTime.getTime());
-      if (diff < minDiff) {
-        minDiff = diff;
-        closestIdx = i;
-      }
-    }
-    
-    // Start with the closest time to current, but prefer recent past over future
-    smokeIdx = closestIdx;
+    smokeIdx = nearestIndex(times, Date.now());
     smokeSlider.value = String(smokeIdx);
 
-
-    
-    // If layer is already active, set the time immediately
     if (map.hasLayer(smokeLayer)) {
       smokeSetIndex(smokeIdx);
       if (smokePendingAutoplay || smokeShouldAutoplayNextOn) {
-        smokePlay(); 
-        smokePendingAutoplay = false; 
+        smokePlay();
+        smokePendingAutoplay = false;
         smokeShouldAutoplayNextOn = false;
       }
     } else {
-      // Just update the label for inactive layer
       setLabel(smokeFmt(times[smokeIdx]));
     }
-  } catch (e){
-    console.error('Smoke timeline load failed:', e);
-    smokeTsLabel.textContent = 'Error loading smoke timeline - using fallback';
-    
-    // Emergency fallback if everything else fails
-    if (!smokeTimesMs.length) {
-      console.warn('Emergency fallback: creating basic time slots');
-      const now = new Date();
-      const currentHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), 0, 0, 0);
-      const startTime = new Date(currentHour.getTime() - (24 * 3600000));
-      
-      const emergencyTimes = [];
-      for (let i = 0; i < 48; i++) {
-        const time = new Date(startTime.getTime() + (i * 3600000));
-        emergencyTimes.push(time.getTime());
-      }
-      
-      smokeTimesMs = emergencyTimes;
-      smokeSlider.max = String(emergencyTimes.length - 1);
-      smokeIdx = Math.floor(emergencyTimes.length / 2); // Start in middle
-      smokeSlider.value = String(smokeIdx);
-      smokeTsLabel.textContent = smokeFmt(emergencyTimes[smokeIdx]);
-    }
+  } catch (e) {
+    console.error('Smoke timeline init failed:', e);
+    // Emergency fallback — 48 hourly slots centred on now
+    const now = Date.now();
+    const base = now - (now % 3_600_000) - 24 * 3_600_000;
+    const fallback = [];
+    for (let i = 0; i < 48; i++) fallback.push(base + i * 3_600_000);
+    smokeTimesMs = fallback;
+    smokeSlider.max = String(fallback.length - 1);
+    smokeIdx = nearestIndex(fallback, now);
+    smokeSlider.value = String(smokeIdx);
+    setLabel(smokeFmt(fallback[smokeIdx]));
   }
 }
 initSmokeTimes();
@@ -4395,36 +4246,39 @@ initSmokeTimes();
       const getSafeBottom = () => (safeProbe?.offsetHeight || 0);
       const BASE_GAP = 10, LEGEND_SMOKE_GAP = 16, FOOTER_SMOKE_GAP = 10;
 
+      /** @type {HTMLElement|null} Cached legend DOM reference */
+      let _legendEl = null;
+      const getLegendEl = () => _legendEl || (_legendEl = D.querySelector('.leaflet-control-layers'));
+
       function sizeLegendWidth(){
-        const legend = D.querySelector('.leaflet-control-layers');
+        const legend = getLegendEl();
         if (!legend) return;
-        const vvW = (window.visualViewport && window.visualViewport.width) || window.innerWidth || D.documentElement.clientWidth || 0;
+        const vvW = (window.visualViewport?.width) || window.innerWidth || D.documentElement.clientWidth || 0;
         const cap = Math.max(240, Math.floor(vvW - 24));
+        // Batch DOM writes – set fit-content first, read scrollWidth once, then finalize
         legend.style.maxWidth = cap + 'px';
         legend.style.width = 'fit-content';
-        const desired = Math.min(legend.scrollWidth, cap);
+        const sw = legend.scrollWidth;
+        const desired = Math.min(sw, cap);
         legend.style.width = desired + 'px';
-        legend.style.overflowX = (legend.scrollWidth > desired) ? 'auto' : 'hidden';
+        legend.style.overflowX = (sw > desired) ? 'auto' : 'hidden';
         return desired;
       }
 
       function sizeLegendHeight(){
-        const legend = D.querySelector('.leaflet-control-layers');
+        const legend = getLegendEl();
         if (!legend) return;
 
         const vvH = (window.visualViewport && window.visualViewport.height) || window.innerHeight || D.documentElement.clientHeight || 0;
         const rect = legend.getBoundingClientRect();
         const topY = Math.max(0, rect.top);
 
-        const footer = $('.nb-footer');
-        const footerH = footer?.getBoundingClientRect().height || 0;
-
         // OPTIONAL #4: treat smoke as "external" only if not inline
         const smokeVisible = (getComputedStyle(smokeControls).display !== 'none') && !smokeControls.classList.contains('inline');
         const smokeH = smokeVisible ? (smokeControls.getBoundingClientRect().height || 0) : 0;
 
         const safeB = getSafeBottom();
-        const reserve = footerH + (smokeVisible ? (smokeH + LEGEND_SMOKE_GAP) : 0) + (BASE_GAP * 2) + safeB + 8;
+        const reserve = (smokeVisible ? (smokeH + LEGEND_SMOKE_GAP) : 0) + (BASE_GAP * 2) + safeB + 8;
         const maxH = Math.max(120, Math.floor(vvH - topY - reserve));
 
         legend.style.maxHeight = maxH + 'px';
@@ -4438,7 +4292,6 @@ initSmokeTimes();
       function onGlobalReflow(){
         requestAnimationFrame(() => {
           sizeLegend();
-          layoutTitleBox();
           const t = smokeTimesMs[smokeIdx];
           if (smokeTimesMs.length && t != null) smokeTsLabel.textContent = smokeFmt(t);
         });
@@ -4452,26 +4305,23 @@ initSmokeTimes();
           root.style.setProperty('--legend-bottom-reserve', '180px');
           sizeLegend(); return;
         }
-        const footer = $('.nb-footer');
-        const footerH = footer?.getBoundingClientRect().height || 0;
 
         // OPTIONAL #4: ignore inline smoke when reserving bottom
         const smokeVisible = (getComputedStyle(smokeControls).display !== 'none') && !smokeControls.classList.contains('inline');
         const smokeH = smokeVisible ? (smokeControls.getBoundingClientRect().height || 0) : 0;
         const safeB = getSafeBottom();
 
-        const smokeBottom = footerH + FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP;
+        const smokeBottom = FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP;
         root.style.setProperty('--smoke-bottom', smokeBottom + 'px');
-        root.style.setProperty('--fs-bottom', (footerH + FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP) + 'px');
+        root.style.setProperty('--fs-bottom', (FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP) + 'px');
 
-        const reserve = footerH + (smokeVisible ? (smokeH + LEGEND_SMOKE_GAP) : 0) + (BASE_GAP * 2) + safeB + 8;
+        const reserve = (smokeVisible ? (smokeH + LEGEND_SMOKE_GAP) : 0) + (BASE_GAP * 2) + safeB + 8;
         root.style.setProperty('--legend-bottom-reserve', Math.max(140, Math.round(reserve)) + 'px');
 
         sizeLegend();
       };
 
       updateBottomStackAndLegend();
-      layoutTitleBox();
 
       window.addEventListener('resize', onGlobalReflow, { passive:true });
       window.addEventListener('orientationchange', () => rAF(onGlobalReflow), { passive:true });
@@ -4487,7 +4337,6 @@ initSmokeTimes();
 
       const ro = ('ResizeObserver' in window) ? new ResizeObserver(() => rAF(onGlobalReflow)) : null;
       ro?.observe(smokeControls);
-      const footerEl = $('.nb-footer'); footerEl && ro?.observe(footerEl);
 
       // AQHI
       const aqhiLayer = L.esri.featureLayer({
@@ -4856,7 +4705,7 @@ async function loadWebcams(){
 
   if (_webcamsLoaded) return;
   try {
-    const r = await fetch('511/webcams.json',{cache:'no-store'});
+    const r = await fetch('511/webcams.json');
     const cams = await r.json();
     
     (cams||[]).forEach(cam => {
@@ -4901,7 +4750,7 @@ async function loadEvents(){
   }
   
   try {
-    const r = await fetch('511/events.json',{cache:'no-store'});
+    const r = await fetch('511/events.json');
     const data = await r.json();
 
     function addPoint(e){
@@ -4919,12 +4768,9 @@ async function loadEvents(){
       marker.options._eventData = e;
       marker._eventCategory = category;
       
-      console.log(`Adding marker for event: ${e.EventType}/${e.EventSubType} -> category: ${category}`);
-      
       // Add to category tracking
       if (window._eventMarkersByCategory && window._eventMarkersByCategory[category]) {
         window._eventMarkersByCategory[category].push(marker);
-        console.log(`Stored marker in ${category} category, now has ${window._eventMarkersByCategory[category].length} markers`);
       } else {
         console.warn(`Could not store marker - category ${category} not found in storage`, Object.keys(window._eventMarkersByCategory || {}));
       }
@@ -5165,7 +5011,6 @@ function addEncodedLine(encoded, event){
     // Apply initial filtering based on legend toggle states if filtering function exists
     setTimeout(() => {
       if (window.filterMarkersAndLinesByCategory) {
-        console.log('Applying initial event filtering...');
         window.filterMarkersAndLinesByCategory();
       }
     }, 500); // Wait for legend to be mounted
@@ -5177,7 +5022,7 @@ async function loadWinterRoads(){
 
   if (_winterLoaded) return;
   try{
-    const r = await fetch('511/winterroads.json',{cache:'no-store'});
+    const r = await fetch('511/winterroads.json');
     const rows = await r.json();
     const list = Array.isArray(rows?.features) ? rows.features.map(f => f.properties||f) :
                  Array.isArray(rows) ? rows : [];
@@ -5315,11 +5160,14 @@ if (typeof map !== 'undefined' && map && map.on){
           
           overlaysList.appendChild(container);
           
-          // Add collapse/expand functionality - all groups collapsed by default
-          let collapsed = true;
-          container.style.display = 'none';
-          collapseBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
-          collapseBtn.title = 'Expand group';
+          // First group ("Fire & Emergency") starts expanded; others collapsed
+          let collapsed = groupIndex !== 0;
+          if (collapsed) {
+            container.style.display = 'none';
+            collapseBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+            collapseBtn.title = 'Expand group';
+          }
+          collapseBtn.setAttribute('aria-expanded', String(!collapsed));
           
           collapseBtn.addEventListener('click', () => {
             collapsed = !collapsed;
@@ -5330,6 +5178,7 @@ if (typeof map !== 'undefined' && map && map.on){
             collapseBtn.title = collapsed ? 
               'Expand group' : 
               'Collapse group';
+            collapseBtn.setAttribute('aria-expanded', String(!collapsed));
             requestAnimationFrame(sizeLegend);
           });
         });
@@ -5363,7 +5212,7 @@ if (typeof map !== 'undefined' && map && map.on){
           </div>
           <div class="fire-filter-content">
             ${FIRE_STATUS.map(([label, ring, checked]) => `
-              <label class="fire-filter-row" style="display:grid;grid-template-columns:18px 26px 1fr;align-items:center;gap:8px;margin:4px 0;">
+              <label class="fire-filter-row">
                 <input type="checkbox" data-status="${label}" ${checked ? 'checked' : ''} />
                 <span class="legend-badge" style="--ring:${ring}">
                   <i class="fa-solid fa-fire"></i>
@@ -5406,16 +5255,26 @@ if (typeof map !== 'undefined' && map && map.on){
         
         // Collapse/expand functionality
         let collapsed = false;
+        collapseBtn.setAttribute('aria-expanded', 'true');
         
         collapseBtn.addEventListener('click', () => {
           collapsed = !collapsed;
-          content.style.display = collapsed ? 'none' : 'block';
+          if (collapsed) {
+            content.style.maxHeight = '0';
+            content.style.overflow = 'hidden';
+          } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.overflow = '';
+            // After transition, let height be natural
+            setTimeout(() => { if (!collapsed) content.style.maxHeight = ''; }, 220);
+          }
           collapseBtn.innerHTML = collapsed ? 
             '<i class="fa-solid fa-chevron-down"></i>' : 
             '<i class="fa-solid fa-chevron-up"></i>';
           collapseBtn.title = collapsed ? 
             'Expand group' : 
             'Collapse group';
+          collapseBtn.setAttribute('aria-expanded', String(!collapsed));
           requestAnimationFrame(sizeLegend);
         });
         
@@ -5530,18 +5389,7 @@ if (typeof map !== 'undefined' && map && map.on){
       }
       loadSumsBenchmarks();
 
-            // --- field getters aligned to your GeoJSONs ---
-      // active & out files both carry TIME_DETECTED
-      function getDetectedMss(props){
-        const v = props?.TIME_DETECTED;
-        return Number.isFinite(v) ? Number(v) : (v!=null ? Number(v) : null);
-      }
-      // out fires carry FIRE_STAT_DATE when FIRE_STAT_DESC_E === 'Out'
-      function getExtinguishedMss(props){
-        if (props?.FIRE_STAT_DESC_E !== 'Out') return null;
-        const v = props?.FIRE_STAT_DATE;
-        return Number.isFinite(v) ? Number(v) : (v!=null ? Number(v) : null);
-      }
+
 
 
       
@@ -5563,8 +5411,8 @@ if (typeof map !== 'undefined' && map && map.on){
           function computeWeeklyTrend(){
         // Combine: detections from active + out; extinctions from out only
         const all = Array.from(fireStoreMap.values());
-        const dets = all.map(it=>getDetectedMss(it.props||{})).filter(v=>v!=null);
-        const outs = all.map(it=>getExtinguishedMss(it.props||{})).filter(v=>v!=null);
+        const dets = all.map(it=>getDetectedMs(it.props||{})).filter(v=>v!=null);
+        const outs = all.map(it=>getExtinguishedMs(it.props||{})).filter(v=>v!=null);
         if (!dets.length && !outs.length) return {weeks:[], newBy:[], outBy:[], actBy:[]};
         const minMs = Math.min(...dets, ...(outs.length ? [Math.min(...outs)] : [Infinity]));
         const maxMs = Math.max(Date.now(),
@@ -6033,8 +5881,6 @@ if (typeof map !== 'undefined' && map && map.on){
           // Toggle the global mode
           fireCauseToggleMode = fireCauseToggleMode === 'area' ? 'count' : 'area';
           toggle.dataset.mode = fireCauseToggleMode;
-          
-          console.log('Toggle clicked, new mode:', fireCauseToggleMode);
           
           if (fireCauseToggleMode === 'count') {
             // Count mode - move slider to right
@@ -6655,8 +6501,8 @@ doc.autoTable({
         const hidden = D.body.classList.contains('map-ui-hidden');
         const label = hidden ? 'Show layers' : 'Hide layers';
         mapToggleBtn.setAttribute('aria-pressed', String(!hidden));
+        mapToggleBtn.setAttribute('aria-expanded', String(!hidden));
         mapToggleBtn.title = label;
-        layoutTitleBox();
       };
       D.body.classList.add('map-ui-hidden');
       updateOverviewButton();
@@ -6665,7 +6511,6 @@ doc.autoTable({
       $('#resetViewBtn').addEventListener('click', () => { localStorage.removeItem(LS_KEY); fitProvinceToView({ animate:true }); });
 
       function hideOverviewPanel(){
-        UIPanelManager.hideOverviewPanel();
         if (!D.body.classList.contains('map-ui-hidden')){
           D.body.classList.add('map-ui-hidden'); updateOverviewButton(); requestAnimationFrame(sizeLegend);
         }
@@ -6946,20 +6791,13 @@ doc.autoTable({
               const eventsLegend = document.getElementById('eventsLegend');
               if (eventsLegend && !window._eventsLegendDelegationSetup) {
                 eventsLegend.addEventListener('change', (e) => {
-                  console.log('Checkbox changed in events legend:', e.target.id, 'type:', e.target.type, 'checked:', e.target.checked);
                   if (e.target.type === 'checkbox' && e.target.id.endsWith('Toggle')) {
-                    console.log(`PROCESSING Toggle changed: ${e.target.id}, checked:`, e.target.checked);
-                    console.log('Current storage state:', Object.keys(window._eventMarkersByCategory || {}));
                     setTimeout(() => {
-                      console.log('About to call filterMarkersAndLinesByCategory');
                       filterMarkersAndLinesByCategory();
                     }, 10);
-                  } else {
-                    console.log('IGNORING checkbox change - does not end with Toggle or not a checkbox');
                   }
                 });
                 window._eventsLegendDelegationSetup = true;
-                console.log('Event delegation setup for events legend');
               }
             }, 100);
             
@@ -6970,8 +6808,6 @@ doc.autoTable({
                 return;
               }
               
-              console.log('Filtering markers and lines by category...');
-              
               // Clear all markers and lines
               eventsPointLayer.clearLayers();
               eventsLineLayer.clearLayers();
@@ -6981,10 +6817,8 @@ doc.autoTable({
               Object.keys(window._eventMarkersByCategory).forEach(category => {
                 const toggle = document.getElementById(category + 'Toggle');
                 const shouldShow = toggle?.checked === true;
-                console.log(`Category: ${category}, toggle found:`, !!toggle, 'checked:', toggle?.checked, 'shouldShow:', shouldShow);
                 
                 if (shouldShow && window._eventMarkersByCategory[category]) {
-                  console.log(`Adding ${category}: ${window._eventMarkersByCategory[category].length} markers, ${window._eventLinesByCategory[category]?.length || 0} lines`);
                   
                   // Add markers
                   let addedMarkers = 0;
@@ -6994,7 +6828,6 @@ doc.autoTable({
                       addedMarkers++;
                     }
                   });
-                  console.log(`Actually added ${addedMarkers} markers for ${category}`);
                   
                   // Add lines
                   let addedLines = 0;
@@ -7011,9 +6844,7 @@ doc.autoTable({
                       }
                     });
                   }
-                  console.log(`Actually added ${addedLines} lines for ${category}`);
                 } else if (shouldShow) {
-                  console.log(`Category ${category} shouldShow but no markers in storage`);
                 }
               });
               
@@ -7085,11 +6916,6 @@ if (window.visualViewport){
   // Initialize slider ranges
   [riskTime, fwiTime, fbpTime].forEach(sl => { sl.min = 0; sl.max = String(dates.length - 1); sl.value = String(CWFIS_PAST); });
 
-  function findOverlayLabelRow(name){
-    const rows = document.querySelectorAll('.leaflet-control-layers-overlays label');
-    for (const row of rows){ const t=row.querySelector('.text')||row; if (t && t.textContent.trim()===name) return row; }
-    return null;
-  }
   function mountControlsInline(layerName, el){
     const row = findOverlayLabelRow(layerName);
     if (!row || !el) return;
@@ -7213,6 +7039,6 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
   ro?.observe(riskControls); ro?.observe(fwiControls); ro?.observe(fbpControls);
 
       // Final sizing after legend mount
-      requestAnimationFrame(() => { sizeLegend(); layoutTitleBox(); });
+      requestAnimationFrame(() => { sizeLegend(); });
 
 });
