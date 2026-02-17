@@ -1,101 +1,127 @@
+/**
+ * NB Fire Map - Stylesheet
+ * 
+ * CSS Custom Properties (variables) define all colors, fonts, and spacing.
+ * Organized by component/feature for maintainability.
+ * 
+ * SECTIONS:
+ *   1. CSS Variables (design tokens)
+ *   2. Base Styles (html, body, reset)
+ *   3. Leaflet Overrides (map controls)
+ *   4. Legend Panel Styles
+ *   5. Fire Status & Badge Styles
+ *   6. Bottom Action Panel
+ *   7. Modal & Popup Styles
+ *   8. Charts & Visualizations
+ *   9. Responsive Breakpoints
+ */
+
+/* =============================================================================
+   SECTION 1: CSS VARIABLES (Design Tokens)
+   ============================================================================= */
 :root{
-      color-scheme: light;
-      --bg:#f7f8fc; --text:#0f172a; --muted:#5b6474;
-      --panel:rgba(255,255,255,.85); --panel-strong:#fff; --border:#e6eaf1;
-      --radius:14px; --radius-sm:10px;
-      --shadow:0 10px 30px rgba(2,8,20,.08); --shadow-soft:0 6px 16px rgba(2,8,20,.06);
-      --btn-bg:#fff; --btn-border:#d9dee6; --btn-hover:#f2f4f7;
-      --link:#2563eb; --focus:0 0 0 3px rgba(37,99,235,.28);
+  color-scheme: light;
+  
+  /* Base palette */
+  --bg:#f7f8fc; --text:#0f172a; --muted:#5b6474;
+  --panel:rgba(255,255,255,.85); --panel-strong:#fff; --border:#e6eaf1;
+  --radius:14px; --radius-sm:10px;
+  --shadow:0 10px 30px rgba(2,8,20,.08); --shadow-soft:0 6px 16px rgba(2,8,20,.06);
+  --btn-bg:#fff; --btn-border:#d9dee6; --btn-hover:#f2f4f7;
+  --link:#2563eb; --focus:0 0 0 3px rgba(37,99,235,.28);
 
-      /* Fire status colors */
-      --oc:#ef4444;   /* Out of control */
-      --mon:#9D00FF;  /* Being monitored */
-      --cont:#FFA500; /* Contained */
-      --uc:#facc15;   /* Under control */
-      --pat:#22c55e;  /* Being patrolled */
+  /* Fire status colors */
+  --oc:#ef4444;   /* Out of control */
+  --mon:#9D00FF;  /* Being monitored */
+  --cont:#FFA500; /* Contained */
+  --uc:#facc15;   /* Under control */
+  --pat:#22c55e;  /* Being patrolled */
 
-      /* Other colors */
-      --modis:#f59e0b; --perimeter:#ef4444; --boundary:#0b0f19;
+  /* Layer colors */
+  --modis:#f59e0b; --perimeter:#ef4444; --boundary:#0b0f19;
 
-      /* Fonts */
-      --fs-12:12px; --fs-14:14px; --fs-16:16px; --fs-18:18px;
+  /* Typography scale */
+  --fs-12:12px; --fs-14:14px; --fs-16:16px; --fs-18:18px;
 
-      /* Mobile fallbacks */
-      --fs-bottom: 86px;
-      --smoke-bottom: 28px;
-      --legend-bottom-reserve: 180px;
+  /* Layout (updated by JS for responsive) */
+  --fs-bottom: 86px;
+  --smoke-bottom: 28px;
+  --legend-bottom-reserve: 180px;
+  --left-guard: 12px;
+  --right-guard: 12px;
+}
 
-      /* Title guards updated by JS */
-      --left-guard: 12px;
-      --right-guard: 12px;
-    }
+/* =============================================================================
+   SECTION 2: BASE STYLES
+   ============================================================================= */
+html,body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}
+#map{height:100%}
+body{
+  background:var(--bg);color:var(--text);
+  font:var(--fs-14)/1.45 'Open Sans',system-ui,-apple-system,sans-serif;letter-spacing:.1px;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale
+}
 
-    html,body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}
-    #map{height:100%}
-    body{
-      background:var(--bg);color:var(--text);
-      font:var(--fs-14)/1.45 'Open Sans',system-ui,-apple-system,sans-serif;letter-spacing:.1px;
-      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale
-    }
+/* =============================================================================
+   SECTION 3: LEAFLET CHROME OVERRIDES
+   ============================================================================= */
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--panel);border:1px solid var(--border);color:var(--text);box-shadow:var(--shadow-soft)}
+.leaflet-bar a{width:34px;height:34px;line-height:34px;font-size:16px}
+.leaflet-control-attribution{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-soft);padding:4px 8px}
+.leaflet-top.leaflet-left{top:80px!important}
+.leaflet-top.leaflet-right{top:80px!important}
 
-    /* Leaflet chrome */
-    .leaflet-bar a,.leaflet-bar a:hover{background:var(--panel);border:1px solid var(--border);color:var(--text);box-shadow:var(--shadow-soft)}
-    .leaflet-bar a{width:34px;height:34px;line-height:34px;font-size:16px}
-    .leaflet-control-attribution{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow-soft);padding:4px 8px}
-    .leaflet-top.leaflet-left{top:80px!important}
-    .leaflet-top.leaflet-right{top:80px!important}
+/* =============================================================================
+   SECTION 4: LEGEND PANEL (Layer Controls)
+   ============================================================================= */
+.leaflet-control-layers{
+  background:rgba(255, 255, 255, 0.3);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+  font-family:'Open Sans', system-ui, -apple-system, sans-serif;font-size:var(--fs-14);padding:8px 40px 8px 14px;backdrop-filter:blur(16px);min-width:260px;
+  width:fit-content;max-width:calc(100vw - 24px);white-space:nowrap;overflow-x:auto;
+}
 
-    /* Overview (legend) */
-    .leaflet-control-layers{
-      background:rgba(255, 255, 255, 0.3);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
-      font-family:'Open Sans', system-ui, -apple-system, sans-serif;font-size:var(--fs-14);padding:8px 40px 8px 14px;backdrop-filter:blur(16px);min-width:260px;
-      width:fit-content;max-width:calc(100vw - 24px);white-space:nowrap;overflow-x:auto;
-    }
-    
-    /* Ensure legend draws over bottom panel when visible */
-    body:not(.map-ui-hidden) .leaflet-control-layers,
-    .leaflet-control-layers-expanded {
-      z-index: 3000 !important;
-    }
-    
-    /* Also set z-index on the parent leaflet control container */
-    body:not(.map-ui-hidden) .leaflet-top.leaflet-right,
-    body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
-      z-index: 3000 !important;
-    }
-    .leaflet-control-layers-expanded,.leaflet-control-layers-list{max-height:none;overflow:visible}
-    .leaflet-control-layers-overlays label{display:grid;grid-template-columns:18px 26px auto;align-items:center;column-gap:8px;min-width:0;line-height:1.25}
-    .leaflet-control-layers-overlays input{margin:0;width:max-content;height:18px}
-    .leaflet-control-layers-overlays .text{min-width:max-content;white-space:nowrap;overflow:visible;text-overflow:clip}
+/* Legend z-index management */
+body:not(.map-ui-hidden) .leaflet-control-layers,
+.leaflet-control-layers-expanded {
+  z-index: 3000 !important;
+}
+body:not(.map-ui-hidden) .leaflet-top.leaflet-right,
+body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
+  z-index: 3000 !important;
+}
+.leaflet-control-layers-expanded,.leaflet-control-layers-list{max-height:none;overflow:visible}
+.leaflet-control-layers-overlays label{display:grid;grid-template-columns:18px 26px auto;align-items:center;column-gap:8px;min-width:0;line-height:1.25}
+.leaflet-control-layers-overlays input{margin:0;width:max-content;height:18px}
+.leaflet-control-layers-overlays .text{min-width:max-content;white-space:nowrap;overflow:visible;text-overflow:clip}
 
-    /* Mobile legend */
-    @media (max-width: 640px){
-      .leaflet-control-layers{
-        width:fit-content;max-width:calc(100vw - 24px);min-width:0!important;white-space:nowrap;overflow-x:auto;
-        max-height:calc(100dvh - var(--legend-bottom-reserve, 180px));overflow-y:auto;-webkit-overflow-scrolling:touch;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        right: auto !important;
-      }
-      .leaflet-control-layers-overlays label{grid-template-columns:18px 26px auto}
-      .leaflet-control-layers-overlays .text{white-space:nowrap;min-width:max-content}
-    }
-    @media (max-width:767.98px){.leaflet-control-layers{font-size:var(--fs-12)}}
+/* Mobile legend adjustments */
+@media (max-width: 640px){
+  .leaflet-control-layers{
+    width:fit-content;max-width:calc(100vw - 24px);min-width:0!important;white-space:nowrap;overflow-x:auto;
+    max-height:calc(100dvh - var(--legend-bottom-reserve, 180px));overflow-y:auto;-webkit-overflow-scrolling:touch;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+  }
+  .leaflet-control-layers-overlays label{grid-template-columns:18px 26px auto}
+  .leaflet-control-layers-overlays .text{white-space:nowrap;min-width:max-content}
+}
+@media (max-width:767.98px){.leaflet-control-layers{font-size:var(--fs-12)}}
 
-    /* Sticky bars inside legend */
-    .overview-topbar{
-      position:sticky;top:0;background:var(--panel);
-      margin:-8px -40px 8px -14px;padding:8px 14px 10px;border-bottom:1px solid var(--border);z-index:1;backdrop-filter:blur(6px)
-    }
-    
-/* Basemap toggle */
+/* Sticky header bar in legend */
+.overview-topbar{
+  position:sticky;top:0;background:var(--panel);
+  margin:-8px -40px 8px -14px;padding:8px 14px 10px;border-bottom:1px solid var(--border);z-index:1;backdrop-filter:blur(6px)
+}
+
+/* Basemap toggle segment control */
 .basemap-toggle {
-   display: flex;
-   align-items: center;
-   justify-content: center; /* center horizontally */
-   margin: 12px auto 8px auto; /* center block & add bottom spacing */
-   width: fit-content;      /* shrink to content */
- }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto 8px auto;
+  width: fit-content;
+}
 .basemap-seg{display:inline-flex;gap:10px;margin:0;padding:4px 8px;border:1px solid var(--border);border-radius:999px}
 .basemap-seg label{display:inline-flex;align-items:center;gap:6px;font-weight:700}
 .basemap-seg input{accent-color:var(--accent,#0078ff)}
@@ -242,7 +268,17 @@
     }
     
     .fire-filter-content {
-      transition: all 0.2s ease;
+      overflow: hidden;
+      transition: max-height 0.2s ease;
+    }
+
+    /* Fire filter row layout (injected from JS) */
+    .fire-filter-row {
+      display: grid;
+      grid-template-columns: 18px 26px 1fr;
+      align-items: center;
+      gap: 8px;
+      margin: 4px 0;
     }\n\n    /* Summary button (now in bottom panel) */\n    .fire-summary-btn.in-legend{position:static!important;left:auto;bottom:auto;width:100%;margin:0;justify-content:center;box-shadow:var(--shadow-soft);border-radius:var(--radius-sm)}
 
     /* Help button */
@@ -276,7 +312,8 @@
     /* User location marker - using default Leaflet marker */
 
     /* Summary modal */
-    .fire-summary-overlay{position:fixed;inset:0;display:none;align-items:start;justify-content:center;z-index:3000;background:rgba(0,0,0,.25);backdrop-filter:blur(2px)}
+    /* Summary modal - skip rendering when hidden (content-visibility) */
+    .fire-summary-overlay{position:fixed;inset:0;display:none;align-items:start;justify-content:center;z-index:4000;background:rgba(0,0,0,.25);backdrop-filter:blur(2px);content-visibility:auto}
     .fire-summary{margin-top:16px;background:var(--panel-strong);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);width:min(680px,calc(100% - 24px));color:var(--text);max-height:90vh;display:flex;flex-direction:column;overflow:hidden}
     .fire-summary header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 8px;flex:0 0 auto}
     .fire-summary h2{font-size:var(--fs-18);font-weight:800;margin:0}
@@ -319,7 +356,9 @@
     .stat .v{font:800 18px/1.15 Inter,system-ui,Arial}
     @media (max-width: 520px){ .fs-meta-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
 
-    /* Legend icons */
+    /* =============================================================================
+       SECTION 5: FIRE STATUS & MARKER BADGES
+       ============================================================================= */
     .marker-badge{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--panel-strong);border:2.5px solid var(--ring,#0000FF);box-shadow:0 2px 10px rgba(0,0,0,.18)}
     .marker-badge i{font-size:14px;color:var(--ring,#0000FF)}
     .legend-icon{width:18px;height:18px;display:inline-grid;place-items:center}
@@ -369,16 +408,16 @@
       transform: scale(1.1);
     }
 
-    /* =======================
-       Bottom Action Panel
-       ======================= */
+/* =============================================================================
+   SECTION 6: BOTTOM ACTION PANEL
+   ============================================================================= */
     .bottom-panel {
       position: fixed;
-      bottom: 30px;
+      bottom: calc(30px + env(safe-area-inset-bottom));
       left: 50%;
       transform: translateX(-50%);
-      z-index: 2001;
-      background: rgba(0, 0, 0, 0.15);
+      z-index: 2500;
+      background: rgba(0, 0, 0, 0.45);
       border-radius: 25px;
       padding: 15px 25px;
       backdrop-filter: blur(20px);
@@ -403,8 +442,13 @@
     }
     
     .action-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       transform: translateY(-1px);
+    }
+    
+    .action-btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255,255,255,.5);
     }
     
     .action-btn i {
@@ -512,12 +556,13 @@
 
 
         /* Nearby fires bottom sheet */
+    /* Nearby fires bottom sheet - isolated layout */
     .nearby-panel{
       position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));
       z-index:2100; display:none; background:var(--panel);
       border:1px solid var(--border); border-radius:12px; padding:10px 12px;
       box-shadow:var(--shadow); backdrop-filter:blur(6px); max-height:40vh; overflow:auto;
-      font-size:var(--fs-14);
+      font-size:var(--fs-14); contain:layout style;
     }
     .nearby-panel[hidden]{ display:none; }
     .nearby-panel header{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px; }
@@ -528,7 +573,9 @@
     .nearby-list a{ color:var(--link); text-decoration:none; font-weight:700; }
     .nearby-list a:hover{ text-decoration:underline; }
 
-    /* Summary table + pie */
+/* =============================================================================
+   SECTION 7: SUMMARY MODAL & PIE CHARTS
+   ============================================================================= */
     .pro-table{width:100%;border-collapse:separate;border-spacing:0;margin:10px 0 4px;background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-soft)}
     .pro-table th,.pro-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
     .pro-table th:nth-child(2),.pro-table td:nth-child(2){text-align:right}
@@ -559,7 +606,7 @@
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2001;
+  z-index: 2200;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -570,6 +617,7 @@
   letter-spacing: -0.02em;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
 }
 
 .map-logo i {
@@ -620,7 +668,10 @@
   transform: translateY(0);
 }
 
-
+.control-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.5);
+}
 
 /* Push Leaflet controls to accommodate left panel */
 .leaflet-top.leaflet-left {
@@ -647,11 +698,15 @@
   
   .map-logo {
     padding: 10px 16px;
-    font-size: 32px;
+    font-size: 26px;
+    gap: 4px;
+  }
+  .map-logo i {
+    font-size: 22px;
   }
   
   .bottom-panel {
-    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
     padding: 12px 20px;
     gap: 20px;
   }
@@ -683,24 +738,78 @@
 }
 
 /* Fire popup styles */
-.fire-popup .popup-body > div:last-child {
-  white-space: nowrap !important;
+.fire-popup .popup-header {
+  font-size: 16px; font-weight: 700; color: var(--text);
+  margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border);
 }
-
-/* Prevent wrapping for status and resource lines */
-.fire-popup .popup-body > div {
-  white-space: nowrap;
+.fire-popup .popup-body { font-size: 13px; line-height: 1.4; }
+.fire-popup .popup-body > div { white-space: nowrap; }
+.fire-popup .popup-body > div:last-child { white-space: nowrap !important; }
+.fire-popup .status-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 8px; border-radius: 12px;
+  background: var(--panel); border: 1px solid var(--border);
+  font-weight: 600; font-size: 12px;
+}
+.fire-popup .detail-row { margin-bottom: 4px; }
+.fire-popup .resource-box {
+  margin-top: 4px; padding: 4px 6px;
+  background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 3px;
+}
+.fire-popup .resource-box .resource-label { font-size: 10px; line-height: 1.2; color: var(--text); }
+.fire-popup .resource-box strong { color: #856404; }
+.fire-popup .popup-footer {
+  margin-top: 8px; padding: 6px 8px; border-radius: 4px;
+  background: var(--panel); font-size: 11px; color: var(--muted);
+  text-align: center; font-style: italic;
 }
 
 /* Allow wrapping for the resource details section only */
-.fire-popup .popup-body > div[style*="background-color:#fff3cd"] {
-  white-space: normal;
+.fire-popup .popup-body .resource-box { white-space: normal; }
+
+/* Event popup styles */
+.event-popup { max-width: 90vw; overflow-wrap: break-word; }
+.event-popup .popup-header {
+  font-size: 15px; font-weight: 700; color: var(--text);
+  margin-bottom: 6px; padding-bottom: 3px; border-bottom: 1px solid var(--border);
+}
+.event-popup .popup-body { font-size: 12px; line-height: 1.3; }
+.event-popup .status-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 6px; border-radius: 10px;
+  background: var(--panel); border: 1px solid var(--border);
+  font-weight: 600; font-size: 11px;
+}
+.event-popup .info-box {
+  margin: 6px 0; padding: 6px;
+  background: #fff; border: 1px solid #e9ecef; border-radius: 4px; word-wrap: break-word;
+}
+.event-popup .restriction-box {
+  margin: 6px 0; padding: 6px;
+  background: #fefce8; border: 1px solid #fde047; border-radius: 4px; word-wrap: break-word;
+}
+.event-popup .date-box {
+  margin: 6px 0; padding: 6px;
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 4px; font-size: 11px; line-height: 1.4;
+}
+.event-popup .date-row { margin-bottom: 2px; }
+.event-popup .date-upcoming { color: #059669; }
+.event-popup .popup-footer {
+  margin-top: 6px; padding: 4px 6px; border-radius: 3px;
+  background: var(--panel); font-size: 10px; color: var(--muted);
+  text-align: center; font-style: italic;
 }
 
-/* Ensure popup has reasonable min-width on mobile */
+/* Station popup styles */
+.station-popup { min-width: 240px; }
+.station-popup .station-name { font-weight: 800; margin-bottom: 4px; }
+.station-popup .obs-time { opacity: .75; font-size: 12px; }
+
+/* Ensure popup has reasonable width on mobile (must not exceed JS maxWidth) */
 @media (max-width: 640px) {
   .leaflet-popup-content {
-    min-width: 250px !important;
+    min-width: 200px !important;
     max-width: calc(100vw - 40px) !important;
   }
   
