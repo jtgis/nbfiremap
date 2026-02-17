@@ -48,7 +48,7 @@ jobs:
           GEOJSON_LAYERS = {
               "active_fires": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/0/query",
               "out_fires": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/1/query",
-              "erd_fire_locations": "https://gis-erd-der.gnb.ca/gisserver/rest/services/New_Brunswick_Fires/New_Brunswick_Fire_Locations/FeatureServer/0/query",
+              "fire_locations": "https://gis-erd-der.gnb.ca/gisserver/rest/services/New_Brunswick_Fires/New_Brunswick_Fire_Locations/FeatureServer/0/query",
           }
 
           TABLE_LAYER = {

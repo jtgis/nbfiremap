@@ -30,7 +30,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests pdfplumber
 
       - name: Archive fire data
         shell: python
@@ -67,6 +67,18 @@ jobs:
               "active_fires": {"type": "erd", "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/0/query", "dir": ERD_DIR},
               "out_fires": {"type": "erd", "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/1/query", "dir": ERD_DIR},
               "fire_locations": {"type": "erd", "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/New_Brunswick_Fires/New_Brunswick_Fire_Locations/FeatureServer/0/query", "dir": ERD_DIR},
+          }
+
+          # ERD JSON endpoints (non-spatial / PDF-derived) archived with date suffix
+          ERD_JSON_SOURCES = {
+              "sums_table": {
+                  "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/2/query",
+                  "params": {"where": "1=1", "outFields": "*", "returnGeometry": "false", "f": "json"},
+              },
+              "GNBfireActSum": {
+                  "url": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
+                  "is_pdf": True,
+              },
           }
 
           # =============================================================================
@@ -227,11 +239,107 @@ jobs:
                   log(f"  FAILED: {e}")
                   failures.append(name)
 
+          # Archive ERD JSON sources (sums_table + GNBfireActSum)
+          for name, cfg in ERD_JSON_SOURCES.items():
+              log(f"Archiving {name}...")
+              try:
+                  if cfg.get("is_pdf"):
+                      # PDF → fetch raw bytes, save as-is with date suffix
+                      import io
+                      r = requests.get(cfg["url"], timeout=TIMEOUT)
+                      r.raise_for_status()
+                      # Try pdfplumber if available, otherwise save raw PDF
+                      try:
+                          import pdfplumber, re
+                          def _clean(s):
+                              return re.sub(r"\s+", " ", str(s or "")).strip()
+                          result = {"source": cfg["url"], "archived_at": archived_at, "pages": 0, "tables": []}
+                          with pdfplumber.open(io.BytesIO(r.content)) as pdf:
+                              result["pages"] = len(pdf.pages)
+                              for pn, page in enumerate(pdf.pages, 1):
+                                  for tbl in (page.extract_tables() or []):
+                                      if not tbl or len(tbl) < 2:
+                                          continue
+                                      hdr = [_clean(c) for c in tbl[0]]
+                                      keep = [i for i, h in enumerate(hdr) if h]
+                                      hdr = [hdr[i] for i in keep]
+                                      if not hdr:
+                                          continue
+                                      rows = []
+                                      for row in tbl[1:]:
+                                          if not row:
+                                              continue
+                                          vals = [_clean(row[i]) if i < len(row) else "" for i in keep]
+                                          vals = (vals + [""] * len(hdr))[:len(hdr)]
+                                          if any(vals):
+                                              rows.append(dict(zip(hdr, vals)))
+                                      if rows:
+                                          result["tables"].append({"page": pn, "headers": hdr, "rows": rows})
+                          data = result
+                      except ImportError:
+                          data = {"source": cfg["url"], "archived_at": archived_at, "error": "pdfplumber not installed"}
+                  else:
+                      data = fetch_json(cfg["url"], cfg["params"], name)
+                      data["archived_at"] = archived_at
+                  
+                  output = os.path.join(ERD_DIR, f"{name}_{today}.json")
+                  write_json(output, data)
+                  log(f"  Done")
+              except Exception as e:
+                  log(f"  FAILED: {e}")
+                  failures.append(name)
+
           if failures:
               log(f"Failures: {failures}")
               raise SystemExit(1)
 
           log("Done")
+
+      - name: Rebuild archive manifest
+        shell: python
+        run: |
+          """Rebuild archive/manifest.json from the files on disk."""
+          import os, json, re
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          ARCHIVE_ROOT = "archive"
+          MANIFEST_PATH = os.path.join(ARCHIVE_ROOT, "manifest.json")
+          ATLANTIC_TZ = ZoneInfo("America/Moncton")
+
+          # Scan for all archived dates by looking at active_fires_*.geojson
+          # (the most reliable indicator that a full archive exists for that date)
+          date_re = re.compile(r"active_fires_(\d{8})\.geojson$")
+          dates = set()
+          erd_dir = os.path.join(ARCHIVE_ROOT, "erd")
+          if os.path.isdir(erd_dir):
+              for fn in os.listdir(erd_dir):
+                  m = date_re.match(fn)
+                  if m:
+                      dates.add(m.group(1))
+
+          manifest = {
+              "generated": datetime.now(ATLANTIC_TZ).strftime("%Y-%m-%d"),
+              "description": (
+                  "Available archive dates for NBFireMap historical data. "
+                  "Each date has active_fires, out_fires, fire_perimeters, "
+                  "and 24h hotspots. fire_locations available from 2025-10-09 onward."
+              ),
+              "dates": sorted(dates),
+              "files": {
+                  "active_fires": "archive/erd/active_fires_{date}.geojson",
+                  "out_fires": "archive/erd/out_fires_{date}.geojson",
+                  "fire_locations": "archive/erd/fire_locations_{date}.geojson",
+                  "fire_perimeters": "archive/cwfis/fire_perimeters_{date}.geojson",
+                  "hotspots_24h": "archive/cwfis/24_hour_spots_{date}.geojson",
+              },
+          }
+
+          with open(MANIFEST_PATH, "w", encoding="utf-8") as f:
+              json.dump(manifest, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+
+          print(f"Manifest updated: {len(dates)} dates")
 
       - name: Commit and push
         env:
@@ -242,7 +350,7 @@ jobs:
           git config pull.rebase true
           
           if [ -n "$(git status --porcelain archive/)" ]; then
-            git add archive/
+            git add archive/ archive/manifest.json
             git commit -m "Archived $(TZ=America/Moncton date +'%Y/%m/%d %I:%M %p')"
             
             for i in 1 2 3; do
@@ -266,5 +374,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: geojson-archive
-          path: archive/**/*.geojson
+          path: |
+            archive/**/*.geojson
+            archive/**/*.json
           if-no-files-found: ignore
