@@ -1,7 +1,8 @@
 name: Hourly 511 Data Sync
+
 on:
   schedule:
-    - cron: "22 * * * *"   # :22 past every hour (UTC)
+    - cron: "22 * * * *"  # :22 past every hour (UTC)
   workflow_dispatch:
 
 permissions:
@@ -10,86 +11,116 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
+          python-version: "3.11"
 
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Install jq and tzdata
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq tzdata
-
-      - name: Fetch and commit (always commit on success)
+      - name: Fetch 511 data
         env:
-          API_KEY: ${{ secrets.GNB511_API_KEY }}
-        shell: bash
+          GNB511_API_KEY: ${{ secrets.GNB511_API_KEY }}
+        shell: python
         run: |
-          set -u -o pipefail
+          """Fetch 511 NB transportation data (webcams, winter roads, ferries, events)."""
+          import os
+          import json
+          import time
+          from datetime import datetime
+          import requests
 
-          if [ -z "${API_KEY:-}" ]; then
-            echo "Missing GNB511_API_KEY secret." >&2
-            exit 1
-          fi
+          # =============================================================================
+          # Configuration
+          # =============================================================================
 
-          # Ensure the 511 folder exists
-          mkdir -p 511
+          API_KEY = os.environ.get("GNB511_API_KEY", "").strip()
+          API_BASE = "https://511.gnb.ca/api/v2/get"
+          OUTPUT_DIR = "511"
+          TIMEOUT = 120
+          RETRIES = 3
 
-          # Map repo filenames -> API path slug
-          declare -A SLUG=(
-            [webcams]="cameras"
-            [winterroads]="winterroads"
-            [ferries]="ferryterminals"
-            [events]="event"
-          )
-
-          # Generate timestamp for file metadata (UTC) and for commit message (Atlantic)
-          timestamp_utc="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-          timestamp_at="$(TZ=America/Halifax date +"%Y/%m/%d %I:%M %p")"
-
-          add_ts() {
-            jq --arg ts "$timestamp_utc" 'if type=="array" then map(. + {downloaded_at:$ts}) else . + {downloaded_at:$ts} end'
+          DATASETS = {
+              "webcams":     {"slug": "cameras", "params": {"lang": "en"}},
+              "winterroads": {"slug": "winterroads", "params": {}},
+              "ferries":     {"slug": "ferryterminals", "params": {}},
+              "events":      {"slug": "event", "params": {}},
           }
 
-          for name in webcams winterroads ferries events; do
-            extra=""
-            if [ "$name" = "webcams" ]; then
-              extra="&lang=en"
-            fi
+          # =============================================================================
+          # Helpers
+          # =============================================================================
 
-            url="https://511.gnb.ca/api/v2/get/${SLUG[$name]}?key=${API_KEY}&format=json${extra}"
-            dest="511/${name}.json"
-            tmp="$(mktemp)"
+          def log(msg: str) -> None:
+              ts = time.strftime("%H:%M:%S", time.gmtime())
+              print(f"[{ts}] {msg}", flush=True)
 
-            echo "::group::Fetching $name => $dest"
-            echo "GET $url"
+          def fetch_json(url: str, params: dict) -> dict | list | None:
+              """Fetch JSON with retry logic."""
+              for attempt in range(1, RETRIES + 1):
+                  try:
+                      log(f"  GET {url} (attempt {attempt})")
+                      r = requests.get(url, params=params, timeout=TIMEOUT)
+                      r.raise_for_status()
+                      return r.json()
+                  except Exception as e:
+                      log(f"  Error: {e}")
+                      time.sleep(1 * attempt)
+              return None
 
-            if curl -fsSL --retry 3 --retry-delay 5 --connect-timeout 20 --max-time 120 "$url" -o "$tmp"; then
-              if jq -e . >/dev/null 2>&1 <"$tmp"; then
-                add_ts <"$tmp" >"$dest"
-                rm -f "$tmp"
+          def add_timestamp(data: dict | list, ts: str) -> dict | list:
+              """Add downloaded_at timestamp to data."""
+              if isinstance(data, list):
+                  return [{**item, "downloaded_at": ts} for item in data]
+              return {**data, "downloaded_at": ts}
 
-                git add "$dest"
-                git commit -m "Updated $timestamp_at" || true
-                echo "Committed $dest (or nothing changed)"
-              else
-                echo "Invalid JSON for $name; skipping commit." >&2
-                rm -f "$tmp"
-              fi
-            else
-              echo "Request failed for $name; skipping." >&2
-              rm -f "$tmp"
-            fi
-            echo "::endgroup::"
-          done
+          # =============================================================================
+          # Main
+          # =============================================================================
 
-      - name: Push commits (if any)
+          if not API_KEY:
+              raise SystemExit("Missing GNB511_API_KEY secret")
+
+          os.makedirs(OUTPUT_DIR, exist_ok=True)
+          timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+          for name, config in DATASETS.items():
+              log(f"Fetching {name}...")
+              
+              url = f"{API_BASE}/{config['slug']}"
+              params = {"key": API_KEY, "format": "json", **config["params"]}
+              
+              data = fetch_json(url, params)
+              
+              if data is not None:
+                  data = add_timestamp(data, timestamp)
+                  output_path = os.path.join(OUTPUT_DIR, f"{name}.json")
+                  
+                  with open(output_path, "w", encoding="utf-8") as f:
+                      json.dump(data, f, ensure_ascii=False)
+                      f.write("\n")
+                  
+                  log(f"  Wrote {output_path}")
+              else:
+                  log(f"  FAILED - skipping {name}")
+
+          log("Done")
+
+      - name: Commit and push
         run: |
-          git push || echo "Nothing to push."
-
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [ -n "$(git status --porcelain 511/)" ]; then
+            git add 511/
+            git commit -m "Updated $(TZ=America/Moncton date +'%Y/%m/%d %I:%M %p')"
+            git push
+          else
+            echo "No changes to commit"
+          fi
