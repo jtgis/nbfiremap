@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONUNBUFFERED: "1"
-      ACTIVE_FIRES_URL: "https://gis-erd-der.gnb.ca/arcgis/rest/services/Fire_Dashboards/Public_Fires/MapServer/0/query"
-      OUT_FIRES_URL: "https://gis-erd-der.gnb.ca/arcgis/rest/services/Fire_Dashboards/Public_Fires/MapServer/1/query"
-      SUMS_TABLE_URL: "https://gis-erd-der.gnb.ca/arcgis/rest/services/Fire_Dashboards/Public_Fires/MapServer/2/query"
+      ACTIVE_FIRES_URL: "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/0/query"
+      OUT_FIRES_URL: "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/1/query"
+      SUMS_TABLE_URL: "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/2/query"
       ACTIVE_FIRES_FILE: "erd/active_fires.geojson"
       OUT_FIRES_FILE: "erd/out_fires.geojson"
       SUMS_TABLE_FILE: "erd/sums_table.json"
