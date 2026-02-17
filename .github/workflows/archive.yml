@@ -164,7 +164,7 @@ jobs:
               return ("CWFIS", base, [params_bbox, params_cql])
 
           def erd_builder(layer_idx: int):
-              base = f"https://gis-erd-der.gnb.ca/arcgis/rest/services/Fire_Dashboards/Public_Fires/MapServer/{layer_idx}/query"
+              base = f"https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/{layer_idx}/query"
               params_env = {
                   "where": "1=1",
                   "geometryType": "esriGeometryEnvelope",
