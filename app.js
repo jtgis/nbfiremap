@@ -6973,6 +6973,12 @@ doc.autoTable({
     
     <p><strong>⚠️ Important:</strong> <em>This is an unofficial viewer created for educational and informational purposes. For official emergency information, always consult <a href="https://www.gnb.ca/en/topic/laws-safety/emergency-preparedness-alerts/fire-watch.html" target="_blank" rel="noopener">GNB Fire Watch</a>.</em></p>
     
+    <div style="background:rgba(255,221,0,0.10);border:1px solid rgba(255,221,0,0.35);border-radius:10px;padding:12px 14px;margin:10px 0 14px;">
+      <p style="margin:0 0 6px;font-size:14px;">☕ <strong>Support This Project</strong></p>
+      <p style="margin:0 0 8px;font-size:13px;opacity:.88;">This map will <strong>always be free and ad-free</strong>. All fire data is made possible by the hard work of agencies like CWFIS, NASA FIRMS, ECCC, and GNB ERD. If you find it useful, consider tossing a dollar or two to help cover hosting and development time — every bit is appreciated!</p>
+      <a href="https://www.buymeacoffee.com/nbfiremap" target="_blank" rel="noopener" style="display:inline-block;background:#FFDD00;color:#000;font-family:Cookie,cursive;font-size:16px;padding:7px 16px;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Buy me a coffee</a>
+    </div>
+    
     <p>🖱️ <strong>Navigation:</strong> Drag to move, scroll or use <b>+</b>/<b>−</b> to zoom. The <b>🔗 Overview</b> panel lets you toggle layers.</p>
     <p>⏰ <strong>Time Controls:</strong> Time-series layers (Smoke, Fire Risk, Fire Weather, Fire Behavior) show inline controls under their row: use ▶ play, the slider, or drag the handle to change the date.</p>
     <p>📍 <strong>Nearby Fires:</strong> Click a city/town label or your location to list active fires within 30&nbsp;km, with distance lines; click any entry to zoom to that fire.</p>
