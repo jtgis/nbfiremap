@@ -113,8 +113,21 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
 /* Sticky header bar in legend */
 .overview-topbar{
   position:sticky;top:0;background:rgba(255,255,255,.7);
-  margin:-10px -40px 10px -14px;padding:10px 14px 12px;border-bottom:1px solid rgba(0,0,0,.06);z-index:1;backdrop-filter:blur(10px)
+  margin:-10px -40px 10px -14px;padding:10px 14px 12px;border-bottom:1px solid rgba(0,0,0,.06);z-index:1;backdrop-filter:blur(10px);
+  position:relative
 }
+
+/* Close button in legend topbar */
+.legend-close-btn{
+  position:absolute;top:8px;right:10px;z-index:2;
+  width:30px;height:30px;border:none;border-radius:50%;
+  background:rgba(0,0,0,.06);color:var(--text,#1d2d44);
+  font-size:15px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s,transform .15s;
+}
+.legend-close-btn:hover{background:rgba(0,0,0,.12);transform:scale(1.08)}
+.legend-close-btn:active{transform:scale(.95)}
 
 /* Basemap toggle segment control */
 .basemap-toggle {

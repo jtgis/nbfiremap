@@ -5347,6 +5347,23 @@ if (typeof map !== 'undefined' && map && map.on){
           const v = e.target?.value;
           if(v==='imagery' || v==='osm') setBasemap(v);
         });
+        // Close button for mobile users
+        const closeBtn = D.createElement('button');
+        closeBtn.type = 'button';
+        closeBtn.className = 'legend-close-btn';
+        closeBtn.title = 'Close layers';
+        closeBtn.setAttribute('aria-label', 'Close layers');
+        closeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        closeBtn.addEventListener('click', () => {
+          D.body.classList.add('map-ui-hidden');
+          const mapToggleBtn = $('#mapToggleBtn');
+          mapToggleBtn.setAttribute('aria-pressed', 'false');
+          mapToggleBtn.setAttribute('aria-expanded', 'false');
+          mapToggleBtn.title = 'Show layers';
+          requestAnimationFrame(sizeLegend);
+        });
+
+        topbar.append(closeBtn);
         topbar.append(baseCtl);
 
         layersBox.prepend(topbar);
