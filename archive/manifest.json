@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-22",
+  "generated": "2026-02-23",
   "description": "Available archive dates for NBFireMap historical data. Each date has active_fires, out_fires, fire_perimeters, and 24h hotspots. fire_locations available from 2025-10-09 onward.",
   "dates": [
     "20250820",
@@ -151,7 +151,8 @@
     "20260219",
     "20260220",
     "20260221",
-    "20260222"
+    "20260222",
+    "20260223"
   ],
   "files": {
     "active_fires": "archive/erd/active_fires_{date}.geojson",
