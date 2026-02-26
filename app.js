@@ -195,6 +195,28 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       // ===========================================================================
+      // DISCLAIMER POPUP (shown once per session on page load)
+      // ===========================================================================
+      (function initDisclaimer() {
+        const overlay = document.getElementById('disclaimerOverlay');
+        const proceedBtn = document.getElementById('disclaimerProceed');
+        if (!overlay || !proceedBtn) return;
+
+        function closeDisclaimer(e) {
+          if (e) e.preventDefault();
+          overlay.style.display = 'none';
+          overlay.hidden = true;
+        }
+
+        proceedBtn.addEventListener('click', closeDisclaimer);
+
+        // Also close when clicking the backdrop (outside the modal)
+        overlay.addEventListener('click', function(e) {
+          if (e.target === overlay) closeDisclaimer(e);
+        });
+      })();
+
+      // ===========================================================================
       // SECTION 2: UTILITY FUNCTIONS
       // ===========================================================================
       // Pure utility functions with no side effects. These are used throughout

@@ -375,6 +375,30 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
     /* Summary modal */
     /* Summary modal - skip rendering when hidden (content-visibility) */
     .fire-summary-overlay{position:fixed;inset:0;display:none;align-items:start;justify-content:center;z-index:4000;background:rgba(0,0,0,.25);backdrop-filter:blur(2px);content-visibility:auto}
+
+    /* Disclaimer modal */
+    #disclaimerOverlay{display:flex;z-index:5000;background:rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+    .disclaimer-modal{max-width:460px}
+    .disclaimer-body p{margin:0 0 10px;font-size:var(--fs-14);line-height:1.6;color:var(--text)}
+    .disclaimer-body p strong{font-weight:800}
+    .disclaimer-actions{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+    .disclaimer-btn{
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 18px;border-radius:var(--radius-sm);font-weight:700;font-size:var(--fs-14);
+      text-decoration:none;cursor:pointer;transition:all .15s ease;
+      border:1px solid var(--btn-border);box-shadow:var(--shadow-soft)
+    }
+    .disclaimer-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .disclaimer-btn:focus-visible{outline:none;box-shadow:var(--focus)}
+    .disclaimer-btn-proceed{background:var(--link);color:#fff;border-color:var(--link)}
+    .disclaimer-btn-proceed:hover{background:#1d4ed8;border-color:#1d4ed8}
+    .disclaimer-btn-official{background:var(--btn-bg);color:var(--text);border-color:var(--btn-border)}
+    .disclaimer-btn-official:hover{background:var(--btn-hover)}
+    .disclaimer-official-tag{
+      display:inline-flex;align-items:center;
+      background:var(--pat);color:#fff;font-size:11px;font-weight:800;
+      padding:2px 7px;border-radius:999px;margin-left:4px;letter-spacing:.3px;text-transform:uppercase
+    }
     .fire-summary{margin-top:16px;background:var(--panel-strong);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);width:min(680px,calc(100% - 24px));color:var(--text);max-height:90vh;display:flex;flex-direction:column;overflow:hidden}
     .fire-summary header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 8px;flex:0 0 auto}
     .fire-summary h2{font-size:var(--fs-18);font-weight:800;margin:0}

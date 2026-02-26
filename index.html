@@ -229,7 +229,28 @@ See README.md for full setup and usage documentation.
        Full-screen dialogs for fire summary, help documentation, nearby fires
        ==================================================================== -->
 
-  <!-- 4a. Fire Summary modal - tabular fire data with export options -->
+  <!-- 4a. Disclaimer modal - shown on page load -->
+  <div id="disclaimerOverlay" class="fire-summary-overlay" role="presentation">
+    <div class="fire-summary disclaimer-modal" role="dialog" aria-modal="true" aria-labelledby="disc-title">
+      <header>
+        <h2 id="disc-title"><i class="fa-solid fa-circle-exclamation" style="color:var(--oc);margin-right:6px"></i> Disclaimer</h2>
+      </header>
+      <div class="body disclaimer-body">
+        <p><strong>nbfiremap</strong> is an <strong>unofficial</strong>, community-made project and is not affiliated with, endorsed by, or connected to any government agency.</p>
+        <p>Information displayed may be inaccurate, incomplete, or delayed. Always refer to official sources for critical decisions.</p>
+        <div class="disclaimer-actions">
+          <a id="disclaimerProceed" href="#" class="disclaimer-btn disclaimer-btn-proceed">
+            <i class="fa-solid fa-arrow-right"></i> Proceed to nbfiremap
+          </a>
+          <a href="https://www2.gnb.ca/content/gnb/en/departments/erd/natural-resources/content/ForestFires/FireWatch.html" class="disclaimer-btn disclaimer-btn-official" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-shield-halved"></i> Go to NB Fire Watch <span class="disclaimer-official-tag">Official</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4b. Fire Summary modal - tabular fire data with export options -->
   <div id="fireSummaryOverlay" class="fire-summary-overlay" role="presentation" hidden>
     <div class="fire-summary" role="dialog" aria-modal="true" aria-labelledby="fs-title">
       <header>
