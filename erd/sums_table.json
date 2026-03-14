@@ -1,6 +1,3 @@
 {
-  "status": "error",
-  "messages": [
-    "Could not access any server machines. Please contact your system administrator."
-  ]
+  "features": []
 }
