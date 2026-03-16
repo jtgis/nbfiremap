@@ -503,13 +503,57 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
       transform: translateX(-50%);
       z-index: 2500;
       background: rgba(0, 0, 0, 0.45);
-      border-radius: 25px;
-      padding: 15px 25px;
+      border-radius: 22px;
+      padding: 10px 14px;
       backdrop-filter: blur(20px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      width: fit-content;
+      max-width: min(94vw, 760px);
+    }
+
+    .bottom-panel-legend {
+      display: flex;
+      flex-wrap: nowrap;
       align-items: center;
-      gap: 30px;
+      justify-content: center;
+      gap: 4px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .chip-label-short { display: none; }
+
+    .legend-chip {
+      display: inline-flex;
+      align-items: center;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0;
+      white-space: nowrap;
+      padding: 4px 7px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.42);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 1px 2px rgba(0, 0, 0, 0.12);
+      flex: 0 0 auto;
+    }
+
+    .legend-chip-oc { background: color-mix(in srgb, var(--oc) 82%, black); border-color: color-mix(in srgb, var(--oc) 92%, black); }
+    .legend-chip-mon { background: color-mix(in srgb, var(--mon) 82%, black); border-color: color-mix(in srgb, var(--mon) 92%, black); }
+    .legend-chip-cont { background: color-mix(in srgb, var(--cont) 82%, black); border-color: color-mix(in srgb, var(--cont) 92%, black); }
+    .legend-chip-uc { background: color-mix(in srgb, var(--uc) 78%, black); border-color: color-mix(in srgb, var(--uc) 90%, black); color: #fff; }
+    .legend-chip-pat { background: color-mix(in srgb, var(--pat) 82%, black); border-color: color-mix(in srgb, var(--pat) 92%, black); }
+
+    .bottom-panel-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
     }
     
     .action-btn {
@@ -952,9 +996,25 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
   
   .bottom-panel {
     bottom: calc(20px + env(safe-area-inset-bottom));
-    padding: 12px 20px;
-    gap: 20px;
+    padding: 9px 12px;
+    gap: 7px;
   }
+
+  .bottom-panel-actions {
+    gap: 16px;
+  }
+
+  .legend-chip {
+    font-size: 9px;
+    padding: 3px 5px;
+  }
+
+  .bottom-panel-legend {
+    gap: 3px;
+  }
+
+  .chip-label-long { display: none; }
+  .chip-label-short { display: inline; }
   
   .action-btn i {
     font-size: 18px;
@@ -977,8 +1037,23 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
   }
   
   .bottom-panel {
-    gap: 15px;
-    padding: 10px 15px;
+    gap: 7px;
+    padding: 8px 10px;
+    max-width: 95vw;
+  }
+
+  .bottom-panel-legend {
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .legend-chip {
+    font-size: 8px;
+    padding: 3px 4px;
+  }
+
+  .bottom-panel-actions {
+    gap: 12px;
   }
 
   .nearby-panel {

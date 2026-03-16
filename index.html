@@ -206,22 +206,31 @@ See README.md for full setup and usage documentation.
 
   <!-- 3c. Bottom action panel (Fire Watch, Summary, History, Help) -->
   <div id="bottomPanel" class="bottom-panel">
-    <button id="fireWatchBtn" class="action-btn" type="button">
-      <i class="fa-solid fa-fire"></i>
-      <span>nb fire watch</span>
-    </button>
-    <button id="fireSummaryBtn" class="action-btn" type="button">
-      <i class="fa-solid fa-list"></i>
-      <span>fire summary</span>
-    </button>
-    <button id="historyBtn" class="action-btn" type="button">
-      <i class="fa-solid fa-clock-rotate-left"></i>
-      <span>history</span>
-    </button>
-    <button id="helpBtn" class="action-btn" type="button">
-      <i class="fa-solid fa-question"></i>
-      <span>help</span>
-    </button>
+    <div class="bottom-panel-legend" aria-label="Fire types legend">
+      <span class="legend-chip legend-chip-oc"><span class="chip-label-long">Out Of Control</span><span class="chip-label-short">Out of Ctrl</span></span>
+      <span class="legend-chip legend-chip-mon"><span class="chip-label-long">Being Monitored</span><span class="chip-label-short">Monitored</span></span>
+      <span class="legend-chip legend-chip-cont"><span class="chip-label-long">Contained</span><span class="chip-label-short">Contained</span></span>
+      <span class="legend-chip legend-chip-uc"><span class="chip-label-long">Under Control</span><span class="chip-label-short">Under Ctrl</span></span>
+      <span class="legend-chip legend-chip-pat"><span class="chip-label-long">Being Patrolled</span><span class="chip-label-short">Patrolled</span></span>
+    </div>
+    <div class="bottom-panel-actions">
+      <button id="fireWatchBtn" class="action-btn" type="button">
+        <i class="fa-solid fa-fire"></i>
+        <span>nb fire watch</span>
+      </button>
+      <button id="fireSummaryBtn" class="action-btn" type="button">
+        <i class="fa-solid fa-list"></i>
+        <span>fire summary</span>
+      </button>
+      <button id="historyBtn" class="action-btn" type="button">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>history</span>
+      </button>
+      <button id="helpBtn" class="action-btn" type="button">
+        <i class="fa-solid fa-question"></i>
+        <span>help</span>
+      </button>
+    </div>
   </div>
 
   <!-- ====================================================================
