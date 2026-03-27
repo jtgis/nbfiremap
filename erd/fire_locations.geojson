@@ -34,7 +34,7 @@
         "FIELD_FIRE_NAME": "001",
         "FIELD_FIRE_NUMBER": "2026001",
         "FIELD_FIRE_NUMBER_SHORT": "001",
-        "FETCHED_FROM_ERD": 1774640041
+        "FETCHED_FROM_ERD": 1774647134
       }
     },
     {
@@ -70,7 +70,7 @@
         "FIELD_FIRE_NAME": "Field",
         "FIELD_FIRE_NUMBER": "2026003",
         "FIELD_FIRE_NUMBER_SHORT": "003",
-        "FETCHED_FROM_ERD": 1774640041
+        "FETCHED_FROM_ERD": 1774647134
       }
     },
     {
@@ -106,7 +106,7 @@
         "FIELD_FIRE_NAME": "Field dress",
         "FIELD_FIRE_NUMBER": "2026002",
         "FIELD_FIRE_NUMBER_SHORT": "002",
-        "FETCHED_FROM_ERD": 1774640041
+        "FETCHED_FROM_ERD": 1774647134
       }
     }
   ]
