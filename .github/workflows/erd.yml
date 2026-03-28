@@ -24,12 +24,98 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pdfplumber
+        run: |
+          pip install requests pdfplumber playwright
+          playwright install chromium --with-deps
+
+      - name: Fetch restricted fire data (Playwright)
+        shell: python
+        run: |
+          """Fetch active_fires, out_fires, sums_table from the restricted ArcGIS dashboard."""
+          import os
+          import json
+          import time
+          from playwright.sync_api import sync_playwright
+
+          OUTPUT_DIR = "erd"
+          DASHBOARD_URL = "https://nbdnr.maps.arcgis.com/apps/dashboards/7bb8645cf75c4aa2b7a43a3123f9e17f"
+          BASE_URL = "https://utility.arcgis.com/usrsvcs/servers/a9126f48ad774664a821ea30e5b10a9c/rest/services/Fire_Dashboards_Restricted/Public_Fires_Restricted/MapServer"
+
+          QUERY_PARAMS_BASE = (
+              "where=1%3D1&outFields=*&returnGeometry=true&outSR=4326"
+              "&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects"
+              "&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false"
+              "&returnExtentOnly=false&returnZ=false&returnM=false"
+              "&multipatchOption=xyFootprint&returnTrueCurves=false"
+              "&returnExceededLimitFeatures=false&returnCentroid=false"
+              "&timeReferenceUnknownClient=false&sqlFormat=none"
+              "&featureEncoding=esriDefault"
+          )
+
+          LAYERS = [
+              {"id": 0, "filename": "active_fires.geojson", "format": "geojson", "label": "active fires"},
+              {"id": 1, "filename": "out_fires.geojson",    "format": "geojson", "label": "out fires"},
+              {"id": 2, "filename": "sums_table.json",       "format": "json",   "label": "sums table"},
+          ]
+
+          CRS_BLOCK = {"type": "name", "properties": {"name": "EPSG:4326"}}
+
+          def log(msg):
+              ts = time.strftime("%H:%M:%S", time.gmtime())
+              print(f"[{ts}] {msg}", flush=True)
+
+          def add_timestamp(data, fmt):
+              ts = int(time.time())
+              key = "properties" if fmt == "geojson" else "attributes"
+              for f in data.get("features", []):
+                  if key in f:
+                      f[key]["FETCHED_FROM_ERD"] = ts
+
+          os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+          with sync_playwright() as p:
+              browser = p.chromium.launch(headless=True)
+              context = browser.new_context()
+              page = context.new_page()
+
+              log("Loading dashboard to establish session...")
+              page.goto(DASHBOARD_URL, wait_until="networkidle", timeout=120_000)
+              page.wait_for_timeout(5_000)
+              log("Session established.")
+
+              for layer in LAYERS:
+                  fmt = layer["format"]
+                  query_url = f"{BASE_URL}/{layer['id']}/query?{QUERY_PARAMS_BASE}&f={fmt}"
+                  log(f"Fetching {layer['label']} (layer {layer['id']})...")
+
+                  data = page.evaluate(
+                      """async (url) => {
+                          const resp = await fetch(url);
+                          return await resp.json();
+                      }""",
+                      query_url,
+                  )
+
+                  if fmt == "geojson":
+                      data["crs"] = CRS_BLOCK
+
+                  add_timestamp(data, fmt)
+                  count = len(data.get("features", []))
+
+                  path = os.path.join(OUTPUT_DIR, layer["filename"])
+                  with open(path, "w", encoding="utf-8") as f:
+                      json.dump(data, f, ensure_ascii=False, indent=2)
+                      f.write("\n")
+                  log(f"  Wrote {path} ({count} features)")
+
+              browser.close()
+
+          log("Restricted layers done.")
 
       - name: Fetch ERD fire data
         shell: python
         run: |
-          """Fetch NB Emergency Response Division (ERD) fire data."""
+          """Fetch fire_locations and PDF from public ERD endpoints."""
           import os
           import io
           import re
@@ -37,23 +123,12 @@ jobs:
           import time
           import requests
 
-          # =============================================================================
-          # Configuration
-          # =============================================================================
-
           OUTPUT_DIR = "erd"
           TIMEOUT = 90
           RETRIES = 3
 
           GEOJSON_LAYERS = {
-              "active_fires": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/0/query",
-              "out_fires": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/1/query",
               "fire_locations": "https://gis-erd-der.gnb.ca/gisserver/rest/services/New_Brunswick_Fires/New_Brunswick_Fire_Locations/FeatureServer/0/query",
-          }
-
-          TABLE_LAYER = {
-              "name": "sums_table",
-              "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/2/query",
           }
 
           PDF_CONFIG = {
@@ -225,13 +300,6 @@ jobs:
               data = add_timestamp(data)
               write_json(os.path.join(OUTPUT_DIR, f"{name}.geojson"), data)
               log(f"  Features: {len(data.get('features', []))}")
-
-          # Fetch table layer
-          log(f"Fetching {TABLE_LAYER['name']}...")
-          data = fetch_arcgis_table(TABLE_LAYER["url"], TABLE_LAYER["name"])
-          data = add_timestamp(data)
-          write_json(os.path.join(OUTPUT_DIR, f"{TABLE_LAYER['name']}.json"), data)
-          log(f"  Rows: {len(data.get('features', []))}")
 
           # Parse PDF
           log("Parsing activity summary PDF...")
