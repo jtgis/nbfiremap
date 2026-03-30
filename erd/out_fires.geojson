@@ -3,6 +3,62 @@
   "features": [
     {
       "type": "Feature",
+      "id": 71082,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.23995930216071,
+          45.2282492899925
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71082,
+        "FIRE_NAME": "Cleland Rd",
+        "DEGREES_LAT": 45.22824,
+        "DEGREES_LONG": 67.23996,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 5,
+        "TIME_DETECTED": 1774819800000,
+        "FIRE_STAT_DATE": 1774876680000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1774888796
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71083,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86672916947356,
+          45.13368928183965
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71083,
+        "FIRE_NAME": "Kelly Road",
+        "DEGREES_LAT": 45.13368,
+        "DEGREES_LONG": 66.86673,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 3,
+        "TIME_DETECTED": 1774798200000,
+        "FIRE_STAT_DATE": 1774875600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1774888796
+      }
+    },
+    {
+      "type": "Feature",
       "id": 71042,
       "geometry": {
         "type": "Point",
@@ -26,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774885723
+        "FETCHED_FROM_ERD": 1774888796
       }
     },
     {
@@ -54,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774885723
+        "FETCHED_FROM_ERD": 1774888796
       }
     },
     {
@@ -82,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774885723
+        "FETCHED_FROM_ERD": 1774888796
       }
     }
   ],

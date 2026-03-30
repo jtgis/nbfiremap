@@ -34,7 +34,7 @@
         "FIELD_FIRE_NAME": "001",
         "FIELD_FIRE_NUMBER": "2026001",
         "FIELD_FIRE_NUMBER_SHORT": "001",
-        "FETCHED_FROM_ERD": 1774885723
+        "FETCHED_FROM_ERD": 1774888798
       }
     },
     {
@@ -70,7 +70,79 @@
         "FIELD_FIRE_NAME": "Field dress",
         "FIELD_FIRE_NUMBER": "2026002",
         "FIELD_FIRE_NUMBER_SHORT": "002",
-        "FETCHED_FROM_ERD": 1774885723
+        "FETCHED_FROM_ERD": 1774888798
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71082,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.23996,
+          45.22824000000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71082,
+        "FIELD_AGENCY_FIRE_ID": 71082,
+        "FIELD_LAT": 45.22824,
+        "FIELD_LONG": -67.23996,
+        "FIELD_FIRE_SIZE": 5,
+        "FIELD_AGENCY_FIRE_CAUSE": "Incendiary (Final) / Incendiaire (Final)",
+        "FIELD_SYSTEM_FIRE_CAUSE": "H",
+        "FIELD_SITUATION_REPORT_DATE": 1774876718000,
+        "FIELD_STATUS_DATE": 1774876680000,
+        "FIELD_STAGE_OF_CONTROL": "EX",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": 5,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "Cleland Rd",
+        "FIELD_FIRE_NUMBER": "2026005",
+        "FIELD_FIRE_NUMBER_SHORT": "005",
+        "FETCHED_FROM_ERD": 1774888798
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71083,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86673000000002,
+          45.13368000000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71083,
+        "FIELD_AGENCY_FIRE_ID": 71083,
+        "FIELD_LAT": 45.13368,
+        "FIELD_LONG": -66.86673,
+        "FIELD_FIRE_SIZE": 3,
+        "FIELD_AGENCY_FIRE_CAUSE": "Incendiary (Final) / Incendiaire (Final)",
+        "FIELD_SYSTEM_FIRE_CAUSE": "H",
+        "FIELD_SITUATION_REPORT_DATE": 1774877048000,
+        "FIELD_STATUS_DATE": 1774875600000,
+        "FIELD_STAGE_OF_CONTROL": "EX",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": 5,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "Kelly Road",
+        "FIELD_FIRE_NUMBER": "2026006",
+        "FIELD_FIRE_NUMBER_SHORT": "006",
+        "FETCHED_FROM_ERD": 1774888798
       }
     },
     {
@@ -106,7 +178,7 @@
         "FIELD_FIRE_NAME": "Field",
         "FIELD_FIRE_NUMBER": "2026003",
         "FIELD_FIRE_NUMBER_SHORT": "003",
-        "FETCHED_FROM_ERD": 1774885723
+        "FETCHED_FROM_ERD": 1774888798
       }
     }
   ]
