@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774888796
+        "FETCHED_FROM_ERD": 1774892315
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774888796
+        "FETCHED_FROM_ERD": 1774892315
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774888796
+        "FETCHED_FROM_ERD": 1774892315
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774888796
+        "FETCHED_FROM_ERD": 1774892315
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774888796
+        "FETCHED_FROM_ERD": 1774892315
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.25274865150388,
+          45.968059466214015
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71102,
+        "FIRE_NAME": "Kinnear Settlement",
+        "DEGREES_LAT": 45.96805,
+        "DEGREES_LONG": 65.25274999999999,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1774795500000,
+        "FIRE_STAT_DATE": 1774880580000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1774892315
       }
     }
   ],

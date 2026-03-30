@@ -34,7 +34,7 @@
         "FIELD_FIRE_NAME": "001",
         "FIELD_FIRE_NUMBER": "2026001",
         "FIELD_FIRE_NUMBER_SHORT": "001",
-        "FETCHED_FROM_ERD": 1774888798
+        "FETCHED_FROM_ERD": 1774892316
       }
     },
     {
@@ -70,7 +70,7 @@
         "FIELD_FIRE_NAME": "Field dress",
         "FIELD_FIRE_NUMBER": "2026002",
         "FIELD_FIRE_NUMBER_SHORT": "002",
-        "FETCHED_FROM_ERD": 1774888798
+        "FETCHED_FROM_ERD": 1774892316
       }
     },
     {
@@ -106,7 +106,7 @@
         "FIELD_FIRE_NAME": "Cleland Rd",
         "FIELD_FIRE_NUMBER": "2026005",
         "FIELD_FIRE_NUMBER_SHORT": "005",
-        "FETCHED_FROM_ERD": 1774888798
+        "FETCHED_FROM_ERD": 1774892316
       }
     },
     {
@@ -142,7 +142,7 @@
         "FIELD_FIRE_NAME": "Kelly Road",
         "FIELD_FIRE_NUMBER": "2026006",
         "FIELD_FIRE_NUMBER_SHORT": "006",
-        "FETCHED_FROM_ERD": 1774888798
+        "FETCHED_FROM_ERD": 1774892316
       }
     },
     {
@@ -178,7 +178,43 @@
         "FIELD_FIRE_NAME": "Field",
         "FIELD_FIRE_NUMBER": "2026003",
         "FIELD_FIRE_NUMBER_SHORT": "003",
-        "FETCHED_FROM_ERD": 1774888798
+        "FETCHED_FROM_ERD": 1774892316
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.25274999999999,
+          45.968050000000005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71102,
+        "FIELD_AGENCY_FIRE_ID": 71102,
+        "FIELD_LAT": 45.96805,
+        "FIELD_LONG": -65.25274999999999,
+        "FIELD_FIRE_SIZE": 0.10000000149011612,
+        "FIELD_AGENCY_FIRE_CAUSE": "Resident / Résidents",
+        "FIELD_SYSTEM_FIRE_CAUSE": "H",
+        "FIELD_SITUATION_REPORT_DATE": 1774879740000,
+        "FIELD_STATUS_DATE": 1774880580000,
+        "FIELD_STAGE_OF_CONTROL": "EX",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": 5,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "Kinnear Settlement",
+        "FIELD_FIRE_NUMBER": "2026007",
+        "FIELD_FIRE_NUMBER_SHORT": "007",
+        "FETCHED_FROM_ERD": 1774892316
       }
     }
   ]
