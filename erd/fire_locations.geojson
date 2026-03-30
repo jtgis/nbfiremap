@@ -34,43 +34,7 @@
         "FIELD_FIRE_NAME": "001",
         "FIELD_FIRE_NUMBER": "2026001",
         "FIELD_FIRE_NUMBER_SHORT": "001",
-        "FETCHED_FROM_ERD": 1774870813
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71042,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.28685000000002,
-          47.05838
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71042,
-        "FIELD_AGENCY_FIRE_ID": 71042,
-        "FIELD_LAT": 47.05838,
-        "FIELD_LONG": -65.28685,
-        "FIELD_FIRE_SIZE": 1.5,
-        "FIELD_AGENCY_FIRE_CAUSE": " / ",
-        "FIELD_SYSTEM_FIRE_CAUSE": "H",
-        "FIELD_SITUATION_REPORT_DATE": 1774514109000,
-        "FIELD_STATUS_DATE": 1774546200000,
-        "FIELD_STAGE_OF_CONTROL": "EX",
-        "FIELD_FIRE_WAS_PERSCRIBED": 0,
-        "FIELD_AGENCY_PREPAREDNESS": 3,
-        "FIELD_FIRE_TYPE_ICS": null,
-        "FIELD_SYSTEM_FIRE_ID": null,
-        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
-        "FIELD_PERCENT_CONTAINED": null,
-        "FIELD_RESPONSE_TYPE": null,
-        "FIELD_SEVERITY_NEAREST_DSR": null,
-        "FIELD_AGENCY_CODE": null,
-        "FIELD_FIRE_NAME": "Field",
-        "FIELD_FIRE_NUMBER": "2026003",
-        "FIELD_FIRE_NUMBER_SHORT": "003",
-        "FETCHED_FROM_ERD": 1774870813
+        "FETCHED_FROM_ERD": 1774874427
       }
     },
     {
@@ -106,7 +70,43 @@
         "FIELD_FIRE_NAME": "Field dress",
         "FIELD_FIRE_NUMBER": "2026002",
         "FIELD_FIRE_NUMBER_SHORT": "002",
-        "FETCHED_FROM_ERD": 1774870813
+        "FETCHED_FROM_ERD": 1774874427
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71042,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.28685000000002,
+          47.05838
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71042,
+        "FIELD_AGENCY_FIRE_ID": 71042,
+        "FIELD_LAT": 47.05838,
+        "FIELD_LONG": -65.28685,
+        "FIELD_FIRE_SIZE": 1.5,
+        "FIELD_AGENCY_FIRE_CAUSE": "Resident / Résidents",
+        "FIELD_SYSTEM_FIRE_CAUSE": "H",
+        "FIELD_SITUATION_REPORT_DATE": 1774514109000,
+        "FIELD_STATUS_DATE": 1774546200000,
+        "FIELD_STAGE_OF_CONTROL": "EX",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": null,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "Field",
+        "FIELD_FIRE_NUMBER": "2026003",
+        "FIELD_FIRE_NUMBER_SHORT": "003",
+        "FETCHED_FROM_ERD": 1774874427
       }
     }
   ]
