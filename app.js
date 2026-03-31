@@ -666,6 +666,7 @@ window.addEventListener('DOMContentLoaded', () => {
               const markers = cluster.getAllChildMarkers();
               let worstSev = -2, worstKey = 'extinguished';
               
+              // First pass: find the most severe status
               for (const m of markers) {
                 const k = m.options._statusKey || 'extinguished';
                 const sev = Number.isFinite(m.options._severity) ? m.options._severity : severityRank(k);
@@ -675,23 +676,38 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
               }
               
+              // Second pass: sum area only for markers matching the worst severity
+              let worstArea = 0;
+              for (const m of markers) {
+                const k = m.options._statusKey || 'extinguished';
+                const sev = Number.isFinite(m.options._severity) ? m.options._severity : severityRank(k);
+                if (sev === worstSev) {
+                  worstArea += Number(m.options._area) || 0;
+                }
+              }
+              
               const ring = statusColor1(worstKey);
               const count = cluster.getChildCount();
+
+              // Scale cluster icon by worst-severity area: 28px min → 52px max
+              const sz = Math.round(28 + 24 * Math.min(Math.sqrt(worstArea) / Math.sqrt(5000), 1));
+              const anchor = Math.round(sz / 2);
+              const fontSize = Math.max(12, Math.round(sz * 0.5));
               
               return L.divIcon({
                 className: 'fire-cluster-icon',
                 html: `
                   <div style="position:relative;display:inline-grid;place-items:center">
-                    <div class="marker-badge" style="--ring:${ring};width:28px;height:28px">
-                      <i class="fa-solid fa-fire"></i>
+                    <div class="marker-badge" style="--ring:${ring};width:${sz}px;height:${sz}px">
+                      <i class="fa-solid fa-fire" style="font-size:${fontSize}px"></i>
                     </div>
                     <div style="position:absolute;bottom:-4px;right:-4px;background:var(--panel-strong);border:1px solid rgba(0,0,0,0.1);border-radius:999px;font:800 10px/1.1 Inter,system-ui,Arial;padding:2px 5px;box-shadow:0 2px 8px rgba(0,0,0,.18)">
                       ${count}
                     </div>
                   </div>`,
-                iconSize: [28, 28], 
-                iconAnchor: [14, 19], 
-                popupAnchor: [0, -15]
+                iconSize: [sz, sz], 
+                iconAnchor: [anchor, Math.round(anchor * 1.36)], 
+                popupAnchor: [0, -Math.round(anchor * 1.07)]
               });
             };
 
@@ -2244,15 +2260,21 @@ window.addEventListener('DOMContentLoaded', () => {
         function createFireMarker(props, coords, explicitStatus, isOutFire = false) {
           const [lng, lat] = coords; // GeoJSON coordinate order
           const statusKey = norm(explicitStatus || props.FIRE_STAT_DESC_E || '—');
+
+          // Scale marker size by fire area (hectares): 22px min → 44px max
+          const area = getFireSize(props);
+          const sz = Math.round(22 + 22 * Math.min(Math.sqrt(area) / Math.sqrt(1000), 1));
+          const anchor = Math.round(sz / 2);
+          const fontSize = Math.max(10, Math.round(sz * 0.5));
           
           const marker = L.marker([lat, lng], {
             pane: 'firesPane',
             icon: L.divIcon({
               className: 'fire-badge-icon',
-              html: `<div class="marker-badge" style="--ring:${getStatusColor(statusKey)}"><i class="fa-solid fa-fire"></i></div>`,
-              iconSize: [28, 28],
-              iconAnchor: [14, 19],
-              popupAnchor: [0, -15]
+              html: `<div class="marker-badge" style="--ring:${getStatusColor(statusKey)};width:${sz}px;height:${sz}px"><i class="fa-solid fa-fire" style="font-size:${fontSize}px"></i></div>`,
+              iconSize: [sz, sz],
+              iconAnchor: [anchor, Math.round(anchor * 1.36)],
+              popupAnchor: [0, -Math.round(anchor * 1.07)]
             }),
             keyboard: false
           });
@@ -7721,8 +7743,12 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
     if (!historyHotspotLayer) {
       historyHotspotLayer = L.geoJSON(null, {
         pane: 'viirsPane',
-        pointToLayer: (_f, latlng) =>
-          L.circleMarker(latlng, { radius: 4, color: 'var(--modis)', fillColor: 'var(--modis)', fillOpacity: 0.8 })
+        pointToLayer: (f, latlng) => {
+          // Scale radius by fire size: 3px min → 12px max
+          const area = Number(f.properties?.area ?? f.properties?.AREA ?? f.properties?.SIZE_HA ?? 0) || 0;
+          const r = Math.round(3 + 9 * Math.min(Math.sqrt(area) / Math.sqrt(1000), 1));
+          return L.circleMarker(latlng, { radius: r, color: 'var(--modis)', fillColor: 'var(--modis)', fillOpacity: 0.8 });
+        }
       }).addTo(map);
     }
 
