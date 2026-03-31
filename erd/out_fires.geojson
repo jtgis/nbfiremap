@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 71122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.34329937794261,
+          46.011809425694224
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71122,
+        "FIRE_NAME": "8",
+        "DEGREES_LAT": 46.0118,
+        "DEGREES_LONG": 67.3433,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1774835100000,
+        "FIRE_STAT_DATE": 1774861200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1774965517
+      }
+    },
+    {
+      "type": "Feature",
       "id": 71082,
       "geometry": {
         "type": "Point",
@@ -26,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774960812
+        "FETCHED_FROM_ERD": 1774965517
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774960812
+        "FETCHED_FROM_ERD": 1774965517
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774960812
+        "FETCHED_FROM_ERD": 1774965517
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774960812
+        "FETCHED_FROM_ERD": 1774965517
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774960812
+        "FETCHED_FROM_ERD": 1774965517
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1774960812
+        "FETCHED_FROM_ERD": 1774965517
       }
     }
   ],
