@@ -1,1 +1,11 @@
-{"type": "FeatureCollection", "features": [], "archived_at": "2026-03-22 06:21:14 ADT"}
+{
+  "type": "FeatureCollection",
+  "features": [],
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "archived_at": "2026-03-22 (backfilled)"
+}
