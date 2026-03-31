@@ -316,6 +316,7 @@ jobs:
           if [ -n "$(git status --porcelain erd/)" ]; then
             git add erd/
             git commit -m "Updated $(TZ=America/Moncton date +'%Y/%m/%d %I:%M %p')"
+            git pull --rebase
             git push
           else
             echo "No changes to commit"
