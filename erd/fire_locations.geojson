@@ -34,43 +34,7 @@
         "FIELD_FIRE_NAME": "Hawkshaw",
         "FIELD_FIRE_NUMBER": "2026010",
         "FIELD_FIRE_NUMBER_SHORT": "010",
-        "FETCHED_FROM_ERD": 1774982353
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71002,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.77096999999998,
-          45.68561999999997
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71002,
-        "FIELD_AGENCY_FIRE_ID": 71002,
-        "FIELD_LAT": 45.68562,
-        "FIELD_LONG": -66.77096999999999,
-        "FIELD_FIRE_SIZE": 0.10000000149011612,
-        "FIELD_AGENCY_FIRE_CAUSE": " / ",
-        "FIELD_SYSTEM_FIRE_CAUSE": "H",
-        "FIELD_SITUATION_REPORT_DATE": 1774431939000,
-        "FIELD_STATUS_DATE": 1774384200000,
-        "FIELD_STAGE_OF_CONTROL": "EX",
-        "FIELD_FIRE_WAS_PERSCRIBED": 0,
-        "FIELD_AGENCY_PREPAREDNESS": 3,
-        "FIELD_FIRE_TYPE_ICS": null,
-        "FIELD_SYSTEM_FIRE_ID": null,
-        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
-        "FIELD_PERCENT_CONTAINED": null,
-        "FIELD_RESPONSE_TYPE": null,
-        "FIELD_SEVERITY_NEAREST_DSR": null,
-        "FIELD_AGENCY_CODE": null,
-        "FIELD_FIRE_NAME": "001",
-        "FIELD_FIRE_NUMBER": "2026001",
-        "FIELD_FIRE_NUMBER_SHORT": "001",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -106,7 +70,7 @@
         "FIELD_FIRE_NAME": "Apple",
         "FIELD_FIRE_NUMBER": "2026004",
         "FIELD_FIRE_NUMBER_SHORT": "004",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -142,7 +106,43 @@
         "FIELD_FIRE_NAME": "Field dress",
         "FIELD_FIRE_NUMBER": "2026002",
         "FIELD_FIRE_NUMBER_SHORT": "002",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71002,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.77096999999998,
+          45.68561999999997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71002,
+        "FIELD_AGENCY_FIRE_ID": 71002,
+        "FIELD_LAT": 45.68562,
+        "FIELD_LONG": -66.77096999999999,
+        "FIELD_FIRE_SIZE": 0.10000000149011612,
+        "FIELD_AGENCY_FIRE_CAUSE": "Unknown (Final) / Inconnu (Final)",
+        "FIELD_SYSTEM_FIRE_CAUSE": "L",
+        "FIELD_SITUATION_REPORT_DATE": 1774431939000,
+        "FIELD_STATUS_DATE": 1774386000000,
+        "FIELD_STAGE_OF_CONTROL": "EX",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": 5,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "001",
+        "FIELD_FIRE_NUMBER": "2026001",
+        "FIELD_FIRE_NUMBER_SHORT": "001",
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -178,7 +178,7 @@
         "FIELD_FIRE_NAME": "Cleland Rd",
         "FIELD_FIRE_NUMBER": "2026005",
         "FIELD_FIRE_NUMBER_SHORT": "005",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -214,7 +214,7 @@
         "FIELD_FIRE_NAME": "Kelly Road",
         "FIELD_FIRE_NUMBER": "2026006",
         "FIELD_FIRE_NUMBER_SHORT": "006",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIELD_FIRE_NAME": "Field",
         "FIELD_FIRE_NUMBER": "2026003",
         "FIELD_FIRE_NUMBER_SHORT": "003",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -286,7 +286,7 @@
         "FIELD_FIRE_NAME": "Kinnear Settlement",
         "FIELD_FIRE_NUMBER": "2026007",
         "FIELD_FIRE_NUMBER_SHORT": "007",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -322,7 +322,7 @@
         "FIELD_FIRE_NAME": "Hewitt Brook Meadow",
         "FIELD_FIRE_NUMBER": "2026009",
         "FIELD_FIRE_NUMBER_SHORT": "009",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     },
     {
@@ -358,7 +358,7 @@
         "FIELD_FIRE_NAME": "8",
         "FIELD_FIRE_NUMBER": "2026008",
         "FIELD_FIRE_NUMBER_SHORT": "008",
-        "FETCHED_FROM_ERD": 1774982353
+        "FETCHED_FROM_ERD": 1774986044
       }
     }
   ]
