@@ -30,7 +30,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests pdfplumber
+        run: |
+          pip install requests pdfplumber playwright
+          playwright install chromium --with-deps
 
       - name: Archive fire data
         shell: python
@@ -42,6 +44,7 @@ jobs:
           from datetime import datetime
           from zoneinfo import ZoneInfo
           import requests
+          from playwright.sync_api import sync_playwright
 
           # =============================================================================
           # Configuration
@@ -63,18 +66,33 @@ jobs:
               # CWFIS WFS layers
               "24_hour_spots": {"type": "cwfis", "layer": "public:hotspots_last24hrs", "dir": CWFIS_DIR},
               "fire_perimeters": {"type": "cwfis", "layer": "public:m3_polygons_current", "dir": CWFIS_DIR},
-              # ERD ArcGIS layers
-              "active_fires": {"type": "erd", "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/0/query", "dir": ERD_DIR},
-              "out_fires": {"type": "erd", "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/1/query", "dir": ERD_DIR},
+              # ERD public ArcGIS layers
               "fire_locations": {"type": "erd", "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/New_Brunswick_Fires/New_Brunswick_Fire_Locations/FeatureServer/0/query", "dir": ERD_DIR},
           }
 
+          # Restricted layers fetched via Playwright dashboard session
+          DASHBOARD_URL = "https://nbdnr.maps.arcgis.com/apps/dashboards/7bb8645cf75c4aa2b7a43a3123f9e17f"
+          RESTRICTED_BASE_URL = "https://utility.arcgis.com/usrsvcs/servers/a9126f48ad774664a821ea30e5b10a9c/rest/services/Fire_Dashboards_Restricted/Public_Fires_Restricted/MapServer"
+          QUERY_PARAMS_BASE = (
+              "where=1%3D1&outFields=*&returnGeometry=true&outSR=4326"
+              "&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects"
+              "&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false"
+              "&returnExtentOnly=false&returnZ=false&returnM=false"
+              "&multipatchOption=xyFootprint&returnTrueCurves=false"
+              "&returnExceededLimitFeatures=false&returnCentroid=false"
+              "&timeReferenceUnknownClient=false&sqlFormat=none"
+              "&featureEncoding=esriDefault"
+          )
+          CRS_BLOCK = {"type": "name", "properties": {"name": "EPSG:4326"}}
+
+          RESTRICTED_LAYERS = [
+              {"id": 0, "name": "active_fires",  "format": "geojson", "dir": ERD_DIR},
+              {"id": 1, "name": "out_fires",     "format": "geojson", "dir": ERD_DIR},
+              {"id": 2, "name": "sums_table",    "format": "json",    "dir": ERD_DIR, "ext": ".json"},
+          ]
+
           # ERD JSON endpoints (non-spatial / PDF-derived) archived with date suffix
           ERD_JSON_SOURCES = {
-              "sums_table": {
-                  "url": "https://gis-erd-der.gnb.ca/gisserver/rest/services/Fire_Dashboards/Public_Fires/MapServer/2/query",
-                  "params": {"where": "1=1", "outFields": "*", "returnGeometry": "false", "f": "json"},
-              },
               "GNBfireActSum": {
                   "url": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
                   "is_pdf": True,
@@ -219,6 +237,55 @@ jobs:
 
           failures = []
 
+          # ---- Fetch restricted layers via Playwright dashboard session ----
+          log("Fetching restricted layers via dashboard session...")
+          try:
+              with sync_playwright() as p:
+                  browser = p.chromium.launch(headless=True)
+                  context = browser.new_context()
+                  page = context.new_page()
+
+                  log("Loading dashboard to establish session...")
+                  page.goto(DASHBOARD_URL, wait_until="networkidle", timeout=120_000)
+                  page.wait_for_timeout(5_000)
+                  log("Session established.")
+
+                  for layer in RESTRICTED_LAYERS:
+                      name = layer["name"]
+                      log(f"Processing {name} (restricted)...")
+                      try:
+                          fmt = layer["format"]
+                          query_url = f"{RESTRICTED_BASE_URL}/{layer['id']}/query?{QUERY_PARAMS_BASE}&f={fmt}"
+
+                          data = page.evaluate(
+                              """async (url) => {
+                                  const resp = await fetch(url);
+                                  return await resp.json();
+                              }""",
+                              query_url,
+                          )
+
+                          if fmt == "geojson":
+                              data["crs"] = CRS_BLOCK
+
+                          data["archived_at"] = archived_at
+
+                          ext = layer.get("ext", ".geojson")
+                          output = os.path.join(layer["dir"], f"{name}_{today}{ext}")
+                          write_json(output, data)
+
+                          count = len(data.get("features", []))
+                          log(f"  Features: {count}")
+                      except Exception as e:
+                          log(f"  FAILED: {e}")
+                          failures.append(name)
+
+                  browser.close()
+          except Exception as e:
+              log(f"Playwright session failed: {e}")
+              failures.extend(layer["name"] for layer in RESTRICTED_LAYERS)
+
+          # ---- Fetch public layers ----
           for name, config in DATASETS.items():
               log(f"Processing {name}...")
               
