@@ -349,8 +349,8 @@ window.addEventListener('DOMContentLoaded', () => {
           createBasemaps(CONFIG) {
             return {
               imagery: L.tileLayer(
-                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-                { maxZoom: CONFIG.MAP.MAX_ZOOM, attribution: 'Tiles &copy; Esri', crossOrigin: 'anonymous' }
+                'https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                { maxZoom: CONFIG.MAP.MAX_ZOOM, attribution: 'Tiles &copy; Esri' }
               ),
               osm: L.tileLayer(CONFIG.SERVICES.OSM_TILES, {
                 maxZoom: CONFIG.MAP.MAX_ZOOM,
