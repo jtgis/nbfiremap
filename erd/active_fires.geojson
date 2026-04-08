@@ -1,6 +1,34 @@
 {
   "type": "FeatureCollection",
-  "features": [],
+  "features": [
+    {
+      "type": "Feature",
+      "id": 71202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.01167858406576,
+          46.334119535784595
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71202,
+        "FIRE_NAME": "012",
+        "DEGREES_LAT": 46.334109999999995,
+        "DEGREES_LONG": 65.01168,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775662800000,
+        "FIRE_STAT_DATE": 1775666820000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775677621
+      }
+    }
+  ],
   "crs": {
     "type": "name",
     "properties": {
