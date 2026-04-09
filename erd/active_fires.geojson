@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775754912
+        "FETCHED_FROM_ERD": 1775756574
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775754912
+        "FETCHED_FROM_ERD": 1775756574
       }
     },
     {
@@ -79,7 +79,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775754912
+        "FETCHED_FROM_ERD": 1775756574
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71322,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.78144915564754,
+          45.442629339279456
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71322,
+        "FIRE_NAME": "Cranberry Brook",
+        "DEGREES_LAT": 45.44262,
+        "DEGREES_LONG": 66.78144999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775674200000,
+        "FIRE_STAT_DATE": 1775745774000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775756574
       }
     }
   ],
