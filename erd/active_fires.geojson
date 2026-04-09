@@ -25,7 +25,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775756874
+        "FETCHED_FROM_ERD": 1775759961
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71323,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.0200285743881,
+          46.03603948362831
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71323,
+        "FIRE_NAME": "Old Garage",
+        "DEGREES_LAT": 46.03603,
+        "DEGREES_LONG": 65.02002999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1775742300000,
+        "FIRE_STAT_DATE": 1775746200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775759961
       }
     },
     {
@@ -52,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775756874
+        "FETCHED_FROM_ERD": 1775759961
       }
     },
     {
@@ -79,34 +106,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775756874
+        "FETCHED_FROM_ERD": 1775759961
       }
     },
     {
       "type": "Feature",
-      "id": 71322,
+      "id": 71342,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.78144915564754,
-          45.442629339279456
+          -65.8827288744489,
+          46.049029466759215
         ]
       },
       "properties": {
-        "OBJECTID": 71322,
-        "FIRE_NAME": "Cranberry Brook",
-        "DEGREES_LAT": 45.44262,
-        "DEGREES_LONG": 66.78144999999999,
+        "OBJECTID": 71342,
+        "FIRE_NAME": "Route 10",
+        "DEGREES_LAT": 46.04902,
+        "DEGREES_LONG": 65.88273,
         "FIRE_STAT_ID": 1,
         "FIRE_STAT_DESC_E": "Out of Control",
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1775674200000,
-        "FIRE_STAT_DATE": 1775746074000,
+        "TIME_DETECTED": 1775748600000,
+        "FIRE_STAT_DATE": 1775749161000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775756874
+        "FETCHED_FROM_ERD": 1775759961
       }
     }
   ],
