@@ -25,7 +25,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775746715
+        "FETCHED_FROM_ERD": 1775749174
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.88677918052294,
+          45.22662929791952
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71262,
+        "FIRE_NAME": "Dowdall Meadow",
+        "DEGREES_LAT": 45.22662,
+        "DEGREES_LONG": 66.88678,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 9.5,
+        "TIME_DETECTED": 1775725200000,
+        "FIRE_STAT_DATE": 1775734200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775749174
       }
     }
   ],
