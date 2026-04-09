@@ -7634,7 +7634,8 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
   // ---- DOM Elements ----
   const historyBtn     = $('#historyBtn');
   const historyPanel   = $('#historyPanel');
-  const historyPlay    = $('#historyPlay');
+  const historyPrev    = $('#historyPrev');
+  const historyNext    = $('#historyNext');
   const historyTime    = $('#historyTime');
   const historyStamp   = $('#historyStamp');
   const historyStats   = $('#historyStats');
@@ -7650,12 +7651,10 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
   // ---- State ----
   let archiveDates = [];        // sorted YYYYMMDD strings
   let isHistoryMode = false;
-  let historyTimer = null;
   let historyPerimeterLayer = null;
   let historyHotspotLayer = null;
   let lastReportYear = null;    // year selected for most recent season report
   let lastReportDates = [];     // archive dates for that year
-  const HISTORY_FRAME_MS = 2000;
   const archiveCache = new Map();
 
   // ---- Load manifest ----
@@ -7768,7 +7767,6 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
   function exitHistoryMode() {
     isHistoryMode = false;
     document.body.classList.remove('history-mode');
-    pauseHistory();
 
     // Remove history layers
     if (historyPerimeterLayer) { historyPerimeterLayer.clearLayers(); }
@@ -7803,9 +7801,46 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
     activeFireMarkers.length = 0;
     outFireMarkers.length = 0;
 
+    // Identify same-day fires: detected AND extinguished on the archive date.
+    // These only appear in out_fires but should display as active so the user
+    // can see they existed that day.
+    const archiveYear  = +dateStr.slice(0, 4);
+    const archiveMonth = +dateStr.slice(4, 6) - 1;
+    const archiveDay   = +dateStr.slice(6, 8);
+    const dayStart = Date.UTC(archiveYear, archiveMonth, archiveDay);
+    const dayEnd   = dayStart + 86400000;
+
+    const sameDayFeatures = [];
+    const regularOutFeatures = [];
+
+    if (outData?.features) {
+      for (const f of outData.features) {
+        const p = f.properties || {};
+        const det = FireDataManager.getDetectedMs(p);
+        const ext = FireDataManager.getExtinguishedMs(p);
+        // Both detected and extinguished fall within the archive day
+        if (det != null && ext != null && det >= dayStart && det < dayEnd && ext >= dayStart && ext < dayEnd) {
+          sameDayFeatures.push(f);
+        } else {
+          regularOutFeatures.push(f);
+        }
+      }
+    }
+
     // Process fire points
     const activeMarkers = FireDataManager.processFireGeoJSON(activeData, null, false);
-    const outMarkers = FireDataManager.processFireGeoJSON(outData, 'Extinguished', true);
+
+    // Same-day fires render as "Under Control" style so they're visible as active
+    if (sameDayFeatures.length) {
+      const sameDayGeoJSON = { type: 'FeatureCollection', features: sameDayFeatures };
+      const sameDayMarkers = FireDataManager.processFireGeoJSON(sameDayGeoJSON, 'Under Control', false);
+      activeMarkers.push(...sameDayMarkers);
+    }
+
+    const regularOutGeoJSON = regularOutFeatures.length
+      ? { type: 'FeatureCollection', features: regularOutFeatures }
+      : outData;
+    const outMarkers = FireDataManager.processFireGeoJSON(regularOutGeoJSON, 'Extinguished', true);
     activeFireMarkers.push(...activeMarkers);
     outFireMarkers.push(...outMarkers);
     applyFireFilter();
@@ -7882,32 +7917,23 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
     }
 
     // Update stats display
-    const activeCount = activeData?.features?.length || 0;
-    const outCount = outData?.features?.length || 0;
+    const activeCount = (activeData?.features?.length || 0) + sameDayFeatures.length;
+    const outCount = regularOutFeatures.length;
+    const sameDayNote = sameDayFeatures.length ? ` (${sameDayFeatures.length} same-day)` : '';
     const perimCount = historyPerimeterLayer ? historyPerimeterLayer.getLayers().length : 0;
     const hotspotCount = hotspotsData?.features?.length || 0;
-    const totalArea = (activeData?.features || []).reduce((sum, f) => sum + (Number(f.properties?.FIRE_SIZE) || 0), 0);
-    historyStats.textContent = `${activeCount} active · ${outCount} out · ${toNum(totalArea,0)} ha · ${perimCount} perimeters · ${hotspotCount} hotspots`;
+    const totalArea = (activeData?.features || []).concat(sameDayFeatures).reduce((sum, f) => sum + (Number(f.properties?.FIRE_SIZE) || 0), 0);
+    historyStats.textContent = `${activeCount} active${sameDayNote} · ${outCount} out · ${toNum(totalArea,0)} ha · ${perimCount} perimeters · ${hotspotCount} hotspots`;
   }
 
-  // ---- Playback controls ----
-  function playHistory() {
-    if (historyTimer) return;
-    historyPlay.textContent = '⏸';
-    historyTimer = setInterval(() => {
-      const max = parseInt(historyTime.max, 10);
-      let i = parseInt(historyTime.value, 10);
-      i = (i + 1) % (max + 1);
-      historyTime.value = String(i);
-      loadHistoricalDate(archiveDates[i]);
-    }, HISTORY_FRAME_MS);
-  }
-
-  function pauseHistory() {
-    if (!historyTimer) return;
-    clearInterval(historyTimer);
-    historyTimer = null;
-    historyPlay.textContent = '▶';
+  // ---- Step controls ----
+  function stepHistory(delta) {
+    const max = parseInt(historyTime.max, 10);
+    let i = parseInt(historyTime.value, 10) + delta;
+    if (i < 0) i = 0;
+    if (i > max) i = max;
+    historyTime.value = String(i);
+    loadHistoricalDate(archiveDates[i]);
   }
 
   // ---- Event bindings ----
@@ -7921,12 +7947,10 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
 
   historyLiveBtn.addEventListener('click', exitHistoryMode);
 
-  historyPlay.addEventListener('click', () => {
-    historyTimer ? pauseHistory() : playHistory();
-  });
+  historyPrev.addEventListener('click', () => stepHistory(-1));
+  historyNext.addEventListener('click', () => stepHistory(1));
 
   historyTime.addEventListener('input', () => {
-    pauseHistory();
     const dateStr = archiveDates[+historyTime.value];
     if (dateStr) loadHistoricalDate(dateStr);
   });
