@@ -2082,7 +2082,7 @@ window.addEventListener('DOMContentLoaded', () => {
          * Get fire ID from properties (handles multiple field names)
          */
         const getFireId = (props) => {
-          return props?.FIRE_ID || props?.FIRE_NUMBER || props?.ID || props?.OBJECTID || 'unknown';
+          return String(props?.FIRE_ID || props?.FIRE_NUMBER || props?.ID || props?.OBJECTID || 'unknown');
         };
 
         /**
