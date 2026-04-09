@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1775763989,
+  "fetched_utc": 1775767613,
   "pages": 1,
   "tables": [
     {
@@ -166,6 +166,23 @@
           "Updated": "Apr-09",
           "Latitude": "45.08896",
           "Longitude": "66.77226",
+          "Size": "0.1",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Out",
+          "Number": "023",
+          "Fire Name": "023",
+          "Updated": "Apr-09",
+          "Latitude": "45.94308",
+          "Longitude": "66.85000",
           "Size": "0.1",
           "Pers": "0",
           "Eng": "0",

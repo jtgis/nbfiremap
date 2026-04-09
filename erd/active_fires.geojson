@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775763987
+        "FETCHED_FROM_ERD": 1775767612
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775763987
+        "FETCHED_FROM_ERD": 1775767612
       }
     },
     {
@@ -79,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775763987
+        "FETCHED_FROM_ERD": 1775767612
       }
     },
     {
@@ -106,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775763987
+        "FETCHED_FROM_ERD": 1775767612
       }
     },
     {
@@ -129,11 +129,38 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1775748600000,
-        "FIRE_STAT_DATE": 1775753187000,
+        "FIRE_STAT_DATE": 1775756812000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775763987
+        "FETCHED_FROM_ERD": 1775767612
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.25809899767212,
+          45.921829435843236
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71382,
+        "FIRE_NAME": "Lakeville",
+        "DEGREES_LAT": 45.92182,
+        "DEGREES_LONG": 66.2581,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775753820000,
+        "FIRE_STAT_DATE": 1775756812000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775767612
       }
     }
   ],
