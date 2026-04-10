@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775849681
+        "FETCHED_FROM_ERD": 1775853165
       }
     },
     {
@@ -52,7 +52,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775849681
+        "FETCHED_FROM_ERD": 1775853165
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71542,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.61689911549402,
+          45.786889404299565
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71542,
+        "FIRE_NAME": "Post Road",
+        "DEGREES_LAT": 45.78688,
+        "DEGREES_LONG": 66.6169,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775836320000,
+        "FIRE_STAT_DATE": 1775839200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775853165
       }
     },
     {
@@ -79,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775849681
+        "FETCHED_FROM_ERD": 1775853165
       }
     },
     {
@@ -102,11 +129,11 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1775832600000,
-        "FIRE_STAT_DATE": 1775838881000,
+        "FIRE_STAT_DATE": 1775842365000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775849681
+        "FETCHED_FROM_ERD": 1775853165
       }
     }
   ],

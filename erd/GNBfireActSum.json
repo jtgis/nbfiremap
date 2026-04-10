@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1775849682,
+  "fetched_utc": 1775853167,
   "pages": 2,
   "tables": [
     {
@@ -83,7 +83,7 @@
           "Longitude": "66.57543",
           "Size": "0.2",
           "Pers": "8",
-          "Eng": "2",
+          "Eng": "3",
           "Tend": "0",
           "Trac": "0",
           "Air": "0",
@@ -123,6 +123,23 @@
           "Air": "0",
           "Heli": "0",
           "Ovr": "1",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Being Patrolled",
+          "Number": "035",
+          "Fire Name": "Post Road",
+          "Updated": "Apr-10",
+          "Latitude": "45.78688",
+          "Longitude": "66.61690",
+          "Size": "0.1",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
           "Region": "West Region"
         },
         {
