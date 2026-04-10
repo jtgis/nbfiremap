@@ -3,33 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 71282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.80406915318757,
-          45.239729302526804
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71282,
-        "FIRE_NAME": "McCoy Medeau North Fire",
-        "DEGREES_LAT": 45.23972,
-        "DEGREES_LONG": 66.80407,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1775736000000,
-        "FIRE_STAT_DATE": 1775736000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
-      }
-    },
-    {
-      "type": "Feature",
       "id": 71242,
       "geometry": {
         "type": "Point",
@@ -52,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -79,7 +52,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.80406915318757,
+          45.239729302526804
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71282,
+        "FIRE_NAME": "McCoy Medeau North Fire",
+        "DEGREES_LAT": 45.23972,
+        "DEGREES_LONG": 66.80407,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775736000000,
+        "FIRE_STAT_DATE": 1775736000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -106,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -133,7 +133,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -160,7 +160,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -187,7 +187,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -214,7 +214,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     },
     {
@@ -241,7 +241,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775800872
+        "FETCHED_FROM_ERD": 1775804318
       }
     }
   ],
