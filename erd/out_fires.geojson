@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -194,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -278,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -306,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -334,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -362,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -390,7 +390,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71502,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.12963926018182,
+          45.14860927854052
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71502,
+        "FIRE_NAME": "Bayside",
+        "DEGREES_LAT": 45.1486,
+        "DEGREES_LONG": 67.12964,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0,
+        "TIME_DETECTED": 1775832600000,
+        "FIRE_STAT_DATE": 1775844060000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -405,7 +433,7 @@
       },
       "properties": {
         "OBJECTID": 71042,
-        "FIRE_NAME": "Field",
+        "FIRE_NAME": "003Field",
         "DEGREES_LAT": 47.05838,
         "DEGREES_LONG": 65.28685,
         "FIRE_STAT_ID": 5,
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -446,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -474,7 +502,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71542,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.61689911549402,
+          45.786889404299565
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71542,
+        "FIRE_NAME": "Post Road",
+        "DEGREES_LAT": 45.78688,
+        "DEGREES_LONG": 66.6169,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1775836320000,
+        "FIRE_STAT_DATE": 1775844000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -502,7 +558,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -530,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -558,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -586,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -614,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -642,7 +698,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -670,7 +726,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -698,7 +754,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -726,7 +782,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71522,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.16062931245011,
+          45.96808942251786
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71522,
+        "FIRE_NAME": "034",
+        "DEGREES_LAT": 45.96808,
+        "DEGREES_LONG": 67.16063,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1775835600000,
+        "FIRE_STAT_DATE": 1775847600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775856764
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71462,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.57542909390529,
+          45.62901937755689
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71462,
+        "FIRE_NAME": "Fire Pit",
+        "DEGREES_LAT": 45.62901,
+        "DEGREES_LONG": 66.57543,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1775829480000,
+        "FIRE_STAT_DATE": 1775836800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -754,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -782,7 +894,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -810,7 +922,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     },
     {
@@ -838,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775853165
+        "FETCHED_FROM_ERD": 1775856764
       }
     }
   ],
