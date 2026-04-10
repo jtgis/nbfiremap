@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1775818035,
+  "fetched_utc": 1775820996,
   "pages": 1,
   "tables": [
     {
@@ -27,7 +27,7 @@
           "Status": "Being Patrolled",
           "Number": "019",
           "Fire Name": "Old Garage",
-          "Updated": "Apr-09",
+          "Updated": "Apr-10",
           "Latitude": "46.03603",
           "Longitude": "65.02003",
           "Size": "0.3",
@@ -146,7 +146,7 @@
           "Status": "Being Patrolled",
           "Number": "022",
           "Fire Name": "Lakeville",
-          "Updated": "Apr-09",
+          "Updated": "Apr-10",
           "Latitude": "45.92182",
           "Longitude": "66.25810",
           "Size": "0.1",
@@ -248,10 +248,10 @@
           "Status": "Out",
           "Number": "021",
           "Fire Name": "Edgar Ln",
-          "Updated": "Apr-09",
+          "Updated": "Apr-10",
           "Latitude": "45.08896",
           "Longitude": "66.77226",
-          "Size": "0.1",
+          "Size": "0.7",
           "Pers": "0",
           "Eng": "0",
           "Tend": "0",
