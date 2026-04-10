@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     },
     {
@@ -79,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     },
     {
@@ -102,38 +102,11 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.4000000059604645,
         "TIME_DETECTED": 1775748600000,
-        "FIRE_STAT_DATE": 1775758320000,
+        "FIRE_STAT_DATE": 1775810400000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71386,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.11232895427152,
-          46.050779462007284
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71386,
-        "FIRE_NAME": "Zion",
-        "DEGREES_LAT": 46.05077,
-        "DEGREES_LONG": 66.11233,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1775754600000,
-        "FIRE_STAT_DATE": 1775761020000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     },
     {
@@ -160,34 +133,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71385,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.59843911164381,
-          45.827679411924514
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71385,
-        "FIRE_NAME": "025",
-        "DEGREES_LAT": 45.82767,
-        "DEGREES_LONG": 66.59844,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1775750040000,
-        "FIRE_STAT_DATE": 1775754000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     },
     {
@@ -214,7 +160,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     },
     {
@@ -241,7 +187,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1775820995
+        "FETCHED_FROM_ERD": 1775824676
       }
     }
   ],
