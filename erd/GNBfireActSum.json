@@ -1,7 +1,7 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1775846136,
-  "pages": 1,
+  "fetched_utc": 1775849682,
+  "pages": 2,
   "tables": [
     {
       "page": 1,
@@ -23,23 +23,6 @@
         "Region"
       ],
       "rows": [
-        {
-          "Status": "Being Patrolled",
-          "Number": "024",
-          "Fire Name": "spruce",
-          "Updated": "Apr-10",
-          "Latitude": "46.35979",
-          "Longitude": "64.56502",
-          "Size": "0.4",
-          "Pers": "2",
-          "Eng": "0",
-          "Tend": "0",
-          "Trac": "0",
-          "Air": "0",
-          "Heli": "0",
-          "Ovr": "1",
-          "Region": "East Region"
-        },
         {
           "Status": "Out",
           "Number": "012",
@@ -75,7 +58,24 @@
           "Region": "East Region"
         },
         {
-          "Status": "Out of Control",
+          "Status": "Out",
+          "Number": "024",
+          "Fire Name": "spruce",
+          "Updated": "Apr-10",
+          "Latitude": "46.35979",
+          "Longitude": "64.56502",
+          "Size": "0.4",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
+          "Region": "East Region"
+        },
+        {
+          "Status": "Under Control",
           "Number": "031",
           "Fire Name": "Fire Pit",
           "Updated": "Apr-10",
@@ -101,6 +101,23 @@
           "Size": "0.1",
           "Pers": "6",
           "Eng": "1",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "1",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Being Patrolled",
+          "Number": "034",
+          "Fire Name": "034",
+          "Updated": "Apr-10",
+          "Latitude": "45.96808",
+          "Longitude": "67.16063",
+          "Size": "0.2",
+          "Pers": "0",
+          "Eng": "0",
           "Tend": "0",
           "Trac": "0",
           "Air": "0",
