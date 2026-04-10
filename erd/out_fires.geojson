@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.88677918052294,
+          45.22662929791952
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71262,
+        "FIRE_NAME": "Dowdall Meadow",
+        "DEGREES_LAT": 45.22662,
+        "DEGREES_LONG": 66.88678,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 9.5,
+        "TIME_DETECTED": 1775725200000,
+        "FIRE_STAT_DATE": 1775815200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -194,7 +222,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71342,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.8827288744489,
+          46.049029466759215
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71342,
+        "FIRE_NAME": "Nail Spark",
+        "DEGREES_LAT": 46.04902,
+        "DEGREES_LONG": 65.88273,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775746800000,
+        "FIRE_STAT_DATE": 1775809800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -222,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -250,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -278,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -306,7 +362,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.80406915318757,
+          45.239729302526804
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71282,
+        "FIRE_NAME": "McCoy Medeau North Fire",
+        "DEGREES_LAT": 45.23972,
+        "DEGREES_LONG": 66.80407,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775736000000,
+        "FIRE_STAT_DATE": 1775816640000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -334,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -362,7 +446,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.25809899767212,
+          45.921829435843236
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71382,
+        "FIRE_NAME": "Lakeville",
+        "DEGREES_LAT": 45.92182,
+        "DEGREES_LONG": 66.2581,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775753820000,
+        "FIRE_STAT_DATE": 1775812800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -390,7 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -418,7 +530,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -446,7 +558,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -474,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -502,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     },
     {
@@ -530,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1775824676
+        "FETCHED_FROM_ERD": 1775829128
       }
     }
   ],
