@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1776011594,
+  "fetched_utc": 1776015149,
   "pages": 1,
   "tables": [
     {
@@ -24,20 +24,20 @@
       ],
       "rows": [
         {
-          "Status": "Being Patrolled",
+          "Status": "Out",
           "Number": "014",
           "Fire Name": "39 Forestdale Rd",
-          "Updated": "Apr-10",
+          "Updated": "Apr-12",
           "Latitude": "45.75168",
           "Longitude": "64.74453",
           "Size": "0.1",
-          "Pers": "6",
-          "Eng": "1",
+          "Pers": "0",
+          "Eng": "0",
           "Tend": "0",
           "Trac": "0",
           "Air": "0",
           "Heli": "0",
-          "Ovr": "1",
+          "Ovr": "0",
           "Region": "West Region"
         }
       ]
