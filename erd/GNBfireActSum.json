@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1776042314,
+  "fetched_utc": 1776045864,
   "pages": 1,
   "tables": [
     {
@@ -38,6 +38,23 @@
           "Air": "0",
           "Heli": "0",
           "Ovr": "0",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Being Monitored",
+          "Number": "036",
+          "Fire Name": "Sherwood Rd",
+          "Updated": "Apr-12",
+          "Latitude": "46.07330",
+          "Longitude": "67.68218",
+          "Size": "0.1",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "1",
           "Region": "West Region"
         }
       ]
