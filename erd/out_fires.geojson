@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -194,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -278,7 +278,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71582,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.16312896023591,
+          45.827289421635264
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71582,
+        "FIRE_NAME": "Grimross",
+        "DEGREES_LAT": 45.827279999999995,
+        "DEGREES_LONG": 66.16313,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776063000000,
+        "FIRE_STAT_DATE": 1776083340000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -446,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -474,7 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -502,7 +530,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -530,7 +558,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -558,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -586,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -614,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -642,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -670,7 +698,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -698,7 +726,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -726,7 +754,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71642,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.10114925880283,
+          45.30310930647007
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71642,
+        "FIRE_NAME": "Hewitt Meadow Brook 2",
+        "DEGREES_LAT": 45.3031,
+        "DEGREES_LONG": 67.10114999999999,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 5.699999809265137,
+        "TIME_DETECTED": 1775858400000,
+        "FIRE_STAT_DATE": 1776084420000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -754,7 +810,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -782,7 +838,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -810,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -838,7 +894,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -866,7 +922,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -894,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -922,7 +978,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -950,7 +1006,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -978,7 +1034,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -1006,7 +1062,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -1015,26 +1071,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.10912894413825,
-          45.85980942904834
+          -66.1098789440734,
+          45.863059429313964
         ]
       },
       "properties": {
         "OBJECTID": 71422,
-        "FIRE_NAME": "Jemseg",
-        "DEGREES_LAT": 45.8598,
-        "DEGREES_LONG": 66.10913,
+        "FIRE_NAME": "Golf Range",
+        "DEGREES_LAT": 45.86305,
+        "DEGREES_LONG": 66.10988,
         "FIRE_STAT_ID": 5,
         "FIRE_STAT_DESC_E": "Out",
         "FIRE_STAT_DESC_F": "Éteint",
-        "FIRE_SIZE": 1,
+        "FIRE_SIZE": 0.6000000238418579,
         "TIME_DETECTED": 1775823120000,
         "FIRE_STAT_DATE": 1775829180000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     },
     {
@@ -1062,7 +1118,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776092156
+        "FETCHED_FROM_ERD": 1776095457
       }
     }
   ],
