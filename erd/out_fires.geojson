@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -194,7 +194,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71602,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.98146888247948,
+          45.499539367691675
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71602,
+        "FIRE_NAME": "Back Yard Kingston",
+        "DEGREES_LAT": 45.49953,
+        "DEGREES_LONG": 65.98147,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1775996880000,
+        "FIRE_STAT_DATE": 1776074400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -250,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -278,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -446,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -474,35 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.80406915318757,
-          45.239729302526804
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71282,
-        "FIRE_NAME": "McCoy Medeau North Fire",
-        "DEGREES_LAT": 45.23972,
-        "DEGREES_LONG": 66.80407,
-        "FIRE_STAT_ID": 5,
-        "FIRE_STAT_DESC_E": "Out",
-        "FIRE_STAT_DESC_F": "Éteint",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1775736000000,
-        "FIRE_STAT_DATE": 1775825940000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -530,7 +530,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -558,7 +558,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -586,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -614,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -642,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -670,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -698,7 +698,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -726,7 +726,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -754,7 +754,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -782,7 +782,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -810,7 +810,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -838,7 +838,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -866,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -894,7 +894,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.80406915318757,
+          45.239729302526804
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71282,
+        "FIRE_NAME": "McCoy Medeau North Fire",
+        "DEGREES_LAT": 45.23972,
+        "DEGREES_LONG": 66.80407,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775692800000,
+        "FIRE_STAT_DATE": 1775696340000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -922,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -950,7 +978,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     },
     {
@@ -978,7 +1006,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776085046
+        "FETCHED_FROM_ERD": 1776088841
       }
     }
   ],

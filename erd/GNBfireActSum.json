@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1776085052,
+  "fetched_utc": 1776088842,
   "pages": 1,
   "tables": [
     {
@@ -31,6 +31,23 @@
           "Latitude": "45.75168",
           "Longitude": "64.74453",
           "Size": "0.1",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Out",
+          "Number": "039",
+          "Fire Name": "Back Yard Kingston",
+          "Updated": "Apr-13",
+          "Latitude": "45.49953",
+          "Longitude": "65.98147",
+          "Size": "0.2",
           "Pers": "0",
           "Eng": "0",
           "Tend": "0",
