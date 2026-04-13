@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776080903
+        "FETCHED_FROM_ERD": 1776085046
       }
     },
     {
@@ -34,15 +34,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.16312896023591,
-          45.827289421635264
+          -66.15906896011234,
+          45.83282942260126
         ]
       },
       "properties": {
         "OBJECTID": 71583,
         "FIRE_NAME": "Grimross",
-        "DEGREES_LAT": 45.827279999999995,
-        "DEGREES_LONG": 66.16313,
+        "DEGREES_LAT": 45.83282,
+        "DEGREES_LONG": 66.15907,
         "FIRE_STAT_ID": 6,
         "FIRE_STAT_DESC_E": "Being Monitored",
         "FIRE_STAT_DESC_F": "Sous surveillance",
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776080903
+        "FETCHED_FROM_ERD": 1776085046
       }
     },
     {
@@ -75,11 +75,11 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1776063000000,
-        "FIRE_STAT_DATE": 1776070103000,
+        "FIRE_STAT_DATE": 1776074246000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776080903
+        "FETCHED_FROM_ERD": 1776085046
       }
     }
   ],

@@ -34,43 +34,7 @@
         "FIELD_FIRE_NAME": "Fire Pit",
         "FIELD_FIRE_NUMBER": "2026031",
         "FIELD_FIRE_NUMBER_SHORT": "031",
-        "FETCHED_FROM_ERD": 1776080904
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.80407000000002,
-          45.23971999999998
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71282,
-        "FIELD_AGENCY_FIRE_ID": 71282,
-        "FIELD_LAT": 45.23972,
-        "FIELD_LONG": -66.80407,
-        "FIELD_FIRE_SIZE": 0.10000000149011612,
-        "FIELD_AGENCY_FIRE_CAUSE": "Incendiary (Final) / Incendiaire (Final)",
-        "FIELD_SYSTEM_FIRE_CAUSE": "H",
-        "FIELD_SITUATION_REPORT_DATE": 1775742761000,
-        "FIELD_STATUS_DATE": 1775816640000,
-        "FIELD_STAGE_OF_CONTROL": "EX",
-        "FIELD_FIRE_WAS_PERSCRIBED": 0,
-        "FIELD_AGENCY_PREPAREDNESS": 3,
-        "FIELD_FIRE_TYPE_ICS": 5,
-        "FIELD_SYSTEM_FIRE_ID": null,
-        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
-        "FIELD_PERCENT_CONTAINED": null,
-        "FIELD_RESPONSE_TYPE": null,
-        "FIELD_SEVERITY_NEAREST_DSR": null,
-        "FIELD_AGENCY_CODE": null,
-        "FIELD_FIRE_NAME": "McCoy Medeau North Fire",
-        "FIELD_FIRE_NUMBER": "2026016",
-        "FIELD_FIRE_NUMBER_SHORT": "016",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -106,7 +70,43 @@
         "FIELD_FIRE_NAME": "Nail Spark",
         "FIELD_FIRE_NUMBER": "2026020",
         "FIELD_FIRE_NUMBER_SHORT": "020",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71583,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.15906999999999,
+          45.83282000000003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71583,
+        "FIELD_AGENCY_FIRE_ID": 71583,
+        "FIELD_LAT": 45.83282,
+        "FIELD_LONG": -66.15907,
+        "FIELD_FIRE_SIZE": 0.10000000149011612,
+        "FIELD_AGENCY_FIRE_CAUSE": " / ",
+        "FIELD_SYSTEM_FIRE_CAUSE": "H",
+        "FIELD_SITUATION_REPORT_DATE": 1776069473000,
+        "FIELD_STATUS_DATE": 1776070020000,
+        "FIELD_STAGE_OF_CONTROL": "OC",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": null,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "Grimross",
+        "FIELD_FIRE_NUMBER": "2026038",
+        "FIELD_FIRE_NUMBER_SHORT": "038",
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -142,7 +142,7 @@
         "FIELD_FIRE_NAME": "Bank Fire",
         "FIELD_FIRE_NUMBER": "2026011",
         "FIELD_FIRE_NUMBER_SHORT": "011",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -178,7 +178,7 @@
         "FIELD_FIRE_NAME": "Route 172",
         "FIELD_FIRE_NUMBER": "2026030",
         "FIELD_FIRE_NUMBER_SHORT": "030",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -214,43 +214,7 @@
         "FIELD_FIRE_NAME": "Lakeville",
         "FIELD_FIRE_NUMBER": "2026022",
         "FIELD_FIRE_NUMBER_SHORT": "022",
-        "FETCHED_FROM_ERD": 1776080904
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71583,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.16313000000002,
-          45.82727999999997
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71583,
-        "FIELD_AGENCY_FIRE_ID": 71583,
-        "FIELD_LAT": 45.827279999999995,
-        "FIELD_LONG": -66.16313,
-        "FIELD_FIRE_SIZE": 0.10000000149011612,
-        "FIELD_AGENCY_FIRE_CAUSE": " / ",
-        "FIELD_SYSTEM_FIRE_CAUSE": "H",
-        "FIELD_SITUATION_REPORT_DATE": 1776069473000,
-        "FIELD_STATUS_DATE": 1776070020000,
-        "FIELD_STAGE_OF_CONTROL": "OC",
-        "FIELD_FIRE_WAS_PERSCRIBED": 0,
-        "FIELD_AGENCY_PREPAREDNESS": 3,
-        "FIELD_FIRE_TYPE_ICS": null,
-        "FIELD_SYSTEM_FIRE_ID": null,
-        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
-        "FIELD_PERCENT_CONTAINED": null,
-        "FIELD_RESPONSE_TYPE": null,
-        "FIELD_SEVERITY_NEAREST_DSR": null,
-        "FIELD_AGENCY_CODE": null,
-        "FIELD_FIRE_NAME": "Grimross",
-        "FIELD_FIRE_NUMBER": "2026038",
-        "FIELD_FIRE_NUMBER_SHORT": "038",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -286,7 +250,7 @@
         "FIELD_FIRE_NAME": "025",
         "FIELD_FIRE_NUMBER": "2026025",
         "FIELD_FIRE_NUMBER_SHORT": "025",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -322,7 +286,7 @@
         "FIELD_FIRE_NAME": "Zion",
         "FIELD_FIRE_NUMBER": "2026026",
         "FIELD_FIRE_NUMBER_SHORT": "026",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -358,7 +322,7 @@
         "FIELD_FIRE_NAME": "Old Garage",
         "FIELD_FIRE_NUMBER": "2026019",
         "FIELD_FIRE_NUMBER_SHORT": "019",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -394,7 +358,7 @@
         "FIELD_FIRE_NAME": "Hawkshaw",
         "FIELD_FIRE_NUMBER": "2026010",
         "FIELD_FIRE_NUMBER_SHORT": "010",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -430,7 +394,7 @@
         "FIELD_FIRE_NAME": "Apple",
         "FIELD_FIRE_NUMBER": "2026004",
         "FIELD_FIRE_NUMBER_SHORT": "004",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -466,7 +430,7 @@
         "FIELD_FIRE_NAME": "012",
         "FIELD_FIRE_NUMBER": "2026012",
         "FIELD_FIRE_NUMBER_SHORT": "012",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -502,7 +466,7 @@
         "FIELD_FIRE_NAME": "Edgar Ln",
         "FIELD_FIRE_NUMBER": "2026021",
         "FIELD_FIRE_NUMBER_SHORT": "021",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -538,7 +502,7 @@
         "FIELD_FIRE_NAME": "Field dress",
         "FIELD_FIRE_NUMBER": "2026002",
         "FIELD_FIRE_NUMBER_SHORT": "002",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -574,7 +538,7 @@
         "FIELD_FIRE_NAME": "001",
         "FIELD_FIRE_NUMBER": "2026001",
         "FIELD_FIRE_NUMBER_SHORT": "001",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -610,7 +574,7 @@
         "FIELD_FIRE_NAME": "Cleland Rd",
         "FIELD_FIRE_NUMBER": "2026005",
         "FIELD_FIRE_NUMBER_SHORT": "005",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -646,7 +610,7 @@
         "FIELD_FIRE_NAME": "spruce",
         "FIELD_FIRE_NUMBER": "2026024",
         "FIELD_FIRE_NUMBER_SHORT": "024",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -682,7 +646,7 @@
         "FIELD_FIRE_NAME": "034",
         "FIELD_FIRE_NUMBER": "2026034",
         "FIELD_FIRE_NUMBER_SHORT": "034",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -718,7 +682,7 @@
         "FIELD_FIRE_NAME": "Kelly Road",
         "FIELD_FIRE_NUMBER": "2026006",
         "FIELD_FIRE_NUMBER_SHORT": "006",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -754,7 +718,7 @@
         "FIELD_FIRE_NAME": "003Field",
         "FIELD_FIRE_NUMBER": "2026003",
         "FIELD_FIRE_NUMBER_SHORT": "003",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -790,7 +754,7 @@
         "FIELD_FIRE_NAME": "McCoy Medeau Fire",
         "FIELD_FIRE_NUMBER": "2026013",
         "FIELD_FIRE_NUMBER_SHORT": "013",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -826,7 +790,7 @@
         "FIELD_FIRE_NAME": "Jemseg",
         "FIELD_FIRE_NUMBER": "2026028",
         "FIELD_FIRE_NUMBER_SHORT": "028",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -862,7 +826,7 @@
         "FIELD_FIRE_NAME": "Kinnear Settlement",
         "FIELD_FIRE_NUMBER": "2026007",
         "FIELD_FIRE_NUMBER_SHORT": "007",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -898,7 +862,7 @@
         "FIELD_FIRE_NAME": "Hewitt Brook Meadow",
         "FIELD_FIRE_NUMBER": "2026009",
         "FIELD_FIRE_NUMBER_SHORT": "009",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -934,7 +898,7 @@
         "FIELD_FIRE_NAME": "Cranberry Brook",
         "FIELD_FIRE_NUMBER": "2026018",
         "FIELD_FIRE_NUMBER_SHORT": "018",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -970,7 +934,7 @@
         "FIELD_FIRE_NAME": "McCoy Medeau North 3",
         "FIELD_FIRE_NUMBER": "2026029",
         "FIELD_FIRE_NUMBER_SHORT": "029",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1006,7 +970,7 @@
         "FIELD_FIRE_NAME": "Sherwood Rd",
         "FIELD_FIRE_NUMBER": "2026036",
         "FIELD_FIRE_NUMBER_SHORT": "036",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1042,7 +1006,7 @@
         "FIELD_FIRE_NAME": "Post Road",
         "FIELD_FIRE_NUMBER": "2026035",
         "FIELD_FIRE_NUMBER_SHORT": "035",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1078,7 +1042,7 @@
         "FIELD_FIRE_NAME": "39 Forestdale Rd",
         "FIELD_FIRE_NUMBER": "2026014",
         "FIELD_FIRE_NUMBER_SHORT": "014",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1114,7 +1078,43 @@
         "FIELD_FIRE_NAME": "Dowdall Meadow",
         "FIELD_FIRE_NUMBER": "2026015",
         "FIELD_FIRE_NUMBER_SHORT": "015",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.80407000000002,
+          45.23971999999998
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71282,
+        "FIELD_AGENCY_FIRE_ID": 71282,
+        "FIELD_LAT": 45.23972,
+        "FIELD_LONG": -66.80407,
+        "FIELD_FIRE_SIZE": 0.10000000149011612,
+        "FIELD_AGENCY_FIRE_CAUSE": "Incendiary (Final) / Incendiaire (Final)",
+        "FIELD_SYSTEM_FIRE_CAUSE": "H",
+        "FIELD_SITUATION_REPORT_DATE": 1775742761000,
+        "FIELD_STATUS_DATE": 1775825940000,
+        "FIELD_STAGE_OF_CONTROL": "EX",
+        "FIELD_FIRE_WAS_PERSCRIBED": 0,
+        "FIELD_AGENCY_PREPAREDNESS": 3,
+        "FIELD_FIRE_TYPE_ICS": 5,
+        "FIELD_SYSTEM_FIRE_ID": null,
+        "FIELD_AGENCY_DATA_TIMEZONE": "ADT",
+        "FIELD_PERCENT_CONTAINED": null,
+        "FIELD_RESPONSE_TYPE": null,
+        "FIELD_SEVERITY_NEAREST_DSR": null,
+        "FIELD_AGENCY_CODE": null,
+        "FIELD_FIRE_NAME": "McCoy Medeau North Fire",
+        "FIELD_FIRE_NUMBER": "2026016",
+        "FIELD_FIRE_NUMBER_SHORT": "016",
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1150,7 +1150,7 @@
         "FIELD_FIRE_NAME": "Milligan Brook",
         "FIELD_FIRE_NUMBER": "2026032",
         "FIELD_FIRE_NUMBER_SHORT": "032",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1186,7 +1186,7 @@
         "FIELD_FIRE_NAME": "023",
         "FIELD_FIRE_NUMBER": "2026023",
         "FIELD_FIRE_NUMBER_SHORT": "023",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1222,7 +1222,7 @@
         "FIELD_FIRE_NAME": "Car Pile fire",
         "FIELD_FIRE_NUMBER": "2026027",
         "FIELD_FIRE_NUMBER_SHORT": "027",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1258,7 +1258,7 @@
         "FIELD_FIRE_NAME": "McCoy Medeau North Fire 2",
         "FIELD_FIRE_NUMBER": "2026017",
         "FIELD_FIRE_NUMBER_SHORT": "017",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     },
     {
@@ -1294,7 +1294,7 @@
         "FIELD_FIRE_NAME": "8",
         "FIELD_FIRE_NUMBER": "2026008",
         "FIELD_FIRE_NUMBER_SHORT": "008",
-        "FETCHED_FROM_ERD": 1776080904
+        "FETCHED_FROM_ERD": 1776085052
       }
     }
   ]

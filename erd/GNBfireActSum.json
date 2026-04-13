@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1776080904,
+  "fetched_utc": 1776085052,
   "pages": 1,
   "tables": [
     {
@@ -55,6 +55,23 @@
           "Air": "0",
           "Heli": "0",
           "Ovr": "1",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Being Monitored",
+          "Number": "038",
+          "Fire Name": "Grimross",
+          "Updated": "Apr-13",
+          "Latitude": "45.83282",
+          "Longitude": "66.15907",
+          "Size": "0.1",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
           "Region": "West Region"
         }
       ]
