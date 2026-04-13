@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1776077749,
+  "fetched_utc": 1776080904,
   "pages": 1,
   "tables": [
     {
@@ -44,7 +44,7 @@
           "Status": "Being Monitored",
           "Number": "036",
           "Fire Name": "Sherwood Rd",
-          "Updated": "Apr-12",
+          "Updated": "Apr-13",
           "Latitude": "46.07330",
           "Longitude": "67.68218",
           "Size": "0.1",
