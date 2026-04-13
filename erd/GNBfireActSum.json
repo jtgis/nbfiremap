@@ -1,6 +1,6 @@
 {
   "source": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
-  "fetched_utc": 1776088842,
+  "fetched_utc": 1776092157,
   "pages": 1,
   "tables": [
     {
@@ -48,6 +48,40 @@
           "Latitude": "45.49953",
           "Longitude": "65.98147",
           "Size": "0.2",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Out",
+          "Number": "040",
+          "Fire Name": "Scott Road",
+          "Updated": "Apr-13",
+          "Latitude": "45.37495",
+          "Longitude": "67.21971",
+          "Size": "0.5",
+          "Pers": "0",
+          "Eng": "0",
+          "Tend": "0",
+          "Trac": "0",
+          "Air": "0",
+          "Heli": "0",
+          "Ovr": "0",
+          "Region": "West Region"
+        },
+        {
+          "Status": "Out",
+          "Number": "041",
+          "Fire Name": "Hewitt Meadow Tracks",
+          "Updated": "Apr-13",
+          "Latitude": "45.30428",
+          "Longitude": "67.10129",
+          "Size": "3.8",
           "Pers": "0",
           "Eng": "0",
           "Tend": "0",

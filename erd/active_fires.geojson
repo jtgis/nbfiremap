@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776088840
+        "FETCHED_FROM_ERD": 1776092156
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776088840
+        "FETCHED_FROM_ERD": 1776092156
       }
     },
     {
@@ -75,11 +75,11 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1776063000000,
-        "FIRE_STAT_DATE": 1776078040000,
+        "FIRE_STAT_DATE": 1776081356000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776088840
+        "FETCHED_FROM_ERD": 1776092156
       }
     }
   ],
