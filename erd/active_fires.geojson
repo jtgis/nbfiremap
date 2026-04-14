@@ -25,34 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776184998
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71702,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.87161918121025,
-          45.34774932057555
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71702,
-        "FIRE_NAME": "Milligan Brook 2",
-        "DEGREES_LAT": 45.347739999999995,
-        "DEGREES_LONG": 66.87162,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776011400000,
-        "FIRE_STAT_DATE": 1776174198000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776184998
+        "FETCHED_FROM_ERD": 1776188710
       }
     }
   ],
