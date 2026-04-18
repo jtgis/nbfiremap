@@ -3,6 +3,33 @@
   "features": [
     {
       "type": "Feature",
+      "id": 71803,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.67024910052703,
+          45.100679280682975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71803,
+        "FIRE_NAME": "Seeleys Cove",
+        "DEGREES_LAT": 45.10067,
+        "DEGREES_LONG": 66.67025,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1776526200000,
+        "FIRE_STAT_DATE": 1776528600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776540828
+      }
+    },
+    {
+      "type": "Feature",
       "id": 71783,
       "geometry": {
         "type": "Point",
@@ -25,7 +52,88 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776537228
+        "FETCHED_FROM_ERD": 1776540828
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71805,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.11496928119463,
+          45.661789369484865
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71805,
+        "FIRE_NAME": "053",
+        "DEGREES_LAT": 45.66178,
+        "DEGREES_LONG": 67.11497,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776522600000,
+        "FIRE_STAT_DATE": 1776529620000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776540828
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71802,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.28956897333721,
+          45.1743193029596
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71802,
+        "FIRE_NAME": "Lawnmower",
+        "DEGREES_LAT": 45.17431,
+        "DEGREES_LONG": 66.28957,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776516600000,
+        "FIRE_STAT_DATE": 1776520800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776540828
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71804,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71474953711747,
+          46.583839514906614
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71804,
+        "FIRE_NAME": "Stewart Road",
+        "DEGREES_LAT": 46.58383,
+        "DEGREES_LONG": 67.71475,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776521940000,
+        "FIRE_STAT_DATE": 1776530028000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776540828
       }
     }
   ],
