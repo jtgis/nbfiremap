@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
       }
     },
     {
@@ -79,7 +79,61 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71823,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.25727864962104,
+          45.87370945012447
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71823,
+        "FIRE_NAME": "Anagance",
+        "DEGREES_LAT": 45.8737,
+        "DEGREES_LONG": 65.25728,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1,
+        "TIME_DETECTED": 1776530160000,
+        "FIRE_STAT_DATE": 1776537000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776555150
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71843,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.55107875119582,
+          45.88428944563921
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71843,
+        "FIRE_NAME": "Taylor Road",
+        "DEGREES_LAT": 45.88428,
+        "DEGREES_LONG": 65.55108,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776528060000,
+        "FIRE_STAT_DATE": 1776543000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776555150
       }
     },
     {
@@ -106,7 +160,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
       }
     },
     {
@@ -133,34 +187,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71823,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.25727864962104,
-          45.87370945012447
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71823,
-        "FIRE_NAME": "Anagance",
-        "DEGREES_LAT": 45.8737,
-        "DEGREES_LONG": 65.25728,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1776530160000,
-        "FIRE_STAT_DATE": 1776532740000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
       }
     },
     {
@@ -187,7 +214,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
       }
     },
     {
@@ -214,7 +241,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776551555
+        "FETCHED_FROM_ERD": 1776555150
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.67261910140581,
+          45.1016392814298
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71842,
+        "FIRE_NAME": "Seeley Cove 2",
+        "DEGREES_LAT": 45.10163,
+        "DEGREES_LONG": 66.67262,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776540000000,
+        "FIRE_STAT_DATE": 1776542820000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776555150
       }
     }
   ],
