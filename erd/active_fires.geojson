@@ -20,12 +20,12 @@
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1776526200000,
+        "TIME_DETECTED": 1776525000000,
         "FIRE_STAT_DATE": 1776528600000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776540828
+        "FETCHED_FROM_ERD": 1776544358
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776540828
+        "FETCHED_FROM_ERD": 1776544358
       }
     },
     {
@@ -79,7 +79,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776540828
+        "FETCHED_FROM_ERD": 1776544358
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71823,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.25727864962104,
+          45.87370945012447
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71823,
+        "FIRE_NAME": "Anagance",
+        "DEGREES_LAT": 45.8737,
+        "DEGREES_LONG": 65.25728,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1776530160000,
+        "FIRE_STAT_DATE": 1776532740000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776544358
       }
     },
     {
@@ -106,34 +133,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776540828
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71804,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71474953711747,
-          46.583839514906614
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71804,
-        "FIRE_NAME": "Stewart Road",
-        "DEGREES_LAT": 46.58383,
-        "DEGREES_LONG": 67.71475,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776521940000,
-        "FIRE_STAT_DATE": 1776530028000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776540828
+        "FETCHED_FROM_ERD": 1776544358
       }
     }
   ],
