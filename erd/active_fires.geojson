@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
+        "FETCHED_FROM_ERD": 1776551555
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
+        "FETCHED_FROM_ERD": 1776551555
       }
     },
     {
@@ -79,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
+        "FETCHED_FROM_ERD": 1776551555
       }
     },
     {
@@ -106,7 +106,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
+        "FETCHED_FROM_ERD": 1776551555
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71826,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.3523687196315,
+          46.704249592387264
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71826,
+        "FIRE_NAME": "IronGate",
+        "DEGREES_LAT": 46.70424,
+        "DEGREES_LONG": 65.35237,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1776525720000,
+        "FIRE_STAT_DATE": 1776539220000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776551555
       }
     },
     {
@@ -133,7 +160,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
+        "FETCHED_FROM_ERD": 1776551555
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71827,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.8586288468445,
+          45.65225939826491
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71827,
+        "FIRE_NAME": "Hatfield",
+        "DEGREES_LAT": 45.652249999999995,
+        "DEGREES_LONG": 65.85862999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1776528180000,
+        "FIRE_STAT_DATE": 1776535200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776551555
       }
     },
     {
@@ -160,34 +214,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71826,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.3523687196315,
-          46.704249592387264
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71826,
-        "FIRE_NAME": "IronGate",
-        "DEGREES_LAT": 46.70424,
-        "DEGREES_LONG": 65.35237,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776525720000,
-        "FIRE_STAT_DATE": 1776537134000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776547934
+        "FETCHED_FROM_ERD": 1776551555
       }
     }
   ],
