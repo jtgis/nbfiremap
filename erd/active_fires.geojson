@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -79,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -106,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -133,7 +133,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -160,7 +160,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -187,34 +187,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.67261910140581,
-          45.1016392814298
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71842,
-        "FIRE_NAME": "Seeley Cove 2",
-        "DEGREES_LAT": 45.10163,
-        "DEGREES_LONG": 66.67262,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776540000000,
-        "FIRE_STAT_DATE": 1776542820000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     },
     {
@@ -241,7 +214,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776609223
+        "FETCHED_FROM_ERD": 1776612787
       }
     }
   ],
