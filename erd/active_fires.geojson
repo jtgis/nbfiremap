@@ -25,61 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71783,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.18194932057008,
-          45.98230942479174
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71783,
-        "FIRE_NAME": "049",
-        "DEGREES_LAT": 45.9823,
-        "DEGREES_LONG": 67.18195,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1776519900000,
-        "FIRE_STAT_DATE": 1776525360000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71805,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.11496928119463,
-          45.661789369484865
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71805,
-        "FIRE_NAME": "053",
-        "DEGREES_LAT": 45.66178,
-        "DEGREES_LONG": 67.11497,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776522600000,
-        "FIRE_STAT_DATE": 1776529620000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
       }
     },
     {
@@ -106,34 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71824,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.8129991879063,
-          45.88800941719428
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71824,
-        "FIRE_NAME": "Mazerolle",
-        "DEGREES_LAT": 45.888000000000005,
-        "DEGREES_LONG": 66.813,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 7.699999809265137,
-        "TIME_DETECTED": 1776528060000,
-        "FIRE_STAT_DATE": 1776535200000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
       }
     },
     {
@@ -160,7 +79,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71824,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.8129991879063,
+          45.88800941719428
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71824,
+        "FIRE_NAME": "Mazerolle",
+        "DEGREES_LAT": 45.888000000000005,
+        "DEGREES_LONG": 66.813,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 7.699999809265137,
+        "TIME_DETECTED": 1776528060000,
+        "FIRE_STAT_DATE": 1776586440000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776598360
       }
     },
     {
@@ -187,7 +133,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
       }
     },
     {
@@ -214,7 +160,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
       }
     },
     {
@@ -241,7 +187,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
       }
     },
     {
@@ -268,7 +214,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776594795
+        "FETCHED_FROM_ERD": 1776598360
       }
     }
   ],
