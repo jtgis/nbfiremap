@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -194,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -278,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -306,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -334,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -362,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -390,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -418,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -446,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -474,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -502,7 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -530,7 +530,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71803,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.67024910052703,
+          45.100679280682975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71803,
+        "FIRE_NAME": "Seeleys Cove",
+        "DEGREES_LAT": 45.10067,
+        "DEGREES_LONG": 66.67025,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1776525000000,
+        "FIRE_STAT_DATE": 1776618000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776634348
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71922,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.91597918778822,
+          45.16189928615745
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71922,
+        "FIRE_NAME": "Exit 45",
+        "DEGREES_LAT": 45.16189,
+        "DEGREES_LONG": 66.91597999999999,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0,
+        "TIME_DETECTED": 1776549600000,
+        "FIRE_STAT_DATE": 1776551400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -558,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -586,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -614,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -642,7 +698,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -670,7 +726,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -698,7 +754,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -726,7 +782,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -754,7 +810,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -782,7 +838,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -810,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -838,7 +894,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -866,7 +922,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -894,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -922,7 +978,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -950,7 +1006,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -978,7 +1034,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1006,7 +1062,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1034,7 +1090,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1062,7 +1118,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1090,7 +1146,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1118,7 +1174,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1146,7 +1202,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1174,7 +1230,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1202,7 +1258,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1230,7 +1286,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1258,7 +1314,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1286,7 +1342,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1314,7 +1370,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1342,7 +1398,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1370,7 +1426,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1398,7 +1454,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71902,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.67381910166043,
+          45.10287928107697
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71902,
+        "FIRE_NAME": "Seeley Cove Rd 3",
+        "DEGREES_LAT": 45.102869999999996,
+        "DEGREES_LONG": 66.67381999999999,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776547200000,
+        "FIRE_STAT_DATE": 1776620760000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1426,7 +1510,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1454,7 +1538,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1482,7 +1566,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1510,7 +1594,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1538,7 +1622,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1566,7 +1650,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -1594,7 +1678,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     }
   ],

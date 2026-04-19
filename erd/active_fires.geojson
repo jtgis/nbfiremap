@@ -3,33 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 71803,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.67024910052703,
-          45.100679280682975
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71803,
-        "FIRE_NAME": "Seeleys Cove",
-        "DEGREES_LAT": 45.10067,
-        "DEGREES_LONG": 66.67025,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1776525000000,
-        "FIRE_STAT_DATE": 1776528600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
-      }
-    },
-    {
-      "type": "Feature",
       "id": 71862,
       "geometry": {
         "type": "Point",
@@ -52,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -79,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -106,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -133,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -160,7 +133,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     },
     {
@@ -187,7 +160,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776630762
+        "FETCHED_FROM_ERD": 1776634348
       }
     }
   ],
