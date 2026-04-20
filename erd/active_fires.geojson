@@ -3,114 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 71862,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.37446868945348,
-          45.865389445642144
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71862,
-        "FIRE_NAME": "Manning Road",
-        "DEGREES_LAT": 45.865379999999995,
-        "DEGREES_LONG": 65.37447,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776521400000,
-        "FIRE_STAT_DATE": 1776591540000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776682630
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71823,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.25727864962104,
-          45.87370945012447
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71823,
-        "FIRE_NAME": "Anagance",
-        "DEGREES_LAT": 45.8737,
-        "DEGREES_LONG": 65.25728,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1776530160000,
-        "FIRE_STAT_DATE": 1776590460000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776682630
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71824,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.8129991879063,
-          45.88800941719428
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71824,
-        "FIRE_NAME": "Mazerolle",
-        "DEGREES_LAT": 45.888000000000005,
-        "DEGREES_LONG": 66.813,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 7.699999809265137,
-        "TIME_DETECTED": 1776528060000,
-        "FIRE_STAT_DATE": 1776586440000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776682630
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71882,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.34304868528335,
-          46.020089473784964
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71882,
-        "FIRE_NAME": "Rd 885",
-        "DEGREES_LAT": 46.02008,
-        "DEGREES_LONG": 65.34304999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776526920000,
-        "FIRE_STAT_DATE": 1776592920000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776682630
-      }
-    },
-    {
-      "type": "Feature",
       "id": 71827,
       "geometry": {
         "type": "Point",
@@ -133,34 +25,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776682630
+        "FETCHED_FROM_ERD": 1776685741
       }
     },
     {
       "type": "Feature",
-      "id": 71843,
+      "id": 71824,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.55107875119582,
-          45.88428944563921
+          -66.8129991879063,
+          45.88800941719428
         ]
       },
       "properties": {
-        "OBJECTID": 71843,
-        "FIRE_NAME": "Taylor Road",
-        "DEGREES_LAT": 45.88428,
-        "DEGREES_LONG": 65.55108,
+        "OBJECTID": 71824,
+        "FIRE_NAME": "Mazerolle",
+        "DEGREES_LAT": 45.888000000000005,
+        "DEGREES_LONG": 66.813,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
+        "FIRE_SIZE": 7.699999809265137,
         "TIME_DETECTED": 1776528060000,
-        "FIRE_STAT_DATE": 1776590640000,
+        "FIRE_STAT_DATE": 1776673380000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776682630
+        "FETCHED_FROM_ERD": 1776685741
       }
     }
   ],
