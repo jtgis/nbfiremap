@@ -3,6 +3,33 @@
   "features": [
     {
       "type": "Feature",
+      "id": 72002,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.37092873858266,
+          46.978639637989154
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72002,
+        "FIRE_NAME": "070 Glenwood",
+        "DEGREES_LAT": 46.978629999999995,
+        "DEGREES_LONG": 65.37093,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1776699480000,
+        "FIRE_STAT_DATE": 1776702000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776714138
+      }
+    },
+    {
+      "type": "Feature",
       "id": 71827,
       "geometry": {
         "type": "Point",
@@ -25,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776710479
+        "FETCHED_FROM_ERD": 1776714138
       }
     }
   ],
