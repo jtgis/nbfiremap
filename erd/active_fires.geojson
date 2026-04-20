@@ -3,60 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 71862,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.37446868945348,
-          45.865389445642144
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71862,
-        "FIRE_NAME": "Manning Road",
-        "DEGREES_LAT": 45.865379999999995,
-        "DEGREES_LONG": 65.37447,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776521400000,
-        "FIRE_STAT_DATE": 1776591540000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776668812
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71823,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.25727864962104,
-          45.87370945012447
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71823,
-        "FIRE_NAME": "Anagance",
-        "DEGREES_LAT": 45.8737,
-        "DEGREES_LONG": 65.25728,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1776530160000,
-        "FIRE_STAT_DATE": 1776590460000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776668812
-      }
-    },
-    {
-      "type": "Feature",
       "id": 71824,
       "geometry": {
         "type": "Point",
@@ -79,34 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776668812
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71882,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.34304868528335,
-          46.020089473784964
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71882,
-        "FIRE_NAME": "Rd 885",
-        "DEGREES_LAT": 46.02008,
-        "DEGREES_LONG": 65.34304999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776526920000,
-        "FIRE_STAT_DATE": 1776592920000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776668812
+        "FETCHED_FROM_ERD": 1776672162
       }
     },
     {
@@ -133,7 +52,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776668812
+        "FETCHED_FROM_ERD": 1776672162
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71882,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.34304868528335,
+          46.020089473784964
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71882,
+        "FIRE_NAME": "Rd 885",
+        "DEGREES_LAT": 46.02008,
+        "DEGREES_LONG": 65.34304999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776526920000,
+        "FIRE_STAT_DATE": 1776592920000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776672162
       }
     },
     {
@@ -160,7 +106,61 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776668812
+        "FETCHED_FROM_ERD": 1776672162
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71862,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.37446868945348,
+          45.865389445642144
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71862,
+        "FIRE_NAME": "Manning Road",
+        "DEGREES_LAT": 45.865379999999995,
+        "DEGREES_LONG": 65.37447,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776521400000,
+        "FIRE_STAT_DATE": 1776591540000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776672162
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71823,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.25727864962104,
+          45.87370945012447
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71823,
+        "FIRE_NAME": "Anagance",
+        "DEGREES_LAT": 45.8737,
+        "DEGREES_LONG": 65.25728,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1,
+        "TIME_DETECTED": 1776530160000,
+        "FIRE_STAT_DATE": 1776590460000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776672162
       }
     }
   ],
