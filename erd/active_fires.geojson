@@ -3,33 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 71827,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.8586288468445,
-          45.65225939826491
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71827,
-        "FIRE_NAME": "Hatfield",
-        "DEGREES_LAT": 45.652249999999995,
-        "DEGREES_LONG": 65.85862999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1776528180000,
-        "FIRE_STAT_DATE": 1776670260000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776765194
-      }
-    },
-    {
-      "type": "Feature",
       "id": 72002,
       "geometry": {
         "type": "Point",
@@ -52,7 +25,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776765194
+        "FETCHED_FROM_ERD": 1776768881
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71827,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.8586288468445,
+          45.65225939826491
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71827,
+        "FIRE_NAME": "Hatfield",
+        "DEGREES_LAT": 45.652249999999995,
+        "DEGREES_LONG": 65.85862999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1776528180000,
+        "FIRE_STAT_DATE": 1776670260000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776768881
       }
     }
   ],
