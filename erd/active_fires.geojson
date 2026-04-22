@@ -3,29 +3,29 @@
   "features": [
     {
       "type": "Feature",
-      "id": 71827,
+      "id": 72162,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.8586288468445,
-          45.65225939826491
+          -67.33837937615418,
+          46.01180942585872
         ]
       },
       "properties": {
-        "OBJECTID": 71827,
-        "FIRE_NAME": "Hatfield",
-        "DEGREES_LAT": 45.652249999999995,
-        "DEGREES_LONG": 65.85862999999999,
+        "OBJECTID": 72162,
+        "FIRE_NAME": "80",
+        "DEGREES_LAT": 46.0118,
+        "DEGREES_LONG": 67.33838,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1776528180000,
-        "FIRE_STAT_DATE": 1776771300000,
+        "FIRE_SIZE": 2.299999952316284,
+        "TIME_DETECTED": 1776857400000,
+        "FIRE_STAT_DATE": 1776862080000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776869643
+        "FETCHED_FROM_ERD": 1776872915
       }
     },
     {
@@ -52,7 +52,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776869643
+        "FETCHED_FROM_ERD": 1776872915
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.81336857201757,
+          47.62442975882835
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72163,
+        "FIRE_NAME": "Four Road",
+        "DEGREES_LAT": 47.62442,
+        "DEGREES_LONG": 64.81336999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776886200000,
+        "FIRE_STAT_DATE": 1776862115000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776872915
       }
     }
   ],
