@@ -3,6 +3,33 @@
   "features": [
     {
       "type": "Feature",
+      "id": 72202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.67712887314724,
+          47.53188972502779
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72202,
+        "FIRE_NAME": "Poplar Fire",
+        "DEGREES_LAT": 47.53188,
+        "DEGREES_LONG": 65.67712999999999,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1776867300000,
+        "FIRE_STAT_DATE": 1776870000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776883356
+      }
+    },
+    {
+      "type": "Feature",
       "id": 72162,
       "geometry": {
         "type": "Point",
@@ -25,34 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776879646
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72102,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.70623911402298,
-          45.13135928518025
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72102,
-        "FIRE_NAME": "Pennfield Ridge airstrip",
-        "DEGREES_LAT": 45.13135,
-        "DEGREES_LONG": 66.70624,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 3,
-        "TIME_DETECTED": 1776787200000,
-        "FIRE_STAT_DATE": 1776799260000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776879646
+        "FETCHED_FROM_ERD": 1776883356
       }
     }
   ],
