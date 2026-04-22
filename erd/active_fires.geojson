@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776854835
+        "FETCHED_FROM_ERD": 1776861781
       }
     },
     {
@@ -52,34 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776854835
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72042,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.82495919419146,
-          45.91928942257968
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72042,
-        "FIRE_NAME": "Millennium",
-        "DEGREES_LAT": 45.91928,
-        "DEGREES_LONG": 66.82495999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776770760000,
-        "FIRE_STAT_DATE": 1776844035000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776854835
+        "FETCHED_FROM_ERD": 1776861781
       }
     }
   ],
