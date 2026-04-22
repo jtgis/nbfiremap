@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776872915
+        "FETCHED_FROM_ERD": 1776876069
       }
     },
     {
@@ -52,34 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776872915
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72163,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.81336857201757,
-          47.62442975882835
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72163,
-        "FIRE_NAME": "Four Road",
-        "DEGREES_LAT": 47.62442,
-        "DEGREES_LONG": 64.81336999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776886200000,
-        "FIRE_STAT_DATE": 1776862115000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776872915
+        "FETCHED_FROM_ERD": 1776876069
       }
     }
   ],
