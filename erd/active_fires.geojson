@@ -25,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776906410
+        "FETCHED_FROM_ERD": 1776909800
       }
     },
     {
@@ -52,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776906410
+        "FETCHED_FROM_ERD": 1776909800
       }
     },
     {
@@ -79,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776906410
+        "FETCHED_FROM_ERD": 1776909800
       }
     },
     {
@@ -106,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776906410
+        "FETCHED_FROM_ERD": 1776909800
       }
     },
     {
@@ -133,7 +133,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776906410
+        "FETCHED_FROM_ERD": 1776909800
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.34166937754948,
+          46.01325942560937
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72302,
+        "FIRE_NAME": "Campbell",
+        "DEGREES_LAT": 46.01325,
+        "DEGREES_LONG": 67.34167,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776891300000,
+        "FIRE_STAT_DATE": 1776899000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776909800
       }
     }
   ],
