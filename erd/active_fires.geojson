@@ -25,34 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776952863
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72162,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.33837937615418,
-          46.01180942585872
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72162,
-        "FIRE_NAME": "80",
-        "DEGREES_LAT": 46.0118,
-        "DEGREES_LONG": 67.33838,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 2.299999952316284,
-        "TIME_DETECTED": 1776856500000,
-        "FIRE_STAT_DATE": 1776933240000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776952863
+        "FETCHED_FROM_ERD": 1776956679
       }
     }
   ],
