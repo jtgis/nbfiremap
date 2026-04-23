@@ -3,87 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 72282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.88391884678718,
-          45.43395935880944
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72282,
-        "FIRE_NAME": "Porter Road",
-        "DEGREES_LAT": 45.433949999999996,
-        "DEGREES_LONG": 65.88392,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776883380000,
-        "FIRE_STAT_DATE": 1776886440000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776921371
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72302,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.34166937754948,
-          46.01325942560937
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72302,
-        "FIRE_NAME": "Campbell",
-        "DEGREES_LAT": 46.01325,
-        "DEGREES_LONG": 67.34167,
-        "FIRE_STAT_ID": 6,
-        "FIRE_STAT_DESC_E": "Being Monitored",
-        "FIRE_STAT_DESC_F": "Sous surveillance",
-        "FIRE_SIZE": 1.5,
-        "TIME_DETECTED": 1776891300000,
-        "FIRE_STAT_DATE": 1776898980000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776921371
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72202,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.67712887314724,
-          47.53188972502779
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72202,
-        "FIRE_NAME": "Poplar Fire",
-        "DEGREES_LAT": 47.53188,
-        "DEGREES_LONG": 65.67712999999999,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1776867300000,
-        "FIRE_STAT_DATE": 1776870000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776921371
-      }
-    },
-    {
-      "type": "Feature",
       "id": 72162,
       "geometry": {
         "type": "Point",
@@ -106,34 +25,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776921371
+        "FETCHED_FROM_ERD": 1776924179
       }
     },
     {
       "type": "Feature",
-      "id": 72262,
+      "id": 72282,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.05532862005461,
-          46.79332961351812
+          -65.88391884678718,
+          45.43395935880944
         ]
       },
       "properties": {
-        "OBJECTID": 72262,
-        "FIRE_NAME": "Dam",
-        "DEGREES_LAT": 46.79332,
-        "DEGREES_LONG": 65.05533,
+        "OBJECTID": 72282,
+        "FIRE_NAME": "Porter Road",
+        "DEGREES_LAT": 45.433949999999996,
+        "DEGREES_LONG": 65.88392,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1776879000000,
-        "FIRE_STAT_DATE": 1776881580000,
+        "TIME_DETECTED": 1776883380000,
+        "FIRE_STAT_DATE": 1776886440000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776921371
+        "FETCHED_FROM_ERD": 1776924179
       }
     },
     {
@@ -160,7 +79,88 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776921371
+        "FETCHED_FROM_ERD": 1776924179
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.05532862005461,
+          46.79332961351812
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72262,
+        "FIRE_NAME": "Dam",
+        "DEGREES_LAT": 46.79332,
+        "DEGREES_LONG": 65.05533,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1776879000000,
+        "FIRE_STAT_DATE": 1776881580000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776924179
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.34166937754948,
+          46.01325942560937
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72302,
+        "FIRE_NAME": "Campbell",
+        "DEGREES_LAT": 46.01325,
+        "DEGREES_LONG": 67.34167,
+        "FIRE_STAT_ID": 6,
+        "FIRE_STAT_DESC_E": "Being Monitored",
+        "FIRE_STAT_DESC_F": "Sous surveillance",
+        "FIRE_SIZE": 1.5,
+        "TIME_DETECTED": 1776891300000,
+        "FIRE_STAT_DATE": 1776898980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776924179
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.67712887314724,
+          47.53188972502779
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72202,
+        "FIRE_NAME": "Poplar Fire",
+        "DEGREES_LAT": 47.53188,
+        "DEGREES_LONG": 65.67712999999999,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1776867300000,
+        "FIRE_STAT_DATE": 1776870000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1776924179
       }
     }
   ],
