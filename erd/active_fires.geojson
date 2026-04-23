@@ -3,33 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 72202,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.67712887314724,
-          47.53188972502779
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72202,
-        "FIRE_NAME": "Poplar Fire",
-        "DEGREES_LAT": 47.53188,
-        "DEGREES_LONG": 65.67712999999999,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1776867300000,
-        "FIRE_STAT_DATE": 1776870000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776944590
-      }
-    },
-    {
-      "type": "Feature",
       "id": 72262,
       "geometry": {
         "type": "Point",
@@ -52,7 +25,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776944590
+        "FETCHED_FROM_ERD": 1776948205
       }
     },
     {
@@ -79,7 +52,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776944590
+        "FETCHED_FROM_ERD": 1776948205
       }
     },
     {
@@ -106,7 +79,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776944590
+        "FETCHED_FROM_ERD": 1776948205
       }
     },
     {
@@ -133,7 +106,7 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1776944590
+        "FETCHED_FROM_ERD": 1776948205
       }
     }
   ],
