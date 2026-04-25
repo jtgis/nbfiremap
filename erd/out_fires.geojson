@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -166,7 +166,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.77225913533167,
+          45.08896927595788
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71362,
+        "FIRE_NAME": "Edgar Ln",
+        "DEGREES_LAT": 45.08896,
+        "DEGREES_LONG": 66.77226,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1775748600000,
+        "FIRE_STAT_DATE": 1775752200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -194,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -250,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -278,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -446,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -474,7 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -502,7 +530,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -530,7 +558,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -558,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -586,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -614,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -642,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -670,7 +698,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -698,7 +726,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -726,7 +754,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -754,7 +782,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -782,7 +810,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -810,7 +838,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -838,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -866,7 +894,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -894,7 +922,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -922,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -950,7 +978,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -978,7 +1006,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1006,7 +1034,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1034,7 +1062,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1062,7 +1090,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1090,35 +1118,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71502,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.12963926018182,
-          45.14860927854052
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71502,
-        "FIRE_NAME": "Tree Frog Hollow",
-        "DEGREES_LAT": 45.1486,
-        "DEGREES_LONG": 67.12964,
-        "FIRE_STAT_ID": 5,
-        "FIRE_STAT_DESC_E": "Out",
-        "FIRE_STAT_DESC_F": "Éteint",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1775832600000,
-        "FIRE_STAT_DATE": 1775844060000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1146,7 +1146,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1174,7 +1174,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1202,7 +1202,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1230,7 +1230,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1258,7 +1258,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1286,7 +1286,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1314,7 +1314,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1342,7 +1342,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1370,7 +1370,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.70803911670008,
+          45.155359290196834
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72103,
+        "FIRE_NAME": "Old Saint John Road",
+        "DEGREES_LAT": 45.15535,
+        "DEGREES_LONG": 66.70804,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1776787200000,
+        "FIRE_STAT_DATE": 1776799380000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777134814
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71682,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.891659187447,
+          45.319869314752005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71682,
+        "FIRE_NAME": "Lake Stream Meadow Fire",
+        "DEGREES_LAT": 45.31986,
+        "DEGREES_LONG": 66.89166,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 97,
+        "TIME_DETECTED": 1775998800000,
+        "FIRE_STAT_DATE": 1776160800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1398,35 +1454,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72103,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.70803911670008,
-          45.155359290196834
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72103,
-        "FIRE_NAME": "Old Saint John Road",
-        "DEGREES_LAT": 45.15535,
-        "DEGREES_LONG": 66.70804,
-        "FIRE_STAT_ID": 5,
-        "FIRE_STAT_DESC_E": "Out",
-        "FIRE_STAT_DESC_F": "Éteint",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1776787200000,
-        "FIRE_STAT_DATE": 1776799380000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1454,7 +1482,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1482,7 +1510,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1510,7 +1538,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1538,7 +1566,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1566,7 +1594,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1594,7 +1622,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1622,7 +1650,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1650,7 +1678,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1678,7 +1706,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1706,7 +1734,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1734,7 +1762,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71502,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.12963926018182,
+          45.14860927854052
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71502,
+        "FIRE_NAME": "Tree Frog Hollow",
+        "DEGREES_LAT": 45.1486,
+        "DEGREES_LONG": 67.12964,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1775832600000,
+        "FIRE_STAT_DATE": 1775833920000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 1,
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1762,7 +1818,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1790,7 +1846,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1818,7 +1874,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1846,7 +1902,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1874,7 +1930,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1902,7 +1958,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1930,7 +1986,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1958,7 +2014,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -1986,7 +2042,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2014,7 +2070,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2042,35 +2098,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71682,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.891659187447,
-          45.319869314752005
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71682,
-        "FIRE_NAME": "Lake Stream Meadow Fire",
-        "DEGREES_LAT": 45.31986,
-        "DEGREES_LONG": 66.89166,
-        "FIRE_STAT_ID": 5,
-        "FIRE_STAT_DESC_E": "Out",
-        "FIRE_STAT_DESC_F": "Éteint",
-        "FIRE_SIZE": 97,
-        "TIME_DETECTED": 1775998800000,
-        "FIRE_STAT_DATE": 1775998800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2098,7 +2126,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2126,7 +2154,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2154,7 +2182,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2182,7 +2210,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2210,7 +2238,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2238,7 +2266,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2266,7 +2294,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2294,7 +2322,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2322,7 +2350,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2350,7 +2378,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2378,7 +2406,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2406,7 +2434,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2434,35 +2462,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 71362,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.77225913533167,
-          45.08896927595788
-        ]
-      },
-      "properties": {
-        "OBJECTID": 71362,
-        "FIRE_NAME": "Edgar Ln",
-        "DEGREES_LAT": 45.08896,
-        "DEGREES_LONG": 66.77226,
-        "FIRE_STAT_ID": 5,
-        "FIRE_STAT_DESC_E": "Out",
-        "FIRE_STAT_DESC_F": "Éteint",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1775748600000,
-        "FIRE_STAT_DATE": 1775751900000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2490,7 +2490,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2518,7 +2518,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     },
     {
@@ -2546,7 +2546,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777131221
+        "FETCHED_FROM_ERD": 1777134814
       }
     }
   ],
