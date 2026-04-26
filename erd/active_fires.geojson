@@ -19,13 +19,13 @@
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1777203600000,
-        "FIRE_STAT_DATE": 1777207860000,
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1777202700000,
+        "FIRE_STAT_DATE": 1777214940000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1777224818
+        "FETCHED_FROM_ERD": 1777228451
       }
     }
   ],
