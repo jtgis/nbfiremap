@@ -25,7 +25,34 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1777232190
+        "FETCHED_FROM_ERD": 1777235579
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72442,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.04879893441942,
+          46.099979472227666
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72442,
+        "FIRE_NAME": "Pleasant Drive",
+        "DEGREES_LAT": 46.09997,
+        "DEGREES_LONG": 66.0488,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777216020000,
+        "FIRE_STAT_DATE": 1777219200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1777235579
       }
     }
   ],
