@@ -3,33 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 72464,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.54439906175477,
-          45.18193929797237
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72464,
-        "FIRE_NAME": "Road 6",
-        "DEGREES_LAT": 45.18193,
-        "DEGREES_LONG": 66.54440000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 10,
-        "TIME_DETECTED": 1777215000000,
-        "FIRE_STAT_DATE": 1777277700000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1777305508
-      }
-    },
-    {
-      "type": "Feature",
       "id": 72482,
       "geometry": {
         "type": "Point",
@@ -52,34 +25,61 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1777305508
+        "FETCHED_FROM_ERD": 1777308909
       }
     },
     {
       "type": "Feature",
-      "id": 72542,
+      "id": 72464,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.00712967891921,
-          47.278929624431186
+          -66.54439906175477,
+          45.18193929797237
         ]
       },
       "properties": {
-        "OBJECTID": 72542,
-        "FIRE_NAME": "Chemin Sirois",
-        "DEGREES_LAT": 47.27892,
-        "DEGREES_LONG": 68.00713,
+        "OBJECTID": 72464,
+        "FIRE_NAME": "Road 6",
+        "DEGREES_LAT": 45.18193,
+        "DEGREES_LONG": 66.54440000000001,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 10,
+        "TIME_DETECTED": 1777215000000,
+        "FIRE_STAT_DATE": 1777294800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "FETCHED_FROM_ERD": 1777308909
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72562,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.87134921699793,
+          46.06142944574453
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72562,
+        "FIRE_NAME": "Jones Forks",
+        "DEGREES_LAT": 46.06142,
+        "DEGREES_LONG": 66.87134999999999,
         "FIRE_STAT_ID": 1,
         "FIRE_STAT_DESC_E": "Out of Control",
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777235100000,
-        "FIRE_STAT_DATE": 1777294707000,
+        "TIME_DETECTED": 1777294800000,
+        "FIRE_STAT_DATE": 1777298109000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "FETCHED_FROM_ERD": 1777305508
+        "FETCHED_FROM_ERD": 1777308909
       }
     }
   ],
