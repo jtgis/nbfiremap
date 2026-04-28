@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72862,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.22714898277223,
+          45.83955942279966
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72862,
+        "FIRE_NAME": "Gagetown",
+        "DEGREES_LAT": 45.839549999999996,
+        "DEGREES_LONG": 66.22715,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777395600000,
+        "FIRE_STAT_DATE": 1777399860000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -138,7 +166,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72846,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.91279885382164,
+          45.37312934680883
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72846,
+        "FIRE_NAME": "Upper Golden",
+        "DEGREES_LAT": 45.37312,
+        "DEGREES_LONG": 65.9128,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777391100000,
+        "FIRE_STAT_DATE": 1777395000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -166,35 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72845,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.7112995616737,
-          47.05700959581545
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72845,
-        "FIRE_NAME": "Falls Brook",
-        "DEGREES_LAT": 47.057,
-        "DEGREES_LONG": 67.71130000000001,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777393800000,
-        "FIRE_STAT_DATE": 1777396800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -250,35 +278,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
       "type": "Feature",
-      "id": 72802,
+      "id": 72863,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.85384920683971,
-          45.974999431435975
+          -65.13211867903543,
+          47.510709733039114
         ]
       },
       "properties": {
-        "OBJECTID": 72802,
-        "FIRE_NAME": "Wesco",
-        "DEGREES_LAT": 45.97499,
-        "DEGREES_LONG": 66.85385,
+        "OBJECTID": 72863,
+        "FIRE_NAME": "Tilley Roads",
+        "DEGREES_LAT": 47.5107,
+        "DEGREES_LONG": 65.13212,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777387200000,
-        "FIRE_STAT_DATE": 1777390200000,
+        "TIME_DETECTED": 1777388400000,
+        "FIRE_STAT_DATE": 1777395000000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777409252
+        "FETCHED_FROM_ERD": 1777412449
       }
     }
   ],
