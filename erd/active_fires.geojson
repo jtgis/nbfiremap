@@ -3,58 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 72464,
+      "id": 72643,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.54439906175477,
-          45.18193929797237
+          -65.0050286353726,
+          47.53712974008623
         ]
       },
       "properties": {
-        "OBJECTID": 72464,
-        "FIRE_NAME": "Road 6",
-        "DEGREES_LAT": 45.18193,
-        "DEGREES_LONG": 66.54440000000001,
+        "OBJECTID": 72643,
+        "FIRE_NAME": "Gauvreau",
+        "DEGREES_LAT": 47.537119999999994,
+        "DEGREES_LONG": 65.00502999999999,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 9,
-        "TIME_DETECTED": 1777218300000,
-        "FIRE_STAT_DATE": 1777294800000,
+        "FIRE_SIZE": 3.4000000953674316,
+        "TIME_DETECTED": 1777301100000,
+        "FIRE_STAT_DATE": 1777313640000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777363452
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72662,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.60549910676124,
-          45.70150938896918
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72662,
-        "FIRE_NAME": "Mast Road",
-        "DEGREES_LAT": 45.7015,
-        "DEGREES_LONG": 66.6055,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777315500000,
-        "FIRE_STAT_DATE": 1777318920000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777363452
+        "FETCHED_FROM_ERD": 1777367349
       }
     },
     {
@@ -82,35 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777363452
+        "FETCHED_FROM_ERD": 1777367349
       }
     },
     {
       "type": "Feature",
-      "id": 72643,
+      "id": 72662,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.0050286353726,
-          47.53712974008623
+          -66.60549910676124,
+          45.70150938896918
         ]
       },
       "properties": {
-        "OBJECTID": 72643,
-        "FIRE_NAME": "Gauvreau",
-        "DEGREES_LAT": 47.537119999999994,
-        "DEGREES_LONG": 65.00502999999999,
+        "OBJECTID": 72662,
+        "FIRE_NAME": "Mast Road",
+        "DEGREES_LAT": 45.7015,
+        "DEGREES_LONG": 66.6055,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 3.4000000953674316,
-        "TIME_DETECTED": 1777301100000,
-        "FIRE_STAT_DATE": 1777313640000,
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777315500000,
+        "FIRE_STAT_DATE": 1777318920000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777363452
+        "FETCHED_FROM_ERD": 1777367349
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72464,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.54439906175477,
+          45.18193929797237
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72464,
+        "FIRE_NAME": "Road 6",
+        "DEGREES_LAT": 45.18193,
+        "DEGREES_LONG": 66.54440000000001,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 9,
+        "TIME_DETECTED": 1777218300000,
+        "FIRE_STAT_DATE": 1777294800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777367349
       }
     }
   ],
