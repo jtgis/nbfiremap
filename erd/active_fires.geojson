@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 72824,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.36576936258454,
+          45.57330934809434
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72824,
+        "FIRE_NAME": "Lakeland",
+        "DEGREES_LAT": 45.5733,
+        "DEGREES_LONG": 67.36577,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777388400000,
+        "FIRE_STAT_DATE": 1777394040000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777406137
+      }
+    },
+    {
+      "type": "Feature",
       "id": 72722,
       "geometry": {
         "type": "Point",
@@ -25,8 +53,8 @@
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777402403
+        "PERCENT_CONTAINED": 1,
+        "FETCHED_FROM_ERD": 1777406137
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777402403
+        "FETCHED_FROM_ERD": 1777406137
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777402403
+        "FETCHED_FROM_ERD": 1777406137
       }
     },
     {
@@ -110,7 +138,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777402403
+        "FETCHED_FROM_ERD": 1777406137
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72823,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71056954667641,
+          46.77665954817641
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72823,
+        "FIRE_NAME": "New Road",
+        "DEGREES_LAT": 46.77665,
+        "DEGREES_LONG": 67.71056999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777386600000,
+        "FIRE_STAT_DATE": 1777393680000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777406137
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72762,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.11871868365627,
+          47.70830976673621
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72762,
+        "FIRE_NAME": "Acadiens",
+        "DEGREES_LAT": 47.7083,
+        "DEGREES_LONG": 65.11872,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1777381500000,
+        "FIRE_STAT_DATE": 1777386600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777406137
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72802,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.85384920683971,
+          45.974999431435975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72802,
+        "FIRE_NAME": "Wesco",
+        "DEGREES_LAT": 45.97499,
+        "DEGREES_LONG": 66.85385,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777387200000,
+        "FIRE_STAT_DATE": 1777390200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777406137
       }
     },
     {
@@ -138,35 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777402403
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72762,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.11871868365627,
-          47.70830976673621
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72762,
-        "FIRE_NAME": "Acadiens",
-        "DEGREES_LAT": 47.7083,
-        "DEGREES_LONG": 65.11872,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777381500000,
-        "FIRE_STAT_DATE": 1777391603000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777402403
+        "FETCHED_FROM_ERD": 1777406137
       }
     }
   ],
