@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -110,35 +110,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
       "type": "Feature",
-      "id": 72682,
+      "id": 72842,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.89304890468833,
-          46.61403956447258
+          -66.18115894996772,
+          45.472579358675105
         ]
       },
       "properties": {
-        "OBJECTID": 72682,
-        "FIRE_NAME": "Upper Blackville Fire",
-        "DEGREES_LAT": 46.61403,
-        "DEGREES_LONG": 65.89305,
+        "OBJECTID": 72842,
+        "FIRE_NAME": "Brittain Road",
+        "DEGREES_LAT": 45.47257,
+        "DEGREES_LONG": 66.18115999999999,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777375920000,
-        "FIRE_STAT_DATE": 1777380660000,
+        "TIME_DETECTED": 1777388820000,
+        "FIRE_STAT_DATE": 1777391700000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72844,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.8590492128234,
+          46.06164944669398
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72844,
+        "FIRE_NAME": "Maclean Settlement",
+        "DEGREES_LAT": 46.06164,
+        "DEGREES_LONG": 66.85905,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777392900000,
+        "FIRE_STAT_DATE": 1777395600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777409252
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72845,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7112995616737,
+          47.05700959581545
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72845,
+        "FIRE_NAME": "Falls Brook",
+        "DEGREES_LAT": 47.057,
+        "DEGREES_LONG": 67.71130000000001,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777393800000,
+        "FIRE_STAT_DATE": 1777396800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -166,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -194,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -222,7 +278,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72843,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.92016856540387,
+          46.64010958997477
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72843,
+        "FIRE_NAME": "Centre de ressources",
+        "DEGREES_LAT": 46.640100000000004,
+        "DEGREES_LONG": 64.92017,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777393140000,
+        "FIRE_STAT_DATE": 1777395600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777409252
       }
     },
     {
@@ -250,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777406137
+        "FETCHED_FROM_ERD": 1777409252
       }
     }
   ],
