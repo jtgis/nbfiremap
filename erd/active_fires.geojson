@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777381010
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72464,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.54439906175477,
-          45.18193929797237
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72464,
-        "FIRE_NAME": "Road 6",
-        "DEGREES_LAT": 45.18193,
-        "DEGREES_LONG": 66.54440000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 9,
-        "TIME_DETECTED": 1777218300000,
-        "FIRE_STAT_DATE": 1777294800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777381010
+        "FETCHED_FROM_ERD": 1777389156
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777381010
+        "FETCHED_FROM_ERD": 1777389156
       }
     }
   ],
