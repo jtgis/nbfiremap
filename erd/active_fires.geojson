@@ -3,230 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 72843,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.92016856540387,
-          46.64010958997477
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72843,
-        "FIRE_NAME": "Centre de ressources",
-        "DEGREES_LAT": 46.640100000000004,
-        "DEGREES_LONG": 64.92017,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777393140000,
-        "FIRE_STAT_DATE": 1777395600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72743,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.1223786619246,
-          47.204289682110506
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72743,
-        "FIRE_NAME": "(124) Algonquin",
-        "DEGREES_LAT": 47.20428,
-        "DEGREES_LONG": 65.12237999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777386120000,
-        "FIRE_STAT_DATE": 1777389720000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72742,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.24807830414265,
-          45.99053949077303
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72742,
-        "FIRE_NAME": "Brooklyn",
-        "DEGREES_LAT": 45.99053,
-        "DEGREES_LONG": 64.24808,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 2,
-        "TIME_DETECTED": 1777384800000,
-        "FIRE_STAT_DATE": 1777389780000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.18115894996772,
-          45.472579358675105
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72842,
-        "FIRE_NAME": "Brittain Road",
-        "DEGREES_LAT": 45.47257,
-        "DEGREES_LONG": 66.18115999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777388820000,
-        "FIRE_STAT_DATE": 1777391700000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72882,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.68436853431771,
-          47.79862979027052
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72882,
-        "FIRE_NAME": "Pointe Alexandre",
-        "DEGREES_LAT": 47.79862,
-        "DEGREES_LONG": 64.68437,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1777391700000,
-        "FIRE_STAT_DATE": 1777403400000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72823,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71056954667641,
-          46.77665954817641
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72823,
-        "FIRE_NAME": "New Road",
-        "DEGREES_LAT": 46.77665,
-        "DEGREES_LONG": 67.71056999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777386600000,
-        "FIRE_STAT_DATE": 1777393680000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72762,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.11871868365627,
-          47.70830976673621
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72762,
-        "FIRE_NAME": "Acadiens",
-        "DEGREES_LAT": 47.7083,
-        "DEGREES_LONG": 65.11872,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1777381500000,
-        "FIRE_STAT_DATE": 1777386600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72846,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.91279885382164,
-          45.37312934680883
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72846,
-        "FIRE_NAME": "Upper Golden",
-        "DEGREES_LAT": 45.37312,
-        "DEGREES_LONG": 65.9128,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777391100000,
-        "FIRE_STAT_DATE": 1777395000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
-      }
-    },
-    {
-      "type": "Feature",
       "id": 72862,
       "geometry": {
         "type": "Point",
@@ -250,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
+        "FETCHED_FROM_ERD": 1777460464
       }
     },
     {
@@ -278,35 +54,203 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777456968
+        "FETCHED_FROM_ERD": 1777460464
       }
     },
     {
       "type": "Feature",
-      "id": 72863,
+      "id": 72743,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.13211867903543,
-          47.510709733039114
+          -65.1223786619246,
+          47.204289682110506
         ]
       },
       "properties": {
-        "OBJECTID": 72863,
-        "FIRE_NAME": "Tilley Roads",
-        "DEGREES_LAT": 47.5107,
-        "DEGREES_LONG": 65.13212,
+        "OBJECTID": 72743,
+        "FIRE_NAME": "(124) Algonquin",
+        "DEGREES_LAT": 47.20428,
+        "DEGREES_LONG": 65.12237999999999,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777388400000,
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777386120000,
+        "FIRE_STAT_DATE": 1777389720000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72742,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.24807830414265,
+          45.99053949077303
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72742,
+        "FIRE_NAME": "Brooklyn",
+        "DEGREES_LAT": 45.99053,
+        "DEGREES_LONG": 64.24808,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 2,
+        "TIME_DETECTED": 1777384800000,
+        "FIRE_STAT_DATE": 1777389780000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.18115894996772,
+          45.472579358675105
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72842,
+        "FIRE_NAME": "Brittain Road",
+        "DEGREES_LAT": 45.47257,
+        "DEGREES_LONG": 66.18115999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777388820000,
+        "FIRE_STAT_DATE": 1777391700000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72846,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.91279885382164,
+          45.37312934680883
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72846,
+        "FIRE_NAME": "Upper Golden",
+        "DEGREES_LAT": 45.37312,
+        "DEGREES_LONG": 65.9128,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777391100000,
         "FIRE_STAT_DATE": 1777395000000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72882,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68436853431771,
+          47.79862979027052
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72882,
+        "FIRE_NAME": "Pointe Alexandre",
+        "DEGREES_LAT": 47.79862,
+        "DEGREES_LONG": 64.68437,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1777391700000,
+        "FIRE_STAT_DATE": 1777403400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72823,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71056954667641,
+          46.77665954817641
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72823,
+        "FIRE_NAME": "New Road",
+        "DEGREES_LAT": 46.77665,
+        "DEGREES_LONG": 67.71056999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777386600000,
+        "FIRE_STAT_DATE": 1777393680000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72762,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.11871868365627,
+          47.70830976673621
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72762,
+        "FIRE_NAME": "Acadiens",
+        "DEGREES_LAT": 47.7083,
+        "DEGREES_LONG": 65.11872,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1777381500000,
+        "FIRE_STAT_DATE": 1777386600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
       }
     },
     {
@@ -334,7 +278,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777456968
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72863,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.13211867903543,
+          47.510709733039114
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72863,
+        "FIRE_NAME": "Tilley Roads",
+        "DEGREES_LAT": 47.5107,
+        "DEGREES_LONG": 65.13212,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777388400000,
+        "FIRE_STAT_DATE": 1777395000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72843,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.92016856540387,
+          46.64010958997477
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72843,
+        "FIRE_NAME": "Centre de ressources",
+        "DEGREES_LAT": 46.640100000000004,
+        "DEGREES_LONG": 64.92017,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777393140000,
+        "FIRE_STAT_DATE": 1777395600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777460464
       }
     }
   ],
