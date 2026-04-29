@@ -21,12 +21,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.4000000059604645,
         "TIME_DETECTED": 1777398720000,
-        "FIRE_STAT_DATE": 1777408200000,
+        "FIRE_STAT_DATE": 1777453200000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -77,40 +77,40 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
         "TIME_DETECTED": 1777381800000,
-        "FIRE_STAT_DATE": 1777386000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777471318
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72942,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.14886861615783,
-          45.978289470184194
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72942,
-        "FIRE_NAME": "Cornfield",
-        "DEGREES_LAT": 45.97828,
-        "DEGREES_LONG": 65.14887,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777397100000,
-        "FIRE_STAT_DATE": 1777402800000,
+        "FIRE_STAT_DATE": 1777461480000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72982,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.972688995617,
+          47.90297977965543
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72982,
+        "FIRE_NAME": "Quinn rd",
+        "DEGREES_LAT": 47.902969999999996,
+        "DEGREES_LONG": 65.97269,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777391760000,
+        "FIRE_STAT_DATE": 1777398960000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72942,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.14886861615783,
+          45.978289470184194
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72942,
+        "FIRE_NAME": "Cornfield",
+        "DEGREES_LAT": 45.97828,
+        "DEGREES_LONG": 65.14887,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777397100000,
+        "FIRE_STAT_DATE": 1777453200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -194,35 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72762,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.11871868365627,
-          47.70830976673621
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72762,
-        "FIRE_NAME": "Acadiens",
-        "DEGREES_LAT": 47.7083,
-        "DEGREES_LONG": 65.11872,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1777381500000,
-        "FIRE_STAT_DATE": 1777386600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -278,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -306,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
@@ -334,35 +334,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777471318
+        "FETCHED_FROM_ERD": 1777475050
       }
     },
     {
       "type": "Feature",
-      "id": 72982,
+      "id": 72762,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.972688995617,
-          47.90297977965543
+          -65.11871868365627,
+          47.70830976673621
         ]
       },
       "properties": {
-        "OBJECTID": 72982,
-        "FIRE_NAME": "Quinn rd",
-        "DEGREES_LAT": 47.902969999999996,
-        "DEGREES_LONG": 65.97269,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777391760000,
-        "FIRE_STAT_DATE": 1777460518000,
+        "OBJECTID": 72762,
+        "FIRE_NAME": "Acadiens",
+        "DEGREES_LAT": 47.7083,
+        "DEGREES_LONG": 65.11872,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1777381500000,
+        "FIRE_STAT_DATE": 1777461420000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777471318
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777475050
       }
     }
   ],
