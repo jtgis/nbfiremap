@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 72962,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.57755875897139,
+          45.832289435698975
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72962,
+        "FIRE_NAME": "1565 Route 880",
+        "DEGREES_LAT": 45.83228,
+        "DEGREES_LONG": 65.57755999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1777398720000,
+        "FIRE_STAT_DATE": 1777408200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777467256
+      }
+    },
+    {
+      "type": "Feature",
       "id": 72862,
       "geometry": {
         "type": "Point",
@@ -26,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -54,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777463698
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72743,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.1223786619246,
-          47.204289682110506
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72743,
-        "FIRE_NAME": "(124) Algonquin",
-        "DEGREES_LAT": 47.20428,
-        "DEGREES_LONG": 65.12237999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777386120000,
-        "FIRE_STAT_DATE": 1777389720000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -100,17 +100,17 @@
         "FIRE_NAME": "Brooklyn",
         "DEGREES_LAT": 45.99053,
         "DEGREES_LONG": 64.24808,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 2,
         "TIME_DETECTED": 1777384800000,
-        "FIRE_STAT_DATE": 1777389780000,
+        "FIRE_STAT_DATE": 1777453200000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -194,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -278,35 +278,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
       "type": "Feature",
-      "id": 72922,
+      "id": 72743,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.62066851090106,
-          47.78342978892161
+          -65.1223786619246,
+          47.204289682110506
         ]
       },
       "properties": {
-        "OBJECTID": 72922,
-        "FIRE_NAME": "Lameque Hydro",
-        "DEGREES_LAT": 47.78342,
-        "DEGREES_LONG": 64.62067,
+        "OBJECTID": 72743,
+        "FIRE_NAME": "(124) Algonquin",
+        "DEGREES_LAT": 47.20428,
+        "DEGREES_LONG": 65.12237999999999,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1777406400000,
-        "FIRE_STAT_DATE": 1777415400000,
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777386120000,
+        "FIRE_STAT_DATE": 1777454400000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -334,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     },
     {
@@ -362,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777463698
+        "FETCHED_FROM_ERD": 1777467256
       }
     }
   ],
