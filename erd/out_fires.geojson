@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72743,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.1223786619246,
+          47.204289682110506
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72743,
+        "FIRE_NAME": "(124) Algonquin",
+        "DEGREES_LAT": 47.20428,
+        "DEGREES_LONG": 65.12237999999999,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777386120000,
+        "FIRE_STAT_DATE": 1777475760000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -194,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -250,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -278,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -446,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -474,7 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -502,7 +530,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -530,7 +558,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -558,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -586,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -614,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -642,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -670,7 +698,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72863,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.13211867903543,
+          47.510709733039114
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72863,
+        "FIRE_NAME": "Tilley Roads",
+        "DEGREES_LAT": 47.5107,
+        "DEGREES_LONG": 65.13212,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777388400000,
+        "FIRE_STAT_DATE": 1777470300000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -698,7 +754,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -726,7 +782,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -754,7 +810,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -782,7 +838,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -810,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -838,7 +894,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -866,7 +922,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -894,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -922,7 +978,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -950,7 +1006,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -978,7 +1034,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1006,7 +1062,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1034,7 +1090,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1062,7 +1118,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1090,7 +1146,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1118,7 +1174,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1146,7 +1202,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1174,7 +1230,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1202,7 +1258,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1230,7 +1286,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1258,7 +1314,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1286,7 +1342,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1314,7 +1370,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1342,7 +1398,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1370,7 +1426,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1398,7 +1454,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1426,7 +1482,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1454,7 +1510,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1482,7 +1538,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1510,7 +1566,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1538,7 +1594,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1566,7 +1622,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1594,7 +1650,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1622,7 +1678,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1650,7 +1706,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1678,7 +1734,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1706,7 +1762,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1734,7 +1790,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1762,7 +1818,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1790,7 +1846,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1818,7 +1874,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1846,7 +1902,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1874,7 +1930,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1902,7 +1958,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1930,7 +1986,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1958,7 +2014,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -1986,7 +2042,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2014,7 +2070,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2042,7 +2098,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2070,7 +2126,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2098,7 +2154,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2126,7 +2182,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2154,7 +2210,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2182,7 +2238,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2210,7 +2266,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2238,7 +2294,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2266,7 +2322,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2294,7 +2350,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2322,7 +2378,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2350,7 +2406,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2378,7 +2434,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2406,7 +2462,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2434,7 +2490,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2462,7 +2518,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2490,7 +2546,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2518,7 +2574,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2546,7 +2602,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 10,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2574,7 +2630,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2602,7 +2658,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2630,7 +2686,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2658,7 +2714,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2686,7 +2742,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2714,7 +2770,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2742,7 +2798,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2770,7 +2826,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2798,7 +2854,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2826,7 +2882,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2854,7 +2910,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2882,7 +2938,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72942,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.14886861615783,
+          45.978289470184194
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72942,
+        "FIRE_NAME": "Cornfield",
+        "DEGREES_LAT": 45.97828,
+        "DEGREES_LONG": 65.14887,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777397100000,
+        "FIRE_STAT_DATE": 1777474800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2910,7 +2994,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2938,7 +3022,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2966,7 +3050,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -2994,7 +3078,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3022,7 +3106,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3050,7 +3134,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3078,7 +3162,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3106,7 +3190,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3134,7 +3218,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3162,7 +3246,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3190,7 +3274,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3218,7 +3302,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3246,7 +3330,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3274,7 +3358,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3302,7 +3386,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3330,7 +3414,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3358,7 +3442,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3386,7 +3470,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3414,7 +3498,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3442,7 +3526,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3470,7 +3554,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3498,7 +3582,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3526,7 +3610,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3554,7 +3638,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3582,7 +3666,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3610,7 +3694,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3638,7 +3722,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3666,7 +3750,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3694,7 +3778,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3722,7 +3806,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     },
     {
@@ -3750,7 +3834,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777485147
+        "FETCHED_FROM_ERD": 1777488720
       }
     }
   ],
