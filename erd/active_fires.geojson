@@ -3,58 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 72862,
+      "id": 72843,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.22714898277223,
-          45.83955942279966
+          -64.92016856540387,
+          46.64010958997477
         ]
       },
       "properties": {
-        "OBJECTID": 72862,
-        "FIRE_NAME": "Gagetown",
-        "DEGREES_LAT": 45.839549999999996,
-        "DEGREES_LONG": 66.22715,
+        "OBJECTID": 72843,
+        "FIRE_NAME": "Centre de ressources",
+        "DEGREES_LAT": 46.640100000000004,
+        "DEGREES_LONG": 64.92017,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777395600000,
-        "FIRE_STAT_DATE": 1777399860000,
+        "TIME_DETECTED": 1777393140000,
+        "FIRE_STAT_DATE": 1777395600000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72722,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.97879861900938,
-          47.3596797109787
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72722,
-        "FIRE_NAME": "Brantville Sud",
-        "DEGREES_LAT": 47.35967,
-        "DEGREES_LONG": 64.9788,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777381800000,
-        "FIRE_STAT_DATE": 1777386000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -138,35 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72846,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.91279885382164,
-          45.37312934680883
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72846,
-        "FIRE_NAME": "Upper Golden",
-        "DEGREES_LAT": 45.37312,
-        "DEGREES_LONG": 65.9128,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777391100000,
-        "FIRE_STAT_DATE": 1777395000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -194,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -222,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -250,35 +194,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
       "type": "Feature",
-      "id": 72902,
+      "id": 72846,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.5777991036115,
-          45.82260941129345
+          -65.91279885382164,
+          45.37312934680883
         ]
       },
       "properties": {
-        "OBJECTID": 72902,
-        "FIRE_NAME": "Rusagonis Road",
-        "DEGREES_LAT": 45.8226,
-        "DEGREES_LONG": 66.5778,
+        "OBJECTID": 72846,
+        "FIRE_NAME": "Upper Golden",
+        "DEGREES_LAT": 45.37312,
+        "DEGREES_LONG": 65.9128,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777403520000,
-        "FIRE_STAT_DATE": 1777411500000,
+        "TIME_DETECTED": 1777391100000,
+        "FIRE_STAT_DATE": 1777395000000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72862,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.22714898277223,
+          45.83955942279966
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72862,
+        "FIRE_NAME": "Gagetown",
+        "DEGREES_LAT": 45.839549999999996,
+        "DEGREES_LONG": 66.22715,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777395600000,
+        "FIRE_STAT_DATE": 1777399860000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777456968
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72722,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.97879861900938,
+          47.3596797109787
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72722,
+        "FIRE_NAME": "Brantville Sud",
+        "DEGREES_LAT": 47.35967,
+        "DEGREES_LONG": 64.9788,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777381800000,
+        "FIRE_STAT_DATE": 1777386000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 1,
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
@@ -306,35 +306,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     },
     {
       "type": "Feature",
-      "id": 72843,
+      "id": 72902,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.92016856540387,
-          46.64010958997477
+          -66.5777991036115,
+          45.82260941129345
         ]
       },
       "properties": {
-        "OBJECTID": 72843,
-        "FIRE_NAME": "Centre de ressources",
-        "DEGREES_LAT": 46.640100000000004,
-        "DEGREES_LONG": 64.92017,
+        "OBJECTID": 72902,
+        "FIRE_NAME": "Rusagonis Road",
+        "DEGREES_LAT": 45.8226,
+        "DEGREES_LONG": 66.5778,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777393140000,
-        "FIRE_STAT_DATE": 1777395600000,
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777403520000,
+        "FIRE_STAT_DATE": 1777411500000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777453473
+        "FETCHED_FROM_ERD": 1777456968
       }
     }
   ],
