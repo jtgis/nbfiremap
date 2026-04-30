@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777571347
+        "FETCHED_FROM_ERD": 1777574996
       }
     },
     {
@@ -54,35 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777571347
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73002,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.58184949128521,
-          46.59798952044469
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73002,
-        "FIRE_NAME": "Mineral rd",
-        "DEGREES_LAT": 46.59798,
-        "DEGREES_LONG": 67.58185,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777552200000,
-        "FIRE_STAT_DATE": 1777560547000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777571347
+        "FETCHED_FROM_ERD": 1777574996
       }
     }
   ],
