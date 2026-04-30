@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 72843,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.92016856540387,
+          46.64010958997477
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72843,
+        "FIRE_NAME": "Centre de ressources",
+        "DEGREES_LAT": 46.640100000000004,
+        "DEGREES_LONG": 64.92017,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777393140000,
+        "FIRE_STAT_DATE": 1777395600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777533163
+      }
+    },
+    {
+      "type": "Feature",
       "id": 72962,
       "geometry": {
         "type": "Point",
@@ -26,63 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777527128
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72722,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.97879861900938,
-          47.3596797109787
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72722,
-        "FIRE_NAME": "Brantville Sud",
-        "DEGREES_LAT": 47.35967,
-        "DEGREES_LONG": 64.9788,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777381800000,
-        "FIRE_STAT_DATE": 1777461480000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777527128
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.18115894996772,
-          45.472579358675105
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72842,
-        "FIRE_NAME": "Brittain Road",
-        "DEGREES_LAT": 45.47257,
-        "DEGREES_LONG": 66.18115999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777388820000,
-        "FIRE_STAT_DATE": 1777391700000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777527128
+        "FETCHED_FROM_ERD": 1777533163
       }
     },
     {
@@ -110,35 +82,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777527128
+        "FETCHED_FROM_ERD": 1777533163
       }
     },
     {
       "type": "Feature",
-      "id": 72843,
+      "id": 72722,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.92016856540387,
-          46.64010958997477
+          -64.97879861900938,
+          47.3596797109787
         ]
       },
       "properties": {
-        "OBJECTID": 72843,
-        "FIRE_NAME": "Centre de ressources",
-        "DEGREES_LAT": 46.640100000000004,
-        "DEGREES_LONG": 64.92017,
+        "OBJECTID": 72722,
+        "FIRE_NAME": "Brantville Sud",
+        "DEGREES_LAT": 47.35967,
+        "DEGREES_LONG": 64.9788,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777393140000,
-        "FIRE_STAT_DATE": 1777395600000,
+        "TIME_DETECTED": 1777381800000,
+        "FIRE_STAT_DATE": 1777461480000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777527128
+        "FETCHED_FROM_ERD": 1777533163
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.18115894996772,
+          45.472579358675105
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72842,
+        "FIRE_NAME": "Brittain Road",
+        "DEGREES_LAT": 45.47257,
+        "DEGREES_LONG": 66.18115999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777388820000,
+        "FIRE_STAT_DATE": 1777391700000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777533163
       }
     }
   ],
