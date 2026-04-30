@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777546839
+        "FETCHED_FROM_ERD": 1777550197
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777546839
+        "FETCHED_FROM_ERD": 1777550197
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777546839
+        "FETCHED_FROM_ERD": 1777550197
       }
     },
     {
@@ -110,35 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1777546839
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 72843,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.92016856540387,
-          46.64010958997477
-        ]
-      },
-      "properties": {
-        "OBJECTID": 72843,
-        "FIRE_NAME": "Centre de ressources",
-        "DEGREES_LAT": 46.640100000000004,
-        "DEGREES_LONG": 64.92017,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777393140000,
-        "FIRE_STAT_DATE": 1777395600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777546839
+        "FETCHED_FROM_ERD": 1777550197
       }
     }
   ],
