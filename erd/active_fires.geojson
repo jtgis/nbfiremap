@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777581753
+        "FETCHED_FROM_ERD": 1777585201
       }
     },
     {
@@ -54,7 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777581753
+        "FETCHED_FROM_ERD": 1777585201
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73042,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.5316590906075,
+          45.891329424354204
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73042,
+        "FIRE_NAME": "Saint River",
+        "DEGREES_LAT": 45.89132,
+        "DEGREES_LONG": 66.53166,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777570320000,
+        "FIRE_STAT_DATE": 1777573140000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777585201
       }
     },
     {
@@ -77,12 +105,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777563900000,
-        "FIRE_STAT_DATE": 1777570953000,
+        "FIRE_STAT_DATE": 1777574401000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777581753
+        "FETCHED_FROM_ERD": 1777585201
       }
     },
     {
@@ -105,12 +133,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777564800000,
-        "FIRE_STAT_DATE": 1777570953000,
+        "FIRE_STAT_DATE": 1777574401000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777581753
+        "FETCHED_FROM_ERD": 1777585201
       }
     }
   ],
