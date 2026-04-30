@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777588642
+        "FETCHED_FROM_ERD": 1777592281
       }
     },
     {
@@ -54,7 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777588642
+        "FETCHED_FROM_ERD": 1777592281
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73022,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.83487890196828,
+          46.98550962890395
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73022,
+        "FIRE_NAME": "Meadow",
+        "DEGREES_LAT": 46.9855,
+        "DEGREES_LONG": 65.83488,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 3,
+        "TIME_DETECTED": 1777563900000,
+        "FIRE_STAT_DATE": 1777578180000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777592281
       }
     },
     {
@@ -82,63 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777588642
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73022,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.83487890196828,
-          46.98550962890395
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73022,
-        "FIRE_NAME": "Meadow",
-        "DEGREES_LAT": 46.9855,
-        "DEGREES_LONG": 65.83488,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777563900000,
-        "FIRE_STAT_DATE": 1777577842000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777588642
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73062,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.37472943983856,
-          46.9818095915278
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73062,
-        "FIRE_NAME": "Sisson brook",
-        "DEGREES_LAT": 46.9818,
-        "DEGREES_LONG": 67.37473,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777568400000,
-        "FIRE_STAT_DATE": 1777577842000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777588642
+        "FETCHED_FROM_ERD": 1777592281
       }
     },
     {
@@ -156,17 +128,17 @@
         "FIRE_NAME": "Joe Wall",
         "DEGREES_LAT": 46.99745,
         "DEGREES_LONG": 65.828,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777564800000,
-        "FIRE_STAT_DATE": 1777577842000,
+        "FIRE_STAT_DATE": 1777578120000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1777588642
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777592281
       }
     }
   ],
