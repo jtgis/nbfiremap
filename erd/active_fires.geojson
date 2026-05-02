@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 73122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.11962866557275,
+          47.29800969759948
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73122,
+        "FIRE_NAME": "Pointe des Robichaud",
+        "DEGREES_LAT": 47.298,
+        "DEGREES_LONG": 65.11963,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777733400000,
+        "FIRE_STAT_DATE": 1777743960000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1777757609
+      }
+    },
+    {
+      "type": "Feature",
       "id": 73102,
       "geometry": {
         "type": "Point",
@@ -26,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777754011
+        "FETCHED_FROM_ERD": 1777757609
       }
     }
   ],
