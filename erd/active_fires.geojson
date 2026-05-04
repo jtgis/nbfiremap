@@ -7,26 +7,26 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.18329869892435,
-          47.53299973542169
+          -65.18329870942351,
+          47.76580977423393
         ]
       },
       "properties": {
         "OBJECTID": 73162,
         "FIRE_NAME": "St-Leolin",
-        "DEGREES_LAT": 47.53299,
+        "DEGREES_LAT": 47.765800000000006,
         "DEGREES_LONG": 65.1833,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
+        "FIRE_SIZE": 2.299999952316284,
         "TIME_DETECTED": 1777903200000,
         "FIRE_STAT_DATE": 1777908600000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1777930964
+        "FETCHED_FROM_ERD": 1777934399
       }
     }
   ],
