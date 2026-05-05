@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778013811
+        "FETCHED_FROM_ERD": 1778017268
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.26307831932534,
+          46.222339531537074
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73282,
+        "FIRE_NAME": "NB pole",
+        "DEGREES_LAT": 46.22233,
+        "DEGREES_LONG": 64.26308,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778005020000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778017268
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778013811
+        "FETCHED_FROM_ERD": 1778017268
       }
     },
     {
@@ -82,7 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778013811
+        "FETCHED_FROM_ERD": 1778017268
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73264,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.03687927352827,
+          46.05767944105715
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73264,
+        "FIRE_NAME": "Green",
+        "DEGREES_LAT": 46.057669999999995,
+        "DEGREES_LONG": 67.03688,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777995360000,
+        "FIRE_STAT_DATE": 1778006468000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1778017268
       }
     },
     {
@@ -105,12 +161,68 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778003011000,
+        "FIRE_STAT_DATE": 1778006468000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778013811
+        "FETCHED_FROM_ERD": 1778017268
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73284,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.06744924205245,
+          45.20864929030112
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73284,
+        "FIRE_NAME": "Chris Wren Lake",
+        "DEGREES_LAT": 45.208639999999995,
+        "DEGREES_LONG": 67.06745,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777999560000,
+        "FIRE_STAT_DATE": 1778006468000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1778017268
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73283,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.91636892197647,
+          46.82170959976609
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73283,
+        "FIRE_NAME": "Power Line Fire",
+        "DEGREES_LAT": 46.8217,
+        "DEGREES_LONG": 65.91637,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778005500000,
+        "FIRE_STAT_DATE": 1778006468000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1778017268
       }
     },
     {
@@ -133,12 +245,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777954200000,
-        "FIRE_STAT_DATE": 1778003011000,
+        "FIRE_STAT_DATE": 1778006468000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778013811
+        "FETCHED_FROM_ERD": 1778017268
       }
     },
     {
@@ -161,12 +273,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777992780000,
-        "FIRE_STAT_DATE": 1778003011000,
+        "FIRE_STAT_DATE": 1778006468000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778013811
+        "FETCHED_FROM_ERD": 1778017268
       }
     }
   ],
