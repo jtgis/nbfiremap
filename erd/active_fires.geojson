@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778011050
+        "FETCHED_FROM_ERD": 1778013811
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.33696870836889,
+          46.5851395719611
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73262,
+        "FIRE_NAME": "Kent Junction",
+        "DEGREES_LAT": 46.58513,
+        "DEGREES_LONG": 65.33697,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1778001300000,
+        "FIRE_STAT_DATE": 1778002320000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778013811
       }
     },
     {
@@ -54,7 +82,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778011050
+        "FETCHED_FROM_ERD": 1778013811
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0843289687574,
+          46.578339554279474
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73263,
+        "FIRE_NAME": "South Road Settlement",
+        "DEGREES_LAT": 46.57833,
+        "DEGREES_LONG": 66.08433,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778003011000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1778013811
       }
     },
     {
@@ -77,12 +133,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777954200000,
-        "FIRE_STAT_DATE": 1778000250000,
+        "FIRE_STAT_DATE": 1778003011000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778011050
+        "FETCHED_FROM_ERD": 1778013811
       }
     },
     {
@@ -105,40 +161,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1777992780000,
-        "FIRE_STAT_DATE": 1778000250000,
+        "FIRE_STAT_DATE": 1778003011000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778011050
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73243,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.84491858483267,
-          47.669539765508944
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73243,
-        "FIRE_NAME": "Robert Road",
-        "DEGREES_LAT": 47.669529999999995,
-        "DEGREES_LONG": 64.84492,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777994940000,
-        "FIRE_STAT_DATE": 1778000250000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778011050
+        "FETCHED_FROM_ERD": 1778013811
       }
     }
   ],
