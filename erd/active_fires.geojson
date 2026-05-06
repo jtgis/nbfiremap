@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73363,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96246855329838,
+          46.0166794811348
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73363,
+        "FIRE_NAME": "Synton",
+        "DEGREES_LAT": 46.01667,
+        "DEGREES_LONG": 64.96247,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 2,
+        "TIME_DETECTED": 1778002200000,
+        "FIRE_STAT_DATE": 1778067120000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -194,35 +222,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
       "type": "Feature",
-      "id": 73363,
+      "id": 73402,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.96246855329838,
-          46.0166794811348
+          -64.57587850107173,
+          47.91772981223578
         ]
       },
       "properties": {
-        "OBJECTID": 73363,
-        "FIRE_NAME": "Synton",
-        "DEGREES_LAT": 46.01667,
-        "DEGREES_LONG": 64.96247,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 2,
-        "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778013900000,
+        "OBJECTID": 73402,
+        "FIRE_NAME": "Harbour",
+        "DEGREES_LAT": 47.917719999999996,
+        "DEGREES_LONG": 64.57588,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778007600000,
+        "FIRE_STAT_DATE": 1778009700000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -250,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -278,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778076169
+        "FETCHED_FROM_ERD": 1778080475
       }
     }
   ],
