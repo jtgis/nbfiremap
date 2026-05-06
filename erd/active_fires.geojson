@@ -19,98 +19,14 @@
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
+        "FIRE_SIZE": 1,
         "TIME_DETECTED": 1777997400000,
         "FIRE_STAT_DATE": 1778053860000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73263,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.0843289687574,
-          46.578339554279474
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73263,
-        "FIRE_NAME": "South Road Settlement",
-        "DEGREES_LAT": 46.57833,
-        "DEGREES_LONG": 66.08433,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 6.099999904632568,
-        "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778058780000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73222,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.40139873688373,
-          46.70087959036947
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73222,
-        "FIRE_NAME": "Rogersville",
-        "DEGREES_LAT": 46.700869999999995,
-        "DEGREES_LONG": 65.40140000000001,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 10.100000381469727,
-        "TIME_DETECTED": 1777992780000,
-        "FIRE_STAT_DATE": 1778071800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73362,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.98558855480569,
-          45.86693945443581
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73362,
-        "FIRE_NAME": "route 895",
-        "DEGREES_LAT": 45.866929999999996,
-        "DEGREES_LONG": 64.98559,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778001900000,
-        "FIRE_STAT_DATE": 1778058000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
+        "FETCHED_FROM_ERD": 1778098169
       }
     },
     {
@@ -138,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
+        "FETCHED_FROM_ERD": 1778098169
       }
     },
     {
@@ -166,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73363,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.96246855329838,
-          46.0166794811348
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73363,
-        "FIRE_NAME": "Synton",
-        "DEGREES_LAT": 46.01667,
-        "DEGREES_LONG": 64.96247,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 2,
-        "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778067120000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
+        "FETCHED_FROM_ERD": 1778098169
       }
     },
     {
@@ -222,7 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
+        "FETCHED_FROM_ERD": 1778098169
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0843289687574,
+          46.578339554279474
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73263,
+        "FIRE_NAME": "South Road Settlement",
+        "DEGREES_LAT": 46.57833,
+        "DEGREES_LONG": 66.08433,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 6.099999904632568,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778058780000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778098169
       }
     },
     {
@@ -250,7 +166,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778093785
+        "FETCHED_FROM_ERD": 1778098169
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73363,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96246855329838,
+          46.0166794811348
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73363,
+        "FIRE_NAME": "Synton",
+        "DEGREES_LAT": 46.01667,
+        "DEGREES_LONG": 64.96247,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 2,
+        "TIME_DETECTED": 1778002200000,
+        "FIRE_STAT_DATE": 1778067120000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778098169
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.40139873688373,
+          46.70087959036947
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73222,
+        "FIRE_NAME": "Rogersville",
+        "DEGREES_LAT": 46.700869999999995,
+        "DEGREES_LONG": 65.40140000000001,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 10.100000381469727,
+        "TIME_DETECTED": 1777992780000,
+        "FIRE_STAT_DATE": 1778071800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778098169
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.98558855480569,
+          45.86693945443581
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73362,
+        "FIRE_NAME": "route 895",
+        "DEGREES_LAT": 45.866929999999996,
+        "DEGREES_LONG": 64.98559,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778001900000,
+        "FIRE_STAT_DATE": 1778058000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778098169
       }
     }
   ],
