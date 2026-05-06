@@ -26,7 +26,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73242,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.41466875624424,
+          47.036059646845885
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73242,
+        "FIRE_NAME": "Portage ATV trail",
+        "DEGREES_LAT": 47.036049999999996,
+        "DEGREES_LONG": 65.41467,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1777997400000,
+        "FIRE_STAT_DATE": 1778053860000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778065380
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73288,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.55961880256696,
+          46.91970962445735
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73288,
+        "FIRE_NAME": "Barnaby Rail X 3",
+        "DEGREES_LAT": 46.9197,
+        "DEGREES_LONG": 65.55962,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1.399999976158142,
+        "TIME_DETECTED": 1778003400000,
+        "FIRE_STAT_DATE": 1778053920000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -54,35 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73182,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.35124873492389,
-          47.048879650808765
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73182,
-        "FIRE_NAME": "North Napan",
-        "DEGREES_LAT": 47.04887,
-        "DEGREES_LONG": 65.35125,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1777989900000,
-        "FIRE_STAT_DATE": 1778008320000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -166,35 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73242,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.41466875624424,
-          47.036059646845885
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73242,
-        "FIRE_NAME": "Portage ATV trail",
-        "DEGREES_LAT": 47.036049999999996,
-        "DEGREES_LONG": 65.41467,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1777997400000,
-        "FIRE_STAT_DATE": 1778018100000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -250,7 +250,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73182,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.35124873492389,
+          47.048879650808765
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73182,
+        "FIRE_NAME": "North Napan",
+        "DEGREES_LAT": 47.04887,
+        "DEGREES_LONG": 65.35125,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1777989900000,
+        "FIRE_STAT_DATE": 1778053740000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -278,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -446,35 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73288,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.55961880256696,
-          46.91970962445735
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73288,
-        "FIRE_NAME": "Barnaby Rail X 3",
-        "DEGREES_LAT": 46.9197,
-        "DEGREES_LONG": 65.55962,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.399999976158142,
-        "TIME_DETECTED": 1778003400000,
-        "FIRE_STAT_DATE": 1778018160000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     },
     {
@@ -497,12 +497,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778051118000,
+        "FIRE_STAT_DATE": 1778054580000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778061918
+        "FETCHED_FROM_ERD": 1778065380
       }
     }
   ],
