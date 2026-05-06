@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0843289687574,
+          46.578339554279474
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73263,
+        "FIRE_NAME": "South Road Settlement",
+        "DEGREES_LAT": 46.57833,
+        "DEGREES_LONG": 66.08433,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 4.5,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778048640000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -166,35 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73382,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.90312890705492,
-          46.60650956284171
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73382,
-        "FIRE_NAME": "Molasses Hill",
-        "DEGREES_LAT": 46.606500000000004,
-        "DEGREES_LONG": 65.90312999999999,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 20,
-        "TIME_DETECTED": 1777995900000,
-        "FIRE_STAT_DATE": 1778047440000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -278,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -306,7 +306,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.90312890705492,
+          46.60650956284171
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73382,
+        "FIRE_NAME": "Molasses Hill",
+        "DEGREES_LAT": 46.606500000000004,
+        "DEGREES_LONG": 65.90312999999999,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 20,
+        "TIME_DETECTED": 1777995900000,
+        "FIRE_STAT_DATE": 1778048640000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -446,63 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778058562
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73383,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.1908290045364,
-          46.53705954440157
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73383,
-        "FIRE_NAME": "powerline",
-        "DEGREES_LAT": 46.53705,
-        "DEGREES_LONG": 66.19082999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777995000000,
-        "FIRE_STAT_DATE": 1778047762000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778058562
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73263,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.0843289687574,
-          46.578339554279474
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73263,
-        "FIRE_NAME": "South Road Settlement",
-        "DEGREES_LAT": 46.57833,
-        "DEGREES_LONG": 66.08433,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778047762000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     },
     {
@@ -525,12 +497,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778047762000,
+        "FIRE_STAT_DATE": 1778051118000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778058562
+        "FETCHED_FROM_ERD": 1778061918
       }
     }
   ],
