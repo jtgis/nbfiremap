@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73286,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.89027855226782,
-          46.57111957933429
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73286,
-        "FIRE_NAME": "East Branch",
-        "DEGREES_LAT": 46.57111,
-        "DEGREES_LONG": 64.89027999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778000400000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73242,
       "geometry": {
         "type": "Point",
@@ -54,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.40139873688373,
+          46.70087959036947
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73222,
+        "FIRE_NAME": "Rogersville",
+        "DEGREES_LAT": 46.700869999999995,
+        "DEGREES_LONG": 65.40140000000001,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 6,
+        "TIME_DETECTED": 1777992780000,
+        "FIRE_STAT_DATE": 1778056200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -82,91 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73322,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.41177939260413,
-          45.847879394885695
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73322,
-        "FIRE_NAME": "Fawn Lake",
-        "DEGREES_LAT": 45.84787,
-        "DEGREES_LONG": 67.41178,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 3,
-        "TIME_DETECTED": 1777991100000,
-        "FIRE_STAT_DATE": 1778007600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73222,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.40139873688373,
-          46.70087959036947
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73222,
-        "FIRE_NAME": "Rogersville",
-        "DEGREES_LAT": 46.700869999999995,
-        "DEGREES_LONG": 65.40140000000001,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 5,
-        "TIME_DETECTED": 1777992780000,
-        "FIRE_STAT_DATE": 1778016600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73202,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.99569864357849,
-          47.77170977926087
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73202,
-        "FIRE_NAME": "St-Pierre",
-        "DEGREES_LAT": 47.7717,
-        "DEGREES_LONG": 64.9957,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1777991400000,
-        "FIRE_STAT_DATE": 1777995000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -194,35 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
       "type": "Feature",
-      "id": 73285,
+      "id": 73362,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.91622856287023,
-          46.60373958401686
+          -65.9855889011792,
+          45.86693943299628
         ]
       },
       "properties": {
-        "OBJECTID": 73285,
-        "FIRE_NAME": "Big pine",
-        "DEGREES_LAT": 46.60373,
-        "DEGREES_LONG": 64.91623,
+        "OBJECTID": 73362,
+        "FIRE_NAME": "route 895",
+        "DEGREES_LAT": 45.866929999999996,
+        "DEGREES_LONG": 65.98559,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1777996200000,
-        "FIRE_STAT_DATE": 1777998900000,
+        "TIME_DETECTED": 1778002200000,
+        "FIRE_STAT_DATE": 1777978620000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -250,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -278,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -306,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -334,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -362,35 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73264,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.03687927352827,
-          46.05767944105715
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73264,
-        "FIRE_NAME": "Green",
-        "DEGREES_LAT": 46.057669999999995,
-        "DEGREES_LONG": 67.03688,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1777995360000,
-        "FIRE_STAT_DATE": 1778008920000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -418,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -446,63 +334,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
       "type": "Feature",
-      "id": 73287,
+      "id": 73322,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.81946852896183,
-          46.616339588646106
+          -67.41177939260413,
+          45.847879394885695
         ]
       },
       "properties": {
-        "OBJECTID": 73287,
-        "FIRE_NAME": "Onedown",
-        "DEGREES_LAT": 46.61633,
-        "DEGREES_LONG": 64.81947,
+        "OBJECTID": 73322,
+        "FIRE_NAME": "Fawn Lake",
+        "DEGREES_LAT": 45.84787,
+        "DEGREES_LONG": 67.41178,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1777995900000,
-        "FIRE_STAT_DATE": 1778007600000,
+        "FIRE_SIZE": 3,
+        "TIME_DETECTED": 1777991100000,
+        "FIRE_STAT_DATE": 1778056500000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73362,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.98666890234735,
-          45.871259433582146
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73362,
-        "FIRE_NAME": "route 895",
-        "DEGREES_LAT": 45.871249999999996,
-        "DEGREES_LONG": 65.98667,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778054580000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     }
   ],

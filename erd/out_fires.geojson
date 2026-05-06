@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73285,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.91622856287023,
+          46.60373958401686
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73285,
+        "FIRE_NAME": "Big pine",
+        "DEGREES_LAT": 46.60373,
+        "DEGREES_LONG": 64.91623,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777996200000,
+        "FIRE_STAT_DATE": 1778057100000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -194,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -250,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -278,7 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -306,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -334,7 +362,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -362,7 +390,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -390,7 +418,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -418,7 +446,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -446,7 +474,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -474,7 +502,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -502,7 +530,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73286,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.89027855226782,
+          46.57111957933429
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73286,
+        "FIRE_NAME": "East Branch",
+        "DEGREES_LAT": 46.57111,
+        "DEGREES_LONG": 64.89027999999999,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778056200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -530,7 +586,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -558,7 +614,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -586,7 +642,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -614,7 +670,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -642,7 +698,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -670,7 +726,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -698,7 +754,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -726,7 +782,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -754,7 +810,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -782,7 +838,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -810,7 +866,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -838,7 +894,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -866,7 +922,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -894,7 +950,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -922,7 +978,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -950,7 +1006,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -978,7 +1034,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1006,7 +1062,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1034,7 +1090,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1062,7 +1118,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1090,7 +1146,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1118,7 +1174,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1146,7 +1202,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1174,7 +1230,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1202,7 +1258,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1230,7 +1286,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1258,7 +1314,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1286,7 +1342,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1314,7 +1370,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1342,7 +1398,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1370,7 +1426,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1398,7 +1454,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1426,7 +1482,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1454,7 +1510,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1482,7 +1538,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1510,7 +1566,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1538,7 +1594,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1566,7 +1622,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1594,7 +1650,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 50,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1622,7 +1678,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1650,7 +1706,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1678,7 +1734,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1706,7 +1762,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1734,7 +1790,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1762,7 +1818,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1790,7 +1846,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1818,7 +1874,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1846,7 +1902,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1874,7 +1930,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1902,7 +1958,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1930,7 +1986,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1958,7 +2014,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -1986,7 +2042,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2014,7 +2070,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2042,7 +2098,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2070,7 +2126,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2098,7 +2154,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2126,7 +2182,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2154,7 +2210,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2182,7 +2238,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2210,7 +2266,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2238,7 +2294,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2266,7 +2322,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2294,7 +2350,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2322,7 +2378,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2350,7 +2406,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2378,7 +2434,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2406,7 +2462,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2434,7 +2490,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2462,7 +2518,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2490,7 +2546,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2518,7 +2574,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2546,7 +2602,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2574,7 +2630,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2602,7 +2658,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2630,7 +2686,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2658,7 +2714,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2686,7 +2742,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2714,7 +2770,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2742,7 +2798,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2770,7 +2826,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2798,7 +2854,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2826,7 +2882,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2854,7 +2910,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2882,7 +2938,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2910,7 +2966,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2938,7 +2994,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2966,7 +3022,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -2994,7 +3050,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 10,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3022,7 +3078,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3050,7 +3106,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3078,7 +3134,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3106,7 +3162,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3134,7 +3190,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3162,7 +3218,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3190,7 +3246,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3218,7 +3274,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3246,7 +3302,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3274,7 +3330,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3302,7 +3358,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3330,7 +3386,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3358,7 +3414,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3386,7 +3442,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3414,7 +3470,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3442,7 +3498,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3470,7 +3526,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3498,7 +3554,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73264,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.03687927352827,
+          46.05767944105715
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73264,
+        "FIRE_NAME": "Green",
+        "DEGREES_LAT": 46.057669999999995,
+        "DEGREES_LONG": 67.03688,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1777995360000,
+        "FIRE_STAT_DATE": 1778057400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3526,7 +3610,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3554,7 +3638,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.99569864357849,
+          47.77170977926087
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73202,
+        "FIRE_NAME": "St-Pierre",
+        "DEGREES_LAT": 47.7717,
+        "DEGREES_LONG": 64.9957,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1777991400000,
+        "FIRE_STAT_DATE": 1778057760000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3582,7 +3694,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3610,7 +3722,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3638,7 +3750,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3666,7 +3778,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3694,7 +3806,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3722,7 +3834,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3750,7 +3862,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3778,7 +3890,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73287,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.81946852896183,
+          46.616339588646106
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73287,
+        "FIRE_NAME": "Onedown",
+        "DEGREES_LAT": 46.61633,
+        "DEGREES_LONG": 64.81947,
+        "FIRE_STAT_ID": 5,
+        "FIRE_STAT_DESC_E": "Out",
+        "FIRE_STAT_DESC_F": "Éteint",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1777995900000,
+        "FIRE_STAT_DATE": 1778056200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3806,7 +3946,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3834,7 +3974,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3862,7 +4002,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3890,7 +4030,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3918,7 +4058,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3946,7 +4086,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -3974,7 +4114,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4002,7 +4142,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4030,7 +4170,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4058,7 +4198,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4086,7 +4226,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4114,7 +4254,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4142,7 +4282,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4170,7 +4310,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4198,7 +4338,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4226,7 +4366,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4254,7 +4394,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4282,7 +4422,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4310,7 +4450,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4338,7 +4478,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4366,7 +4506,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4394,7 +4534,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     },
     {
@@ -4422,7 +4562,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778065380
+        "FETCHED_FROM_ERD": 1778068795
       }
     }
   ],
