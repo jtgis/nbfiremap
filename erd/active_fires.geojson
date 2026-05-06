@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -82,7 +82,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.98558855480569,
+          45.86693945443581
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73362,
+        "FIRE_NAME": "route 895",
+        "DEGREES_LAT": 45.866929999999996,
+        "DEGREES_LONG": 64.98559,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778001900000,
+        "FIRE_STAT_DATE": 1778058000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -110,35 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73362,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.98558855480569,
-          45.86693945443581
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73362,
-        "FIRE_NAME": "route 895",
-        "DEGREES_LAT": 45.866929999999996,
-        "DEGREES_LONG": 64.98559,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1777978620000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -194,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     },
     {
@@ -250,35 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73322,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.41177939260413,
-          45.847879394885695
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73322,
-        "FIRE_NAME": "Fawn Lake",
-        "DEGREES_LAT": 45.84787,
-        "DEGREES_LONG": 67.41178,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1777991100000,
-        "FIRE_STAT_DATE": 1778056500000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778086481
+        "FETCHED_FROM_ERD": 1778090050
       }
     }
   ],
