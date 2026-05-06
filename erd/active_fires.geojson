@@ -7,15 +7,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.41466875624424,
-          47.036059646845885
+          -65.42409875981264,
+          47.02770964596055
         ]
       },
       "properties": {
         "OBJECTID": 73242,
         "FIRE_NAME": "Portage ATV trail",
-        "DEGREES_LAT": 47.036049999999996,
-        "DEGREES_LONG": 65.41467,
+        "DEGREES_LAT": 47.0277,
+        "DEGREES_LONG": 65.42410000000001,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -132,13 +132,41 @@
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 1.399999976158142,
-        "TIME_DETECTED": 1778003400000,
+        "TIME_DETECTED": 1778002200000,
         "FIRE_STAT_DATE": 1778053920000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73422,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.60602876584109,
+          45.782379425995174
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73422,
+        "FIRE_NAME": "Berwick Flat",
+        "DEGREES_LAT": 45.78237,
+        "DEGREES_LONG": 65.60603,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778010300000,
+        "FIRE_STAT_DATE": 1778068800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -166,35 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.26307831932534,
-          46.222339531537074
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73282,
-        "FIRE_NAME": "NB pole",
-        "DEGREES_LAT": 46.22233,
-        "DEGREES_LONG": 64.26308,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778005020000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -222,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     },
     {
@@ -250,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778090050
+        "FETCHED_FROM_ERD": 1778093785
       }
     }
   ],
