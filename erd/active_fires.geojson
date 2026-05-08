@@ -3,62 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73363,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.96246855329838,
-          46.0166794811348
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73363,
-        "FIRE_NAME": "Synton",
-        "DEGREES_LAT": 46.01667,
-        "DEGREES_LONG": 64.96247,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.2999999523162842,
-        "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778145180000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778244619
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73263,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.0843289687574,
-          46.578339554279474
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73263,
-        "FIRE_NAME": "South Road Settlement",
-        "DEGREES_LAT": 46.57833,
-        "DEGREES_LONG": 66.08433,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 6.099999904632568,
-        "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778149980000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778244619
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73382,
       "geometry": {
         "type": "Point",
@@ -82,7 +26,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778244619
+        "FETCHED_FROM_ERD": 1778248904
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0843289687574,
+          46.578339554279474
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73263,
+        "FIRE_NAME": "South Road Settlement",
+        "DEGREES_LAT": 46.57833,
+        "DEGREES_LONG": 66.08433,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 6.099999904632568,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778235120000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778248904
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73363,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96246855329838,
+          46.0166794811348
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73363,
+        "FIRE_NAME": "Synton",
+        "DEGREES_LAT": 46.01667,
+        "DEGREES_LONG": 64.96247,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1.2999999523162842,
+        "TIME_DETECTED": 1778002200000,
+        "FIRE_STAT_DATE": 1778145180000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778248904
       }
     }
   ],
