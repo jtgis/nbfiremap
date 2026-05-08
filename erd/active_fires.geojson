@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73363,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.96246855329838,
-          46.0166794811348
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73363,
-        "FIRE_NAME": "Synton",
-        "DEGREES_LAT": 46.01667,
-        "DEGREES_LONG": 64.96247,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.2999999523162842,
-        "TIME_DETECTED": 1778002200000,
-        "FIRE_STAT_DATE": 1778242440000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778262562
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73382,
       "geometry": {
         "type": "Point",
@@ -54,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778262562
+        "FETCHED_FROM_ERD": 1778266307
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778262562
+        "FETCHED_FROM_ERD": 1778266307
       }
     }
   ],
