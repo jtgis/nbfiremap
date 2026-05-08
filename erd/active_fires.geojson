@@ -26,63 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778202746
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73263,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.0843289687574,
-          46.578339554279474
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73263,
-        "FIRE_NAME": "South Road Settlement",
-        "DEGREES_LAT": 46.57833,
-        "DEGREES_LONG": 66.08433,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 6.099999904632568,
-        "TIME_DETECTED": 1777998600000,
-        "FIRE_STAT_DATE": 1778149980000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778202746
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73382,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.90312890705492,
-          46.60650956284171
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73382,
-        "FIRE_NAME": "Molasses Hill",
-        "DEGREES_LAT": 46.606500000000004,
-        "DEGREES_LONG": 65.90312999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 20,
-        "TIME_DETECTED": 1777995900000,
-        "FIRE_STAT_DATE": 1778142120000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778202746
+        "FETCHED_FROM_ERD": 1778205833
       }
     },
     {
@@ -110,7 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778202746
+        "FETCHED_FROM_ERD": 1778205833
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0843289687574,
+          46.578339554279474
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73263,
+        "FIRE_NAME": "South Road Settlement",
+        "DEGREES_LAT": 46.57833,
+        "DEGREES_LONG": 66.08433,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 6.099999904632568,
+        "TIME_DETECTED": 1777998600000,
+        "FIRE_STAT_DATE": 1778149980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778205833
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.90312890705492,
+          46.60650956284171
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73382,
+        "FIRE_NAME": "Molasses Hill",
+        "DEGREES_LAT": 46.606500000000004,
+        "DEGREES_LONG": 65.90312999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 20,
+        "TIME_DETECTED": 1777995900000,
+        "FIRE_STAT_DATE": 1778142120000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778205833
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778202746
+        "FETCHED_FROM_ERD": 1778205833
       }
     }
   ],
