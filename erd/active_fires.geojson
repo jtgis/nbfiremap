@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 73382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.90312890705492,
+          46.60650956284171
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73382,
+        "FIRE_NAME": "Molasses Hill",
+        "DEGREES_LAT": 46.606500000000004,
+        "DEGREES_LONG": 65.90312999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 32,
+        "TIME_DETECTED": 1777995900000,
+        "FIRE_STAT_DATE": 1778227860000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778240986
+      }
+    },
+    {
+      "type": "Feature",
       "id": 73363,
       "geometry": {
         "type": "Point",
@@ -26,35 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778237483
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73242,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.42409875981264,
-          47.02770964596055
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73242,
-        "FIRE_NAME": "Portage ATV trail",
-        "DEGREES_LAT": 47.0277,
-        "DEGREES_LONG": 65.42410000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1777997400000,
-        "FIRE_STAT_DATE": 1778146500000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778237483
+        "FETCHED_FROM_ERD": 1778240986
       }
     },
     {
@@ -82,63 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778237483
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73382,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.90312890705492,
-          46.60650956284171
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73382,
-        "FIRE_NAME": "Molasses Hill",
-        "DEGREES_LAT": 46.606500000000004,
-        "DEGREES_LONG": 65.90312999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 20,
-        "TIME_DETECTED": 1777995900000,
-        "FIRE_STAT_DATE": 1778142120000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778237483
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73222,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.40139873688373,
-          46.70087959036947
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73222,
-        "FIRE_NAME": "Rogersville",
-        "DEGREES_LAT": 46.700869999999995,
-        "DEGREES_LONG": 65.40140000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 10.100000381469727,
-        "TIME_DETECTED": 1777992300000,
-        "FIRE_STAT_DATE": 1778143980000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778237483
+        "FETCHED_FROM_ERD": 1778240986
       }
     }
   ],
