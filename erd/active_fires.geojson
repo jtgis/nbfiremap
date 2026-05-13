@@ -3,30 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73642,
+      "id": 73702,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.76523917072346,
-          45.8726494150908
+          -66.86132920848796,
+          45.94893942662647
         ]
       },
       "properties": {
-        "OBJECTID": 73642,
-        "FIRE_NAME": "Smith",
-        "DEGREES_LAT": 45.87264,
-        "DEGREES_LONG": 66.76525,
+        "OBJECTID": 73702,
+        "FIRE_NAME": "Substation",
+        "DEGREES_LAT": 45.94893,
+        "DEGREES_LONG": 66.86133,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778608140000,
-        "FIRE_STAT_DATE": 1778661780000,
+        "TIME_DETECTED": 1778681100000,
+        "FIRE_STAT_DATE": 1778684400000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778695344
+        "FETCHED_FROM_ERD": 1778698850
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778695344
+        "FETCHED_FROM_ERD": 1778698850
       }
     }
   ],
