@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778629252
+        "FETCHED_FROM_ERD": 1778634976
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73642,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.76523917072346,
+          45.8726494150908
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73642,
+        "FIRE_NAME": "Smith",
+        "DEGREES_LAT": 45.87264,
+        "DEGREES_LONG": 66.76525,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778608140000,
+        "FIRE_STAT_DATE": 1778619180000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778634976
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778629252
+        "FETCHED_FROM_ERD": 1778634976
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778629252
+        "FETCHED_FROM_ERD": 1778634976
       }
     }
   ],
