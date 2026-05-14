@@ -52,11 +52,11 @@
         "OBJECTID": 1,
         "AVG_10Y_BURN": 134.7,
         "AVG_10Y_FIRES": 108,
-        "LAST_YEARS_COUNT": 108,
-        "LAST_YEARS_BURN": 91.6,
+        "LAST_YEARS_COUNT": 109,
+        "LAST_YEARS_BURN": 92.1,
         "THIS_YEARS_COUNT": 202,
         "THIS_YEARS_BURN": 367.7,
-        "FETCHED_FROM_ERD": 1778795152
+        "FETCHED_FROM_ERD": 1778798421
       }
     }
   ]
