@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778753060
+        "FETCHED_FROM_ERD": 1778756717
       }
     },
     {
@@ -54,35 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778753060
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73762,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.95112858001409,
-          46.72422960426304
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73762,
-        "FIRE_NAME": "Backyard",
-        "DEGREES_LAT": 46.724219999999995,
-        "DEGREES_LONG": 64.95112999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778698800000,
-        "FIRE_STAT_DATE": 1778709240000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778753060
+        "FETCHED_FROM_ERD": 1778756717
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778753060
+        "FETCHED_FROM_ERD": 1778756717
       }
     },
     {
@@ -138,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778753060
+        "FETCHED_FROM_ERD": 1778756717
       }
     }
   ],
