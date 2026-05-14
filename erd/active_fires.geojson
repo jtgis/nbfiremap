@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 73763,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.002818591999,
+          46.59295957997771
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73763,
+        "FIRE_NAME": "Cove",
+        "DEGREES_LAT": 46.592949999999995,
+        "DEGREES_LONG": 65.00282,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1,
+        "TIME_DETECTED": 1778701500000,
+        "FIRE_STAT_DATE": 1778709420000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778721470
+      }
+    },
+    {
+      "type": "Feature",
       "id": 73722,
       "geometry": {
         "type": "Point",
@@ -26,7 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778715672
+        "FETCHED_FROM_ERD": 1778721470
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73762,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.95112858001409,
+          46.72422960426304
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73762,
+        "FIRE_NAME": "Backyard",
+        "DEGREES_LAT": 46.724219999999995,
+        "DEGREES_LONG": 64.95112999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778698800000,
+        "FIRE_STAT_DATE": 1778709240000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778721470
       }
     },
     {
@@ -54,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778715672
+        "FETCHED_FROM_ERD": 1778721470
       }
     },
     {
@@ -77,12 +133,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1778695560000,
-        "FIRE_STAT_DATE": 1778704872000,
+        "FIRE_STAT_DATE": 1778710670000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778715672
+        "FETCHED_FROM_ERD": 1778721470
       }
     }
   ],
