@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778721470
+        "FETCHED_FROM_ERD": 1778724334
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778721470
+        "FETCHED_FROM_ERD": 1778724334
       }
     },
     {
@@ -82,7 +82,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778721470
+        "FETCHED_FROM_ERD": 1778724334
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73742,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.60196913918249,
+          46.373629506878245
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73742,
+        "FIRE_NAME": "McGivney Station",
+        "DEGREES_LAT": 46.373619999999995,
+        "DEGREES_LONG": 66.60197,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1778695560000,
+        "FIRE_STAT_DATE": 1778702400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778724334
       }
     },
     {
@@ -110,35 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778721470
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73742,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.60196913918249,
-          46.373629506878245
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73742,
-        "FIRE_NAME": "McGivney Station",
-        "DEGREES_LAT": 46.373619999999995,
-        "DEGREES_LONG": 66.60197,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778695560000,
-        "FIRE_STAT_DATE": 1778710670000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778721470
+        "FETCHED_FROM_ERD": 1778724334
       }
     }
   ],
