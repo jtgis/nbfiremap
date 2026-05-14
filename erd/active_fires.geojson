@@ -3,62 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73763,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.002818591999,
-          46.59295957997771
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73763,
-        "FIRE_NAME": "Cove",
-        "DEGREES_LAT": 46.592949999999995,
-        "DEGREES_LONG": 65.00282,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1778701500000,
-        "FIRE_STAT_DATE": 1778709420000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778756717
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73722,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.0813689455777,
-          46.09383947065087
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73722,
-        "FIRE_NAME": "Willow",
-        "DEGREES_LAT": 46.09383,
-        "DEGREES_LONG": 66.08136999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778690700000,
-        "FIRE_STAT_DATE": 1778697900000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778756717
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73742,
       "geometry": {
         "type": "Point",
@@ -77,12 +21,40 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.4000000059604645,
         "TIME_DETECTED": 1778695560000,
-        "FIRE_STAT_DATE": 1778702400000,
+        "FIRE_STAT_DATE": 1778748420000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778756717
+        "FETCHED_FROM_ERD": 1778760016
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73763,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.002818591999,
+          46.59295957997771
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73763,
+        "FIRE_NAME": "Cove",
+        "DEGREES_LAT": 46.592949999999995,
+        "DEGREES_LONG": 65.00282,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1,
+        "TIME_DETECTED": 1778701500000,
+        "FIRE_STAT_DATE": 1778746020000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778760016
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778756717
+        "FETCHED_FROM_ERD": 1778760016
       }
     }
   ],
