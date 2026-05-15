@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778843259
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73143,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.84952920433597,
-          45.95650942818757
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73143,
-        "FIRE_NAME": "Fish Hatchery Lane",
-        "DEGREES_LAT": 45.956500000000005,
-        "DEGREES_LONG": 66.84953,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 2,
-        "TIME_DETECTED": 1777745100000,
-        "FIRE_STAT_DATE": 1778576100000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778843259
+        "FETCHED_FROM_ERD": 1778846452
       }
     }
   ],
