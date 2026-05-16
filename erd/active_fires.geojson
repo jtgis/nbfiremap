@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778963684
+        "FETCHED_FROM_ERD": 1778967357
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778963684
+        "FETCHED_FROM_ERD": 1778967357
       }
     },
     {
@@ -82,35 +82,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778963684
+        "FETCHED_FROM_ERD": 1778967357
       }
     },
     {
       "type": "Feature",
-      "id": 73902,
+      "id": 73922,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.59254951395697,
-          46.938229578046105
+          -64.81544853053377,
+          46.66453959620653
         ]
       },
       "properties": {
-        "OBJECTID": 73902,
-        "FIRE_NAME": "Burnt Hill",
-        "DEGREES_LAT": 46.93822,
-        "DEGREES_LONG": 67.59255,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778873400000,
-        "FIRE_STAT_DATE": 1778952884000,
+        "OBJECTID": 73922,
+        "FIRE_NAME": "Bridge Fire",
+        "DEGREES_LAT": 46.66453,
+        "DEGREES_LONG": 64.81545,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 3,
+        "TIME_DETECTED": 1778948760000,
+        "FIRE_STAT_DATE": 1778955900000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1778963684
+        "PERCENT_CONTAINED": 20,
+        "FETCHED_FROM_ERD": 1778967357
       }
     }
   ],
