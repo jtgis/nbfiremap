@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 73882,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.85836920718108,
+          45.95037942718086
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73882,
+        "FIRE_NAME": "Corridor",
+        "DEGREES_LAT": 45.95037,
+        "DEGREES_LONG": 66.85837,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 20,
+        "TIME_DETECTED": 1778933400000,
+        "FIRE_STAT_DATE": 1778948640000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778960612
+      }
+    },
+    {
+      "type": "Feature",
       "id": 73842,
       "geometry": {
         "type": "Point",
@@ -26,35 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778956794
+        "FETCHED_FROM_ERD": 1778960612
       }
     },
     {
       "type": "Feature",
-      "id": 73862,
+      "id": 73883,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.8232991895497,
-          45.84075940847235
+          -66.31927899687761,
+          45.444939350442304
         ]
       },
       "properties": {
-        "OBJECTID": 73862,
-        "FIRE_NAME": "Bernadette",
-        "DEGREES_LAT": 45.84075,
-        "DEGREES_LONG": 66.8233,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "OBJECTID": 73883,
+        "FIRE_NAME": "Swamp",
+        "DEGREES_LAT": 45.44493,
+        "DEGREES_LONG": 66.31927999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778941800000,
-        "FIRE_STAT_DATE": 1778944440000,
+        "TIME_DETECTED": 1778944200000,
+        "FIRE_STAT_DATE": 1778949812000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778956794
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1778960612
       }
     }
   ],
