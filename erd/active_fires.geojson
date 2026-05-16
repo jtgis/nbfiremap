@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778942546
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73822,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.61016850737484,
-          47.79533979164732
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73822,
-        "FIRE_NAME": "Haut-Lamèque",
-        "DEGREES_LAT": 47.79533,
-        "DEGREES_LONG": 64.61017,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.699999988079071,
-        "TIME_DETECTED": 1778847600000,
-        "FIRE_STAT_DATE": 1778852280000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778942546
+        "FETCHED_FROM_ERD": 1778946004
       }
     }
   ],
