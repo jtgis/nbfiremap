@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778953208
+        "FETCHED_FROM_ERD": 1778956794
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73862,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.8232991895497,
+          45.84075940847235
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73862,
+        "FIRE_NAME": "Bernadette",
+        "DEGREES_LAT": 45.84075,
+        "DEGREES_LONG": 66.8233,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778941800000,
+        "FIRE_STAT_DATE": 1778944440000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778956794
       }
     }
   ],
