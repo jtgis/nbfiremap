@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 73842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.43712942167197,
+          46.23877946302862
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73842,
+        "FIRE_NAME": "East Brighton",
+        "DEGREES_LAT": 46.238769999999995,
+        "DEGREES_LONG": 67.43713,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 10,
+        "TIME_DETECTED": 1778852700000,
+        "FIRE_STAT_DATE": 1778927100000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778939797
+      }
+    },
+    {
+      "type": "Feature",
       "id": 73822,
       "geometry": {
         "type": "Point",
@@ -26,35 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778935352
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.43712942167197,
-          46.23877946302862
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73842,
-        "FIRE_NAME": "East Brighton",
-        "DEGREES_LAT": 46.238769999999995,
-        "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 10,
-        "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1778921580000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 70,
-        "FETCHED_FROM_ERD": 1778935352
+        "FETCHED_FROM_ERD": 1778939797
       }
     }
   ],
