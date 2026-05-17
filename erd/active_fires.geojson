@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779057484
+        "FETCHED_FROM_ERD": 1779061222
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779057484
+        "FETCHED_FROM_ERD": 1779061222
       }
     },
     {
@@ -82,7 +82,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779057484
+        "FETCHED_FROM_ERD": 1779061222
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74042,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.97112859801288,
+          46.97045964568284
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74042,
+        "FIRE_NAME": "Eel River Fire",
+        "DEGREES_LAT": 46.97045,
+        "DEGREES_LONG": 64.97113,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779042180000,
+        "FIRE_STAT_DATE": 1779046800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779061222
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779057484
+        "FETCHED_FROM_ERD": 1779061222
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779057484
+        "FETCHED_FROM_ERD": 1779061222
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779057484
+        "FETCHED_FROM_ERD": 1779061222
       }
     }
   ],
