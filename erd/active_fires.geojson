@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778983621
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.43712942167197,
-          46.23877946302862
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73842,
-        "FIRE_NAME": "East Brighton",
-        "DEGREES_LAT": 46.238769999999995,
-        "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 11.5,
-        "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1778963880000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778983621
+        "FETCHED_FROM_ERD": 1778988721
       }
     },
     {
@@ -82,7 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1778983621
+        "FETCHED_FROM_ERD": 1778988721
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73942,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.81736889602281,
+          47.00642963297393
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73942,
+        "FIRE_NAME": "Wildcat Brook",
+        "DEGREES_LAT": 47.00642,
+        "DEGREES_LONG": 65.81737,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.699999988079071,
+        "TIME_DETECTED": 1778955240000,
+        "FIRE_STAT_DATE": 1778967000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778988721
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.43712942167197,
+          46.23877946302862
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73842,
+        "FIRE_NAME": "East Brighton",
+        "DEGREES_LAT": 46.238769999999995,
+        "DEGREES_LONG": 67.43713,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.699999988079071,
+        "TIME_DETECTED": 1778852700000,
+        "FIRE_STAT_DATE": 1778967000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1778988721
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 20,
-        "FETCHED_FROM_ERD": 1778983621
+        "FETCHED_FROM_ERD": 1778988721
       }
     }
   ],
