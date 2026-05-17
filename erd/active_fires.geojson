@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779035938
+        "FETCHED_FROM_ERD": 1779039652
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779035938
+        "FETCHED_FROM_ERD": 1779039652
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779035938
+        "FETCHED_FROM_ERD": 1779039652
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779035938
+        "FETCHED_FROM_ERD": 1779039652
       }
     },
     {
@@ -138,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779035938
+        "FETCHED_FROM_ERD": 1779039652
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74002,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.4409490868697,
+          46.43206952068082
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74002,
+        "FIRE_NAME": "Astle",
+        "DEGREES_LAT": 46.43206,
+        "DEGREES_LONG": 66.44095,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779022800000,
+        "FIRE_STAT_DATE": 1779028852000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1779039652
       }
     }
   ],
