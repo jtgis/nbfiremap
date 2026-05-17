@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
       }
     },
     {
@@ -54,7 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74005,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.59649850434253,
+          47.82192979638767
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74005,
+        "FIRE_NAME": "Cotteau Road",
+        "DEGREES_LAT": 47.82192,
+        "DEGREES_LONG": 64.5965,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.8999999761581421,
+        "TIME_DETECTED": 1779022800000,
+        "FIRE_STAT_DATE": 1779034560000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779047139
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
       }
     },
     {
@@ -194,35 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779043264
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74005,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.59649850434253,
-          47.82192979638767
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74005,
-        "FIRE_NAME": "Cotteau Road",
-        "DEGREES_LAT": 47.82192,
-        "DEGREES_LONG": 64.5965,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779022800000,
-        "FIRE_STAT_DATE": 1779032464000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1779043264
+        "FETCHED_FROM_ERD": 1779047139
       }
     }
   ],
