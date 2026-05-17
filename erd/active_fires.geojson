@@ -20,13 +20,13 @@
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 1.5,
-        "TIME_DETECTED": 1778954400000,
+        "TIME_DETECTED": 1778953500000,
         "FIRE_STAT_DATE": 1779008220000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779032514
+        "FETCHED_FROM_ERD": 1779035938
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779032514
+        "FETCHED_FROM_ERD": 1779035938
       }
     },
     {
@@ -82,7 +82,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779032514
+        "FETCHED_FROM_ERD": 1779035938
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73984,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.89877852322665,
+          45.811139446539116
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73984,
+        "FIRE_NAME": "Prosser Brook",
+        "DEGREES_LAT": 45.81113,
+        "DEGREES_LONG": 64.89878,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779017280000,
+        "FIRE_STAT_DATE": 1779022980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779035938
       }
     },
     {
@@ -100,45 +128,17 @@
         "FIRE_NAME": "Wildcat Brook",
         "DEGREES_LAT": 47.00642,
         "DEGREES_LONG": 65.81737,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.699999988079071,
-        "TIME_DETECTED": 1778955240000,
-        "FIRE_STAT_DATE": 1778967000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779032514
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73963,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.60532947421298,
-          46.130229439393695
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73963,
-        "FIRE_NAME": "Jellystone",
-        "DEGREES_LAT": 46.13022,
-        "DEGREES_LONG": 67.60533,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778961600000,
-        "FIRE_STAT_DATE": 1779004800000,
+        "FIRE_SIZE": 0.699999988079071,
+        "TIME_DETECTED": 1778955240000,
+        "FIRE_STAT_DATE": 1779022440000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779032514
+        "FETCHED_FROM_ERD": 1779035938
       }
     }
   ],
