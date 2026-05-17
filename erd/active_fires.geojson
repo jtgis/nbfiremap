@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73882,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.85836920718108,
-          45.95037942718086
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73882,
-        "FIRE_NAME": "Corridor",
-        "DEGREES_LAT": 45.95037,
-        "DEGREES_LONG": 66.85837,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 20,
-        "TIME_DETECTED": 1778933400000,
-        "FIRE_STAT_DATE": 1778948640000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779008556
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73883,
       "geometry": {
         "type": "Point",
@@ -54,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779008556
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73942,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.81736889602281,
-          47.00642963297393
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73942,
-        "FIRE_NAME": "Wildcat Brook",
-        "DEGREES_LAT": 47.00642,
-        "DEGREES_LONG": 65.81737,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.699999988079071,
-        "TIME_DETECTED": 1778955240000,
-        "FIRE_STAT_DATE": 1778967000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779008556
+        "FETCHED_FROM_ERD": 1779011876
       }
     },
     {
@@ -110,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779008556
+        "FETCHED_FROM_ERD": 1779011876
       }
     },
     {
@@ -138,7 +82,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 20,
-        "FETCHED_FROM_ERD": 1779008556
+        "FETCHED_FROM_ERD": 1779011876
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73962,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.00209891673016,
+          46.07218946799566
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73962,
+        "FIRE_NAME": "Old Haul",
+        "DEGREES_LAT": 46.072179999999996,
+        "DEGREES_LONG": 66.0021,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 1.5,
+        "TIME_DETECTED": 1778954400000,
+        "FIRE_STAT_DATE": 1778965200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779011876
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73882,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.85836920718108,
+          45.95037942718086
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73882,
+        "FIRE_NAME": "Corridor",
+        "DEGREES_LAT": 45.95037,
+        "DEGREES_LONG": 66.85837,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 20,
+        "TIME_DETECTED": 1778933400000,
+        "FIRE_STAT_DATE": 1778948640000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779011876
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73942,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.81736889602281,
+          47.00642963297393
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73942,
+        "FIRE_NAME": "Wildcat Brook",
+        "DEGREES_LAT": 47.00642,
+        "DEGREES_LONG": 65.81737,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.699999988079071,
+        "TIME_DETECTED": 1778955240000,
+        "FIRE_STAT_DATE": 1778967000000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779011876
       }
     }
   ],
