@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
+        "FETCHED_FROM_ERD": 1779032514
       }
     },
     {
@@ -54,35 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73882,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.85836920718108,
-          45.95037942718086
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73882,
-        "FIRE_NAME": "Corridor",
-        "DEGREES_LAT": 45.95037,
-        "DEGREES_LONG": 66.85837,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 20,
-        "TIME_DETECTED": 1778933400000,
-        "FIRE_STAT_DATE": 1779011040000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
+        "FETCHED_FROM_ERD": 1779032514
       }
     },
     {
@@ -110,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73982,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.85166920340251,
-          45.936789424486676
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73982,
-        "FIRE_NAME": "Blacks",
-        "DEGREES_LAT": 45.93678,
-        "DEGREES_LONG": 66.85167,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1778976000000,
-        "FIRE_STAT_DATE": 1779017160000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
+        "FETCHED_FROM_ERD": 1779032514
       }
     },
     {
@@ -166,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
+        "FETCHED_FROM_ERD": 1779032514
       }
     },
     {
@@ -194,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779029068
+        "FETCHED_FROM_ERD": 1779032514
       }
     }
   ],
