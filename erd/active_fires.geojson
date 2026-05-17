@@ -3,118 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73883,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.31305933055926,
-          45.291549299157204
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73883,
-        "FIRE_NAME": "Swamp",
-        "DEGREES_LAT": 45.29154,
-        "DEGREES_LONG": 67.31306,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1778944200000,
-        "FIRE_STAT_DATE": 1778949900000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779014883
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.43712942167197,
-          46.23877946302862
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73842,
-        "FIRE_NAME": "East Brighton",
-        "DEGREES_LAT": 46.238769999999995,
-        "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.699999988079071,
-        "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1778967000000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779014883
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73922,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.81544853053377,
-          46.66453959620653
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73922,
-        "FIRE_NAME": "Bridge Fire",
-        "DEGREES_LAT": 46.66453,
-        "DEGREES_LONG": 64.81545,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 3,
-        "TIME_DETECTED": 1778948760000,
-        "FIRE_STAT_DATE": 1778955900000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 20,
-        "FETCHED_FROM_ERD": 1779014883
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73962,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.00209891673016,
-          46.07218946799566
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73962,
-        "FIRE_NAME": "Old Haul",
-        "DEGREES_LAT": 46.072179999999996,
-        "DEGREES_LONG": 66.0021,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 1.5,
-        "TIME_DETECTED": 1778954400000,
-        "FIRE_STAT_DATE": 1778965200000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779014883
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73882,
       "geometry": {
         "type": "Point",
@@ -138,7 +26,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779014883
+        "FETCHED_FROM_ERD": 1779018115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73922,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.81544853053377,
+          46.66453959620653
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73922,
+        "FIRE_NAME": "Bridge Fire",
+        "DEGREES_LAT": 46.66453,
+        "DEGREES_LONG": 64.81545,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 4,
+        "TIME_DETECTED": 1778948760000,
+        "FIRE_STAT_DATE": 1779004980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779018115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73883,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.31305933055926,
+          45.291549299157204
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73883,
+        "FIRE_NAME": "Swamp",
+        "DEGREES_LAT": 45.29154,
+        "DEGREES_LONG": 67.31306,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778944200000,
+        "FIRE_STAT_DATE": 1778949900000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779018115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.43712942167197,
+          46.23877946302862
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73842,
+        "FIRE_NAME": "East Brighton",
+        "DEGREES_LAT": 46.238769999999995,
+        "DEGREES_LONG": 67.43713,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 11.5,
+        "TIME_DETECTED": 1778852700000,
+        "FIRE_STAT_DATE": 1779004980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779018115
       }
     },
     {
@@ -166,7 +138,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779014883
+        "FETCHED_FROM_ERD": 1779018115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73962,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.00209891673016,
+          46.07218946799566
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73962,
+        "FIRE_NAME": "Old Haul",
+        "DEGREES_LAT": 46.072179999999996,
+        "DEGREES_LONG": 66.0021,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 1.5,
+        "TIME_DETECTED": 1778954400000,
+        "FIRE_STAT_DATE": 1778965200000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779018115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73963,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.60532947421298,
+          46.130229439393695
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73963,
+        "FIRE_NAME": "Jellystone",
+        "DEGREES_LAT": 46.13022,
+        "DEGREES_LONG": 67.60533,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1778961600000,
+        "FIRE_STAT_DATE": 1779004800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779018115
       }
     }
   ],
