@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779111406
+        "FETCHED_FROM_ERD": 1779118353
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74063,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.86929854938542,
+          46.67875959816755
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74063,
+        "FIRE_NAME": "Laurentide",
+        "DEGREES_LAT": 46.67875,
+        "DEGREES_LONG": 64.86930000000001,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779101220000,
+        "FIRE_STAT_DATE": 1779103800000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779118353
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779111406
+        "FETCHED_FROM_ERD": 1779118353
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779111406
+        "FETCHED_FROM_ERD": 1779118353
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779111406
+        "FETCHED_FROM_ERD": 1779118353
       }
     },
     {
@@ -133,12 +161,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1779017280000,
-        "FIRE_STAT_DATE": 1779022980000,
+        "FIRE_STAT_DATE": 1779105900000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779111406
+        "FETCHED_FROM_ERD": 1779118353
       }
     },
     {
@@ -166,7 +194,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779111406
+        "FETCHED_FROM_ERD": 1779118353
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74062,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.62919844744368,
+          46.26257953081476
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74062,
+        "FIRE_NAME": "South Shediac River",
+        "DEGREES_LAT": 46.26257,
+        "DEGREES_LONG": 64.6292,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779099300000,
+        "FIRE_STAT_DATE": 1779107553000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1779118353
       }
     }
   ],
