@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73922,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.81544853053377,
-          46.66453959620653
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73922,
-        "FIRE_NAME": "Bridge Fire",
-        "DEGREES_LAT": 46.66453,
-        "DEGREES_LONG": 64.81545,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 4,
-        "TIME_DETECTED": 1778948760000,
-        "FIRE_STAT_DATE": 1779031140000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
+        "FETCHED_FROM_ERD": 1779104070
       }
     },
     {
@@ -77,40 +49,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.8999999761581421,
         "TIME_DETECTED": 1779022800000,
-        "FIRE_STAT_DATE": 1779034560000,
+        "FIRE_STAT_DATE": 1779087360000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74042,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.97112859801288,
-          46.97045964568284
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74042,
-        "FIRE_NAME": "Eel River Fire",
-        "DEGREES_LAT": 46.97045,
-        "DEGREES_LONG": 64.97113,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779042180000,
-        "FIRE_STAT_DATE": 1779046800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
+        "FETCHED_FROM_ERD": 1779104070
       }
     },
     {
@@ -128,17 +72,45 @@
         "FIRE_NAME": "East Brighton",
         "DEGREES_LAT": 46.238769999999995,
         "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 11.5,
         "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1779004980000,
+        "FIRE_STAT_DATE": 1779089940000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
+        "FETCHED_FROM_ERD": 1779104070
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73922,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.81544853053377,
+          46.66453959620653
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73922,
+        "FIRE_NAME": "Burnning Bush",
+        "DEGREES_LAT": 46.66453,
+        "DEGREES_LONG": 64.81545,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 3.700000047683716,
+        "TIME_DETECTED": 1778948760000,
+        "FIRE_STAT_DATE": 1779091740000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779104070
       }
     },
     {
@@ -166,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
+        "FETCHED_FROM_ERD": 1779104070
       }
     },
     {
@@ -194,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779096882
+        "FETCHED_FROM_ERD": 1779104070
       }
     }
   ],
