@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74082,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.59857881730542,
-          46.95657962986101
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74082,
-        "FIRE_NAME": "Derby",
-        "DEGREES_LAT": 46.95657,
-        "DEGREES_LONG": 65.59858,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779110700000,
-        "FIRE_STAT_DATE": 1779131880000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74142,
       "geometry": {
         "type": "Point",
@@ -54,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
       }
     },
     {
@@ -110,119 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73942,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.81736889602281,
-          47.00642963297393
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73942,
-        "FIRE_NAME": "Wildcat Brook",
-        "DEGREES_LAT": 47.00642,
-        "DEGREES_LONG": 65.81737,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.699999988079071,
-        "TIME_DETECTED": 1778955240000,
-        "FIRE_STAT_DATE": 1779096960000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.43712942167197,
-          46.23877946302862
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73842,
-        "FIRE_NAME": "East Brighton",
-        "DEGREES_LAT": 46.238769999999995,
-        "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 11.5,
-        "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1779089940000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73922,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.81544853053377,
-          46.66453959620653
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73922,
-        "FIRE_NAME": "Burnning Bush",
-        "DEGREES_LAT": 46.66453,
-        "DEGREES_LONG": 64.81545,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 3.700000047683716,
-        "TIME_DETECTED": 1778948760000,
-        "FIRE_STAT_DATE": 1779091740000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74122,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.68099844540909,
-          45.75688944161163
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74122,
-        "FIRE_NAME": "Fence",
-        "DEGREES_LAT": 45.756879999999995,
-        "DEGREES_LONG": 64.681,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779105600000,
-        "FIRE_STAT_DATE": 1779122340000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
       }
     },
     {
@@ -245,12 +105,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1779106500000,
-        "FIRE_STAT_DATE": 1779122520000,
+        "FIRE_STAT_DATE": 1779178380000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
       }
     },
     {
@@ -278,35 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
       }
     },
     {
       "type": "Feature",
-      "id": 73984,
+      "id": 73922,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.89877852322665,
-          45.811139446539116
+          -64.81544853053377,
+          46.66453959620653
         ]
       },
       "properties": {
-        "OBJECTID": 73984,
-        "FIRE_NAME": "Prosser Brook",
-        "DEGREES_LAT": 45.81113,
-        "DEGREES_LONG": 64.89878,
+        "OBJECTID": 73922,
+        "FIRE_NAME": "Burnning Bush",
+        "DEGREES_LAT": 46.66453,
+        "DEGREES_LONG": 64.81545,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779017280000,
-        "FIRE_STAT_DATE": 1779105900000,
+        "FIRE_SIZE": 3.700000047683716,
+        "TIME_DETECTED": 1778948760000,
+        "FIRE_STAT_DATE": 1779179220000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
       }
     },
     {
@@ -329,12 +189,96 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
         "TIME_DETECTED": 1779112800000,
-        "FIRE_STAT_DATE": 1779122760000,
+        "FIRE_STAT_DATE": 1779178440000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779183185
+        "FETCHED_FROM_ERD": 1779190167
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74082,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.59857881730542,
+          46.95657962986101
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74082,
+        "FIRE_NAME": "Derby",
+        "DEGREES_LAT": 46.95657,
+        "DEGREES_LONG": 65.59858,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779110700000,
+        "FIRE_STAT_DATE": 1779177960000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779190167
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.43712942167197,
+          46.23877946302862
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73842,
+        "FIRE_NAME": "East Brighton",
+        "DEGREES_LAT": 46.238769999999995,
+        "DEGREES_LONG": 67.43713,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 11.5,
+        "TIME_DETECTED": 1778852700000,
+        "FIRE_STAT_DATE": 1779178020000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779190167
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68099844540909,
+          45.75688944161163
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74122,
+        "FIRE_NAME": "Fence",
+        "DEGREES_LAT": 45.756879999999995,
+        "DEGREES_LONG": 64.681,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779105600000,
+        "FIRE_STAT_DATE": 1779178320000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779190167
       }
     }
   ],
