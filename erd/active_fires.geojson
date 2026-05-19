@@ -3,90 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74142,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.14846869380197,
-          47.701459764466286
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74142,
-        "FIRE_NAME": "Burnsville",
-        "DEGREES_LAT": 47.70145,
-        "DEGREES_LONG": 65.14847,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779123600000,
-        "FIRE_STAT_DATE": 1779127800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74005,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.59649850434253,
-          47.82192979638767
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74005,
-        "FIRE_NAME": "Cotteau Road",
-        "DEGREES_LAT": 47.82192,
-        "DEGREES_LONG": 64.5965,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.8999999761581421,
-        "TIME_DETECTED": 1779022800000,
-        "FIRE_STAT_DATE": 1779087360000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74063,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.86929854938542,
-          46.67875959816755
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74063,
-        "FIRE_NAME": "Laurentide",
-        "DEGREES_LAT": 46.67875,
-        "DEGREES_LONG": 64.86930000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779101220000,
-        "FIRE_STAT_DATE": 1779103800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74123,
       "geometry": {
         "type": "Point",
@@ -110,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
       }
     },
     {
@@ -133,12 +49,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 1.7000000476837158,
         "TIME_DETECTED": 1778953500000,
-        "FIRE_STAT_DATE": 1779107580000,
+        "FIRE_STAT_DATE": 1779184860000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
       }
     },
     {
@@ -166,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
       }
     },
     {
@@ -194,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
       }
     },
     {
@@ -222,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
       }
     },
     {
@@ -250,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
       }
     },
     {
@@ -278,7 +194,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779190167
+        "FETCHED_FROM_ERD": 1779197337
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.96582892891497,
+          46.60322956071643
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74202,
+        "FIRE_NAME": "weaver siding",
+        "DEGREES_LAT": 46.60322,
+        "DEGREES_LONG": 65.96583,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779181200000,
+        "FIRE_STAT_DATE": 1779186536000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1779197337
       }
     }
   ],
