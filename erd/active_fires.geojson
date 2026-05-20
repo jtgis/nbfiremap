@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 74282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.80944888018122,
+          46.709459583000694
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74282,
+        "FIRE_NAME": "Wolf Fire",
+        "DEGREES_LAT": 46.70945,
+        "DEGREES_LONG": 65.80945,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295800000,
+        "FIRE_STAT_DATE": 1779308100000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779320839
+      }
+    },
+    {
+      "type": "Feature",
       "id": 74123,
       "geometry": {
         "type": "Point",
@@ -26,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -194,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -250,7 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     },
     {
@@ -278,35 +306,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779317323
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.80944888018122,
-          46.709459583000694
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74282,
-        "FIRE_NAME": "Wolf Fire",
-        "DEGREES_LAT": 46.70945,
-        "DEGREES_LONG": 65.80945,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779295800000,
-        "FIRE_STAT_DATE": 1779306523000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1779317323
+        "FETCHED_FROM_ERD": 1779320839
       }
     }
   ],
