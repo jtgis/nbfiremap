@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779304136
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74242,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.0181285731147,
-          46.03871948359378
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74242,
-        "FIRE_NAME": "Salisbury Trailor",
-        "DEGREES_LAT": 46.038709999999995,
-        "DEGREES_LONG": 65.01813,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779270300000,
-        "FIRE_STAT_DATE": 1779275460000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779304136
+        "FETCHED_FROM_ERD": 1779307440
       }
     },
     {
@@ -82,7 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779304136
+        "FETCHED_FROM_ERD": 1779307440
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.98841856393015,
+          46.055979487211275
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74262,
+        "FIRE_NAME": "Willow",
+        "DEGREES_LAT": 46.055969999999995,
+        "DEGREES_LONG": 64.98841999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779291000000,
+        "FIRE_STAT_DATE": 1779296580000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779307440
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74242,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.0181285731147,
+          46.03871948359378
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74242,
+        "FIRE_NAME": "Salisbury Trailor",
+        "DEGREES_LAT": 46.038709999999995,
+        "DEGREES_LONG": 65.01813,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779270300000,
+        "FIRE_STAT_DATE": 1779296520000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779307440
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779304136
+        "FETCHED_FROM_ERD": 1779307440
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779304136
+        "FETCHED_FROM_ERD": 1779307440
       }
     },
     {
@@ -166,7 +194,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779304136
+        "FETCHED_FROM_ERD": 1779307440
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.9954785678215,
+          46.07270949007339
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74263,
+        "FIRE_NAME": "Fence",
+        "DEGREES_LAT": 46.072700000000005,
+        "DEGREES_LONG": 64.99548,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779294600000,
+        "FIRE_STAT_DATE": 1779296640000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1779307440
       }
     }
   ],
