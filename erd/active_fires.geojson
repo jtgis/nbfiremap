@@ -3,58 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74122,
+      "id": 74123,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.68099844540909,
-          45.75688944161163
+          -64.68169844473763,
+          45.759209441969645
         ]
       },
       "properties": {
-        "OBJECTID": 74122,
-        "FIRE_NAME": "Fence",
-        "DEGREES_LAT": 45.756879999999995,
-        "DEGREES_LONG": 64.681,
+        "OBJECTID": 74123,
+        "FIRE_NAME": "Germantown Ditch",
+        "DEGREES_LAT": 45.7592,
+        "DEGREES_LONG": 64.6817,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779115800000,
-        "FIRE_STAT_DATE": 1779179400000,
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779104520000,
+        "FIRE_STAT_DATE": 1779266400000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779276241
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74222,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.84716887018004,
-          46.243869501915675
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74222,
-        "FIRE_NAME": "Beaver Bogan",
-        "DEGREES_LAT": 46.24386,
-        "DEGREES_LONG": 65.84716999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1779222000000,
-        "FIRE_STAT_DATE": 1779229920000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 40,
-        "FETCHED_FROM_ERD": 1779276241
+        "FETCHED_FROM_ERD": 1779283132
       }
     },
     {
@@ -77,12 +49,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
         "TIME_DETECTED": 1779112800000,
-        "FIRE_STAT_DATE": 1779178440000,
+        "FIRE_STAT_DATE": 1779266400000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779276241
+        "FETCHED_FROM_ERD": 1779283132
       }
     },
     {
@@ -105,40 +77,68 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 11.5,
         "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1779178020000,
+        "FIRE_STAT_DATE": 1779267180000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779276241
+        "FETCHED_FROM_ERD": 1779283132
       }
     },
     {
       "type": "Feature",
-      "id": 74123,
+      "id": 74222,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.68169844473763,
-          45.759209441969645
+          -65.84716887018004,
+          46.243869501915675
         ]
       },
       "properties": {
-        "OBJECTID": 74123,
-        "FIRE_NAME": "Germantown Ditch",
-        "DEGREES_LAT": 45.7592,
-        "DEGREES_LONG": 64.6817,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779104520000,
-        "FIRE_STAT_DATE": 1779179400000,
+        "OBJECTID": 74222,
+        "FIRE_NAME": "Beaver Bogan",
+        "DEGREES_LAT": 46.24386,
+        "DEGREES_LONG": 65.84716999999999,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1779222000000,
+        "FIRE_STAT_DATE": 1779265800000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779276241
+        "FETCHED_FROM_ERD": 1779283132
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68099844540909,
+          45.75688944161163
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74122,
+        "FIRE_NAME": "Fence",
+        "DEGREES_LAT": 45.756879999999995,
+        "DEGREES_LONG": 64.681,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779115800000,
+        "FIRE_STAT_DATE": 1779266340000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779283132
       }
     }
   ],
