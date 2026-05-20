@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779283132
+        "FETCHED_FROM_ERD": 1779286532
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74242,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.0181285731147,
+          46.03871948359378
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74242,
+        "FIRE_NAME": "Salisbury Trailor",
+        "DEGREES_LAT": 46.038709999999995,
+        "DEGREES_LONG": 65.01813,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779270300000,
+        "FIRE_STAT_DATE": 1779275460000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779286532
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779283132
+        "FETCHED_FROM_ERD": 1779286532
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779283132
+        "FETCHED_FROM_ERD": 1779286532
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779283132
+        "FETCHED_FROM_ERD": 1779286532
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779283132
+        "FETCHED_FROM_ERD": 1779286532
       }
     }
   ],
