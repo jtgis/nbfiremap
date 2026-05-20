@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779240108
+        "FETCHED_FROM_ERD": 1779247938
       }
     },
     {
@@ -54,7 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779240108
+        "FETCHED_FROM_ERD": 1779247938
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.84716887018004,
+          46.243869501915675
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74222,
+        "FIRE_NAME": "Beaver Bogan",
+        "DEGREES_LAT": 46.24386,
+        "DEGREES_LONG": 65.84716999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1779222000000,
+        "FIRE_STAT_DATE": 1779229920000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 40,
+        "FETCHED_FROM_ERD": 1779247938
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779240108
+        "FETCHED_FROM_ERD": 1779247938
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779240108
+        "FETCHED_FROM_ERD": 1779247938
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779240108
+        "FETCHED_FROM_ERD": 1779247938
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779240108
+        "FETCHED_FROM_ERD": 1779247938
       }
     }
   ],
