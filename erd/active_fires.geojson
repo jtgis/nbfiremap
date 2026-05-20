@@ -26,7 +26,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74283,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.03277858061799,
+          46.065699487988184
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74283,
+        "FIRE_NAME": "O Blenis",
+        "DEGREES_LAT": 46.06569,
+        "DEGREES_LONG": 65.03278,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779296400000,
+        "FIRE_STAT_DATE": 1779297960000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779310870
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74284,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86061916887289,
+          45.15923928721079
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74284,
+        "FIRE_NAME": "Old St. Andrews Rd",
+        "DEGREES_LAT": 45.15923,
+        "DEGREES_LONG": 66.86062,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295500000,
+        "FIRE_STAT_DATE": 1779298020000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
@@ -54,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
@@ -82,7 +138,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.9954785678215,
+          46.07270949007339
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74263,
+        "FIRE_NAME": "Fence",
+        "DEGREES_LAT": 46.072700000000005,
+        "DEGREES_LONG": 64.99548,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779294600000,
+        "FIRE_STAT_DATE": 1779296700000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
@@ -110,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
@@ -138,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
@@ -166,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
@@ -194,35 +278,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
       }
     },
     {
       "type": "Feature",
-      "id": 74263,
+      "id": 74282,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.9954785678215,
-          46.07270949007339
+          -65.80944888018122,
+          46.709459583000694
         ]
       },
       "properties": {
-        "OBJECTID": 74263,
-        "FIRE_NAME": "Fence",
-        "DEGREES_LAT": 46.072700000000005,
-        "DEGREES_LONG": 64.99548,
+        "OBJECTID": 74282,
+        "FIRE_NAME": "Wolf Fire",
+        "DEGREES_LAT": 46.70945,
+        "DEGREES_LONG": 65.80945,
         "FIRE_STAT_ID": 1,
         "FIRE_STAT_DESC_E": "Out of Control",
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779294600000,
-        "FIRE_STAT_DATE": 1779296640000,
+        "TIME_DETECTED": 1779295800000,
+        "FIRE_STAT_DATE": 1779300070000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1779307440
+        "FETCHED_FROM_ERD": 1779310870
       }
     }
   ],
