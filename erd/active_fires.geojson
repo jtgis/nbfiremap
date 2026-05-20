@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -54,35 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
       "type": "Feature",
-      "id": 74284,
+      "id": 74322,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.86061916887289,
-          45.15923928721079
+          -67.51001946690162,
+          46.61552952534011
         ]
       },
       "properties": {
-        "OBJECTID": 74284,
-        "FIRE_NAME": "Old St. Andrews Rd",
-        "DEGREES_LAT": 45.15923,
-        "DEGREES_LONG": 66.86062,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
+        "OBJECTID": 74322,
+        "FIRE_NAME": "Range road",
+        "DEGREES_LAT": 46.61552,
+        "DEGREES_LONG": 67.51002,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779295500000,
-        "FIRE_STAT_DATE": 1779298020000,
+        "TIME_DETECTED": 1779300900000,
+        "FIRE_STAT_DATE": 1779302820000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -166,7 +166,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96531855603162,
+          46.06805949042166
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74302,
+        "FIRE_NAME": "Lower Mountain",
+        "DEGREES_LAT": 46.06805,
+        "DEGREES_LONG": 64.96531999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779296400000,
+        "FIRE_STAT_DATE": 1779300300000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -194,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -222,7 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -250,7 +278,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74284,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86061916887289,
+          45.15923928721079
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74284,
+        "FIRE_NAME": "Old St. Andrews Rd",
+        "DEGREES_LAT": 45.15923,
+        "DEGREES_LONG": 66.86062,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295500000,
+        "FIRE_STAT_DATE": 1779301680000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -278,7 +334,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     },
     {
@@ -301,12 +357,12 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1779295800000,
-        "FIRE_STAT_DATE": 1779300070000,
+        "FIRE_STAT_DATE": 1779303656000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1779310870
+        "FETCHED_FROM_ERD": 1779314456
       }
     }
   ],
