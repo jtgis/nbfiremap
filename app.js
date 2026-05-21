@@ -5654,7 +5654,7 @@ if (typeof map !== 'undefined' && map && map.on){
               await drawTilesToCanvas(sortedTiles, ctx, mapContainerRect);
             }
 
-            // -- Draw other visible tile/WMS layers (overlays like fire weather, smoke) --
+            // -- Draw other visible tile/WMS layers (fire weather, lightning radar, etc.) --
             const otherTileLayers = [];
             map.eachLayer(lyr => {
               if(lyr === activeTileLayer) return;
@@ -5665,7 +5665,41 @@ if (typeof map !== 'undefined' && map && map.on){
               await drawTilesToCanvas(tiles, ctx, mapContainerRect);
             }
 
-            // -- Draw vector overlays directly on canvas (boundary, perimeters, etc.) --
+            // -- Draw ESRI Image/Dynamic Map Layers (smoke, radar, burn bans, sentinel-2, crown land raster) --
+            // These layers render as a single <img> stretched to the map bounds, not as a tile grid.
+            // Sort by pane z-index so they composite in the correct visual order.
+            const paneZIndex = Object.fromEntries((CONFIG.PANES || []).map(([name, z]) => [name, z]));
+            const imgLayers = [];
+            map.eachLayer(lyr => {
+              // Check the layer itself, then any direct children (e.g. crownProxy wraps a dynamicMapLayer).
+              // Guard getLayers() — some plugin types return non-arrays or throw.
+              const toCheck = [lyr];
+              if(typeof lyr.getLayers === 'function'){
+                try {
+                  const children = lyr.getLayers();
+                  if(Array.isArray(children)) toCheck.push(...children);
+                } catch(e) { /* layer type doesn't support enumeration */ }
+              }
+              for(const candidate of toCheck){
+                const img = candidate._image;
+                if(!img || !img.complete || !img.naturalWidth) continue;
+                const rawOpacity = parseFloat(img.style.opacity);
+                const effectiveOpacity = Number.isFinite(rawOpacity) ? rawOpacity : (candidate.options?.opacity ?? 1);
+                if(effectiveOpacity > 0){
+                  imgLayers.push({ candidate, img, effectiveOpacity });
+                }
+              }
+            });
+            imgLayers.sort((a, b) =>
+              (paneZIndex[a.candidate.options?.pane] ?? 500) - (paneZIndex[b.candidate.options?.pane] ?? 500)
+            );
+            for(const { img, effectiveOpacity } of imgLayers){
+              ctx.globalAlpha = effectiveOpacity;
+              try { ctx.drawImage(img, 0, 0, mapSize.x, mapSize.y); } catch(e){}
+              ctx.globalAlpha = 1;
+            }
+
+            // -- Draw vector overlays directly on canvas (boundary, perimeters, hotspots, etc.) --
             // This avoids SVG transform/viewBox misalignment that occurs with serialization.
             // Resolve CSS variable colors (e.g. 'var(--boundary)') to actual hex values
             function resolveColor(c){
@@ -5674,15 +5708,26 @@ if (typeof map !== 'undefined' && map && map.on){
               return c;
             }
 
-            // Collect all vector layers currently on the map
+            // Collect all vector layers currently on the map, recursing into LayerGroups so
+            // that ESRI feature layers (boundary, counties, perimeters, CWFIS hotspots, etc.)
+            // and plain L.geoJSON / L.layerGroup instances have their children included.
             const vecLayers = [];
-            map.eachLayer(lyr => {
-              if(lyr instanceof L.TileLayer) return;   // tiles already drawn
-              if(lyr instanceof L.Marker) return;       // fire markers drawn in step 4
+            function collectVec(lyr) {
+              if(lyr instanceof L.TileLayer) return;          // tiles already drawn
+              if(lyr._image) return;                          // image layers already drawn above
+              if(lyr instanceof L.Marker) return;             // fire markers drawn in step 4
               if(L.MarkerClusterGroup && lyr instanceof L.MarkerClusterGroup) return;
               if(lyr instanceof L.CircleMarker){ vecLayers.push(lyr); return; }
               if(lyr instanceof L.Polyline){ vecLayers.push(lyr); return; }
-            });
+              // LayerGroup / FeatureGroup / ESRI FeatureLayer — recurse into children
+              if(typeof lyr.getLayers === 'function'){
+                try {
+                  const children = lyr.getLayers();
+                  if(Array.isArray(children)) children.forEach(child => collectVec(child));
+                } catch(e) { /* layer type doesn't support enumeration */ }
+              }
+            }
+            map.eachLayer(lyr => collectVec(lyr));
 
             // Trace LatLng arrays onto the canvas (handles nested rings / multi-polygons)
             function traceRings(arr, isPolygon){
@@ -5779,72 +5824,251 @@ if (typeof map !== 'undefined' && map && map.on){
               (STATUS_SEV_ORDER[norm(a.statusKey||'')]??9) - (STATUS_SEV_ORDER[norm(b.statusKey||'')]??9)
             );
 
-            // First pass: draw badge-style markers — white fill + colored ring (matches marker-badge CSS)
-            // Use Font Awesome fa-fire glyph if loaded (same as web app), fall back to emoji
+            // -- Cluster fires that fall within CLUSTER_R canvas pixels of each other --
+            // Fires are already sorted by severity so the most severe anchors each cluster.
+            const CLUSTER_R = 24; // px
+            const clusters = [];
+            for (const rec of sortedVisibleFires) {
+              const pt = map.latLngToContainerPoint(rec.latlng);
+              let assigned = false;
+              for (const cl of clusters) {
+                const dx = cl.cx - pt.x, dy = cl.cy - pt.y;
+                if (Math.sqrt(dx*dx + dy*dy) < CLUSTER_R) {
+                  cl.members.push({ rec, pt });
+                  // Re-compute centroid
+                  cl.cx = cl.members.reduce((s,m) => s + m.pt.x, 0) / cl.members.length;
+                  cl.cy = cl.members.reduce((s,m) => s + m.pt.y, 0) / cl.members.length;
+                  assigned = true; break;
+                }
+              }
+              if (!assigned) clusters.push({ members:[{ rec, pt }], cx: pt.x, cy: pt.y });
+            }
+
+            // Map each fire record to its 0-based index in sortedVisibleFires (= PDF table row - 1)
+            const fireIndexMap = new Map(sortedVisibleFires.map((rec, i) => [rec, i]));
+
             const _faReady = typeof document.fonts !== 'undefined' &&
                              document.fonts.check('900 12px "Font Awesome 6 Free"');
-            for(const rec of sortedVisibleFires){
-              const pt = map.latLngToContainerPoint(rec.latlng);
-              const sk = norm(rec.statusKey || '');
+
+            // Helper: draw a single fire badge (white circle + coloured ring + flame icon)
+            function drawFireBadge(px, py, sk) {
               const color = statusColorMap[sk] || '#ef4444';
-              // White circle with colored ring
               ctx.beginPath();
-              ctx.arc(pt.x, pt.y, markerR, 0, Math.PI*2);
-              ctx.fillStyle = '#ffffff';
-              ctx.fill();
-              ctx.lineWidth = 2.5;
-              ctx.strokeStyle = color;
-              ctx.stroke();
-              // Flame icon (status color, like web app marker-badge i element)
+              ctx.arc(px, py, markerR, 0, Math.PI*2);
+              ctx.fillStyle = '#ffffff'; ctx.fill();
+              ctx.lineWidth = 2.5; ctx.strokeStyle = color; ctx.stroke();
               ctx.fillStyle = color;
-              ctx.textBaseline = 'middle';
-              ctx.textAlign = 'center';
-              if(_faReady){
+              ctx.textBaseline = 'middle'; ctx.textAlign = 'center';
+              if (_faReady) {
                 ctx.font = `900 ${Math.round(markerR)}px "Font Awesome 6 Free"`;
-                ctx.fillText('\uf06d', pt.x, pt.y);
+                ctx.fillText('\uf06d', px, py);
               } else {
                 ctx.font = `${Math.round(markerR * 1.3)}px sans-serif`;
-                ctx.fillText('\uD83D\uDD25', pt.x, pt.y);
+                ctx.fillText('\uD83D\uDD25', px, py);
               }
             }
 
-            // Second pass: sequential row-number labels (always shown, matches PDF table row)
-            // with collision-avoiding placement so clustered fires don't overlap
+            // Helper: draw a cluster count badge (halo + white circle + coloured ring + count)
+            function drawClusterBadge(px, py, count, ringColor) {
+              const cr = markerR + 3;
+              ctx.beginPath();
+              ctx.arc(px, py, cr + 4, 0, Math.PI*2);
+              ctx.fillStyle = ringColor + '22'; ctx.fill();
+              ctx.strokeStyle = ringColor + '55'; ctx.lineWidth = 3; ctx.stroke();
+              ctx.beginPath();
+              ctx.arc(px, py, cr, 0, Math.PI*2);
+              ctx.fillStyle = '#ffffff'; ctx.fill();
+              ctx.lineWidth = 2.5; ctx.strokeStyle = ringColor; ctx.stroke();
+              ctx.fillStyle = ringColor;
+              ctx.font = `bold ${Math.round(cr * 0.82)}px sans-serif`;
+              ctx.textBaseline = 'middle'; ctx.textAlign = 'center';
+              ctx.fillText(String(count), px, py);
+            }
+
+            // Pass 1: draw individual fire badges (single-fire clusters only)
+            const multiClusters = [];
+            for (const cl of clusters) {
+              if (cl.members.length === 1) {
+                const { rec, pt } = cl.members[0];
+                drawFireBadge(pt.x, pt.y, norm(rec.statusKey||''));
+              } else {
+                multiClusters.push(cl);
+              }
+            }
+
+            // Pass 2: row-number labels for single fires (collision-avoiding)
             ctx.textAlign = 'left';
             ctx.textBaseline = 'middle';
             ctx.font = 'bold 11px sans-serif';
             const labelH = 12;
             const placedLabels = [];
-            function labelOverlaps(box){
+            function labelOverlaps(box) {
               return placedLabels.some(b =>
                 box.x < b.x + b.w + 2 && box.x + box.w + 2 > b.x &&
                 box.y < b.y + b.h + 2 && box.y + box.h + 2 > b.y
               );
             }
-            sortedVisibleFires.forEach((rec, idx) => {
-              const pt = map.latLngToContainerPoint(rec.latlng);
-              const label = String(idx + 1);
+            for (const cl of clusters) {
+              if (cl.members.length !== 1) continue;
+              const { rec, pt } = cl.members[0];
+              const idx = fireIndexMap.get(rec);
+              const _fp = rec.props || {};
+              const label = _fp.FIRE_NUMBER_SHORT ?? _fp.FIRE_NUMBER ?? _fp.FIRE_ID ?? _fp.ID ?? (_fp.OBJECTID != null ? String(_fp.OBJECTID) : '') ?? String(idx + 1);
               const tw = ctx.measureText(label).width;
               const gap = 3;
-              const candidates = [
-                { lx: pt.x + markerR + gap,       ly: pt.y - labelH/2 },
-                { lx: pt.x + markerR + gap,       ly: pt.y - labelH - markerR },
-                { lx: pt.x + markerR + gap,       ly: pt.y + markerR },
-                { lx: pt.x - markerR - tw - gap,  ly: pt.y - labelH/2 },
-                { lx: pt.x - tw/2,                ly: pt.y - markerR - labelH - gap },
-                { lx: pt.x - tw/2,                ly: pt.y + markerR + gap },
+              const labelCandidates = [
+                { lx: pt.x + markerR + gap,      ly: pt.y - labelH/2 },
+                { lx: pt.x + markerR + gap,      ly: pt.y - labelH - markerR },
+                { lx: pt.x + markerR + gap,      ly: pt.y + markerR },
+                { lx: pt.x - markerR - tw - gap, ly: pt.y - labelH/2 },
+                { lx: pt.x - tw/2,               ly: pt.y - markerR - labelH - gap },
+                { lx: pt.x - tw/2,               ly: pt.y + markerR + gap },
               ];
-              let best = candidates[0];
-              for(const cand of candidates){
-                if(!labelOverlaps({ x: cand.lx, y: cand.ly, w: tw, h: labelH })){ best = cand; break; }
+              let best = labelCandidates[0];
+              for (const cand of labelCandidates) {
+                if (!labelOverlaps({ x: cand.lx, y: cand.ly, w: tw, h: labelH })) { best = cand; break; }
               }
               placedLabels.push({ x: best.lx, y: best.ly, w: tw, h: labelH });
-              ctx.strokeStyle = 'rgba(255,255,255,0.9)';
-              ctx.lineWidth = 3;
+              ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 3;
               ctx.strokeText(label, best.lx, best.ly + labelH/2);
               ctx.fillStyle = '#1f2937';
               ctx.fillText(label, best.lx, best.ly + labelH/2);
-            });
+            }
+
+            // Pass 3: multi-fire cluster badges + leader lines + stacked row-number labels
+            for (const cl of multiClusters) {
+              const { members, cx, cy } = cl;
+
+              // Ring colour = most severe status in the cluster
+              let minSev = 99, ringColor = '#ef4444';
+              for (const { rec } of members) {
+                const s = STATUS_SEV_ORDER[norm(rec.statusKey||'')] ?? 9;
+                if (s < minSev) { minSev = s; ringColor = statusColorMap[norm(rec.statusKey||'')] || '#ef4444'; }
+              }
+              drawClusterBadge(cx, cy, members.length, ringColor);
+
+              // Stacked label dimensions
+              const dotR    = 4;
+              const itemFsz = 10;
+              const itemH   = itemFsz + 7;
+              const itemGap = 3;
+              const totalSH = members.length * itemH + (members.length - 1) * itemGap;
+              const labelW  = 96;
+              const badgeCR = markerR + 3; // cluster badge drawn radius
+              const reach   = badgeCR + 26; // centre → pivot point distance
+
+              // Every individual fire position across all other clusters
+              const otherPts = clusters.filter(c => c !== cl).flatMap(c => c.members.map(m => m.pt));
+
+              // Score 12 clock-position angles (every 30°, canvas: 0=right, π/2=down).
+              // Returns number of nearby fire points that would be overlapped (999 = off-canvas).
+              function scorePlacement(θ) {
+                const px = cx + reach * Math.cos(θ);
+                const py = cy + reach * Math.sin(θ);
+                const goR = Math.cos(θ) >= 0;
+                const bx  = goR ? px : px - labelW;
+                const by  = py - totalSH / 2;
+                if (bx < 4 || bx + labelW > mapSize.x - 4 || by < 4 || by + totalSH > mapSize.y - 4) return 999;
+                // Fires inside label bounding box (weighted ×3)
+                const boxHits = otherPts.filter(p =>
+                  p.x > bx - 10 && p.x < bx + labelW + 10 &&
+                  p.y > by - 10 && p.y < by + totalSH + 10
+                ).length;
+                // Fires in a 60° cone pointing this direction
+                const scanR2 = (reach + labelW) ** 2;
+                const coneHits = otherPts.filter(p => {
+                  const dx = p.x - cx, dy = p.y - cy;
+                  if (dx*dx + dy*dy > scanR2) return false;
+                  const a    = Math.atan2(dy, dx);
+                  const diff = Math.abs(((a - θ) + 3 * Math.PI) % (2 * Math.PI) - Math.PI);
+                  return diff < Math.PI / 3;
+                }).length;
+                return boxHits * 3 + coneHits;
+              }
+
+              let bestAngle = 0, bestScore = Infinity;
+              for (let i = 0; i < 12; i++) {
+                const θ = i * Math.PI / 6;
+                const s = scorePlacement(θ);
+                if (s < bestScore) { bestScore = s; bestAngle = θ; }
+              }
+
+              const cosB      = Math.cos(bestAngle), sinB = Math.sin(bestAngle);
+              const pivotX    = cx + reach * cosB;
+              const pivotY    = cy + reach * sinB;
+              const goRight   = cosB >= 0;
+              const stackTopY = Math.max(4, Math.min(pivotY - totalSH / 2, mapSize.y - totalSH - 4));
+              const stackCtrY = stackTopY + totalSH / 2;
+              const contactX  = cx + badgeCR * cosB;
+              const contactY  = cy + badgeCR * sinB;
+
+              // ── Leader: dark outer stroke + light (white) inner stroke ────────────
+              // Drawn twice to be legible on any basemap colour.
+              function tracePath() {
+                ctx.beginPath();
+                ctx.moveTo(contactX, contactY);
+                ctx.lineTo(pivotX, pivotY);
+                if (Math.abs(pivotY - stackCtrY) > 3) ctx.lineTo(pivotX, stackCtrY);
+              }
+              ctx.save();
+              ctx.lineCap = 'round';
+              ctx.setLineDash([6, 3]);
+              ctx.strokeStyle = 'rgba(0,0,0,0.5)';  ctx.lineWidth = 5.5;
+              tracePath(); ctx.stroke();
+              ctx.strokeStyle = 'rgba(255,255,255,0.92)'; ctx.lineWidth = 3;
+              tracePath(); ctx.stroke();
+              ctx.setLineDash([]);
+
+              // ── Bracket spine (solid vertical at pivotX) ─────────────────────────
+              ctx.lineCap = 'butt';
+              ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 3;
+              ctx.beginPath();
+              ctx.moveTo(pivotX, stackTopY + itemH / 2);
+              ctx.lineTo(pivotX, stackTopY + totalSH - itemH / 2);
+              ctx.stroke();
+              ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 1.5;
+              ctx.beginPath();
+              ctx.moveTo(pivotX, stackTopY + itemH / 2);
+              ctx.lineTo(pivotX, stackTopY + totalSH - itemH / 2);
+              ctx.stroke();
+              ctx.restore();
+
+              // ── Stacked label items: tick → status dot → row-number text ─────────
+              ctx.font = `bold ${itemFsz}px sans-serif`;
+              ctx.textBaseline = 'middle';
+              for (let i = 0; i < members.length; i++) {
+                const { rec } = members[i];
+                const idx      = fireIndexMap.get(rec);
+                const sk       = norm(rec.statusKey||'');
+                const dotColor = statusColorMap[sk] || '#ef4444';
+                const ly       = stackTopY + i * (itemH + itemGap) + itemH / 2;
+                const dotX     = goRight ? pivotX + 5 + dotR : pivotX - 5 - dotR;
+                const textX    = goRight ? dotX + dotR + 3   : dotX - dotR - 3;
+
+                // Short horizontal tick from bracket to dot
+                ctx.beginPath();
+                ctx.strokeStyle = '#555'; ctx.lineWidth = 0.8;
+                ctx.moveTo(pivotX, ly);
+                ctx.lineTo(goRight ? dotX - dotR : dotX + dotR, ly);
+                ctx.stroke();
+
+                // Status colour dot
+                ctx.beginPath();
+                ctx.arc(dotX, ly, dotR, 0, Math.PI*2);
+                ctx.fillStyle = dotColor; ctx.fill();
+
+                // Row label — same Fire # value as the PDF table column
+                ctx.textAlign = goRight ? 'left' : 'right';
+                const fp       = rec.props || {};
+                const fireNum  = fp.FIRE_NUMBER_SHORT ?? fp.FIRE_NUMBER ?? fp.FIRE_ID ?? fp.ID ?? (fp.OBJECTID != null ? String(fp.OBJECTID) : '') ?? '';
+                const rowLabel = fireNum || String(idx + 1);
+                ctx.strokeStyle = 'rgba(255,255,255,0.95)'; ctx.lineWidth = 3;
+                ctx.strokeText(rowLabel, textX, ly);
+                ctx.fillStyle = '#111';
+                ctx.fillText(rowLabel, textX, ly);
+              }
+              ctx.textAlign = 'left';
+            }
 
             // Encode canvas to image
             let mapImg;
@@ -5966,6 +6190,29 @@ if (typeof map !== 'undefined' && map && map.on){
 
               // hexToRgb is defined in NBFireMapUtils (utils section) and accessible here via closure
 
+              // Pre-render a small badge canvas for each status (flame icon + coloured ring).
+              // Used as images in the symbol column so the table badge matches the map marker.
+              const _badgeImgs = {};
+              for (const [sk, color] of Object.entries(statusColorMap)) {
+                const bc = document.createElement('canvas');
+                bc.width = bc.height = 32;
+                const bx = bc.getContext('2d');
+                bx.beginPath();
+                bx.arc(16, 16, 13, 0, Math.PI * 2);
+                bx.fillStyle = '#ffffff'; bx.fill();
+                bx.lineWidth = 2.5; bx.strokeStyle = color; bx.stroke();
+                bx.fillStyle = color;
+                bx.textBaseline = 'middle'; bx.textAlign = 'center';
+                if (_faReady) {
+                  bx.font = '900 11px "Font Awesome 6 Free"';
+                  bx.fillText('\uf06d', 16, 16);
+                } else {
+                  bx.font = '14px sans-serif';
+                  bx.fillText('\uD83D\uDD25', 16, 16);
+                }
+                _badgeImgs[sk] = bc.toDataURL('image/png');
+              }
+
               doc.autoTable({
                 startY: p2y,
                 margin: { left: p2mx, right: p2mx },
@@ -5982,21 +6229,19 @@ if (typeof map !== 'undefined' && map && map.on){
                 },
                 didDrawCell: (data) => {
                   if(data.section === 'body' && data.column.index === 0){
-                    const rowNum = data.row.index + 1;
-                    const sk = fireStatusKeys[data.row.index];
-                    const [rr,gg,bb] = hexToRgb(statusColorMap[sk] || '#ef4444');
-                    const cx = data.cell.x + data.cell.width / 2;
-                    const cy = data.cell.y + data.cell.height / 2;
-                    // White circle with colored ring (matching canvas badge)
-                    doc.setFillColor(255, 255, 255);
-                    doc.setDrawColor(rr, gg, bb);
-                    doc.setLineWidth(0.75);
-                    doc.circle(cx, cy, 5, 'FD');
-                    // Row number inside (matches map label)
-                    doc.setFontSize(6);
-                    doc.setTextColor(rr, gg, bb);
-                    doc.text(String(rowNum), cx, cy + 0.5, { align: 'center', baseline: 'middle' });
-                    doc.setTextColor(0, 0, 0);
+                    const sk  = fireStatusKeys[data.row.index];
+                    const img = _badgeImgs[sk];
+                    const cx  = data.cell.x + data.cell.width / 2;
+                    const cy  = data.cell.y + data.cell.height / 2;
+                    const sz  = 8; // pt — badge diameter in PDF
+                    if (img) {
+                      doc.addImage(img, 'PNG', cx - sz / 2, cy - sz / 2, sz, sz);
+                    } else {
+                      // Fallback: vector circle when canvas is unavailable
+                      const [rr,gg,bb] = hexToRgb(statusColorMap[sk] || '#ef4444');
+                      doc.setFillColor(255,255,255); doc.setDrawColor(rr,gg,bb);
+                      doc.setLineWidth(0.75); doc.circle(cx, cy, 4, 'FD');
+                    }
                   }
                 },
                 didDrawPage: ()=>{
