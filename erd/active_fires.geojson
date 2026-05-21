@@ -3,6 +3,62 @@
   "features": [
     {
       "type": "Feature",
+      "id": 74123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68169844473763,
+          45.759209441969645
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74123,
+        "FIRE_NAME": "Germantown Ditch",
+        "DEGREES_LAT": 45.7592,
+        "DEGREES_LONG": 64.6817,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779104520000,
+        "FIRE_STAT_DATE": 1779351660000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779363069
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74284,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86061916887289,
+          45.15923928721079
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74284,
+        "FIRE_NAME": "Old St. Andrews Rd",
+        "DEGREES_LAT": 45.15923,
+        "DEGREES_LONG": 66.86062,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295500000,
+        "FIRE_STAT_DATE": 1779350340000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779363069
+      }
+    },
+    {
+      "type": "Feature",
       "id": 74282,
       "geometry": {
         "type": "Point",
@@ -26,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74123,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.68169844473763,
-          45.759209441969645
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74123,
-        "FIRE_NAME": "Germantown Ditch",
-        "DEGREES_LAT": 45.7592,
-        "DEGREES_LONG": 64.6817,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779104520000,
-        "FIRE_STAT_DATE": 1779266400000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -82,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -110,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -138,7 +166,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.68099844540909,
+          45.75688944161163
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74122,
+        "FIRE_NAME": "Fence",
+        "DEGREES_LAT": 45.756879999999995,
+        "DEGREES_LONG": 64.681,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779115800000,
+        "FIRE_STAT_DATE": 1779351600000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -166,7 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -194,35 +250,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74124,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.00944856972541,
-          46.00970947947627
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74124,
-        "FIRE_NAME": "Mollins Road",
-        "DEGREES_LAT": 46.0097,
-        "DEGREES_LONG": 65.00945,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779112800000,
-        "FIRE_STAT_DATE": 1779266400000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -250,63 +278,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74284,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.86061916887289,
-          45.15923928721079
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74284,
-        "FIRE_NAME": "Old St. Andrews Rd",
-        "DEGREES_LAT": 45.15923,
-        "DEGREES_LONG": 66.86062,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779295500000,
-        "FIRE_STAT_DATE": 1779301680000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74122,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.68099844540909,
-          45.75688944161163
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74122,
-        "FIRE_NAME": "Fence",
-        "DEGREES_LAT": 45.756879999999995,
-        "DEGREES_LONG": 64.681,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779115800000,
-        "FIRE_STAT_DATE": 1779266340000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
       }
     },
     {
@@ -334,7 +306,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779355985
+        "FETCHED_FROM_ERD": 1779363069
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.20636864057232,
+          46.07220948579618
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74362,
+        "FIRE_NAME": "Buckley",
+        "DEGREES_LAT": 46.0722,
+        "DEGREES_LONG": 65.20636999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779306000000,
+        "FIRE_STAT_DATE": 1779352269000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1779363069
       }
     }
   ],
