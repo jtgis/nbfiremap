@@ -3,6 +3,90 @@
   "features": [
     {
       "type": "Feature",
+      "id": 74222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.84716887018004,
+          46.243869501915675
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74222,
+        "FIRE_NAME": "Beaver Bogan",
+        "DEGREES_LAT": 46.24386,
+        "DEGREES_LONG": 65.84716999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1,
+        "TIME_DETECTED": 1779222000000,
+        "FIRE_STAT_DATE": 1779357540000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779368872
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.20636864057232,
+          46.07220948579618
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74362,
+        "FIRE_NAME": "Buckley",
+        "DEGREES_LAT": 46.0722,
+        "DEGREES_LONG": 65.20636999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779306000000,
+        "FIRE_STAT_DATE": 1779352380000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779368872
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96531855603162,
+          46.06805949042166
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74302,
+        "FIRE_NAME": "Lower Mountain",
+        "DEGREES_LAT": 46.06805,
+        "DEGREES_LONG": 64.96531999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779296400000,
+        "FIRE_STAT_DATE": 1779353940000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779368872
+      }
+    },
+    {
+      "type": "Feature",
       "id": 74123,
       "geometry": {
         "type": "Point",
@@ -26,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
+        "FETCHED_FROM_ERD": 1779368872
       }
     },
     {
@@ -54,63 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.80944888018122,
-          46.709459583000694
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74282,
-        "FIRE_NAME": "Wolf Fire",
-        "DEGREES_LAT": 46.70945,
-        "DEGREES_LONG": 65.80945,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779295800000,
-        "FIRE_STAT_DATE": 1779308100000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74283,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.03277858061799,
-          46.065699487988184
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74283,
-        "FIRE_NAME": "O Blenis",
-        "DEGREES_LAT": 46.06569,
-        "DEGREES_LONG": 65.03278,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779296400000,
-        "FIRE_STAT_DATE": 1779297960000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
+        "FETCHED_FROM_ERD": 1779368872
       }
     },
     {
@@ -133,40 +161,68 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1779300000000,
-        "FIRE_STAT_DATE": 1779306240000,
+        "FIRE_STAT_DATE": 1779355260000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
+        "FETCHED_FROM_ERD": 1779368872
       }
     },
     {
       "type": "Feature",
-      "id": 74222,
+      "id": 74282,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.84716887018004,
-          46.243869501915675
+          -65.80944888018122,
+          46.709459583000694
         ]
       },
       "properties": {
-        "OBJECTID": 74222,
-        "FIRE_NAME": "Beaver Bogan",
-        "DEGREES_LAT": 46.24386,
-        "DEGREES_LONG": 65.84716999999999,
+        "OBJECTID": 74282,
+        "FIRE_NAME": "Wolf Fire",
+        "DEGREES_LAT": 46.70945,
+        "DEGREES_LONG": 65.80945,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1779222000000,
-        "FIRE_STAT_DATE": 1779287220000,
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295800000,
+        "FIRE_STAT_DATE": 1779354480000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
+        "FETCHED_FROM_ERD": 1779368872
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.43712942167197,
+          46.23877946302862
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73842,
+        "FIRE_NAME": "East Brighton",
+        "DEGREES_LAT": 46.238769999999995,
+        "DEGREES_LONG": 67.43713,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 11.5,
+        "TIME_DETECTED": 1778852700000,
+        "FIRE_STAT_DATE": 1779352620000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779368872
       }
     },
     {
@@ -194,147 +250,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
+        "FETCHED_FROM_ERD": 1779368872
       }
     },
     {
       "type": "Feature",
-      "id": 74302,
+      "id": 74283,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.96531855603162,
-          46.06805949042166
+          -65.03277858061799,
+          46.065699487988184
         ]
       },
       "properties": {
-        "OBJECTID": 74302,
-        "FIRE_NAME": "Lower Mountain",
-        "DEGREES_LAT": 46.06805,
-        "DEGREES_LONG": 64.96531999999999,
+        "OBJECTID": 74283,
+        "FIRE_NAME": "O Blenis",
+        "DEGREES_LAT": 46.06569,
+        "DEGREES_LONG": 65.03278,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1779296400000,
-        "FIRE_STAT_DATE": 1779300300000,
+        "FIRE_STAT_DATE": 1779354000000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74242,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.0181285731147,
-          46.03871948359378
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74242,
-        "FIRE_NAME": "Salisbury Trailor",
-        "DEGREES_LAT": 46.038709999999995,
-        "DEGREES_LONG": 65.01813,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779270300000,
-        "FIRE_STAT_DATE": 1779296520000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 73842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.43712942167197,
-          46.23877946302862
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73842,
-        "FIRE_NAME": "East Brighton",
-        "DEGREES_LAT": 46.238769999999995,
-        "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 11.5,
-        "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1779267180000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74342,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.92087855215644,
-          46.31572953464729
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74342,
-        "FIRE_NAME": "False Yellow",
-        "DEGREES_LAT": 46.31572,
-        "DEGREES_LONG": 64.92088,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779307200000,
-        "FIRE_STAT_DATE": 1779311100000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779363069
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74362,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.20636864057232,
-          46.07220948579618
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74362,
-        "FIRE_NAME": "Buckley",
-        "DEGREES_LAT": 46.0722,
-        "DEGREES_LONG": 65.20636999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779306000000,
-        "FIRE_STAT_DATE": 1779352269000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1779363069
+        "FETCHED_FROM_ERD": 1779368872
       }
     }
   ],
