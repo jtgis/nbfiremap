@@ -312,6 +312,35 @@ window.addEventListener('DOMContentLoaded', () => {
         return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
       };
 
+      // ===========================================================================
+      // LAZY EXPORT LIBRARY LOADER
+      // ===========================================================================
+      // jsPDF, AutoTable, SheetJS (xlsx), and html2canvas are only needed when
+      // the user explicitly requests a PDF or Excel export. Loading them on demand
+      // removes ~300 KB of JS from the critical path, reducing TBT and parse time.
+      let _exportLibsPromise = null;
+      function loadExportLibs() {
+        if (_exportLibsPromise) return _exportLibsPromise;
+        function injectScript(src) {
+          return new Promise((resolve, reject) => {
+            const s = document.createElement('script');
+            s.src = src;
+            s.onload = resolve;
+            s.onerror = () => reject(new Error('Failed to load: ' + src));
+            document.head.appendChild(s);
+          });
+        }
+        // jsPDF must load before AutoTable (plugin extends jsPDF prototype).
+        // xlsx and html2canvas are independent and load in parallel.
+        _exportLibsPromise = injectScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js')
+          .then(() => injectScript('https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.min.js'))
+          .then(() => Promise.all([
+            injectScript('https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js'),
+            injectScript('https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js')
+          ]));
+        return _exportLibsPromise;
+      }
+
       // Export utilities to global scope for cross-module access
       window.NBFireMapUtils = {
         degToCompass,
@@ -5567,8 +5596,7 @@ if (typeof map !== 'undefined' && map && map.on){
           showToast('Generating PDF…');
 
           try {
-            if(typeof window.jspdf === 'undefined'){ showToast('PDF library still loading, try again.'); return; }
-
+            await loadExportLibs();
             const { jsPDF } = window.jspdf;
 
             // ---- 1. Build a canvas from the map tiles + vectors + markers ----
@@ -6723,6 +6751,7 @@ if (typeof map !== 'undefined' && map && map.on){
 
       // ---- Excel (.xlsx) export via SheetJS ----
       async function exportSummaryExcel() {
+        await loadExportLibs();
         const rows = collectFireRows();
         const stats = collectSummaryStats();
         // Sheet 1: Stats (K/V)
@@ -6753,6 +6782,7 @@ if (typeof map !== 'undefined' && map && map.on){
 
       // ---- PDF export via jsPDF + AutoTable ----
       async function exportSummaryPDF() {
+  await loadExportLibs();
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: 'pt', format: 'a4' });
   const marginX = 40;
@@ -8348,8 +8378,8 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
 
   // ---- Season report PDF export ----
   if (srExportPdf) {
-    srExportPdf.addEventListener('click', () => {
-      if (typeof window.jspdf === 'undefined') { alert('jsPDF not loaded yet.'); return; }
+    srExportPdf.addEventListener('click', async () => {
+      await loadExportLibs();
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF({ unit: 'pt', format: 'a4' });
       const marginX = 40;
