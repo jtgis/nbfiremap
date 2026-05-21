@@ -301,6 +301,17 @@ window.addEventListener('DOMContentLoaded', () => {
       /** Check if viewport is mobile width (<768px) */
       const isMobile = () => innerWidth < 768;
 
+      /**
+       * Convert a CSS hex colour string to an [r, g, b] integer array.
+       * Used by PDF export (jsPDF uses numeric RGB, not hex strings).
+       * @param {string} hex - 6-digit hex colour, e.g. '#ef4444'
+       * @returns {[number, number, number]} [r, g, b] in range 0–255
+       */
+      const hexToRgb = (hex) => {
+        const h = hex.replace('#', '');
+        return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
+      };
+
       // Export utilities to global scope for cross-module access
       window.NBFireMapUtils = {
         degToCompass,
@@ -4032,18 +4043,23 @@ window.addEventListener('DOMContentLoaded', () => {
         const temp = p.Temperature_C !== '' && p.Temperature_C != null ? Math.round(Number(p.Temperature_C)) : null;
         const hum = p.Humidity_Percent !== '' && p.Humidity_Percent != null ? Math.round(Number(p.Humidity_Percent)) : null;
         const scale = size/84;
+        // Build the bottom line: "25°C • 32%" — combine to one line so it fits in the circle.
+        // Circle bottom inner edge is at y≈78, so baseline must stay ≤74 with a 10px font.
+        let bottomLine = '';
+        if (temp != null && hum != null) bottomLine = `${temp}°C • ${hum}%`;
+        else if (temp != null) bottomLine = `${temp}°C`;
+        else if (hum != null) bottomLine = `${hum}%`;
         return `
-          <svg class="ws-svg" width="${84*scale}" height="${84*scale}" viewBox="0 0 84 84" aria-hidden="true" role="img" style="position:relative; z-index:1; filter:drop-shadow(0 1px 3px rgba(0,0,0,.2))">
-            <circle cx="42" cy="42" r="39" fill="#0b0f19" stroke="#38f" stroke-width="3"></circle>
+          <svg class="ws-svg" width="${84*scale}" height="${84*scale}" viewBox="0 0 84 84" aria-hidden="true" role="img" style="position:relative; z-index:1; filter:drop-shadow(0 1px 4px rgba(0,0,0,.45))">
+            <circle cx="42" cy="42" r="39" fill="#111827" stroke="#6b7280" stroke-width="2.5"></circle>
             ${Number.isFinite(fromDeg) ? `
               <g transform="rotate(${fromDeg} 42 42)">
-                <path d="M42 12 L48 12 L48 42 L56 34 L42 48 L28 34 L36 42 L36 12 Z" fill="#38f" stroke="#fff" stroke-width="1"></path>
+                <path d="M42 22 L52 44 L42 36 L32 44 Z" fill="#3b82f6" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
               </g>
             ` : ''}
-            <text x="42" y="22" text-anchor="middle" class="ws-small">From ${Number.isFinite(fromDeg) ? degToCompass(fromDeg) : '—'}</text>
-            <text x="42" y="58" text-anchor="middle" class="ws-speed">${Number.isFinite(kmh) ? kmh : '—'} km/h</text>
-            <text x="42" y="70" text-anchor="middle" class="ws-small">${temp != null ? temp + '°C' : '—'}</text>
-            <text x="42" y="80" text-anchor="middle" class="ws-small">${hum != null ? hum + '%' : '—'}</text>
+            <text x="42" y="20" text-anchor="middle" class="ws-small">From ${Number.isFinite(fromDeg) ? degToCompass(fromDeg) : '—'}</text>
+            <text x="42" y="56" text-anchor="middle" class="ws-speed">${Number.isFinite(kmh) ? kmh : '—'} km/h</text>
+            ${bottomLine ? `<text x="42" y="72" text-anchor="middle" class="ws-small">${bottomLine}</text>` : ''}
           </svg>`;
       }
       function makeStationMarker(feature, latlng) {
@@ -5726,10 +5742,13 @@ if (typeof map !== 'undefined' && map && map.on){
             };
             const markerR = 11;
 
+            // Severity ordering — lower index = higher severity.
+            // Defined once here and reused for both canvas sort (step 4) and table sort (step 5).
+            const STATUS_SEV_ORDER = {'out of control':0,'being monitored':1,'contained':2,'under control':3,'being patrolled':4,'extinguished':5};
+
             // Sort same order as PDF table so row numbers match for cross-reference
-            const _sOrd = {'out of control':0,'being monitored':1,'contained':2,'under control':3,'being patrolled':4,'extinguished':5};
             const sortedVisibleFires = [...visibleFires].sort((a,b) =>
-              (_sOrd[norm(a.statusKey||'')]??9) - (_sOrd[norm(b.statusKey||'')]??9)
+              (STATUS_SEV_ORDER[norm(a.statusKey||'')]??9) - (STATUS_SEV_ORDER[norm(b.statusKey||'')]??9)
             );
 
             // First pass: draw badge-style markers — white fill + colored ring (matches marker-badge CSS)
@@ -5911,18 +5930,13 @@ if (typeof map !== 'undefined' && map && map.on){
                 };
               });
 
-              // Sort by status severity
-              const statusOrder = {'out of control':0,'being monitored':1,'contained':2,'under control':3,'being patrolled':4,'extinguished':5};
-              fireData.sort((a,b) => (statusOrder[a.statusKey]??9) - (statusOrder[b.statusKey]??9));
+              // Sort by status severity (same order as canvas — row numbers stay consistent)
+              fireData.sort((a,b) => (STATUS_SEV_ORDER[a.statusKey]??9) - (STATUS_SEV_ORDER[b.statusKey]??9));
 
               const fireRows = fireData.map(d => d.row);
               const fireStatusKeys = fireData.map(d => d.statusKey);
 
-              // Helper: hex colour string → [r, g, b]
-              function hexToRgb(hex){
-                const h = hex.replace('#','');
-                return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
-              }
+              // hexToRgb is defined in NBFireMapUtils (utils section) and accessible here via closure
 
               doc.autoTable({
                 startY: p2y,
@@ -6215,32 +6229,28 @@ if (typeof map !== 'undefined' && map && map.on){
         return { css:`conic-gradient(${segs.join(',')})`, legendHTML:legend.join('') };
       }
 
+      // ---- Cause pie colour palette (module-level constant, keyed by clean English cause) ----
+      // Values mirror the ERD fire cause field after cleanFireCause() normalisation.
+      const CAUSE_COLORS = {
+        'Recreation':     '#10B981',  // Emerald  — outdoor activities
+        'Resident':       '#EC4899',  // Pink     — residential activities
+        'Lightning':      '#F59E0B',  // Amber    — natural/weather
+        'Unknown':        '#9CA3AF',  // Gray     — cause unknown
+        'Other Industry': '#14B8A6',  // Teal     — industrial (non-equipment)
+        'Incendiary':     '#DC2626',  // Dark Red — intentional (arson-like)
+        'Railroads':      '#6B7280',  // Cool Gray — transportation
+        'Miscellaneous':  '#8B5CF6',  // Violet   — catch-all
+        'Equipment':      '#3B82F6',  // Blue     — mechanical/industrial
+        'Campfire':       '#F97316',  // Orange   — campfire
+        'Debris Burning': '#A855F7',  // Purple   — controlled burns
+        'Human':          '#EF4444',  // Red      — general human activity
+        'Vehicle':        '#06B6D4',  // Cyan     — vehicles
+        'Structure':      '#84CC16',  // Lime     — structure fires spreading
+        'Arson':          '#B91C1C',  // Dark Red — confirmed arson
+        'No cause data':  '#D1D5DB'   // Light Gray — no data available
+      };
+
       function fireCausePieSegments(causeStats, causeAreas, totalArea, mode = 'area'){
-        // Define color palette for clean English cause values (French and Final removed)
-        const causeColors = {
-          // Primary causes (clean English only)
-          'Recreation': '#10B981',                    // Emerald - outdoor activities
-          'Resident': '#EC4899',                      // Pink - residential activities
-          'Lightning': '#F59E0B',                     // Amber - natural/weather
-          'Unknown': '#9CA3AF',                       // Gray - unknown
-          'Other Industry': '#14B8A6',                // Teal - industrial
-          'Incendiary': '#DC2626',                    // Dark Red - intentional/arson
-          'Railroads': '#6B7280',                     // Cool Gray - transportation
-          'Miscellaneous': '#8B5CF6',                 // Violet - miscellaneous
-          
-          // Additional common causes
-          'Equipment': '#3B82F6',          // Blue - mechanical/industrial
-          'Campfire': '#F97316',           // Orange - fire/heat
-          'Debris Burning': '#A855F7',     // Purple - controlled burning
-          'Human': '#EF4444',              // Red - human activity
-          'Vehicle': '#06B6D4',            // Cyan - vehicles
-          'Structure': '#84CC16',          // Lime - buildings
-          'Arson': '#B91C1C',             // Dark red - intentional harm
-          
-          // No cause data available
-          'No cause data': '#D1D5DB'       // Light Gray - no data available
-        };
-        
         // Convert Map to array and sort by the selected mode (area or count)
         const sortedCauses = Array.from(causeStats.entries())
           .map(([cause, count]) => ({ cause, count, area: causeAreas.get(cause) || 0 }))
@@ -6272,8 +6282,8 @@ if (typeof map !== 'undefined' && map && map.on){
           const areaPercentage = totalArea > 0 ? ((area / totalArea) * 100).toFixed(1) : '0.0';
           const valuePercentage = ((value / totalValue) * 100).toFixed(1);
           
-          // Get color for this cause, default to a generated color if not defined
-          const color = causeColors[cause] || `hsl(${(cause.charCodeAt(0) * 137) % 360}, 70%, 50%)`;
+          // Get color for this cause; fall back to a deterministic hue if not in palette
+          const color = CAUSE_COLORS[cause] || `hsl(${(cause.charCodeAt(0) * 137) % 360}, 70%, 50%)`;
           
           segs.push(`${color} ${start}deg ${end}deg`);
           
