@@ -163,7 +163,7 @@ window.addEventListener('DOMContentLoaded', () => {
         OPACITY: {
           SMOKE: 0.72,
           RADAR: 0.8,
-          SENTINEL: 0.75,
+          SENTINEL: 1,
           BURN_BANS: 0.7
         },
 
@@ -5718,37 +5718,86 @@ if (typeof map !== 'undefined' && map && map.on){
               visibleFires.push(rec);
             }
 
-            // ---- 4. Draw fire markers + fire # labels on the canvas ----
+            // ---- 4. Draw fire markers + row-number labels on the canvas ----
+            // Colors match web map CSS variables (--oc, --mon, etc.)
             const statusColorMap = {
               'out of control':'#ef4444', 'being monitored':'#9D00FF', 'contained':'#FFA500',
               'under control':'#facc15', 'being patrolled':'#22c55e', 'extinguished':'#0000FF'
             };
-            ctx.textBaseline = 'middle';
-            for(const rec of visibleFires){
+            const markerR = 11;
+
+            // Sort same order as PDF table so row numbers match for cross-reference
+            const _sOrd = {'out of control':0,'being monitored':1,'contained':2,'under control':3,'being patrolled':4,'extinguished':5};
+            const sortedVisibleFires = [...visibleFires].sort((a,b) =>
+              (_sOrd[norm(a.statusKey||'')]??9) - (_sOrd[norm(b.statusKey||'')]??9)
+            );
+
+            // First pass: draw badge-style markers — white fill + colored ring (matches marker-badge CSS)
+            // Use Font Awesome fa-fire glyph if loaded (same as web app), fall back to emoji
+            const _faReady = typeof document.fonts !== 'undefined' &&
+                             document.fonts.check('900 12px "Font Awesome 6 Free"');
+            for(const rec of sortedVisibleFires){
               const pt = map.latLngToContainerPoint(rec.latlng);
               const sk = norm(rec.statusKey || '');
               const color = statusColorMap[sk] || '#ef4444';
-              const fireNum = rec.props?.FIRE_NUMBER_SHORT ?? rec.props?.FIRE_ID ?? '';
-
-              // Draw filled circle
+              // White circle with colored ring
               ctx.beginPath();
-              ctx.arc(pt.x, pt.y, 10, 0, Math.PI*2);
-              ctx.fillStyle = color;
+              ctx.arc(pt.x, pt.y, markerR, 0, Math.PI*2);
+              ctx.fillStyle = '#ffffff';
               ctx.fill();
-              ctx.lineWidth = 2;
-              ctx.strokeStyle = '#fff';
+              ctx.lineWidth = 2.5;
+              ctx.strokeStyle = color;
               ctx.stroke();
-
-              // Draw fire number label
-              if(fireNum){
-                ctx.font = 'bold 14px sans-serif';
-                ctx.fillStyle = '#fff';
-                ctx.strokeStyle = 'rgba(0,0,0,0.75)';
-                ctx.lineWidth = 4;
-                ctx.strokeText(fireNum, pt.x + 14, pt.y);
-                ctx.fillText(fireNum, pt.x + 14, pt.y);
+              // Flame icon (status color, like web app marker-badge i element)
+              ctx.fillStyle = color;
+              ctx.textBaseline = 'middle';
+              ctx.textAlign = 'center';
+              if(_faReady){
+                ctx.font = `900 ${Math.round(markerR)}px "Font Awesome 6 Free"`;
+                ctx.fillText('\uf06d', pt.x, pt.y);
+              } else {
+                ctx.font = `${Math.round(markerR * 1.3)}px sans-serif`;
+                ctx.fillText('\uD83D\uDD25', pt.x, pt.y);
               }
             }
+
+            // Second pass: sequential row-number labels (always shown, matches PDF table row)
+            // with collision-avoiding placement so clustered fires don't overlap
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            ctx.font = 'bold 11px sans-serif';
+            const labelH = 12;
+            const placedLabels = [];
+            function labelOverlaps(box){
+              return placedLabels.some(b =>
+                box.x < b.x + b.w + 2 && box.x + box.w + 2 > b.x &&
+                box.y < b.y + b.h + 2 && box.y + box.h + 2 > b.y
+              );
+            }
+            sortedVisibleFires.forEach((rec, idx) => {
+              const pt = map.latLngToContainerPoint(rec.latlng);
+              const label = String(idx + 1);
+              const tw = ctx.measureText(label).width;
+              const gap = 3;
+              const candidates = [
+                { lx: pt.x + markerR + gap,       ly: pt.y - labelH/2 },
+                { lx: pt.x + markerR + gap,       ly: pt.y - labelH - markerR },
+                { lx: pt.x + markerR + gap,       ly: pt.y + markerR },
+                { lx: pt.x - markerR - tw - gap,  ly: pt.y - labelH/2 },
+                { lx: pt.x - tw/2,                ly: pt.y - markerR - labelH - gap },
+                { lx: pt.x - tw/2,                ly: pt.y + markerR + gap },
+              ];
+              let best = candidates[0];
+              for(const cand of candidates){
+                if(!labelOverlaps({ x: cand.lx, y: cand.ly, w: tw, h: labelH })){ best = cand; break; }
+              }
+              placedLabels.push({ x: best.lx, y: best.ly, w: tw, h: labelH });
+              ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+              ctx.lineWidth = 3;
+              ctx.strokeText(label, best.lx, best.ly + labelH/2);
+              ctx.fillStyle = '#1f2937';
+              ctx.fillText(label, best.lx, best.ly + labelH/2);
+            });
 
             // Encode canvas to image
             let mapImg;
@@ -5839,37 +5888,75 @@ if (typeof map !== 'undefined' && map && map.on){
               doc.text(`Showing: ${statusList}`, p2mx, p2y + 10);
               p2y += 20;
 
-              // Build table rows
-              const fireRows = visibleFires.map(rec => {
+              // Build table rows — paired with status key for symbol colour in didDrawCell
+              const fireData = visibleFires.map(rec => {
                 const p = rec.props || {};
-                const statusKey = norm(rec.statusKey || p.FIRE_STAT_DESC_E || '—');
+                const sk = norm(rec.statusKey || p.FIRE_STAT_DESC_E || '');
                 const sizeHa = Number(p.FIRE_SIZE ?? p.SIZE_HA ?? p.AREA);
                 const containPct = getContainPct(p);
                 const detMs = getDetectedMs(p);
-                return [
-                  p.FIRE_NUMBER_SHORT ?? p.FIRE_ID ?? '',
-                  p.FIRE_NAME || p.FIRE_ID || 'Unnamed',
-                  statusKey.replace(/\b\w/g, c => c.toUpperCase()),
-                  Number.isFinite(sizeHa) ? sizeHa.toFixed(1) : '',
-                  containPct != null ? containPct + '%' : '',
-                  detMs ? new Date(detMs).toISOString().slice(0,10) : '',
-                  rec.latlng ? rec.latlng.lat.toFixed(4) : '',
-                  rec.latlng ? rec.latlng.lng.toFixed(4) : ''
-                ];
+                return {
+                  statusKey: sk,
+                  row: [
+                    '',  // symbol column — drawn via didDrawCell
+                    p.FIRE_NUMBER_SHORT ?? p.FIRE_NUMBER ?? p.FIRE_ID ?? p.ID ?? (p.OBJECTID != null ? String(p.OBJECTID) : '') ?? '',
+                    p.FIRE_NAME || p.FIRE_ID || 'Unnamed',
+                    sk.replace(/\b\w/g, c => c.toUpperCase()),
+                    Number.isFinite(sizeHa) ? sizeHa.toFixed(1) : '',
+                    containPct != null ? containPct + '%' : '',
+                    detMs ? new Date(detMs).toISOString().slice(0,10) : '',
+                    rec.latlng ? rec.latlng.lat.toFixed(4) : '',
+                    rec.latlng ? rec.latlng.lng.toFixed(4) : ''
+                  ]
+                };
               });
 
               // Sort by status severity
               const statusOrder = {'out of control':0,'being monitored':1,'contained':2,'under control':3,'being patrolled':4,'extinguished':5};
-              fireRows.sort((a,b) => (statusOrder[a[2].toLowerCase()]??9) - (statusOrder[b[2].toLowerCase()]??9));
+              fireData.sort((a,b) => (statusOrder[a.statusKey]??9) - (statusOrder[b.statusKey]??9));
+
+              const fireRows = fireData.map(d => d.row);
+              const fireStatusKeys = fireData.map(d => d.statusKey);
+
+              // Helper: hex colour string → [r, g, b]
+              function hexToRgb(hex){
+                const h = hex.replace('#','');
+                return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
+              }
 
               doc.autoTable({
                 startY: p2y,
                 margin: { left: p2mx, right: p2mx },
-                head: [['Fire #','Name','Status','Size (ha)','Cont.','Detected','Lat','Lng']],
+                head: [['','Fire #','Name','Status','Size (ha)','Cont.','Detected','Lat','Lng']],
                 body: fireRows,
                 styles: { fontSize: 8, cellPadding: 4 },
                 headStyles: { fillColor:[55,65,81], fontStyle:'bold' },
-                columnStyles: { 3:{halign:'right'}, 4:{halign:'right'}, 6:{halign:'right'}, 7:{halign:'right'} },
+                columnStyles: {
+                  0: { cellWidth: 20 },
+                  4: { halign:'right' },
+                  5: { halign:'right' },
+                  7: { halign:'right' },
+                  8: { halign:'right' }
+                },
+                didDrawCell: (data) => {
+                  if(data.section === 'body' && data.column.index === 0){
+                    const rowNum = data.row.index + 1;
+                    const sk = fireStatusKeys[data.row.index];
+                    const [rr,gg,bb] = hexToRgb(statusColorMap[sk] || '#ef4444');
+                    const cx = data.cell.x + data.cell.width / 2;
+                    const cy = data.cell.y + data.cell.height / 2;
+                    // White circle with colored ring (matching canvas badge)
+                    doc.setFillColor(255, 255, 255);
+                    doc.setDrawColor(rr, gg, bb);
+                    doc.setLineWidth(0.75);
+                    doc.circle(cx, cy, 5, 'FD');
+                    // Row number inside (matches map label)
+                    doc.setFontSize(6);
+                    doc.setTextColor(rr, gg, bb);
+                    doc.text(String(rowNum), cx, cy + 0.5, { align: 'center', baseline: 'middle' });
+                    doc.setTextColor(0, 0, 0);
+                  }
+                },
                 didDrawPage: ()=>{
                   const pgSize = doc.internal.pageSize;
                   doc.setFontSize(8);
