@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
       }
     },
     {
@@ -110,7 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74383,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.60376909742317,
+          45.50387935430059
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74383,
+        "FIRE_NAME": "South Branch Oromocto Falls",
+        "DEGREES_LAT": 45.50387,
+        "DEGREES_LONG": 66.60377,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779382860000,
+        "FIRE_STAT_DATE": 1779386760000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779400319
       }
     },
     {
@@ -138,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
       }
     },
     {
@@ -166,7 +194,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
       }
     },
     {
@@ -194,35 +222,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74382,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.09716860074676,
-          46.040929482530835
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74382,
-        "FIRE_NAME": "Ditch",
-        "DEGREES_LAT": 46.04092,
-        "DEGREES_LONG": 65.09716999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779370200000,
-        "FIRE_STAT_DATE": 1779376500000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779397008
+        "FETCHED_FROM_ERD": 1779400319
       }
     }
   ],
