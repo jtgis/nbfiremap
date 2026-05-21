@@ -96,6 +96,7 @@ jobs:
               "GNBfireActSum": {
                   "url": "https://www3.gnb.ca/public/fire-feu/activitysum_e.pdf",
                   "is_pdf": True,
+                  "optional": True,  # URL may be temporarily unavailable; skip without failing
               },
           }
 
@@ -353,8 +354,11 @@ jobs:
                   write_json(output, data)
                   log(f"  Done")
               except Exception as e:
-                  log(f"  FAILED: {e}")
-                  failures.append(name)
+                  if cfg.get("optional"):
+                      log(f"  SKIPPED (optional, source unavailable): {e}")
+                  else:
+                      log(f"  FAILED: {e}")
+                      failures.append(name)
 
           if failures:
               log(f"Failures: {failures}")
