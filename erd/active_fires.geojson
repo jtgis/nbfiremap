@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74222,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.84716887018004,
-          46.243869501915675
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74222,
-        "FIRE_NAME": "Beaver Bogan",
-        "DEGREES_LAT": 46.24386,
-        "DEGREES_LONG": 65.84716999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1,
-        "TIME_DETECTED": 1779222000000,
-        "FIRE_STAT_DATE": 1779357540000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74362,
       "geometry": {
         "type": "Point",
@@ -54,175 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74302,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.96531855603162,
-          46.06805949042166
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74302,
-        "FIRE_NAME": "Lower Mountain",
-        "DEGREES_LAT": 46.06805,
-        "DEGREES_LONG": 64.96531999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779296400000,
-        "FIRE_STAT_DATE": 1779353940000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74123,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.68169844473763,
-          45.759209441969645
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74123,
-        "FIRE_NAME": "Germantown Ditch",
-        "DEGREES_LAT": 45.7592,
-        "DEGREES_LONG": 64.6817,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779104520000,
-        "FIRE_STAT_DATE": 1779351660000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74284,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.86061916887289,
-          45.15923928721079
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74284,
-        "FIRE_NAME": "Old St. Andrews Rd",
-        "DEGREES_LAT": 45.15923,
-        "DEGREES_LONG": 66.86062,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779295500000,
-        "FIRE_STAT_DATE": 1779350340000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74382,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.09716860074676,
-          46.040929482530835
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74382,
-        "FIRE_NAME": "Ditch",
-        "DEGREES_LAT": 46.04092,
-        "DEGREES_LONG": 65.09716999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779370200000,
-        "FIRE_STAT_DATE": 1779376500000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74322,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.51001946690162,
-          46.61552952534011
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74322,
-        "FIRE_NAME": "Range road",
-        "DEGREES_LAT": 46.61552,
-        "DEGREES_LONG": 67.51002,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779300000000,
-        "FIRE_STAT_DATE": 1779355260000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.80944888018122,
-          46.709459583000694
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74282,
-        "FIRE_NAME": "Wolf Fire",
-        "DEGREES_LAT": 46.70945,
-        "DEGREES_LONG": 65.80945,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779295800000,
-        "FIRE_STAT_DATE": 1779354480000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
+        "FETCHED_FROM_ERD": 1779393662
       }
     },
     {
@@ -250,7 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
+        "FETCHED_FROM_ERD": 1779393662
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74322,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.51001946690162,
+          46.61552952534011
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74322,
+        "FIRE_NAME": "Range road",
+        "DEGREES_LAT": 46.61552,
+        "DEGREES_LONG": 67.51002,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779300000000,
+        "FIRE_STAT_DATE": 1779355260000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779393662
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.84716887018004,
+          46.243869501915675
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74222,
+        "FIRE_NAME": "Beaver Bogan",
+        "DEGREES_LAT": 46.24386,
+        "DEGREES_LONG": 65.84716999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1,
+        "TIME_DETECTED": 1779222000000,
+        "FIRE_STAT_DATE": 1779357540000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779393662
       }
     },
     {
@@ -278,7 +138,91 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
+        "FETCHED_FROM_ERD": 1779393662
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74302,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.96531855603162,
+          46.06805949042166
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74302,
+        "FIRE_NAME": "Lower Mountain",
+        "DEGREES_LAT": 46.06805,
+        "DEGREES_LONG": 64.96531999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779296400000,
+        "FIRE_STAT_DATE": 1779353940000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779393662
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74284,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.86061916887289,
+          45.15923928721079
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74284,
+        "FIRE_NAME": "Old St. Andrews Rd",
+        "DEGREES_LAT": 45.15923,
+        "DEGREES_LONG": 66.86062,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295500000,
+        "FIRE_STAT_DATE": 1779350340000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779393662
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74282,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.80944888018122,
+          46.709459583000694
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74282,
+        "FIRE_NAME": "Wolf Fire",
+        "DEGREES_LAT": 46.70945,
+        "DEGREES_LONG": 65.80945,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779295800000,
+        "FIRE_STAT_DATE": 1779354480000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779393662
       }
     },
     {
@@ -306,7 +250,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779390058
+        "FETCHED_FROM_ERD": 1779393662
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74382,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.09716860074676,
+          46.040929482530835
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74382,
+        "FIRE_NAME": "Ditch",
+        "DEGREES_LAT": 46.04092,
+        "DEGREES_LONG": 65.09716999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779370200000,
+        "FIRE_STAT_DATE": 1779376500000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779393662
       }
     }
   ],
