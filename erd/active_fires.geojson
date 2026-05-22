@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74362,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.20636864057232,
-          46.07220948579618
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74362,
-        "FIRE_NAME": "Buckley",
-        "DEGREES_LAT": 46.0722,
-        "DEGREES_LONG": 65.20636999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1779306000000,
-        "FIRE_STAT_DATE": 1779352380000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779448851
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73842,
       "geometry": {
         "type": "Point",
@@ -49,40 +21,12 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 11.5,
         "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1779352620000,
+        "FIRE_STAT_DATE": 1779440280000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779448851
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74402,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.93669886031947,
-          45.33302933964589
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74402,
-        "FIRE_NAME": "Hilcrest",
-        "DEGREES_LAT": 45.33302,
-        "DEGREES_LONG": 65.9367,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779390000000,
-        "FIRE_STAT_DATE": 1779394500000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779448851
+        "FETCHED_FROM_ERD": 1779451820
       }
     },
     {
@@ -110,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779448851
+        "FETCHED_FROM_ERD": 1779451820
       }
     },
     {
@@ -133,12 +77,68 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1779382860000,
-        "FIRE_STAT_DATE": 1779386760000,
+        "FIRE_STAT_DATE": 1779438600000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779448851
+        "FETCHED_FROM_ERD": 1779451820
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.20636864057232,
+          46.07220948579618
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74362,
+        "FIRE_NAME": "Buckley",
+        "DEGREES_LAT": 46.0722,
+        "DEGREES_LONG": 65.20636999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1779306000000,
+        "FIRE_STAT_DATE": 1779438660000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779451820
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74402,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.93669886031947,
+          45.33302933964589
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74402,
+        "FIRE_NAME": "Hilcrest",
+        "DEGREES_LAT": 45.33302,
+        "DEGREES_LONG": 65.9367,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779390000000,
+        "FIRE_STAT_DATE": 1779440400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779451820
       }
     },
     {
@@ -166,7 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779448851
+        "FETCHED_FROM_ERD": 1779451820
       }
     }
   ],
