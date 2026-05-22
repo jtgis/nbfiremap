@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779483067
+        "FETCHED_FROM_ERD": 1779486307
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779483067
+        "FETCHED_FROM_ERD": 1779486307
       }
     },
     {
@@ -82,35 +82,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779483067
+        "FETCHED_FROM_ERD": 1779486307
       }
     },
     {
       "type": "Feature",
-      "id": 74402,
+      "id": 74443,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.93669886031947,
-          45.33302933964589
+          -66.09364891120003,
+          45.285939327681255
         ]
       },
       "properties": {
-        "OBJECTID": 74402,
-        "FIRE_NAME": "Hilcrest",
-        "DEGREES_LAT": 45.33302,
-        "DEGREES_LONG": 65.9367,
+        "OBJECTID": 74443,
+        "FIRE_NAME": "Forbes",
+        "DEGREES_LAT": 45.28593,
+        "DEGREES_LONG": 66.09365,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779390000000,
-        "FIRE_STAT_DATE": 1779440400000,
+        "TIME_DETECTED": 1779462000000,
+        "FIRE_STAT_DATE": 1779474300000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779483067
+        "FETCHED_FROM_ERD": 1779486307
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74442,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.67359845760465,
+          46.12524950659459
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74442,
+        "FIRE_NAME": "Aviation",
+        "DEGREES_LAT": 46.12524,
+        "DEGREES_LONG": 64.67360000000001,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 2,
+        "TIME_DETECTED": 1779473400000,
+        "FIRE_STAT_DATE": 1779474360000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779486307
       }
     }
   ],
