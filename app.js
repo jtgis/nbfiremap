@@ -1958,18 +1958,24 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         /**
-         * Fire status colors mapped from CSS variables
+         * Fire status colors mapped from CSS variables.
+         * All properties are read from a single getComputedStyle call to avoid
+         * multiple forced style recalculations.
          */
-        const COLORS = {
-          oc: cssVar('--oc'), 
-          mon: cssVar('--mon'), 
-          cont: cssVar('--cont'),
-          uc: cssVar('--uc'), 
-          pat: cssVar('--pat'),
-          perimeter: cssVar('--perimeter'), 
-          boundary: cssVar('--boundary'),
-          modis: cssVar('--modis'),
-        };
+        const COLORS = (() => {
+          const s = getComputedStyle(document.documentElement);
+          const v = (n) => s.getPropertyValue(n).trim();
+          return {
+            oc: v('--oc'),
+            mon: v('--mon'),
+            cont: v('--cont'),
+            uc: v('--uc'),
+            pat: v('--pat'),
+            perimeter: v('--perimeter'),
+            boundary: v('--boundary'),
+            modis: v('--modis'),
+          };
+        })();
 
         /**
          * Fire status configuration with colors and severity rankings
