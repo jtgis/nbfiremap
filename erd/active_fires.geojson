@@ -26,7 +26,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779472786
+        "FETCHED_FROM_ERD": 1779476400
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74423,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.64325844989195,
+          46.17725951613292
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74423,
+        "FIRE_NAME": "Poplar",
+        "DEGREES_LAT": 46.17725,
+        "DEGREES_LONG": 64.64326,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1779456900000,
+        "FIRE_STAT_DATE": 1779462240000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779476400
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74424,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.74477916531048,
+          45.91070942310868
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74424,
+        "FIRE_NAME": "Hanwell Road",
+        "DEGREES_LAT": 45.910700000000006,
+        "DEGREES_LONG": 66.74477999999999,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779454800000,
+        "FIRE_STAT_DATE": 1779459300000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779476400
       }
     },
     {
@@ -48,13 +104,13 @@
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779382860000,
+        "TIME_DETECTED": 1779381900000,
         "FIRE_STAT_DATE": 1779438600000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779472786
+        "FETCHED_FROM_ERD": 1779476400
       }
     },
     {
@@ -82,63 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779472786
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74424,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.74477916531048,
-          45.91070942310868
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74424,
-        "FIRE_NAME": "Hanwell Road",
-        "DEGREES_LAT": 45.910700000000006,
-        "DEGREES_LONG": 66.74477999999999,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779454800000,
-        "FIRE_STAT_DATE": 1779458640000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779472786
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74423,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.64325844989195,
-          46.17725951613292
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74423,
-        "FIRE_NAME": "Poplar",
-        "DEGREES_LAT": 46.17725,
-        "DEGREES_LONG": 64.64326,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779456900000,
-        "FIRE_STAT_DATE": 1779461986000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1779472786
+        "FETCHED_FROM_ERD": 1779476400
       }
     }
   ],
