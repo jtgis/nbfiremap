@@ -3,62 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74442,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.67359845760465,
-          46.12524950659459
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74442,
-        "FIRE_NAME": "Aviation",
-        "DEGREES_LAT": 46.12524,
-        "DEGREES_LONG": 64.67360000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 2,
-        "TIME_DETECTED": 1779473400000,
-        "FIRE_STAT_DATE": 1779523980000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779540074
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74443,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.09364891120003,
-          45.285939327681255
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74443,
-        "FIRE_NAME": "Forbes",
-        "DEGREES_LAT": 45.28593,
-        "DEGREES_LONG": 66.09365,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779462000000,
-        "FIRE_STAT_DATE": 1779474300000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779540074
-      }
-    },
-    {
-      "type": "Feature",
       "id": 73842,
       "geometry": {
         "type": "Point",
@@ -82,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779540074
+        "FETCHED_FROM_ERD": 1779544740
       }
     },
     {
@@ -110,7 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779540074
+        "FETCHED_FROM_ERD": 1779544740
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74442,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.67359845760465,
+          46.12524950659459
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74442,
+        "FIRE_NAME": "Aviation",
+        "DEGREES_LAT": 46.12524,
+        "DEGREES_LONG": 64.67360000000001,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 2,
+        "TIME_DETECTED": 1779473400000,
+        "FIRE_STAT_DATE": 1779523980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779544740
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74443,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.09364891120003,
+          45.285939327681255
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74443,
+        "FIRE_NAME": "Forbes",
+        "DEGREES_LAT": 45.28593,
+        "DEGREES_LONG": 66.09365,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779462000000,
+        "FIRE_STAT_DATE": 1779532680000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779544740
       }
     }
   ],
