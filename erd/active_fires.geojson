@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 73842,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.43712942167197,
-          46.23877946302862
-        ]
-      },
-      "properties": {
-        "OBJECTID": 73842,
-        "FIRE_NAME": "East Brighton",
-        "DEGREES_LAT": 46.238769999999995,
-        "DEGREES_LONG": 67.43713,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 11.5,
-        "TIME_DETECTED": 1778852700000,
-        "FIRE_STAT_DATE": 1779440280000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779547639
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74462,
       "geometry": {
         "type": "Point",
@@ -48,13 +20,13 @@
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779493800000,
+        "TIME_DETECTED": 1779493500000,
         "FIRE_STAT_DATE": 1779528600000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779547639
+        "FETCHED_FROM_ERD": 1779554413
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779547639
+        "FETCHED_FROM_ERD": 1779554413
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779547639
+        "FETCHED_FROM_ERD": 1779554413
       }
     },
     {
@@ -138,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779547639
+        "FETCHED_FROM_ERD": 1779554413
       }
     }
   ],
