@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779565509
+        "FETCHED_FROM_ERD": 1779568564
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74463,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.98478891021726,
+          46.064859467569896
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74463,
+        "FIRE_NAME": "Chapman",
+        "DEGREES_LAT": 46.06485,
+        "DEGREES_LONG": 65.98479,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1779551100000,
+        "FIRE_STAT_DATE": 1779556920000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1779568564
       }
     },
     {
@@ -54,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779565509
+        "FETCHED_FROM_ERD": 1779568564
       }
     }
   ],
