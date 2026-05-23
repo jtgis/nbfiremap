@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779536644
+        "FETCHED_FROM_ERD": 1779540074
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779536644
+        "FETCHED_FROM_ERD": 1779540074
       }
     },
     {
@@ -82,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779536644
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74423,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.64325844989195,
-          46.17725951613292
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74423,
-        "FIRE_NAME": "Birch",
-        "DEGREES_LAT": 46.17725,
-        "DEGREES_LONG": 64.64326,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1779456900000,
-        "FIRE_STAT_DATE": 1779523920000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779536644
+        "FETCHED_FROM_ERD": 1779540074
       }
     },
     {
@@ -138,35 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779536644
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74444,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.60512913480191,
-          46.25120948528316
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74444,
-        "FIRE_NAME": "Valley",
-        "DEGREES_LAT": 46.251200000000004,
-        "DEGREES_LONG": 66.60513,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.5,
-        "TIME_DETECTED": 1779472500000,
-        "FIRE_STAT_DATE": 1779479760000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779536644
+        "FETCHED_FROM_ERD": 1779540074
       }
     }
   ],
