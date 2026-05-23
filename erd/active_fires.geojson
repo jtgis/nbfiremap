@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779558116
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74442,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.67359845760465,
-          46.12524950659459
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74442,
-        "FIRE_NAME": "Aviation",
-        "DEGREES_LAT": 46.12524,
-        "DEGREES_LONG": 64.67360000000001,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 2,
-        "TIME_DETECTED": 1779473400000,
-        "FIRE_STAT_DATE": 1779523980000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779558116
+        "FETCHED_FROM_ERD": 1779561671
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779558116
+        "FETCHED_FROM_ERD": 1779561671
       }
     }
   ],
