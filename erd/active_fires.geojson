@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74522,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.59484909001166,
-          45.42828934149607
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74522,
-        "FIRE_NAME": "Solar Fire",
-        "DEGREES_LAT": 45.42828,
-        "DEGREES_LONG": 66.59485,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1779649200000,
-        "FIRE_STAT_DATE": 1779698280000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779742108
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74483,
       "geometry": {
         "type": "Point",
@@ -54,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779742108
+        "FETCHED_FROM_ERD": 1779745548
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779742108
+        "FETCHED_FROM_ERD": 1779745548
       }
     }
   ],
