@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779722849
+        "FETCHED_FROM_ERD": 1779728590
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779722849
+        "FETCHED_FROM_ERD": 1779728590
       }
     },
     {
@@ -82,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779722849
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74502,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.5943484358425,
-          46.26620953269688
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74502,
-        "FIRE_NAME": "Shediac River",
-        "DEGREES_LAT": 46.266200000000005,
-        "DEGREES_LONG": 64.59434999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1779644400000,
-        "FIRE_STAT_DATE": 1779694380000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1779722849
+        "FETCHED_FROM_ERD": 1779728590
       }
     }
   ],
