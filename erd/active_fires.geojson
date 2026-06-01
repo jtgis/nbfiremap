@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780341142
+        "FETCHED_FROM_ERD": 1780346723
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74602,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.62752908635166,
+          45.11469928407063
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74602,
+        "FIRE_NAME": "Seeleys Cover Crossroads",
+        "DEGREES_LAT": 45.114689999999996,
+        "DEGREES_LONG": 66.62753,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780332300000,
+        "FIRE_STAT_DATE": 1780335923000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1780346723
       }
     }
   ],
