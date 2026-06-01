@@ -26,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780277432
+        "FETCHED_FROM_ERD": 1780284785
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74582,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.9048039757682,
+          45.8790191136599
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74582,
+        "FIRE_NAME": "Woodbine",
+        "DEGREES_LAT": 45.8789,
+        "DEGREES_LONG": 66.9038,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1780252200000,
+        "FIRE_STAT_DATE": 1780259400000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780284785
       }
     }
   ],
