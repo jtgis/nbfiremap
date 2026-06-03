@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74622,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.345628674773,
-          45.7568094272814
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74622,
-        "FIRE_NAME": "Secord Street",
-        "DEGREES_LAT": 45.756800000000005,
-        "DEGREES_LONG": 65.34563,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780339980000,
-        "FIRE_STAT_DATE": 1780387020000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780466540
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74642,
       "geometry": {
         "type": "Point",
@@ -54,7 +26,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780466540
+        "FETCHED_FROM_ERD": 1780473865
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74622,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.345628674773,
+          45.7568094272814
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74622,
+        "FIRE_NAME": "Secord Street",
+        "DEGREES_LAT": 45.756800000000005,
+        "DEGREES_LONG": 65.34563,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780339980000,
+        "FIRE_STAT_DATE": 1780387020000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780473865
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780466540
+        "FETCHED_FROM_ERD": 1780473865
       }
     }
   ],
