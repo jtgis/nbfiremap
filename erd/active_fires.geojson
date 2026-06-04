@@ -3,30 +3,58 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74682,
+      "id": 74684,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.10974897787136,
-          46.56467955149644
+          -65.27814869442155,
+          46.71713959561599
         ]
       },
       "properties": {
-        "OBJECTID": 74682,
-        "FIRE_NAME": "Sunset Powerline",
-        "DEGREES_LAT": 46.56467,
-        "DEGREES_LONG": 66.10974999999999,
+        "OBJECTID": 74684,
+        "FIRE_NAME": "Pine",
+        "DEGREES_LAT": 46.71713,
+        "DEGREES_LONG": 65.27815,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.20000000298023224,
+        "TIME_DETECTED": 1780587000000,
+        "FIRE_STAT_DATE": 1780592100000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780603371
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74683,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.84293920578752,
+          46.04487944379356
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74683,
+        "FIRE_NAME": "Pugh's Crossroad",
+        "DEGREES_LAT": 46.044869999999996,
+        "DEGREES_LONG": 66.84294,
         "FIRE_STAT_ID": 1,
         "FIRE_STAT_DESC_E": "Out of Control",
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780584300000,
-        "FIRE_STAT_DATE": 1780589302000,
+        "TIME_DETECTED": 1780586820000,
+        "FIRE_STAT_DATE": 1780590420000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1780600102
+        "PERCENT_CONTAINED": 80,
+        "FETCHED_FROM_ERD": 1780603371
       }
     }
   ],
