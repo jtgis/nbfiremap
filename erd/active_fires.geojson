@@ -1,6 +1,35 @@
 {
   "type": "FeatureCollection",
-  "features": [],
+  "features": [
+    {
+      "type": "Feature",
+      "id": 74682,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.10974897787136,
+          46.56467955149644
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74682,
+        "FIRE_NAME": "Sunset Powerline",
+        "DEGREES_LAT": 46.56467,
+        "DEGREES_LONG": 66.10974999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780584300000,
+        "FIRE_STAT_DATE": 1780589302000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1780600102
+      }
+    }
+  ],
   "crs": {
     "type": "name",
     "properties": {
