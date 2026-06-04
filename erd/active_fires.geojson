@@ -3,6 +3,62 @@
   "features": [
     {
       "type": "Feature",
+      "id": 74687,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.449698786902,
+          47.40105970821283
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74687,
+        "FIRE_NAME": "Jeanne-Mance",
+        "DEGREES_LAT": 47.40105,
+        "DEGREES_LONG": 65.4497,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780595400000,
+        "FIRE_STAT_DATE": 1780598700000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780610044
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74686,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.99874887922583,
+          45.29535933165662
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74686,
+        "FIRE_NAME": "dunes",
+        "DEGREES_LAT": 45.29535,
+        "DEGREES_LONG": 65.99875,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780589280000,
+        "FIRE_STAT_DATE": 1780598100000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780610044
+      }
+    },
+    {
+      "type": "Feature",
       "id": 74683,
       "geometry": {
         "type": "Point",
@@ -26,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780606843
+        "FETCHED_FROM_ERD": 1780610044
       }
     },
     {
@@ -54,7 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780606843
+        "FETCHED_FROM_ERD": 1780610044
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74685,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70304952912049,
+          46.50422950182435
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74685,
+        "FIRE_NAME": "greenfield",
+        "DEGREES_LAT": 46.50422,
+        "DEGREES_LONG": 67.70304999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780588800000,
+        "FIRE_STAT_DATE": 1780599244000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FETCHED_FROM_ERD": 1780610044
       }
     }
   ],
