@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780610044
+        "FETCHED_FROM_ERD": 1780613385
       }
     },
     {
@@ -54,7 +54,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780610044
+        "FETCHED_FROM_ERD": 1780613385
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74702,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.94662854773348,
+          46.00628947981003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74702,
+        "FIRE_NAME": "trail",
+        "DEGREES_LAT": 46.00628,
+        "DEGREES_LONG": 64.94663,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1780592400000,
+        "FIRE_STAT_DATE": 1780602240000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 1,
+        "FETCHED_FROM_ERD": 1780613385
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74703,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.3550287461767,
+          47.257639686327245
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74703,
+        "FIRE_NAME": "Chrysler",
+        "DEGREES_LAT": 47.25763,
+        "DEGREES_LONG": 65.35503,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.800000011920929,
+        "TIME_DETECTED": 1780598400000,
+        "FIRE_STAT_DATE": 1780602420000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780613385
       }
     },
     {
@@ -72,17 +128,17 @@
         "FIRE_NAME": "Pugh's Crossroad",
         "DEGREES_LAT": 46.044869999999996,
         "DEGREES_LONG": 66.84294,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1780586820000,
-        "FIRE_STAT_DATE": 1780592880000,
+        "FIRE_STAT_DATE": 1780601820000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780610044
+        "FETCHED_FROM_ERD": 1780613385
       }
     },
     {
@@ -110,35 +166,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780610044
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74685,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.70304952912049,
-          46.50422950182435
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74685,
-        "FIRE_NAME": "greenfield",
-        "DEGREES_LAT": 46.50422,
-        "DEGREES_LONG": 67.70304999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780588800000,
-        "FIRE_STAT_DATE": 1780599244000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FETCHED_FROM_ERD": 1780610044
+        "FETCHED_FROM_ERD": 1780613385
       }
     }
   ],
