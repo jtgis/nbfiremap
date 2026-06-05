@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": 74704,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.85149920488661,
+          45.95583942810502
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74704,
+        "FIRE_NAME": "Fish Hatchery Lane Hill",
+        "DEGREES_LAT": 45.95583,
+        "DEGREES_LONG": 66.8515,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780603080000,
+        "FIRE_STAT_DATE": 1780607940000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780652012
+      }
+    },
+    {
+      "type": "Feature",
       "id": 74686,
       "geometry": {
         "type": "Point",
@@ -26,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780645778
+        "FETCHED_FROM_ERD": 1780652012
       }
     },
     {
@@ -54,63 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
-        "FETCHED_FROM_ERD": 1780645778
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74683,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.84293920578752,
-          46.04487944379356
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74683,
-        "FIRE_NAME": "Pugh's Crossroad",
-        "DEGREES_LAT": 46.044869999999996,
-        "DEGREES_LONG": 66.84294,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780586820000,
-        "FIRE_STAT_DATE": 1780601820000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780645778
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74703,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.3550287461767,
-          47.257639686327245
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74703,
-        "FIRE_NAME": "Chrysler",
-        "DEGREES_LAT": 47.25763,
-        "DEGREES_LONG": 65.35503,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.800000011920929,
-        "TIME_DETECTED": 1780598400000,
-        "FIRE_STAT_DATE": 1780602420000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780645778
+        "FETCHED_FROM_ERD": 1780652012
       }
     },
     {
@@ -138,35 +110,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780645778
+        "FETCHED_FROM_ERD": 1780652012
       }
     },
     {
       "type": "Feature",
-      "id": 74704,
+      "id": 74703,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.85149920488661,
-          45.95583942810502
+          -65.3550287461767,
+          47.257639686327245
         ]
       },
       "properties": {
-        "OBJECTID": 74704,
-        "FIRE_NAME": "Fish Hatchery Lane Hill",
-        "DEGREES_LAT": 45.95583,
-        "DEGREES_LONG": 66.8515,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780603080000,
-        "FIRE_STAT_DATE": 1780607940000,
+        "OBJECTID": 74703,
+        "FIRE_NAME": "Chrysler",
+        "DEGREES_LAT": 47.25763,
+        "DEGREES_LONG": 65.35503,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.800000011920929,
+        "TIME_DETECTED": 1780598400000,
+        "FIRE_STAT_DATE": 1780602420000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780645778
+        "FETCHED_FROM_ERD": 1780652012
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74683,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.84293920578752,
+          46.04487944379356
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74683,
+        "FIRE_NAME": "Pugh's Crossroad",
+        "DEGREES_LAT": 46.044869999999996,
+        "DEGREES_LONG": 66.84294,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780586820000,
+        "FIRE_STAT_DATE": 1780601820000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780652012
       }
     }
   ],
