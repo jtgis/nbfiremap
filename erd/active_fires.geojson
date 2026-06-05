@@ -3,30 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74704,
+      "id": 74722,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.85149920488661,
-          45.95583942810502
+          -64.96909861832287,
+          47.418719721227546
         ]
       },
       "properties": {
-        "OBJECTID": 74704,
-        "FIRE_NAME": "Fish Hatchery Lane Hill",
-        "DEGREES_LAT": 45.95583,
-        "DEGREES_LONG": 66.8515,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "OBJECTID": 74722,
+        "FIRE_NAME": "Rivière-du-Portage Nord",
+        "DEGREES_LAT": 47.41871,
+        "DEGREES_LONG": 64.9691,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780603080000,
-        "FIRE_STAT_DATE": 1780648320000,
+        "TIME_DETECTED": 1780657140000,
+        "FIRE_STAT_DATE": 1780660860000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780665882
+        "FETCHED_FROM_ERD": 1780673226
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780665882
+        "FETCHED_FROM_ERD": 1780673226
       }
     },
     {
@@ -82,35 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780665882
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74683,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.84293920578752,
-          46.04487944379356
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74683,
-        "FIRE_NAME": "Pugh's Crossing",
-        "DEGREES_LAT": 46.044869999999996,
-        "DEGREES_LONG": 66.84294,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780586820000,
-        "FIRE_STAT_DATE": 1780651620000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780665882
+        "FETCHED_FROM_ERD": 1780673226
       }
     },
     {
@@ -138,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780665882
+        "FETCHED_FROM_ERD": 1780673226
       }
     },
     {
@@ -166,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780665882
+        "FETCHED_FROM_ERD": 1780673226
       }
     }
   ],
