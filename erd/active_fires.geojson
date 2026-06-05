@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780682445
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74686,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.99874887922583,
-          45.29535933165662
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74686,
-        "FIRE_NAME": "dunes",
-        "DEGREES_LAT": 45.29535,
-        "DEGREES_LONG": 65.99875,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780589280000,
-        "FIRE_STAT_DATE": 1780647840000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780682445
+        "FETCHED_FROM_ERD": 1780686051
       }
     },
     {
@@ -72,17 +44,17 @@
         "FIRE_NAME": "Elm",
         "DEGREES_LAT": 45.663329999999995,
         "DEGREES_LONG": 65.84817,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.5,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 1.5,
         "TIME_DETECTED": 1780663260000,
-        "FIRE_STAT_DATE": 1780665960000,
+        "FIRE_STAT_DATE": 1780673940000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 10,
-        "FETCHED_FROM_ERD": 1780682445
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780686051
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780682445
+        "FETCHED_FROM_ERD": 1780686051
       }
     },
     {
@@ -138,7 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780682445
+        "FETCHED_FROM_ERD": 1780686051
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74686,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.99874887922583,
+          45.29535933165662
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74686,
+        "FIRE_NAME": "dunes",
+        "DEGREES_LAT": 45.29535,
+        "DEGREES_LONG": 65.99875,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780589280000,
+        "FIRE_STAT_DATE": 1780647840000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780686051
       }
     }
   ],
