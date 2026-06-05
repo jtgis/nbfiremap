@@ -26,35 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780689666
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74686,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.99874887922583,
-          45.29535933165662
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74686,
-        "FIRE_NAME": "dunes",
-        "DEGREES_LAT": 45.29535,
-        "DEGREES_LONG": 65.99875,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780589280000,
-        "FIRE_STAT_DATE": 1780647840000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780689666
+        "FETCHED_FROM_ERD": 1780692927
       }
     },
     {
@@ -82,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780689666
+        "FETCHED_FROM_ERD": 1780692927
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780689666
+        "FETCHED_FROM_ERD": 1780692927
       }
     },
     {
@@ -138,7 +110,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780689666
+        "FETCHED_FROM_ERD": 1780692927
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74686,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.99874887922583,
+          45.29535933165662
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74686,
+        "FIRE_NAME": "dunes",
+        "DEGREES_LAT": 45.29535,
+        "DEGREES_LONG": 65.99875,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780589280000,
+        "FIRE_STAT_DATE": 1780647840000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780692927
       }
     }
   ],
