@@ -3,30 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74722,
+      "id": 74723,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.96909861832287,
-          47.418719721227546
+          -65.84816884496212,
+          45.6633393999914
         ]
       },
       "properties": {
-        "OBJECTID": 74722,
-        "FIRE_NAME": "Rivière-du-Portage Nord",
-        "DEGREES_LAT": 47.41871,
-        "DEGREES_LONG": 64.9691,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1780657140000,
-        "FIRE_STAT_DATE": 1780660860000,
+        "OBJECTID": 74723,
+        "FIRE_NAME": "Elm",
+        "DEGREES_LAT": 45.663329999999995,
+        "DEGREES_LONG": 65.84817,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.5,
+        "TIME_DETECTED": 1780663260000,
+        "FIRE_STAT_DATE": 1780665960000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780673226
+        "PERCENT_CONTAINED": 10,
+        "FETCHED_FROM_ERD": 1780679131
       }
     },
     {
@@ -54,7 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780673226
+        "FETCHED_FROM_ERD": 1780679131
       }
     },
     {
@@ -82,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780673226
+        "FETCHED_FROM_ERD": 1780679131
       }
     },
     {
@@ -110,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780673226
+        "FETCHED_FROM_ERD": 1780679131
       }
     },
     {
@@ -138,7 +138,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780673226
+        "FETCHED_FROM_ERD": 1780679131
       }
     }
   ],
