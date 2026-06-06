@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780724430
+        "FETCHED_FROM_ERD": 1780730698
       }
     },
     {
@@ -54,63 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780724430
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74703,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.3550287461767,
-          47.257639686327245
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74703,
-        "FIRE_NAME": "Chrysler",
-        "DEGREES_LAT": 47.25763,
-        "DEGREES_LONG": 65.35503,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.800000011920929,
-        "TIME_DETECTED": 1780598400000,
-        "FIRE_STAT_DATE": 1780669500000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780724430
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74684,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.27814869442155,
-          46.71713959561599
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74684,
-        "FIRE_NAME": "Pine",
-        "DEGREES_LAT": 46.71713,
-        "DEGREES_LONG": 65.27815,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.2000000476837158,
-        "TIME_DETECTED": 1780587000000,
-        "FIRE_STAT_DATE": 1780646760000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780724430
+        "FETCHED_FROM_ERD": 1780730698
       }
     },
     {
@@ -138,7 +82,63 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780724430
+        "FETCHED_FROM_ERD": 1780730698
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74703,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.3550287461767,
+          47.257639686327245
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74703,
+        "FIRE_NAME": "Chrysler",
+        "DEGREES_LAT": 47.25763,
+        "DEGREES_LONG": 65.35503,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.800000011920929,
+        "TIME_DETECTED": 1780598400000,
+        "FIRE_STAT_DATE": 1780669500000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780730698
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74684,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.27814869442155,
+          46.71713959561599
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74684,
+        "FIRE_NAME": "Pine",
+        "DEGREES_LAT": 46.71713,
+        "DEGREES_LONG": 65.27815,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 1.2000000476837158,
+        "TIME_DETECTED": 1780587000000,
+        "FIRE_STAT_DATE": 1780646760000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780730698
       }
     }
   ],
