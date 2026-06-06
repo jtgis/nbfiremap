@@ -26,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780750125
+        "FETCHED_FROM_ERD": 1780754438
       }
     },
     {
@@ -54,35 +54,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780750125
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 74684,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.27814869442155,
-          46.71713959561599
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74684,
-        "FIRE_NAME": "Pine",
-        "DEGREES_LAT": 46.71713,
-        "DEGREES_LONG": 65.27815,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.2000000476837158,
-        "TIME_DETECTED": 1780587000000,
-        "FIRE_STAT_DATE": 1780733400000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780750125
+        "FETCHED_FROM_ERD": 1780754438
       }
     },
     {
@@ -110,7 +82,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780750125
+        "FETCHED_FROM_ERD": 1780754438
       }
     },
     {
@@ -138,7 +110,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780750125
+        "FETCHED_FROM_ERD": 1780754438
       }
     }
   ],
