@@ -3,34 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74702,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.94662854773348,
-          46.00628947981003
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74702,
-        "FIRE_NAME": "Trail",
-        "DEGREES_LAT": 46.00628,
-        "DEGREES_LONG": 64.94663,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1780592400000,
-        "FIRE_STAT_DATE": 1780731780000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780811576
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74723,
       "geometry": {
         "type": "Point",
@@ -54,7 +26,7 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780811576
+        "FETCHED_FROM_ERD": 1780818204
       }
     },
     {
@@ -82,7 +54,35 @@
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FETCHED_FROM_ERD": 1780811576
+        "FETCHED_FROM_ERD": 1780818204
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74702,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.94662854773348,
+          46.00628947981003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74702,
+        "FIRE_NAME": "Trail",
+        "DEGREES_LAT": 46.00628,
+        "DEGREES_LONG": 64.94663,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
+        "TIME_DETECTED": 1780592400000,
+        "FIRE_STAT_DATE": 1780731780000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FETCHED_FROM_ERD": 1780818204
       }
     }
   ],
