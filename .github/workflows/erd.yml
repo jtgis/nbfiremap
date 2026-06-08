@@ -39,7 +39,7 @@ jobs:
 
           OUTPUT_DIR = "erd"
           DASHBOARD_URL = "https://nbdnr.maps.arcgis.com/apps/dashboards/7bb8645cf75c4aa2b7a43a3123f9e17f"
-          BASE_URL = "https://utility.arcgis.com/usrsvcs/servers/a9126f48ad774664a821ea30e5b10a9c/rest/services/Fire_Dashboards_Restricted/Public_Fires_Restricted/MapServer"
+          BASE_URL = "https://utility.arcgis.com/usrsvcs/servers/0bdd2371793b41f6a5dba7ab7cd51152/rest/services/Fire_Dashboards_Restricted/Public_Fires_Restricted_v2/MapServer"
 
           QUERY_PARAMS_BASE = (
               "where=1%3D1&outFields=*&returnGeometry=true&outSR=4326"
