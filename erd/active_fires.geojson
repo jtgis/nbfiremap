@@ -27,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "284",
-        "FETCHED_FROM_ERD": 1780952897
+        "FETCHED_FROM_ERD": 1780955921
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74762,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.27552873454358,
+          47.59713974437092
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74762,
+        "FIRE_NAME": "Chemin Val Doucet",
+        "DEGREES_LAT": 47.59713,
+        "DEGREES_LONG": 65.27553,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1780936200000,
+        "FIRE_STAT_DATE": 1780945121000,
+        "FIRE_OF_NOTE_INDCTR": 1,
+        "FIRE_NOTE_ENG": "Yes",
+        "FIRE_NOTE_FR": "Oui",
+        "PERCENT_CONTAINED": 0,
+        "FIRE_NUMBER_SHORT": "286",
+        "FETCHED_FROM_ERD": 1780955921
       }
     }
   ],
