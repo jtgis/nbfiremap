@@ -27,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "284",
-        "FETCHED_FROM_ERD": 1781018753
+        "FETCHED_FROM_ERD": 1781025087
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74782,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.112468672344,
+          47.50412973242379
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74782,
+        "FIRE_NAME": "De la promenade",
+        "DEGREES_LAT": 47.50412,
+        "DEGREES_LONG": 65.11247,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1781005500000,
+        "FIRE_STAT_DATE": 1781008500000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "287",
+        "FETCHED_FROM_ERD": 1781025087
       }
     }
   ],
