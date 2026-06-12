@@ -27,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "289",
-        "FETCHED_FROM_ERD": 1781257527
+        "FETCHED_FROM_ERD": 1781264026
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74842,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.89632887256693,
+          45.91872944369403
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74842,
+        "FIRE_NAME": "belledune beach",
+        "DEGREES_LAT": 45.91872,
+        "DEGREES_LONG": 65.89632999999999,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1781208000000,
+        "FIRE_STAT_DATE": 1781264026000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FIRE_NUMBER_SHORT": "291",
+        "FETCHED_FROM_ERD": 1781264026
       }
     }
   ],
