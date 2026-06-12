@@ -3,60 +3,31 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74803,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.36004867587978,
-          45.654639409470064
-        ]
-      },
-      "properties": {
-        "OBJECTID": 74803,
-        "FIRE_NAME": "Walker",
-        "DEGREES_LAT": 45.65463,
-        "DEGREES_LONG": 65.36005,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1781031600000,
-        "FIRE_STAT_DATE": 1781177940000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "289",
-        "FETCHED_FROM_ERD": 1781264026
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74842,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.89632887256693,
-          45.91872944369403
+          -66.29687911508692,
+          47.99438978660036
         ]
       },
       "properties": {
         "OBJECTID": 74842,
         "FIRE_NAME": "belledune beach",
-        "DEGREES_LAT": 45.91872,
-        "DEGREES_LONG": 65.89632999999999,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "DEGREES_LAT": 47.99438,
+        "DEGREES_LONG": 66.29688,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1781208000000,
-        "FIRE_STAT_DATE": 1781264026000,
+        "FIRE_STAT_DATE": 1781265060000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
+        "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "291",
-        "FETCHED_FROM_ERD": 1781264026
+        "FETCHED_FROM_ERD": 1781271077
       }
     }
   ],
