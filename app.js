@@ -137,7 +137,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // ---- Layer Z-Index Configuration --------------------------------------
         PANES: [
           ['alwaysOnTopPopup', 9999],
-          ['sentinelPane', 400],
+          ['burnBansPane',   201],   // just above basemap tile pane (200); below all overlays
+          ['sentinelPane',   400],
           ['nbBoundaryPane', 405],
           ['crownPane', 406],
           ['countiesPane', 407],
@@ -164,7 +165,9 @@ window.addEventListener('DOMContentLoaded', () => {
           SMOKE: 0.72,
           RADAR: 0.8,
           SENTINEL: 1,
-          BURN_BANS: 0.7
+          BURN_BANS: 1,  // ← burn ban layer transparency (0–1)
+          IMAGERY:   0.85,  // ← satellite basemap transparency (0–1)
+          OSM:       0.90   // ← street map basemap transparency (0–1)
         },
 
         // ---- Cluster Configuration -------------------------------------------
@@ -390,12 +393,13 @@ window.addEventListener('DOMContentLoaded', () => {
             return {
               imagery: L.tileLayer(
                 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-                { maxZoom: CONFIG.MAP.MAX_ZOOM, attribution: 'Tiles &copy; Esri' }
+                { maxZoom: CONFIG.MAP.MAX_ZOOM, attribution: 'Tiles &copy; Esri', opacity: CONFIG.OPACITY.IMAGERY }
               ),
               osm: L.tileLayer(CONFIG.SERVICES.OSM_TILES, {
                 maxZoom: CONFIG.MAP.MAX_ZOOM,
                 attribution: '&copy; OpenStreetMap contributors',
-                crossOrigin: 'anonymous'
+                crossOrigin: 'anonymous',
+                opacity: CONFIG.OPACITY.OSM
               })
             };
           },
@@ -4054,7 +4058,8 @@ window.addEventListener('DOMContentLoaded', () => {
       // ---- Sentinel imagery & burn bans ------------------------------------
       const sentinel2 = L.esri.imageMapLayer({ url: CONFIG.SERVICES.SENTINEL2, opacity: CONFIG.OPACITY.SENTINEL, pane:'sentinelPane' });
       sentinel2.on('load', ()=> sentinel2.bringToFront());
-      const nbBurnBans = L.esri.dynamicMapLayer({ url: CONFIG.SERVICES.NB_BURN_BANS, opacity: CONFIG.OPACITY.BURN_BANS, pane:'perimetersPane' });
+      const nbBurnBans = L.esri.dynamicMapLayer({ url: CONFIG.SERVICES.NB_BURN_BANS, opacity: CONFIG.OPACITY.BURN_BANS, pane:'burnBansPane' });
+      nbBurnBans.addTo(map);
 
       // ---- Weather stations / radar / lightning / AQHI ----------------------
       function stationPopupHTML(p) {
@@ -5305,7 +5310,7 @@ if (typeof map !== 'undefined' && map && map.on){
           }
           collapseBtn.setAttribute('aria-expanded', String(!collapsed));
           
-          collapseBtn.addEventListener('click', () => {
+          headerContainer.addEventListener('click', () => {
             collapsed = !collapsed;
             container.style.display = collapsed ? 'none' : 'block';
             collapseBtn.innerHTML = collapsed ? 
@@ -7410,6 +7415,8 @@ doc.autoTable({
   return `
     <h2>🗺️ How to Use This Map</h2>
     
+    <p><a href="https://github.com/jtgis/nbfiremap" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/jtgis/nbfiremap</a></p>
+
     <p><strong>⚠️ Important:</strong> <em>This is an unofficial viewer created for educational and informational purposes. For official emergency information, always consult <a href="https://www.gnb.ca/en/topic/laws-safety/emergency-preparedness-alerts/fire-watch.html" target="_blank" rel="noopener">GNB Fire Watch</a>.</em></p>
         
     <p>🖱️ <strong>Navigation:</strong> Drag to move, scroll or use <b>+</b>/<b>−</b> to zoom. The <b>🔗 Overview</b> panel lets you toggle layers.</p>
@@ -7997,6 +8004,12 @@ const fbpPlayer  = setupCwfisPlayer(fbpPlay,  fbpTime, updateFBP);
 
   // Let ResizeObserver size the Overview when legends change
   ro?.observe(riskControls); ro?.observe(fwiControls); ro?.observe(fbpControls);
+
+  // ---- NB Burn Bans map legend (bottom panel row) ----
+  const burnBanLegendRow = $('#burnBanLegendRow');
+  map.on('overlayadd',    (e) => { if (e.layer === nbBurnBans && burnBanLegendRow) burnBanLegendRow.style.display = 'flex'; });
+  map.on('overlayremove', (e) => { if (e.layer === nbBurnBans && burnBanLegendRow) burnBanLegendRow.style.display = 'none'; });
+  if (map.hasLayer(nbBurnBans) && burnBanLegendRow) burnBanLegendRow.style.display = 'flex';
 
       // Final sizing after legend mount
       requestAnimationFrame(() => { sizeLegend(); });

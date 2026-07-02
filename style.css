@@ -161,6 +161,7 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
       border-radius: 10px;
       background: rgba(0,0,0,.035);
       transition: background .15s ease;
+      cursor: pointer;
     }
     
     .legend-group-header-container:hover {
@@ -548,6 +549,36 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
     .legend-chip-cont { background: color-mix(in srgb, var(--cont) 82%, black); border-color: color-mix(in srgb, var(--cont) 92%, black); }
     .legend-chip-uc { background: color-mix(in srgb, var(--uc) 78%, black); border-color: color-mix(in srgb, var(--uc) 90%, black); color: #fff; }
     .legend-chip-pat { background: color-mix(in srgb, var(--pat) 82%, black); border-color: color-mix(in srgb, var(--pat) 92%, black); }
+
+    /* Burn ban legend row */
+    .burn-ban-legend-row {
+      display: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 6px;
+    }
+    .burn-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: rgba(255,255,255,0.9);
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.42);
+    }
+    .burn-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.3);
+      flex-shrink: 0;
+    }
+    .burn-dot-open {
+      background-image: repeating-linear-gradient(45deg, #38a169 0, #38a169 1.5px, transparent 0, transparent 50%),
+                        repeating-linear-gradient(-45deg, #38a169 0, #38a169 1.5px, transparent 0, transparent 50%);
+      background-color: #e6ffed;
+      background-size: 5px 5px;
+    }
 
     .bottom-panel-actions {
       display: flex;
