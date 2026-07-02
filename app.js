@@ -165,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
           SMOKE: 0.72,
           RADAR: 0.8,
           SENTINEL: 1,
-          BURN_BANS: 0.7,  // ← burn ban layer transparency (0–1)
+          BURN_BANS: 0.5,  // ← burn ban layer transparency (0–1)
           IMAGERY:   0.9,  // ← satellite basemap transparency (0–1)
           OSM:       1   // ← street map basemap transparency (0–1)
         },
