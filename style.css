@@ -580,6 +580,37 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
       background-size: 5px 5px;
     }
 
+    /* Chip label + checkbox wrapper */
+    .chip-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+    .chip-cb {
+      width: 11px;
+      height: 11px;
+      accent-color: rgba(255,255,255,0.9);
+      cursor: pointer;
+      flex-shrink: 0;
+      margin: 0;
+    }
+    .chip-off {
+      opacity: 0.3;
+      transition: opacity 0.2s;
+    }
+    /* Stacked "Restricted" mobile label */
+    .restrict-short {
+      display: none;
+      flex-direction: column;
+      line-height: 1.2;
+      align-items: flex-start;
+    }
+    .restrict-time {
+      font-size: 7.5px;
+      opacity: 0.85;
+    }
+
     .bottom-panel-actions {
       display: flex;
       align-items: center;
@@ -1052,6 +1083,8 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
 
   .chip-label-long { display: none; }
   .chip-label-short { display: inline; }
+  /* Stacked restricted burn label on mobile */
+  .restrict-short { display: flex; }
   
   .action-btn i {
     font-size: 18px;

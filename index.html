@@ -126,6 +126,22 @@ See README.md for full setup and usage documentation.
 </head>
 
 <body>
+  <!-- Hidden SVG pattern defs for burn ban layer fills -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <!-- Restricted burn: yellow-green base + white diagonal hatch -->
+      <pattern id="burnBanHatch" width="8" height="8" patternUnits="userSpaceOnUse">
+        <rect width="8" height="8" fill="#c8d400"/>
+        <line x1="0" y1="0" x2="8" y2="8" stroke="rgba(255,255,255,0.65)" stroke-width="1.5"/>
+      </pattern>
+      <!-- Burn permitted: green base + white diagonal crosshatch -->
+      <pattern id="burnBanCross" width="8" height="8" patternUnits="userSpaceOnUse">
+        <rect width="8" height="8" fill="#3a8c3a"/>
+        <line x1="0" y1="0" x2="8" y2="8" stroke="rgba(255,255,255,0.65)" stroke-width="1.5"/>
+        <line x1="0" y1="8" x2="8" y2="0" stroke="rgba(255,255,255,0.65)" stroke-width="1.5"/>
+      </pattern>
+    </defs>
+  </svg>
   <!-- ====================================================================
        SECTION 1: MAP CONTAINER
        Main Leaflet map canvas - all layers render here
@@ -268,6 +284,7 @@ See README.md for full setup and usage documentation.
   <!-- 3c. Bottom action panel (Fire Watch, Summary, History, Help) -->
   <div id="bottomPanel" class="bottom-panel">
     <div class="bottom-panel-legend" aria-label="Fire types legend">
+      <input type="checkbox" id="fireStatusToggle" class="chip-cb" checked title="Toggle all fire markers">
       <span class="legend-chip legend-chip-oc"><span class="chip-label-long">Out Of Control</span><span class="chip-label-short">Out of Ctrl</span></span>
       <span class="legend-chip legend-chip-mon"><span class="chip-label-long">Being Monitored</span><span class="chip-label-short">Monitored</span></span>
       <span class="legend-chip legend-chip-cont"><span class="chip-label-long">Contained</span><span class="chip-label-short">Contained</span></span>
@@ -275,8 +292,9 @@ See README.md for full setup and usage documentation.
       <span class="legend-chip legend-chip-pat"><span class="chip-label-long">Being Patrolled</span><span class="chip-label-short">Patrolled</span></span>
     </div>
     <div id="burnBanLegendRow" class="bottom-panel-legend burn-ban-legend-row" aria-label="Burn ban legend">
+      <input type="checkbox" id="burnBanToggle" class="chip-cb" checked title="Toggle burn ban layer">
       <span class="burn-chip"><span class="burn-dot" style="background:#c0392b"></span>No burn</span>
-      <span class="burn-chip"><span class="burn-dot" style="background:#f5e642"></span><span class="chip-label-long">Restricted 8 p.m.–8 a.m.</span><span class="chip-label-short">Restricted</span></span>
+      <span class="burn-chip"><span class="burn-dot" style="background:#f5e642"></span><span class="chip-label-long">Restricted 8 p.m.–8 a.m.</span><span class="restrict-short"><span>Restricted</span><span class="restrict-time">8 p.m.–8 a.m.</span></span></span>
       <span class="burn-chip"><span class="burn-dot burn-dot-open"></span>Burn permitted</span>
     </div>
     <div class="bottom-panel-actions">

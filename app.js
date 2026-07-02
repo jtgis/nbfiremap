@@ -165,9 +165,9 @@ window.addEventListener('DOMContentLoaded', () => {
           SMOKE: 0.72,
           RADAR: 0.8,
           SENTINEL: 1,
-          BURN_BANS: 1,  // ← burn ban layer transparency (0–1)
-          IMAGERY:   0.85,  // ← satellite basemap transparency (0–1)
-          OSM:       0.90   // ← street map basemap transparency (0–1)
+          BURN_BANS: 0.7,  // ← burn ban layer transparency (0–1)
+          IMAGERY:   0.9,  // ← satellite basemap transparency (0–1)
+          OSM:       1   // ← street map basemap transparency (0–1)
         },
 
         // ---- Cluster Configuration -------------------------------------------
@@ -4058,7 +4058,19 @@ window.addEventListener('DOMContentLoaded', () => {
       // ---- Sentinel imagery & burn bans ------------------------------------
       const sentinel2 = L.esri.imageMapLayer({ url: CONFIG.SERVICES.SENTINEL2, opacity: CONFIG.OPACITY.SENTINEL, pane:'sentinelPane' });
       sentinel2.on('load', ()=> sentinel2.bringToFront());
-      const nbBurnBans = L.esri.dynamicMapLayer({ url: CONFIG.SERVICES.NB_BURN_BANS, opacity: CONFIG.OPACITY.BURN_BANS, pane:'burnBansPane' });
+      const nbBurnBans = L.esri.featureLayer({
+        url: `${CONFIG.SERVICES.NB_BURN_BANS}/0`,
+        pane: 'burnBansPane',
+        where: '1=1',
+        style: function(feature) {
+          const cat = feature.properties.PUBLICCATEGORY;
+          const op = CONFIG.OPACITY.BURN_BANS;
+          if (cat === 1) return { color: '#cc0000', weight: 1, fillColor: '#cc0000', fillOpacity: op, interactive: false };
+          if (cat === 2) return { color: '#c8d400', weight: 1, fillColor: 'url(#burnBanHatch)', fillOpacity: op, interactive: false };
+          if (cat === 3) return { color: '#3a8c3a', weight: 1, fillColor: 'url(#burnBanCross)', fillOpacity: op, interactive: false };
+          return { weight: 0, fillOpacity: 0, interactive: false };
+        }
+      });
       nbBurnBans.addTo(map);
 
       // ---- Weather stations / radar / lightning / AQHI ----------------------
@@ -5425,6 +5437,64 @@ if (typeof map !== 'undefined' && map && map.on){
       // Inject fire status panel first, then apply styling
       injectFireStatusPanel();
       setTimeout(styleLegend, 100);
+
+      // ---- Bottom-panel chip checkboxes ----------------------------------------
+      (function initChipCheckboxes() {
+        // Fire status toggle: check = show all markers, uncheck = hide all markers
+        const fireStatusToggle = D.getElementById('fireStatusToggle');
+        if (fireStatusToggle) {
+          function setFireChipsOff(off) {
+            D.querySelectorAll('.bottom-panel-legend .legend-chip').forEach(c => c.classList.toggle('chip-off', off));
+          }
+          fireStatusToggle.addEventListener('change', () => {
+            const on = fireStatusToggle.checked;
+            D.querySelectorAll('.fire-filter-block input[type="checkbox"]').forEach(cb => {
+              // Never re-enable Extinguished — it stays off unless the user sets it manually
+              if (on && cb.dataset.status === 'Extinguished') return;
+              cb.checked = on;
+            });
+            applyFireFilter();
+            setFireChipsOff(!on);
+          });
+          // Sync toggle if layer-menu "toggle all" changes all checkboxes
+          const _baseApplyFireFilter = applyFireFilter;
+          applyFireFilter = function () {
+            _baseApplyFireFilter();
+            const cbs = Array.from(D.querySelectorAll('.fire-filter-block input[type="checkbox"]'));
+            if (cbs.length) {
+              const allOn = cbs.every(cb => cb.checked);
+              const allOff = cbs.every(cb => !cb.checked);
+              if (allOff)  { fireStatusToggle.checked = false; setFireChipsOff(true); }
+              else if (allOn) { fireStatusToggle.checked = true;  setFireChipsOff(false); }
+              // indeterminate state: leave toggle as-is
+            }
+          };
+        }
+
+        // Burn ban toggle: check = show layer, uncheck = hide all categories
+        const burnBanToggle = D.getElementById('burnBanToggle');
+        if (burnBanToggle) {
+          function setBurnChipsOff(off) {
+            D.querySelectorAll('#burnBanLegendRow .burn-chip').forEach(c => c.classList.toggle('chip-off', off));
+          }
+          burnBanToggle.addEventListener('change', () => {
+            if (burnBanToggle.checked) {
+              nbBurnBans.setWhere('1=1');
+            } else {
+              nbBurnBans.setWhere('1=2');
+            }
+            setBurnChipsOff(!burnBanToggle.checked);
+          });
+          // When layer toggled back on from layer menu, reset toggle to checked
+          map.on('overlayadd', (e) => {
+            if (e.layer === nbBurnBans) {
+              burnBanToggle.checked = true;
+              nbBurnBans.setWhere('1=1');
+              setBurnChipsOff(false);
+            }
+          });
+        }
+      })();
 
       // ---- Move basemap toggle into legend (but keep summary in bottom panel) ----
       function mountBasemapInLegend(){
