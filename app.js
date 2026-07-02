@@ -5473,6 +5473,53 @@ if (typeof map !== 'undefined' && map && map.on){
 
       // ---- New UI Button Handlers -------------------------------------------
       function setupNewUIButtons() {
+        // Air Quality (Smoke + AQHI) toggle button
+        const airQualityBtn = $('#airQualityBtn');
+        if (airQualityBtn) {
+          function updateAirQualityBtn() {
+            const on = map.hasLayer(smokeLayer) || map.hasLayer(aqhiLayer);
+            airQualityBtn.setAttribute('aria-pressed', String(on));
+            airQualityBtn.title = on ? 'Hide Smoke & Air Quality layers' : 'Show Smoke & Air Quality layers';
+          }
+          airQualityBtn.addEventListener('click', () => {
+            const on = map.hasLayer(smokeLayer) || map.hasLayer(aqhiLayer);
+            if (on) {
+              if (map.hasLayer(smokeLayer))  map.removeLayer(smokeLayer);
+              if (map.hasLayer(aqhiLayer))   map.removeLayer(aqhiLayer);
+            } else {
+              map.addLayer(smokeLayer);
+              map.addLayer(aqhiLayer);
+            }
+            updateAirQualityBtn();
+          });
+          map.on('overlayadd overlayremove', (e) => {
+            if (e.layer === smokeLayer || e.layer === aqhiLayer) updateAirQualityBtn();
+          });
+          updateAirQualityBtn();
+        }
+
+        // 511 Road Events toggle button
+        const roadInfoBtn = $('#roadInfoBtn');
+        if (roadInfoBtn) {
+          function updateRoadInfoBtn() {
+            const on = map.hasLayer(eventsCombined);
+            roadInfoBtn.setAttribute('aria-pressed', String(on));
+            roadInfoBtn.title = on ? 'Hide 511 Road Events' : 'Show 511 Road Events';
+          }
+          roadInfoBtn.addEventListener('click', () => {
+            if (map.hasLayer(eventsCombined)) {
+              map.removeLayer(eventsCombined);
+            } else {
+              map.addLayer(eventsCombined);
+            }
+            updateRoadInfoBtn();
+          });
+          map.on('overlayadd overlayremove', (e) => {
+            if (e.layer === eventsCombined) updateRoadInfoBtn();
+          });
+          updateRoadInfoBtn();
+        }
+
         // Fire Watch button - opens the GNB fire watch page
         const fireWatchBtn = $('#fireWatchBtn');
         if (fireWatchBtn) {
