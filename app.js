@@ -5313,8 +5313,8 @@ if (typeof map !== 'undefined' && map && map.on){
           
           overlaysList.appendChild(container);
           
-          // First group ("Fire & Emergency") starts expanded; others collapsed
-          let collapsed = groupIndex !== 0;
+          // Fire & Emergency and Weather & Environment start expanded; others collapsed
+          let collapsed = groupIndex !== 0 && groupIndex !== 2;
           if (collapsed) {
             container.style.display = 'none';
             collapseBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
@@ -5438,6 +5438,17 @@ if (typeof map !== 'undefined' && map && map.on){
       injectFireStatusPanel();
       setTimeout(styleLegend, 100);
 
+      // Helper: sync a named layer's checkbox without triggering Leaflet's _update()
+      function syncLayerCheckbox(name, checked) {
+        D.querySelectorAll('.leaflet-control-layers-overlays label').forEach(label => {
+          const s = label.querySelector('span:last-child');
+          if (s && s.textContent.trim() === name) {
+            const inp = label.querySelector('input[type="checkbox"]');
+            if (inp) inp.checked = checked;
+          }
+        });
+      }
+
       // ---- Bottom-panel chip checkboxes ----------------------------------------
       (function initChipCheckboxes() {
         // Fire status toggle: check = show all markers, uncheck = hide all markers
@@ -5553,6 +5564,9 @@ if (typeof map !== 'undefined' && map && map.on){
           }
           airQualityBtn.addEventListener('click', () => {
             const on = map.hasLayer(smokeLayer) || map.hasLayer(aqhiLayer);
+            // Prevent Leaflet from calling _update() (which destroys custom groups);
+            // overlayadd/overlayremove still fires so lazy-loading keeps working.
+            layerControl._handlingClick = true;
             if (on) {
               if (map.hasLayer(smokeLayer))  map.removeLayer(smokeLayer);
               if (map.hasLayer(aqhiLayer))   map.removeLayer(aqhiLayer);
@@ -5560,6 +5574,9 @@ if (typeof map !== 'undefined' && map && map.on){
               map.addLayer(smokeLayer);
               map.addLayer(aqhiLayer);
             }
+            layerControl._handlingClick = false;
+            syncLayerCheckbox('Smoke', !on);
+            syncLayerCheckbox('AQHI Risk', !on);
             updateAirQualityBtn();
           });
           map.on('overlayadd overlayremove', (e) => {
@@ -5577,11 +5594,12 @@ if (typeof map !== 'undefined' && map && map.on){
             roadInfoBtn.title = on ? 'Hide 511 Road Events' : 'Show 511 Road Events';
           }
           roadInfoBtn.addEventListener('click', () => {
-            if (map.hasLayer(eventsCombined)) {
-              map.removeLayer(eventsCombined);
-            } else {
-              map.addLayer(eventsCombined);
-            }
+            const on = map.hasLayer(eventsCombined);
+            layerControl._handlingClick = true;
+            if (on) map.removeLayer(eventsCombined);
+            else    map.addLayer(eventsCombined);
+            layerControl._handlingClick = false;
+            syncLayerCheckbox('Road Events', !on);
             updateRoadInfoBtn();
           });
           map.on('overlayadd overlayremove', (e) => {
