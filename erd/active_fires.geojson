@@ -3,31 +3,31 @@
   "features": [
     {
       "type": "Feature",
-      "id": 74962,
+      "id": 74982,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.13514931132535,
-          46.11712944893268
+          -67.84221966025261,
+          47.94679974032071
         ]
       },
       "properties": {
-        "OBJECTID": 74962,
-        "FIRE_NAME": "Crossmember",
-        "DEGREES_LAT": 46.11691,
-        "DEGREES_LONG": 67.13541,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1783027980000,
-        "FIRE_STAT_DATE": 1783089900000,
+        "OBJECTID": 74982,
+        "FIRE_NAME": "Tom Pond",
+        "DEGREES_LAT": 47.94679,
+        "DEGREES_LONG": 67.84222,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 10,
+        "TIME_DETECTED": 1783110600000,
+        "FIRE_STAT_DATE": 1783119540000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "297",
-        "FETCHED_FROM_ERD": 1783118443
+        "PERCENT_CONTAINED": 25,
+        "FIRE_NUMBER_SHORT": "298",
+        "FETCHED_FROM_ERD": 1783122076
       }
     }
   ],
