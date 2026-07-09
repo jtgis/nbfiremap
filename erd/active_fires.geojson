@@ -27,7 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "298",
-        "FETCHED_FROM_ERD": 1783630534
+        "FETCHED_FROM_ERD": 1783633878
       }
     },
     {
@@ -45,47 +45,18 @@
         "FIRE_NAME": "McKenzie",
         "DEGREES_LAT": 46.102779999999996,
         "DEGREES_LONG": 67.70161999999999,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.20000000298023224,
         "TIME_DETECTED": 1783623600000,
-        "FIRE_STAT_DATE": 1783630320000,
+        "FIRE_STAT_DATE": 1783632720000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "301",
-        "FETCHED_FROM_ERD": 1783630534
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 75023,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.2962997863631,
-          47.3847096342614
-        ]
-      },
-      "properties": {
-        "OBJECTID": 75023,
-        "FIRE_NAME": "Cedar",
-        "DEGREES_LAT": 47.3847,
-        "DEGREES_LONG": 68.2963,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1783620900000,
-        "FIRE_STAT_DATE": 1783630534000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
-        "FIRE_NUMBER_SHORT": "302",
-        "FETCHED_FROM_ERD": 1783630534
+        "FETCHED_FROM_ERD": 1783633878
       }
     }
   ],
