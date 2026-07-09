@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 75022,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.70161950653744,
-          46.102789431959536
-        ]
-      },
-      "properties": {
-        "OBJECTID": 75022,
-        "FIRE_NAME": "McKenzie",
-        "DEGREES_LAT": 46.102779999999996,
-        "DEGREES_LONG": 67.70161999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1783623600000,
-        "FIRE_STAT_DATE": 1783632720000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "301",
-        "FETCHED_FROM_ERD": 1783637269
-      }
-    },
-    {
-      "type": "Feature",
       "id": 74982,
       "geometry": {
         "type": "Point",
@@ -56,7 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "298",
-        "FETCHED_FROM_ERD": 1783637269
+        "FETCHED_FROM_ERD": 1783640783
       }
     }
   ],
