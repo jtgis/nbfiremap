@@ -1,36 +1,6 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "id": 75042,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.8483185400719,
-          46.63078959043124
-        ]
-      },
-      "properties": {
-        "OBJECTID": 75042,
-        "FIRE_NAME": "Timber River",
-        "DEGREES_LAT": 46.630779999999994,
-        "DEGREES_LONG": 64.84832,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1783689300000,
-        "FIRE_STAT_DATE": 1783693320000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "303",
-        "FETCHED_FROM_ERD": 1783719626
-      }
-    }
-  ],
+  "features": [],
   "crs": {
     "type": "name",
     "properties": {
