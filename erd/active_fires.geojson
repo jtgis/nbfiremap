@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 75143,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.02664857711277,
-          46.055629486492364
-        ]
-      },
-      "properties": {
-        "OBJECTID": 75143,
-        "FIRE_NAME": "Wilmot Brook",
-        "DEGREES_LAT": 46.05562,
-        "DEGREES_LONG": 65.02665,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1783965840000,
-        "FIRE_STAT_DATE": 1783970160000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "309",
-        "FETCHED_FROM_ERD": 1783975292
-      }
-    },
-    {
-      "type": "Feature",
       "id": 75142,
       "geometry": {
         "type": "Point",
@@ -56,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "308",
-        "FETCHED_FROM_ERD": 1783975292
+        "FETCHED_FROM_ERD": 1783978663
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.02664857711277,
+          46.055629486492364
+        ]
+      },
+      "properties": {
+        "OBJECTID": 75143,
+        "FIRE_NAME": "Wilmot Brook",
+        "DEGREES_LAT": 46.05562,
+        "DEGREES_LONG": 65.02665,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1783965840000,
+        "FIRE_STAT_DATE": 1783970160000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "309",
+        "FETCHED_FROM_ERD": 1783978663
       }
     }
   ],
