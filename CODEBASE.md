@@ -203,25 +203,11 @@ Lines ~3490–4750. Initialises the Leaflet map, adds all control overlays, and 
 
 Lines ~4750–5570. Adds all vector and raster layers to the map:
 - VIIRS/MODIS hotspot circles
-- CWFIS Fire Points (Canada-wide active fire locations, `activefires_current` WFS)
 - Crown land polygon fill
 - Winter road polylines
 - Ferry icons and webcam markers
 - 511 event markers
 - Fire Weather Index (FWI), Fire Behavior Prediction (FBP), Fire Risk raster layers
-- NOAA surface smoke — preloaded frame animation (see below)
-
-**Smoke layer architecture:** `smokeLayer` is an `L.layerGroup` of per-hour
-`L.imageOverlay` frames. On enable (and on pan/zoom beyond the fetched extent)
-the app requests one `exportImage` PNG per forecast hour from the NOAA
-ImageServer for the padded current view, throttled to `CONFIG.SMOKE.CONCURRENCY`
-parallel downloads. Playback and scrubbing swap overlay opacities client-side
-(no network traffic per frame), cross-faded via the `.smoke-frame` CSS
-transition. The timeline bar (`#smokeControls`) is docked bottom-center over
-the map, above `#bottomPanel`. The left-hand smoke button toggles Smoke, AQHI
-Risk, and Fire Points (Canada) together. Tunables live in `CONFIG.SMOKE`
-(`HOURS_BACK`, `HOURS_FORWARD`, `FRAME_MS`, `OPACITY`, `MAX_FRAMES`, `PAD`,
-`MAX_PX`, `CONCURRENCY`).
 
 ### Section 10 — Summary, Export, and Help
 

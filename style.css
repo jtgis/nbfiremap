@@ -447,6 +447,22 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
        ============================================================================= */
     .marker-badge{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--panel-strong);border:2.5px solid var(--ring,#0000FF);box-shadow:0 2px 10px rgba(0,0,0,.18)}
     .marker-badge i{font-size:14px;color:var(--ring,#0000FF)}
+    /* Canada-wide fire points — same badge as NB fires, dark background */
+    .canada-fire-badge{background:#334155}
+
+    /* AQHI station chips + legend (ECCC scale colours set inline) */
+    .aqhi-chip{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;border:2px solid rgba(255,255,255,.9);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+    .aqhi-chip i{font-size:14px}
+    /* Docked bottom-center above the smoke timeline (or the bottom panel when
+       the timeline is hidden) — offset maintained via --aqhi-bottom */
+    .aqhi-legend{position:absolute;left:50%;transform:translateX(-50%);z-index:2090;display:none;
+      background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:8px 10px;box-shadow:var(--shadow);backdrop-filter:blur(6px);
+      bottom:var(--aqhi-bottom, 28px);width:min(94vw,320px)}
+    .aqhi-legend-title{font:800 12px/1.2 Inter,system-ui,Arial;color:var(--text);margin-bottom:6px}
+    .aqhi-legend-title i{margin-right:4px}
+    .aqhi-legend-chips{display:flex;gap:2px}
+    .aqhi-legend-chip{flex:1;min-width:20px;height:20px;border-radius:5px;display:grid;place-items:center;font:800 11px/1 Inter,system-ui,Arial}
+    .aqhi-legend-scale{display:flex;justify-content:space-between;font:700 10px/1.4 Inter,system-ui,Arial;color:var(--muted);margin-top:4px}
     .legend-icon{width:18px;height:18px;display:inline-grid;place-items:center}
     .icons-pack{display:inline-flex;gap:6px;vertical-align:middle;justify-content:center;width:26px}
     .legend-badge{width:18px;height:18px;border-radius:999px;display:grid;place-items:center;background:#fff;border:2.5px solid var(--ring)}

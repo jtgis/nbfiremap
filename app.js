@@ -9,7 +9,7 @@
  *   - GNB Emergency Response Division (fires, burn bans, crown land)
  *   - Canadian Wildland Fire Information System (hotspots, perimeters, FWI/FBP)
  *   - NASA FIRMS (thermal anomalies via MODIS/VIIRS)
- *   - NOAA (smoke forecasts, weather radar)
+ *   - NOAA (weather radar) / ECCC GeoMet (FireWork smoke forecasts)
  *   - Environment Canada (weather stations, lightning, AQHI)
  *   - OpenSky Network (aircraft tracking)
  * 
@@ -65,11 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
           // Aviation data
           OPEN_SKY_URL: 'https://opensky-network.org/api/states/all',
           
-          // NOAA smoke forecasts (ESRI ImageServer REST)
-          NOAA_SMOKE: 'https://mapservices.weather.noaa.gov/raster/rest/services/air_quality/ndgd_smoke_sfc_1hr_avg_time/ImageServer',
           NOAA_RADAR: 'https://mapservices.weather.noaa.gov/eventdriven/rest/services/radar/radar_base_reflectivity_time/ImageServer',
-          
-          // Canadian weather and fire services
+
+          // Canadian weather and fire services. GEOMET_WMS also serves the
+          // FireWork wildfire smoke forecast (RAQDPS-FW) — the same Canadian
+          // smoke modelling family shown on firesmoke.ca.
           CWFIS_WFS: 'https://cwfis.cfs.nrcan.gc.ca/geoserver/public/ows',
           GEOMET_WMS: 'https://geo.weather.gc.ca/geomet',
           
@@ -98,6 +98,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // ---- Smoke Configuration ----------------------------------------------
         SMOKE: {
+          // ECCC surface PM2.5 (RAQDPS — includes FireWork wildfire emissions)
+          WMS_LAYER: 'RAQDPS.SFC_PM2.5',
           HOURS_BACK: 6,                // Hours of recent history to include
           HOURS_FORWARD: 48,            // Hours of forecast to show ahead
           FRAME_MS: 500,                // Animation frame duration (playback speed)
@@ -193,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
         ATLANTIC_TZ: window.NBFireMapConstants.TIMEZONE.ATLANTIC_TZ,
         OPEN_SKY_URL: window.NBFireMapConstants.SERVICES.OPEN_SKY_URL,
         PLANES_REFRESH_MS: window.NBFireMapConstants.REFRESH.PLANES,
-        NOAA_SMOKE: window.NBFireMapConstants.SERVICES.NOAA_SMOKE,
+        GEOMET_WMS: window.NBFireMapConstants.SERVICES.GEOMET_WMS,
         SMOKE_HOURS_FORWARD: window.NBFireMapConstants.SMOKE.HOURS_FORWARD,
         SMOKE_FRAME_MS: window.NBFireMapConstants.SMOKE.FRAME_MS,
         LIGHTNING_REFRESH_MS: window.NBFireMapConstants.REFRESH.LIGHTNING,
@@ -3451,8 +3453,16 @@ window.addEventListener('DOMContentLoaded', () => {
       const OPEN_SKY_URL = CONFIG.SERVICES.OPEN_SKY_URL;
       const PLANES_REFRESH_MS = CONFIG.REFRESH.PLANES;
 
-      // NOAA ESRI ImageServer for surface smoke
-      const NOAA_SMOKE_URL = CONFIG.SERVICES.NOAA_SMOKE;
+      // ECCC GeoMet WMS for FireWork surface smoke (PM2.5). Candidate layer
+      // names are probed in order at startup; the first one whose capabilities
+      // advertise a time dimension wins.
+      const GEOMET_WMS_URL = CONFIG.SERVICES.GEOMET_WMS;
+      const SMOKE_WMS_CANDIDATES = [
+        CONFIG.SMOKE.WMS_LAYER,        // RAQDPS surface PM2.5 (wildfire smoke included)
+        'RAQDPS-FW.SFC_PM2.5',         // legacy FireWork names, kept as fallbacks
+        'RAQDPS-FW.EATM_PM2.5'
+      ];
+      let smokeWmsLayer = SMOKE_WMS_CANDIDATES[0];
       const SMOKE_FRAME_MS = CONFIG.SMOKE.FRAME_MS;
 
       const LIGHTNING_REFRESH_MS = CONFIG.REFRESH.LIGHTNING;
@@ -3708,11 +3718,22 @@ window.addEventListener('DOMContentLoaded', () => {
         pointToLayer: (f, latlng) => {
           const p = f.properties || {};
           const ha = Number(p.hectares) || 0;
-          const radius = ha >= 10000 ? 8 : ha >= 1000 ? 7 : ha >= 100 ? 6 : ha >= 10 ? 5 : 4;
           const stage = FIRE_POINT_STAGE[(p.stage_of_control || '').toUpperCase()] || ['Unknown', '#dc2626'];
-          return L.circleMarker(latlng, {
-            pane: 'viirsPane', // above the smoke raster so dots stay visible
-            radius, color: '#7f1d1d', weight: 1, fillColor: stage[1], fillOpacity: 0.85
+          // Same badge treatment as the NB fire markers (scaled by area),
+          // slightly smaller and on a dark background to tell them apart
+          const sz = Math.round(18 + 18 * Math.min(Math.sqrt(ha) / Math.sqrt(1000), 1));
+          const anchor = Math.round(sz / 2);
+          const fontSize = Math.max(9, Math.round(sz * 0.5));
+          return L.marker(latlng, {
+            pane: 'viirsPane', // above the smoke raster so markers stay visible
+            keyboard: false,
+            icon: L.divIcon({
+              className: 'fire-badge-icon',
+              html: `<div class="marker-badge canada-fire-badge" style="--ring:${stage[1]};width:${sz}px;height:${sz}px"><i class="fa-solid fa-fire" style="font-size:${fontSize}px"></i></div>`,
+              iconSize: [sz, sz],
+              iconAnchor: [anchor, Math.round(anchor * 1.36)],
+              popupAnchor: [0, -Math.round(anchor * 1.07)]
+            })
           });
         },
         onEachFeature: (feature, layer) => {
@@ -3732,40 +3753,139 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
       let _firePointsLoadedAt = 0;
+      // Inverse Lambert Conformal Conic for EPSG:3978 (NAD83 / Canada Atlas
+      // Lambert), CWFIS's native CRS. The CWFIS GeoServer ignores srsName on
+      // WFS 1.0.0 and returns metre coordinates, so we reproject client-side.
+      const lcc3978ToLonLat = (() => {
+        const D2R = Math.PI / 180, R2D = 180 / Math.PI;
+        const a = 6378137, f = 1 / 298.257222101, e = Math.sqrt(2 * f - f * f);
+        const lat0 = 49 * D2R, lon0 = -95 * D2R, lat1 = 49 * D2R, lat2 = 77 * D2R;
+        const m = (phi) => Math.cos(phi) / Math.sqrt(1 - (e * Math.sin(phi)) ** 2);
+        const t = (phi) => Math.tan(Math.PI / 4 - phi / 2) /
+          Math.pow((1 - e * Math.sin(phi)) / (1 + e * Math.sin(phi)), e / 2);
+        const n = Math.log(m(lat1) / m(lat2)) / Math.log(t(lat1) / t(lat2));
+        const F = m(lat1) / (n * Math.pow(t(lat1), n));
+        const rho0 = a * F * Math.pow(t(lat0), n);
+        return (x, y) => {
+          const rho = Math.sign(n) * Math.hypot(x, rho0 - y);
+          const theta = Math.atan2(x, rho0 - y);
+          const tp = Math.pow(rho / (a * F), 1 / n);
+          let phi = Math.PI / 2 - 2 * Math.atan(tp);
+          for (let i = 0; i < 6; i++) {
+            phi = Math.PI / 2 - 2 * Math.atan(tp * Math.pow((1 - e * Math.sin(phi)) / (1 + e * Math.sin(phi)), e / 2));
+          }
+          return [(theta / n + lon0) * R2D, phi * R2D];
+        };
+      })();
+      const inCanada = (lon, lat) => lon >= -150 && lon <= -45 && lat >= 38 && lat <= 85;
+      // Return [lon, lat] for a plausible Canadian fire point, or null.
+      // Handles proper lon/lat, axis-swapped lat/lon, and native-CRS metres
+      // (tries Canada Atlas Lambert, then Web Mercator).
+      function normalizeFireCoord(c) {
+        if (!Array.isArray(c) || c.length < 2) return null;
+        let [x, y] = c;
+        if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+        if (Math.abs(x) > 180 || Math.abs(y) > 90) {
+          let [lon, lat] = lcc3978ToLonLat(x, y);
+          if (!inCanada(lon, lat)) {
+            const R = 6378137, R2D = 180 / Math.PI;
+            lon = (x / R) * R2D;
+            lat = (2 * Math.atan(Math.exp(y / R)) - Math.PI / 2) * R2D;
+          }
+          [x, y] = [lon, lat];
+        } else if (x >= 40 && x <= 90 && y >= -150 && y <= -40) {
+          [x, y] = [y, x]; // swapped axis order — lands in Canada once flipped
+        }
+        // Generous Canada envelope — rejects garbage from a wrong-CRS guess
+        if (!inCanada(x, y)) return null;
+        return [x, y];
+      }
+      // Validate, filter, and draw a batch of GeoJSON point features.
+      // Throws with a precise reason so failures are diagnosable from console.
+      function addFirePointFeatures(all) {
+        if (!all.length) throw new Error('0 features in response');
+        const feats = [];
+        for (const f of all) {
+          // Property names vary by source (WFS lowercase, ArcGIS mixed) —
+          // lowercase the keys so the popup/filter fields always resolve
+          const props = {};
+          for (const [k, v] of Object.entries(f?.properties || {})) props[k.toLowerCase()] = v;
+          f.properties = props;
+          // NB fires are already on the map via the provincial layer
+          if ((props.agency || '').toLowerCase() === 'nb') continue;
+          const lonlat = normalizeFireCoord(f?.geometry?.coordinates);
+          if (!lonlat) continue;
+          f.geometry.coordinates = lonlat;
+          feats.push(f);
+        }
+        if (!feats.length) {
+          const sample = JSON.stringify(all[0]?.geometry?.coordinates ?? null);
+          throw new Error(`all ${all.length} features dropped (first coords: ${sample})`);
+        }
+        firePointsLayer.clearLayers();
+        firePointsLayer.addData({ type: 'FeatureCollection', features: feats });
+        _firePointsLoadedAt = Date.now();
+        _firePointsRetries = 0;
+        console.info(`Fire points: drew ${feats.length} of ${all.length} features.`);
+      }
+      // Source: the CWFIS Datamart active-fires CSV — the canonical feed the
+      // CWFIS map itself uses. (The GeoServer WFS does NOT publish active
+      // fire points: GetCapabilities confirms no activefires layer exists.)
+      const FIRE_POINTS_CSV = 'https://cwfis.cfs.nrcan.gc.ca/downloads/activefires/activefires.csv';
+      // Minimal CSV parser (handles quoted fields with commas/newlines)
+      function parseCsv(text) {
+        const rows = []; let row = [], cell = '', q = false;
+        for (let i = 0; i < text.length; i++) {
+          const ch = text[i];
+          if (q) {
+            if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+            else cell += ch;
+          }
+          else if (ch === '"') q = true;
+          else if (ch === ',') { row.push(cell); cell = ''; }
+          else if (ch === '\n') {
+            row.push(cell); cell = '';
+            if (row.some(c => c.trim() !== '')) rows.push(row);
+            row = [];
+          }
+          else if (ch !== '\r') cell += ch;
+        }
+        row.push(cell);
+        if (row.some(c => c.trim() !== '')) rows.push(row);
+        return rows;
+      }
+      async function fetchFirePointsCsv() {
+        const res = await fetch(FIRE_POINTS_CSV, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`CSV responded ${res.status}`);
+        const rows = parseCsv(await res.text());
+        if (rows.length < 2) throw new Error('CSV empty');
+        const head = rows[0].map(h => h.trim().toLowerCase());
+        const latI = head.indexOf('lat'), lonI = head.indexOf('lon');
+        if (latI < 0 || lonI < 0) throw new Error(`CSV missing lat/lon columns (got: ${head.join(',')})`);
+        const features = rows.slice(1).map(r => {
+          const props = {};
+          head.forEach((h, i) => { props[h] = (r[i] ?? '').trim(); });
+          return {
+            type: 'Feature', properties: props,
+            geometry: { type: 'Point', coordinates: [Number(r[lonI]), Number(r[latI])] }
+          };
+        });
+        addFirePointFeatures(features);
+      }
+      let _firePointsRetries = 0;
       async function loadFirePoints(force = false) {
         if (!force && (Date.now() - _firePointsLoadedAt) < 10 * 60 * 1000) return;
-        // WFS 2.0.0 — 1.0.0 can ignore srsName and return native-CRS (metre)
-        // coordinates that plot off-map. Fall back through known layer names.
-        for (const typeName of ['public:activefires_current', 'public:activefires']) {
-          try {
-            const params = new URLSearchParams({
-              service: 'WFS', version: '2.0.0', request: 'GetFeature',
-              typeNames: typeName, srsName: 'EPSG:4326',
-              outputFormat: 'application/json', count: '8000'
-            });
-            const res = await fetch(`${CONFIG.SERVICES.CWFIS_WFS}?${params}`);
-            if (!res.ok) throw new Error(`WFS responded ${res.status}`);
-            const text = await res.text();
-            let data;
-            try { data = JSON.parse(text); }
-            catch { throw new Error(`non-JSON response: ${text.slice(0, 160)}`); }
-            // Drop any feature whose coordinates aren't plausible lon/lat
-            const feats = (data?.features || []).filter(f => {
-              const c = f?.geometry?.coordinates;
-              return Array.isArray(c) && Math.abs(c[0]) <= 180 && Math.abs(c[1]) <= 90;
-            });
-            if (!feats.length) throw new Error('no drawable features returned');
-            firePointsLayer.clearLayers();
-            firePointsLayer.addData({ type: 'FeatureCollection', features: feats });
-            _firePointsLoadedAt = Date.now();
-            return;
-          } catch (e) {
-            console.warn(`Fire points: ${typeName} failed —`, e);
-          }
+        try { await fetchFirePointsCsv(); return; }
+        catch (e) { console.error('Fire points: CSV load failed —', e); }
+        // The feed occasionally hiccups — retry a few times
+        if (_firePointsRetries < 3) {
+          _firePointsRetries++;
+          console.warn(`Fire points: retrying in 30s (attempt ${_firePointsRetries}/3)…`);
+          setTimeout(() => { if (map.hasLayer(firePointsLayer)) loadFirePoints(true); }, 30_000);
         }
-        console.error('Fire points: all CWFIS sources failed; layer left empty.');
       }
       map.on('overlayadd', (e) => { if (e.layer === firePointsLayer) loadFirePoints(); });
+      if (map.hasLayer(firePointsLayer)) loadFirePoints();
 
       // ---- Perimeters / Boundary -------------------------------------------
       const perimeterLabelLayers = new Set();
@@ -4306,12 +4426,16 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
     opacity:.7, pane:'perimetersPane', attribution:'CWFIS © Natural Resources Canada'
   });
 
-      // ---- NOAA Smoke timeline (preloaded frame animation) -------------------
-      // firesmoke.ca-style playback: instead of re-querying the ImageServer on
-      // every tick (one network round-trip per frame → lag and flicker), we
-      // export one PNG per forecast hour for the current view, preload them as
-      // stacked image overlays, and animate by swapping opacities client-side.
-      const smokeLayer = L.layerGroup([], { attribution: 'NOAA' });
+      // ---- Smoke timeline (preloaded frame animation) -------------------------
+      // ECCC RAQDPS surface PM2.5 via GeoMet WMS. The operational RAQDPS model
+      // includes FireWork wildfire emissions from the same CWFIS fire
+      // detections that drive firesmoke.ca, so plumes and timing correspond
+      // with that site. firesmoke.ca-style playback: instead of re-querying
+      // the WMS on every tick (one network round-trip per frame → lag and
+      // flicker), we fetch one PNG per forecast hour for the current view,
+      // preload them as stacked image overlays, and animate by swapping
+      // opacities client-side.
+      const smokeLayer = L.layerGroup([], { attribution: 'ECCC RAQDPS' });
 
       const smokeControls   = $('#smokeControls');
       const smokePlayBtn    = $('#smokePlay');
@@ -4348,28 +4472,119 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
 
       function smokeUpdateLabel(){
         if (!smokeTimesMs.length) return;
+        const errs = smokeFrames.filter(f => f.state === 'error').length;
         const done = smokeFrames.filter(f => f.state === 'done' || f.state === 'error').length;
         const total = smokeFrames.length;
+        if (total && errs === total){
+          smokeTsLabel.textContent = 'Smoke unavailable — see console';
+          return;
+        }
         const stamp = smokeFmt(smokeTimesMs[smokeIdx]);
         smokeTsLabel.textContent = (total && done < total)
           ? `${stamp} · loading ${done}/${total}`
           : stamp;
       }
 
-      // Build the exportImage URL for one timestamp over the given bounds
+      // Custom raster styling: hide the lowest smoke levels (below 15 µg/m³),
+      // draw the next band as a transparent light grey, then ramp up through
+      // yellow/orange/red. Applied via SLD_BODY; if GeoMet rejects the SLD the
+      // first frame error flips smokeSldOk and frames rebuild with the
+      // default style instead.
+      let smokeSldOk = true;
+      function smokeSld(layerName){
+        const entries = [
+          ['#9ca3af',    8, 0],     // < 8 µg/m³ (lightest levels) — not drawn
+          ['#9ca3af',   20, 0.40],  // light — transparent light grey
+          ['#fbbf24',   40, 0.55],  // moderate — amber
+          ['#f97316',   80, 0.62],  // high — orange
+          ['#ef4444',  150, 0.68],  // very high — red
+          ['#7f1d1d', 2000, 0.75]   // extreme — dark red
+        ].map(([c, q, o]) => `<ColorMapEntry color="${c}" quantity="${q}" opacity="${o}"/>`).join('');
+        return '<?xml version="1.0" encoding="UTF-8"?>' +
+          '<StyledLayerDescriptor version="1.0.0" xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink">' +
+          `<NamedLayer><Name>${layerName}</Name><UserStyle><FeatureTypeStyle><Rule>` +
+          `<RasterSymbolizer><Opacity>1</Opacity><ColorMap>${entries}</ColorMap></RasterSymbolizer>` +
+          '</Rule></FeatureTypeStyle></UserStyle></NamedLayer></StyledLayerDescriptor>';
+      }
+
+      // Build the WMS GetMap URL for one timestamp over the given bounds
       function smokeExportUrl(tMs, bounds, w, h){
         const nw = L.CRS.EPSG3857.project(bounds.getNorthWest());
         const se = L.CRS.EPSG3857.project(bounds.getSouthEast());
         const params = new URLSearchParams({
-          f: 'image',
-          bbox: `${nw.x},${se.y},${se.x},${nw.y}`,
-          bboxSR: '3857', imageSR: '3857',
-          size: `${w},${h}`,
-          format: 'png32', transparent: 'true',
-          renderingRule: JSON.stringify({ rasterFunction: 'smoke_don_0921' }),
-          time: `${tMs},${tMs}`
+          SERVICE: 'WMS', VERSION: '1.3.0', REQUEST: 'GetMap',
+          LAYERS: smokeWmsLayer, STYLES: '',
+          CRS: 'EPSG:3857',
+          BBOX: `${nw.x},${se.y},${se.x},${nw.y}`,
+          WIDTH: String(w), HEIGHT: String(h),
+          FORMAT: 'image/png', TRANSPARENT: 'true',
+          // XML exceptions (not in-image) so a bad request fires the <img>
+          // error handler instead of silently rendering an exception picture
+          EXCEPTIONS: 'XML',
+          TIME: new Date(tMs).toISOString().replace(/\.\d{3}Z$/, 'Z')
         });
-        return `${NOAA_SMOKE_URL}/exportImage?${params}`;
+        if (smokeSldOk) params.set('SLD_BODY', smokeSld(smokeWmsLayer));
+        return `${GEOMET_WMS_URL}?${params}`;
+      }
+
+      // Verify GetMap works before frames rely on it — a Canada-wide probe
+      // whose pixels are actually inspected. MapServer can accept an SLD yet
+      // render a fully transparent image (wrong band mapping, thresholds above
+      // all current values), which would look like "smoke never draws". If the
+      // SLD probe is blank while the default style shows data, drop the SLD.
+      async function smokeVerifySld(layerName, tMs){
+        const probe = async (withSld) => {
+          const params = new URLSearchParams({
+            SERVICE: 'WMS', VERSION: '1.3.0', REQUEST: 'GetMap',
+            LAYERS: layerName, STYLES: '', CRS: 'EPSG:3857',
+            BBOX: '-15584728,5160979,-5788613,11068715', // all of Canada
+            WIDTH: '256', HEIGHT: '128',
+            FORMAT: 'image/png', TRANSPARENT: 'true', EXCEPTIONS: 'XML',
+            TIME: new Date(tMs).toISOString().replace(/\.\d{3}Z$/, 'Z')
+          });
+          if (withSld) params.set('SLD_BODY', smokeSld(layerName));
+          const res = await fetch(`${GEOMET_WMS_URL}?${params}`);
+          const ct = res.headers.get('content-type') || '';
+          if (res.ok && ct.startsWith('image')) return { blob: await res.blob() };
+          return { err: (await res.text()).slice(0, 400).replace(/\s+/g, ' ') };
+        };
+        const visiblePixels = async (blob) => {
+          const bmp = await createImageBitmap(blob);
+          const cv = D.createElement('canvas');
+          cv.width = bmp.width; cv.height = bmp.height;
+          const ctx = cv.getContext('2d', { willReadFrequently: true });
+          ctx.drawImage(bmp, 0, 0);
+          const d = ctx.getImageData(0, 0, cv.width, cv.height).data;
+          let n = 0;
+          for (let i = 3; i < d.length; i += 4) if (d[i] > 0) n++;
+          return n;
+        };
+        try {
+          const s = await probe(true);
+          if (s.err){
+            smokeSldOk = false;
+            console.warn('Smoke: custom SLD rejected — using default style. Server said:', s.err);
+            const p = await probe(false);
+            if (p.err) console.error('Smoke: default-style GetMap ALSO failed. Server said:', p.err);
+            return;
+          }
+          const sPix = await visiblePixels(s.blob);
+          if (sPix > 0){
+            console.info(`Smoke: custom SLD accepted (${sPix} visible pixels in Canada-wide probe).`);
+            return;
+          }
+          const p = await probe(false);
+          const pPix = p.err ? -1 : await visiblePixels(p.blob);
+          if (pPix > 0){
+            smokeSldOk = false;
+            console.warn(`Smoke: custom SLD renders fully transparent while the default style shows ${pPix} visible pixels — using default style.`);
+          } else {
+            console.info('Smoke: probe shows no visible smoke in either style right now (air is likely clean below the styling thresholds).');
+          }
+        } catch (e) {
+          smokeSldOk = false;
+          console.warn('Smoke: SLD probe failed — using default style.', e);
+        }
       }
 
       // Throttled loader — keeps at most SMOKE.CONCURRENCY downloads in flight,
@@ -4398,6 +4613,14 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
           });
           f.overlay.once('error', () => {
             if (gen !== smokeLoadGen) return;
+            if (smokeSldOk){
+              // The custom SLD may have been rejected — retry all frames once
+              // with the service's default style before flagging errors.
+              smokeSldOk = false;
+              console.warn('Smoke: frame failed with custom SLD — rebuilding with default style.');
+              smokeRebuildFrames();
+              return;
+            }
             f.state = 'error';
             smokeUpdateLabel();
             smokePump();
@@ -4435,6 +4658,7 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
         const scale = Math.min(1, maxPx / Math.max(w, h));
         w = Math.max(1, Math.round(w * scale)); h = Math.max(1, Math.round(h * scale));
 
+        console.info('Smoke: sample frame URL —', smokeExportUrl(smokeTimesMs[smokeIdx] ?? smokeTimesMs[0], smokeExtent, w, h));
         smokeFrames = smokeTimesMs.map((t) => ({
           t,
           state: 'idle',
@@ -4514,18 +4738,47 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
 
 async function initSmokeTimes(){
   const setLabel = (txt) => smokeTsLabel.textContent = txt;
+  const hour = 3_600_000;
 
-  // Hourly steps from (now - HOURS_BACK) to the forecast horizon, capped
-  const buildWindow = (extentStart, extentEnd) => {
+  // Fallback only: hourly steps from (now - HOURS_BACK) to the forecast horizon
+  const buildWindow = () => {
     const now = Date.now();
-    const hour = 3_600_000;
-    let start = now - (now % hour) - (CONFIG.SMOKE.HOURS_BACK ?? 6) * hour;
-    let end = now - (now % hour) + (CONFIG.SMOKE.HOURS_FORWARD ?? 48) * hour;
-    if (Number.isFinite(extentStart)) start = Math.max(start, extentStart);
-    if (Number.isFinite(extentEnd))   end = Math.min(end, extentEnd);
+    const start = now - (now % hour) - (CONFIG.SMOKE.HOURS_BACK ?? 6) * hour;
+    const end = now - (now % hour) + (CONFIG.SMOKE.HOURS_FORWARD ?? 48) * hour;
     const times = [];
     for (let t = start; t <= end && times.length < (CONFIG.SMOKE.MAX_FRAMES || 56); t += hour) times.push(t);
     return times;
+  };
+
+  // Parse the WMS time dimension ("start/end/PT1H", possibly a comma list of
+  // ranges and/or single instants) into epoch-ms steps. Anchored to the named
+  // layer's <Name> entry so a full (unfiltered) capabilities doc still parses
+  // the right layer's dimension. Handles both 1.3.0 <Dimension> content and
+  // 1.1.1-style <Extent> content.
+  const parseTimeDimension = (xml, layerName) => {
+    const at = xml.indexOf(`<Name>${layerName}</Name>`);
+    if (at < 0) return null;
+    const scope = xml.slice(at, at + 20_000);
+    const m = scope.match(/<Dimension[^>]*name="time"[^>]*>([^<]+)<\/Dimension>/i)
+           || scope.match(/<Extent[^>]*name="time"[^>]*>([^<]+)<\/Extent>/i);
+    if (!m) return null;
+    const times = [];
+    for (const part of m[1].trim().split(',')){
+      const p = part.trim();
+      if (!p) continue;
+      if (p.includes('/')){
+        const [s, e, step] = p.split('/');
+        const start = Date.parse(s), end = Date.parse(e);
+        if (!Number.isFinite(start) || !Number.isFinite(end)) continue;
+        const hm = /^PT(\d+)H$/i.exec(step || 'PT1H');
+        const stepMs = hm ? Number(hm[1]) * hour : hour;
+        for (let t = start; t <= end; t += stepMs) times.push(t);
+      } else {
+        const t = Date.parse(p);
+        if (Number.isFinite(t)) times.push(t);
+      }
+    }
+    return times.length ? times.sort((a, b) => a - b) : null;
   };
 
   const applyTimes = (times) => {
@@ -4537,24 +4790,42 @@ async function initSmokeTimes(){
     else setLabel(smokeFmt(times[smokeIdx]));
   };
 
-  try {
-    setLabel('Loading…');
+  setLabel('Loading…');
 
-    // Query the ESRI ImageServer REST endpoint for time info
-    const ac = new AbortController();
-    const timer = setTimeout(() => ac.abort(), 10_000);
-    const res = await fetch(`${NOAA_SMOKE_URL}?f=json`, { signal: ac.signal });
-    clearTimeout(timer);
-    if (!res.ok) throw new Error(`ImageServer responded ${res.status}`);
-    const meta = await res.json();
+  // Ask GeoMet which forecast hours actually exist for the smoke layer, so
+  // the timeline and every frame line up exactly with the model run. Probe
+  // each candidate layer name until one advertises a time dimension.
+  for (const candidate of SMOKE_WMS_CANDIDATES){
+    try {
+      const ac = new AbortController();
+      const timer = setTimeout(() => ac.abort(), 10_000);
+      const capsUrl = `${GEOMET_WMS_URL}?lang=en&service=WMS&version=1.3.0&request=GetCapabilities&LAYERS=${encodeURIComponent(candidate)}&t=${Date.now()}`;
+      const res = await fetch(capsUrl, { signal: ac.signal });
+      clearTimeout(timer);
+      if (!res.ok) throw new Error(`GetCapabilities responded ${res.status}`);
+      const xml = await res.text();
+      const modelTimes = parseTimeDimension(xml, candidate);
+      if (!modelTimes) throw new Error(`no time dimension (response starts: ${xml.slice(0, 200).replace(/\s+/g, ' ')})`);
 
-    const te = meta.timeInfo?.timeExtent;
-    const times = (te && te.length === 2) ? buildWindow(te[0], te[1]) : buildWindow();
-    applyTimes(times.length ? times : buildWindow());
-  } catch (e) {
-    console.error('Smoke timeline init failed:', e);
-    applyTimes(buildWindow()); // service metadata unavailable — assume the window
+      smokeWmsLayer = candidate;
+
+      // Trim to the configured window around now, capped at MAX_FRAMES
+      const now = Date.now();
+      const winStart = now - (CONFIG.SMOKE.HOURS_BACK ?? 6) * hour;
+      const winEnd = now + (CONFIG.SMOKE.HOURS_FORWARD ?? 48) * hour;
+      let times = modelTimes.filter(t => t >= winStart && t <= winEnd);
+      if (!times.length) times = modelTimes; // run entirely outside window — show it all
+      times = times.slice(0, CONFIG.SMOKE.MAX_FRAMES || 56);
+      console.info(`Smoke: GeoMet layer ${candidate}, ${times.length} frames, ${new Date(times[0]).toISOString()} → ${new Date(times[times.length - 1]).toISOString()}`);
+      await smokeVerifySld(candidate, times[nearestIndex(times, Date.now())]);
+      applyTimes(times);
+      return;
+    } catch (e) {
+      console.warn(`Smoke: GeoMet layer ${candidate} failed —`, e);
+    }
   }
+  console.error('Smoke timeline init failed for all GeoMet layers; assuming hourly window.');
+  applyTimes(buildWindow());
 }
 initSmokeTimes();
 
@@ -4608,7 +4879,7 @@ initSmokeTimes();
 
       function onGlobalReflow(){
         requestAnimationFrame(() => {
-          sizeLegend();
+          updateBottomStackAndLegend();
           if (smokeTimesMs.length) smokeUpdateLabel();
         });
       }
@@ -4621,19 +4892,24 @@ initSmokeTimes();
         const vpH = (window.visualViewport?.height) || window.innerHeight || 0;
         const bpTop = bottomPanel ? bottomPanel.getBoundingClientRect().top : vpH;
         const bpClearance = Math.max(0, Math.ceil(vpH - bpTop));
+
+        const smokeVisible = (getComputedStyle(smokeControls).display !== 'none');
+        const smokeH = smokeVisible ? (smokeControls.getBoundingClientRect().height || 0) : 0;
+
         if (!mobile){
           root.style.setProperty('--fs-bottom', '86px');
           root.style.setProperty('--smoke-bottom', (bpClearance + 12) + 'px');
+          // AQHI legend sits above the smoke timeline when it's showing
+          root.style.setProperty('--aqhi-bottom', (bpClearance + 12 + (smokeVisible ? smokeH + 10 : 0)) + 'px');
           root.style.setProperty('--legend-bottom-reserve', '180px');
           sizeLegend(); return;
         }
 
-        const smokeVisible = (getComputedStyle(smokeControls).display !== 'none');
-        const smokeH = smokeVisible ? (smokeControls.getBoundingClientRect().height || 0) : 0;
         const safeB = getSafeBottom();
 
         const smokeBottom = bpClearance + FOOTER_SMOKE_GAP;
         root.style.setProperty('--smoke-bottom', smokeBottom + 'px');
+        root.style.setProperty('--aqhi-bottom', (smokeBottom + (smokeVisible ? smokeH + 10 : 0)) + 'px');
         root.style.setProperty('--fs-bottom', (FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP) + 'px');
 
         const reserve = (smokeVisible ? (smokeH + LEGEND_SMOKE_GAP) : 0) + (BASE_GAP * 2) + safeB + 8;
@@ -4659,30 +4935,53 @@ initSmokeTimes();
       const ro = ('ResizeObserver' in window) ? new ResizeObserver(() => rAF(onGlobalReflow)) : null;
       ro?.observe(smokeControls);
 
-      // AQHI
+      // AQHI — official ECCC scale colours (index 0 = AQHI 1 … index 10 = 10+)
+      const AQHI_COLORS = ['#01cbff','#0099cb','#016797','#fffe03','#ffcb00','#ff9835','#fd6866','#fe0002','#cc0001','#9a0100','#640100'];
+      const AQHI_DARK_TEXT = new Set([0, 3, 4]); // light cyan / yellows need dark text
+      const aqhiScaleIdx = (v) => Math.min(Math.max(Math.round(v), 1), 11) - 1;
+      const aqhiRiskLabel = (v) => v == null ? '—' : v >= 10 ? 'Very High Risk' : v >= 7 ? 'High Risk' : v >= 4 ? 'Moderate Risk' : 'Low Risk';
       const aqhiLayer = L.esri.featureLayer({
         url:'https://services.arcgis.com/wjcPoefzjpzCgffS/ArcGIS/rest/services/aqhi_stations_observations_realtime/FeatureServer/1',
         pane:'aqiPane',
         pointToLayer:(feature,latlng)=> {
           const p=feature.properties||{};
           const raw=p.aqhi??p.aqhi_round; const val=(raw==null||Number.isNaN(Number(raw)))?null:Number(raw);
-          const label=val==null?'—':val>=10?'Very High Risk':val>=7?'High Risk':val>=4?'Moderate Risk':'Low Risk';
-          const color=val==null?'#6b7280':val>=10?'#8b5cf6':val>=7?'#ef4444':val>=4?'#eab308':'#22c55e';
-          const icon=L.divIcon({className:'aqi-badge-icon',html:`
-            <div style="display:flex;flex-direction:column;align-items:center;">
-              <svg width="26" height="26" viewBox="0 0 26 26" style="filter:drop-shadow(0 2px 2px rgba(0,0,0,.25));">
-                <circle cx="13" cy="13" r="11" stroke="#111827" stroke-width="2" fill="${color}" />
-              </svg>
-              <div style="margin-top:2px;font-size:12px;font-weight:800;color:var(--text);background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:4px 8px;line-height:1.15;text-align:center;box-shadow:var(--shadow-soft)">
-                AQHI ${val ?? '—'} <span style="opacity:.8">${label}</span>
-              </div>
-            </div>`, iconSize:[28,48], iconAnchor:[14,24], popupAnchor:[0,-22]});
+          const label=aqhiRiskLabel(val);
+          const idx=val==null?null:aqhiScaleIdx(val);
+          const color=idx==null?'#6b7280':AQHI_COLORS[idx];
+          const txt=(idx!=null&&AQHI_DARK_TEXT.has(idx))?'#1f2937':'#fff';
+          const icon=L.divIcon({className:'aqi-badge-icon',
+            html:`<div class="aqhi-chip" style="background:${color};color:${txt}"><i class="fa-solid fa-wind"></i></div>`,
+            iconSize:[30,30], iconAnchor:[15,15], popupAnchor:[0,-16]});
           const m=L.marker(latlng,{icon});
           const loc=p.location_name_en||''; const when=p.observation_datetime_text_en||'';
-          m.bindTooltip(`${loc?loc+' — ':''}AQHI ${val ?? '—'} • ${label}${when?' • '+when:''}`,{direction:'top',offset:[0,-20],opacity:0});
+          m.bindTooltip(`${loc?loc+' — ':''}AQHI ${val ?? '—'} • ${label}${when?' • '+when:''}`,{direction:'top',offset:[0,-18],opacity:0});
           return m;
         }
       });
+
+      // AQHI legend — docked bottom-center just above the smoke timeline (or
+      // above the bottom panel when the timeline is hidden); shown while the
+      // AQHI layer is on. Its bottom offset (--aqhi-bottom) is maintained by
+      // updateBottomStackAndLegend.
+      const aqhiLegendEl = D.createElement('div');
+      aqhiLegendEl.className = 'aqhi-legend';
+      aqhiLegendEl.innerHTML = (() => {
+        const chips = AQHI_COLORS.map((c, i) =>
+          `<span class="aqhi-legend-chip" style="background:${c};color:${AQHI_DARK_TEXT.has(i)?'#1f2937':'#fff'}">${i === 10 ? '+' : i + 1}</span>`).join('');
+        return `
+          <div class="aqhi-legend-title"><i class="fa-solid fa-wind"></i> Air Quality Health Index</div>
+          <div class="aqhi-legend-chips">${chips}</div>
+          <div class="aqhi-legend-scale"><span>Low</span><span>Moderate</span><span>High</span><span>Very&nbsp;High</span></div>`;
+      })();
+      D.body.appendChild(aqhiLegendEl);
+      const setAqhiLegendVisible = (on) => {
+        aqhiLegendEl.style.display = on ? 'block' : 'none';
+        updateBottomStackAndLegend();
+      };
+      map.on('overlayadd',    (e) => { if (e.layer === aqhiLayer) setAqhiLegendVisible(true); });
+      map.on('overlayremove', (e) => { if (e.layer === aqhiLayer) setAqhiLegendVisible(false); });
+      if (map.hasLayer(aqhiLayer)) setAqhiLegendVisible(true);
 
       // ---- Aircraft ---------------------------------------------------------
       const planesLayer = L.layerGroup();
@@ -7680,8 +7979,8 @@ doc.autoTable({
   // Layers list (match your actual overlays + source links)
   const layersHTML = `
     <ul>
-      <li><b>Smoke (Surface)</b> — NOAA surface smoke forecast. When enabled, an animated timeline appears at the bottom of the map — frames preload for smooth playback; scrub or press ▶ to play. Source:
-        <a href="https://www.arl.noaa.gov/hysplit/smoke-forecasting/" target="_blank" rel="noopener">NOAA</a>.
+      <li><b>Smoke (Surface)</b> — Environment Canada surface smoke (PM2.5) forecast (RAQDPS with FireWork wildfire emissions), built from the same CWFIS fire detections used by firesmoke.ca. When enabled, an animated timeline appears at the bottom of the map — frames preload for smooth playback; scrub or press ▶ to play. Source:
+        <a href="https://weather.gc.ca/firework/" target="_blank" rel="noopener">ECCC FireWork</a>.
       </li>
       <li><b>Fire Points (Canada)</b> — Canada-wide active fire locations, sized by fire area. Source:
         <a href="https://cwfis.cfs.nrcan.gc.ca/" target="_blank" rel="noopener">CWFIS © Natural Resources Canada</a>.
