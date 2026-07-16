@@ -27,7 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "308",
-        "FETCHED_FROM_ERD": 1784199702
+        "FETCHED_FROM_ERD": 1784202856
       }
     },
     {
@@ -48,7 +48,7 @@
         "FIRE_STAT_ID": 1,
         "FIRE_STAT_DESC_E": "Out of Control",
         "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 4,
+        "FIRE_SIZE": 6,
         "TIME_DETECTED": 1784160000000,
         "FIRE_STAT_DATE": 1784195760000,
         "FIRE_OF_NOTE_INDCTR": 0,
@@ -56,7 +56,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 1,
         "FIRE_NUMBER_SHORT": "310",
-        "FETCHED_FROM_ERD": 1784199702
+        "FETCHED_FROM_ERD": 1784202856
       }
     }
   ],
