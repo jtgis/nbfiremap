@@ -7135,6 +7135,39 @@ if (typeof map !== 'undefined' && map && map.on){
           </div>`;
       }
 
+      // Fire size classes: NFDB-style decade classes above 1 ha, subdivided
+      // below 1 ha where most fires land (≤0.1 ha ≈ NWCG Class A, the smallest
+      // recorded size).
+      const FIRE_SIZE_BINS = [
+        { label: '≤ 0.1 ha',       max: 0.1 },
+        { label: '0.1 – 0.5 ha',   max: 0.5 },
+        { label: '0.5 – 1 ha',     max: 1 },
+        { label: '1 – 10 ha',      max: 10 },
+        { label: '10 – 100 ha',    max: 100 },
+        { label: '100 – 1,000 ha', max: 1000 },
+        { label: '> 1,000 ha',     max: Infinity }
+      ];
+      function buildFireSizeChartHTML(items){
+        if (!items.length) return '';
+        const counts = FIRE_SIZE_BINS.map(() => 0);
+        for (const it of items){
+          const ha = sizeOf(it.props || {});
+          let i = FIRE_SIZE_BINS.findIndex(b => ha <= b.max);
+          if (i < 0) i = FIRE_SIZE_BINS.length - 1;
+          counts[i]++;
+        }
+        const maxC = Math.max(1, ...counts);
+        const rows = FIRE_SIZE_BINS.map((b, i) => `
+          <div class="fs-sizebar-row" title="${b.label}: ${counts[i]} fire${counts[i] === 1 ? '' : 's'}">
+            <span class="fs-sizebar-label">${b.label}</span>
+            <span class="fs-sizebar-track"><span class="fs-sizebar-fill" style="width:${Math.round(counts[i] / maxC * 100)}%"></span></span>
+            <span class="fs-sizebar-count">${counts[i]}</span>
+          </div>`).join('');
+        return `
+          <div style="margin:10px 0 2px"><b>Fires by Size</b> <span style="opacity:.7;font-size:12px">(all ${new Date().getFullYear()} fires)</span></div>
+          <div class="fs-sizebar" role="img" aria-label="Bar chart of fire counts by size class">${rows}</div>`;
+      }
+
       function pieCSSSegments(counts){
         const order = [
           ['out of control', 'Out of Control'],
@@ -7366,6 +7399,8 @@ if (typeof map !== 'undefined' && map && map.on){
             <div class="pie" style="background:${pieCSS}"></div>
             <div class="pie-legend">${legendHTML}</div>
           </div>
+
+          ${buildFireSizeChartHTML(items)}
 
           <div style="margin:10px 0 2px"><b>Overview</b></div>
           ${tableHTML}

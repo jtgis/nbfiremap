@@ -463,6 +463,14 @@ body:not(.map-ui-hidden) .leaflet-top.leaflet-left {
     .aqhi-legend-chips{display:flex;gap:2px}
     .aqhi-legend-chip{flex:1;min-width:20px;height:20px;border-radius:5px;display:grid;place-items:center;font:800 11px/1 Inter,system-ui,Arial}
     .aqhi-legend-scale{display:flex;justify-content:space-between;font:700 10px/1.4 Inter,system-ui,Arial;color:var(--muted);margin-top:4px}
+
+    /* Fire size distribution bars (summary panel) */
+    .fs-sizebar{display:flex;flex-direction:column;gap:4px;margin:6px 0 10px}
+    .fs-sizebar-row{display:flex;align-items:center;gap:8px;font-size:12px}
+    .fs-sizebar-label{flex:0 0 100px;text-align:right;color:var(--muted)}
+    .fs-sizebar-track{flex:1;height:14px;background:#e5e7eb;border-radius:4px;overflow:hidden}
+    .fs-sizebar-fill{display:block;height:100%;background:#b45309;border-radius:0 4px 4px 0}
+    .fs-sizebar-count{flex:0 0 36px;font-weight:700;text-align:left}
     .legend-icon{width:18px;height:18px;display:inline-grid;place-items:center}
     .icons-pack{display:inline-flex;gap:6px;vertical-align:middle;justify-content:center;width:26px}
     .legend-badge{width:18px;height:18px;border-radius:999px;display:grid;place-items:center;background:#fff;border:2.5px solid var(--ring)}
