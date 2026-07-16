@@ -7139,7 +7139,7 @@ if (typeof map !== 'undefined' && map && map.on){
       // below 1 ha where most fires land (≤0.1 ha ≈ NWCG Class A, the smallest
       // recorded size).
       const FIRE_SIZE_BINS = [
-        { label: '≤ 0.1 ha',       max: 0.1 },
+        { label: '≤ 0.1 ha',       max: 0.100001 },
         { label: '0.1 – 0.5 ha',   max: 0.5 },
         { label: '0.5 – 1 ha',     max: 1 },
         { label: '1 – 10 ha',      max: 10 },
