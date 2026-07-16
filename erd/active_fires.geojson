@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 75182,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.11460928012916,
-          45.63966936628192
-        ]
-      },
-      "properties": {
-        "OBJECTID": 75182,
-        "FIRE_NAME": "Thomaston",
-        "DEGREES_LAT": 45.63966,
-        "DEGREES_LONG": 67.11461,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
-        "TIME_DETECTED": 1784216700000,
-        "FIRE_STAT_DATE": 1784225100000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "311",
-        "FETCHED_FROM_ERD": 1784234205
-      }
-    },
-    {
-      "type": "Feature",
       "id": 75162,
       "geometry": {
         "type": "Point",
@@ -56,7 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 50,
         "FIRE_NUMBER_SHORT": "310",
-        "FETCHED_FROM_ERD": 1784234205
+        "FETCHED_FROM_ERD": 1784238106
       }
     }
   ],
