@@ -98,9 +98,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // ---- Smoke Configuration ----------------------------------------------
         SMOKE: {
-          HOURS_FORWARD: 24,            // Hours of forecast to show ahead
-          FRAME_MS: 1_200,              // Animation frame duration
-          OPACITY: 0.72                 // Layer opacity
+          HOURS_BACK: 6,                // Hours of recent history to include
+          HOURS_FORWARD: 48,            // Hours of forecast to show ahead
+          FRAME_MS: 500,                // Animation frame duration (playback speed)
+          OPACITY: 0.72,                // Layer opacity
+          MAX_FRAMES: 56,               // Hard cap on preloaded frames
+          PAD: 0.25,                    // Extra fraction of view fetched on each side
+          MAX_PX: 1400,                 // Cap on exported image long edge (px)
+          CONCURRENCY: 4                // Parallel frame downloads
         },
 
         // ---- Crown Land Layer Settings ---------------------------------------
@@ -3443,15 +3448,14 @@ window.addEventListener('DOMContentLoaded', () => {
       const INITIAL_VIEW = CONFIG.INITIAL_VIEW;
 
       // External sources & timing
-      const OPEN_SKY_URL = CONFIG.OPEN_SKY_URL;
-      const PLANES_REFRESH_MS = CONFIG.PLANES_REFRESH_MS;
+      const OPEN_SKY_URL = CONFIG.SERVICES.OPEN_SKY_URL;
+      const PLANES_REFRESH_MS = CONFIG.REFRESH.PLANES;
 
       // NOAA ESRI ImageServer for surface smoke
       const NOAA_SMOKE_URL = CONFIG.SERVICES.NOAA_SMOKE;
-      const SMOKE_HOURS_FORWARD = CONFIG.SMOKE_HOURS_FORWARD;
-      const SMOKE_FRAME_MS = CONFIG.SMOKE_FRAME_MS;
+      const SMOKE_FRAME_MS = CONFIG.SMOKE.FRAME_MS;
 
-      const LIGHTNING_REFRESH_MS = CONFIG.LIGHTNING_REFRESH_MS;
+      const LIGHTNING_REFRESH_MS = CONFIG.REFRESH.LIGHTNING;
 
       // Formatting helpers (most now imported from utils.js)
 
@@ -3688,6 +3692,80 @@ window.addEventListener('DOMContentLoaded', () => {
         DataLoadingManager.refreshVisibleCwfis(cwfis24, cwfis7, map);
       }
       LayerManager.conditionalLoading.setupConditionalHandlers(map, refreshVisibleCwfis);
+
+      // ---- CWFIS Active Fire Points ------------------------------------------
+      // Canada-wide fire location dots — same fire inputs firesmoke.ca plots
+      // alongside its smoke forecast. Source: CWFIS activefires_current WFS.
+      const FIRE_POINT_STAGE = {
+        'OC': ['Out of Control', '#dc2626'],
+        'BH': ['Being Held', '#f97316'],
+        'UC': ['Under Control', '#eab308'],
+        'EX': ['Extinguished', '#3b82f6'],
+        'OUT': ['Extinguished', '#3b82f6']
+      };
+      const firePointsLayer = L.geoJSON(null, {
+        pane: 'viirsPane',
+        pointToLayer: (f, latlng) => {
+          const p = f.properties || {};
+          const ha = Number(p.hectares) || 0;
+          const radius = ha >= 10000 ? 8 : ha >= 1000 ? 7 : ha >= 100 ? 6 : ha >= 10 ? 5 : 4;
+          const stage = FIRE_POINT_STAGE[(p.stage_of_control || '').toUpperCase()] || ['Unknown', '#dc2626'];
+          return L.circleMarker(latlng, {
+            pane: 'viirsPane', // above the smoke raster so dots stay visible
+            radius, color: '#7f1d1d', weight: 1, fillColor: stage[1], fillOpacity: 0.85
+          });
+        },
+        onEachFeature: (feature, layer) => {
+          const p = feature.properties || {};
+          const stage = FIRE_POINT_STAGE[(p.stage_of_control || '').toUpperCase()];
+          const ha = Number(p.hectares);
+          layer.bindPopup(`
+            <div class="popup-header">Fire ${escHTML(p.firename || p.agency?.toUpperCase() || '')}</div>
+            <div class="popup-body">
+              <p><strong>Agency:</strong> ${escHTML((p.agency || 'N/A').toUpperCase())}</p>
+              <p><strong>Status:</strong> ${stage ? stage[0] : escHTML(p.stage_of_control || 'N/A')}</p>
+              <p><strong>Size:</strong> ${Number.isFinite(ha) ? ha.toLocaleString() + ' ha' : 'N/A'}</p>
+              <p><strong>Started:</strong> ${p.startdate ? new Date(p.startdate).toLocaleDateString('en-CA', { year:'numeric', month:'short', day:'numeric' }) : 'N/A'}</p>
+              <p><small>Source: CWFIS © Natural Resources Canada</small></p>
+            </div>
+          `);
+        }
+      });
+      let _firePointsLoadedAt = 0;
+      async function loadFirePoints(force = false) {
+        if (!force && (Date.now() - _firePointsLoadedAt) < 10 * 60 * 1000) return;
+        // WFS 2.0.0 — 1.0.0 can ignore srsName and return native-CRS (metre)
+        // coordinates that plot off-map. Fall back through known layer names.
+        for (const typeName of ['public:activefires_current', 'public:activefires']) {
+          try {
+            const params = new URLSearchParams({
+              service: 'WFS', version: '2.0.0', request: 'GetFeature',
+              typeNames: typeName, srsName: 'EPSG:4326',
+              outputFormat: 'application/json', count: '8000'
+            });
+            const res = await fetch(`${CONFIG.SERVICES.CWFIS_WFS}?${params}`);
+            if (!res.ok) throw new Error(`WFS responded ${res.status}`);
+            const text = await res.text();
+            let data;
+            try { data = JSON.parse(text); }
+            catch { throw new Error(`non-JSON response: ${text.slice(0, 160)}`); }
+            // Drop any feature whose coordinates aren't plausible lon/lat
+            const feats = (data?.features || []).filter(f => {
+              const c = f?.geometry?.coordinates;
+              return Array.isArray(c) && Math.abs(c[0]) <= 180 && Math.abs(c[1]) <= 90;
+            });
+            if (!feats.length) throw new Error('no drawable features returned');
+            firePointsLayer.clearLayers();
+            firePointsLayer.addData({ type: 'FeatureCollection', features: feats });
+            _firePointsLoadedAt = Date.now();
+            return;
+          } catch (e) {
+            console.warn(`Fire points: ${typeName} failed —`, e);
+          }
+        }
+        console.error('Fire points: all CWFIS sources failed; layer left empty.');
+      }
+      map.on('overlayadd', (e) => { if (e.layer === firePointsLayer) loadFirePoints(); });
 
       // ---- Perimeters / Boundary -------------------------------------------
       const perimeterLabelLayers = new Set();
@@ -4168,24 +4246,11 @@ window.addEventListener('DOMContentLoaded', () => {
       map.on('overlayadd',(e)=>{ 
         if(e.layer===lightningLayer) startLightningRefresh(); 
         if(e.layer===sentinel2) sentinel2.bringToFront();
-        if(e.layer===smokeLayer) {
-
-          if (smokeTimesMs.length > 0) {
-            smokeSetIndex(smokeIdx);
-            if (smokePendingAutoplay || smokeShouldAutoplayNextOn) {
-              smokePlay(); 
-              smokePendingAutoplay = false; 
-              smokeShouldAutoplayNextOn = false;
-            }
-          }
-        }
+        if(e.layer===smokeLayer) smokeOnEnabled();
       });
-      map.on('overlayremove',(e)=>{ 
-        if(e.layer===lightningLayer) stopLightningRefresh(); 
-        if(e.layer===smokeLayer) {
-
-          smokePause();
-        }
+      map.on('overlayremove',(e)=>{
+        if(e.layer===lightningLayer) stopLightningRefresh();
+        if(e.layer===smokeLayer) smokeOnDisabled();
         // Stop webcam refresh timer when layer is removed
         if(e.layer===webcamsLayer && window._webcamRefreshTimer) {
           clearInterval(window._webcamRefreshTimer);
@@ -4241,64 +4306,237 @@ const legendURLForLayer = (fullyQualifiedLayer)=>{
     opacity:.7, pane:'perimetersPane', attribution:'CWFIS © Natural Resources Canada'
   });
 
-      // ---- NOAA Smoke timeline ----------------------------------------------
-      // ESRI ImageServer layer with smoke_don_0921 rendering rule
-      const smokeLayer = L.esri.imageMapLayer({
-        url: NOAA_SMOKE_URL,
-        renderingRule: { rasterFunction: 'smoke_don_0921' },
-        opacity: CONFIG.OPACITY.SMOKE,
-        pane: 'smokePane',
-        attribution: 'NOAA',
-        format: 'png32'
-      }); // Off by default — added via layer control
+      // ---- NOAA Smoke timeline (preloaded frame animation) -------------------
+      // firesmoke.ca-style playback: instead of re-querying the ImageServer on
+      // every tick (one network round-trip per frame → lag and flicker), we
+      // export one PNG per forecast hour for the current view, preload them as
+      // stacked image overlays, and animate by swapping opacities client-side.
+      const smokeLayer = L.layerGroup([], { attribution: 'NOAA' });
 
       const smokeControls   = $('#smokeControls');
       const smokePlayBtn    = $('#smokePlay');
       const smokeSlider     = $('#smokeTime');
       const smokeTsLabel    = $('#smokeTimestamp');
       let smokeTimesMs = [], smokeIdx = 0, smokeTimer = null;
-      let smokeShouldAutoplayNextOn = false, smokePendingAutoplay = false;
+      // Autoplay when the layer is switched on (matches firesmoke.ca behaviour)
+      let smokeShouldAutoplayNextOn = true, smokePendingAutoplay = false;
+
+      // Frame cache: one record per timestamp.
+      // state: 'idle' (not requested) | 'loading' | 'done' | 'error'
+      let smokeFrames = [];        // [{ t, overlay, state }]
+      let smokeExtent = null;      // L.LatLngBounds the frames were exported for
+      let smokeZoom = null;        // zoom the frames were exported at
+      let smokeLoadGen = 0;        // generation token — invalidates stale loads
+      let smokeGhost = null;       // last visible overlay kept during a rebuild
 
       const smokeFmt = (ms) => {
         const d = new Date(ms);
         // Format in Atlantic time
-        const atlanticOptions = { 
+        const atlanticOptions = {
           timeZone: 'America/Halifax', // Atlantic timezone
-          month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false 
+          month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false
         };
-        const fullAtlanticOptions = { 
+        const fullAtlanticOptions = {
           timeZone: 'America/Halifax',
-          year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit', hour12:false 
+          year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit', hour12:false
         };
-        
+
         return isMobile()
           ? d.toLocaleString(undefined, atlanticOptions) + ' AT'
           : `${d.toLocaleString(undefined, fullAtlanticOptions)} (Atlantic)`;
       };
 
+      function smokeUpdateLabel(){
+        if (!smokeTimesMs.length) return;
+        const done = smokeFrames.filter(f => f.state === 'done' || f.state === 'error').length;
+        const total = smokeFrames.length;
+        const stamp = smokeFmt(smokeTimesMs[smokeIdx]);
+        smokeTsLabel.textContent = (total && done < total)
+          ? `${stamp} · loading ${done}/${total}`
+          : stamp;
+      }
+
+      // Build the exportImage URL for one timestamp over the given bounds
+      function smokeExportUrl(tMs, bounds, w, h){
+        const nw = L.CRS.EPSG3857.project(bounds.getNorthWest());
+        const se = L.CRS.EPSG3857.project(bounds.getSouthEast());
+        const params = new URLSearchParams({
+          f: 'image',
+          bbox: `${nw.x},${se.y},${se.x},${nw.y}`,
+          bboxSR: '3857', imageSR: '3857',
+          size: `${w},${h}`,
+          format: 'png32', transparent: 'true',
+          renderingRule: JSON.stringify({ rasterFunction: 'smoke_don_0921' }),
+          time: `${tMs},${tMs}`
+        });
+        return `${NOAA_SMOKE_URL}/exportImage?${params}`;
+      }
+
+      // Throttled loader — keeps at most SMOKE.CONCURRENCY downloads in flight,
+      // always fetching the idle frame nearest ahead of the playhead first.
+      function smokePump(){
+        const gen = smokeLoadGen;
+        if (!smokeFrames.length || !map.hasLayer(smokeLayer)) return;
+        let inFlight = smokeFrames.filter(f => f.state === 'loading').length;
+        const n = smokeFrames.length;
+        while (inFlight < (CONFIG.SMOKE.CONCURRENCY || 4)){
+          let idx = -1;
+          for (let k = 0; k < n; k++){
+            const i = (smokeIdx + k) % n;
+            if (smokeFrames[i].state === 'idle'){ idx = i; break; }
+          }
+          if (idx < 0) break;
+          const f = smokeFrames[idx];
+          f.state = 'loading';
+          inFlight++;
+          f.overlay.once('load', () => {
+            if (gen !== smokeLoadGen) return;
+            f.state = 'done';
+            if (idx === smokeIdx) smokeShowFrame(idx);
+            smokeUpdateLabel();
+            smokePump();
+          });
+          f.overlay.once('error', () => {
+            if (gen !== smokeLoadGen) return;
+            f.state = 'error';
+            smokeUpdateLabel();
+            smokePump();
+          });
+          smokeLayer.addLayer(f.overlay); // adding starts the download
+        }
+      }
+
+      // Make frame i the visible one (only called once its image has loaded)
+      function smokeShowFrame(i){
+        if (smokeGhost){ smokeLayer.removeLayer(smokeGhost); smokeGhost = null; }
+        smokeFrames.forEach((f, j) => {
+          if (f.overlay) f.overlay.setOpacity(j === i ? CONFIG.SMOKE.OPACITY : 0);
+        });
+      }
+
+      // (Re)export all frames for the current view. Keeps whatever frame is on
+      // screen visible until its replacement arrives, so pans don't blank out.
+      function smokeRebuildFrames(){
+        if (!smokeTimesMs.length || !map.hasLayer(smokeLayer)) return;
+        smokeLoadGen++;
+
+        // Keep the currently visible frame as a "ghost" during the reload
+        const visible = smokeFrames.find(f => f.state === 'done' && f.overlay?.options && f.overlay._image && parseFloat(f.overlay._image.style.opacity) > 0);
+        if (smokeGhost) smokeLayer.removeLayer(smokeGhost);
+        smokeGhost = visible ? visible.overlay : null;
+        smokeFrames.forEach(f => { if (f.overlay && f.overlay !== smokeGhost) smokeLayer.removeLayer(f.overlay); });
+
+        smokeExtent = map.getBounds().pad(CONFIG.SMOKE.PAD ?? 0.25);
+        smokeZoom = map.getZoom();
+        const size = map.getSize();
+        const factor = 1 + 2 * (CONFIG.SMOKE.PAD ?? 0.25);
+        const maxPx = CONFIG.SMOKE.MAX_PX || 1400;
+        let w = Math.round(size.x * factor), h = Math.round(size.y * factor);
+        const scale = Math.min(1, maxPx / Math.max(w, h));
+        w = Math.max(1, Math.round(w * scale)); h = Math.max(1, Math.round(h * scale));
+
+        smokeFrames = smokeTimesMs.map((t) => ({
+          t,
+          state: 'idle',
+          overlay: L.imageOverlay(smokeExportUrl(t, smokeExtent, w, h), smokeExtent, {
+            pane: 'smokePane', opacity: 0, interactive: false, alt: '',
+            crossOrigin: 'anonymous', className: 'smoke-frame'
+          })
+        }));
+        smokeUpdateLabel();
+        smokePump();
+      }
+
       function smokeSetIndex(i){
         if (!smokeTimesMs.length) return;
         smokeIdx = Math.max(0, Math.min(smokeTimesMs.length - 1, i));
-        const t = smokeTimesMs[smokeIdx];
-        // ESRI ImageServer time filter — bracket the exact hour
-        smokeLayer.setTimeRange(new Date(t), new Date(t));
         smokeSlider.value = String(smokeIdx);
-        smokeTsLabel.textContent = smokeFmt(t);
+        smokeUpdateLabel();
+        const f = smokeFrames[smokeIdx];
+        if (f?.state === 'done') smokeShowFrame(smokeIdx);
+        else smokePump(); // not ready — keep current frame visible, bump priority
+      }
+
+      // Advance the playhead. Skips failed frames; if the next frame is still
+      // downloading, hold the current one (no blank flash) and try next tick.
+      function smokeAdvance(){
+        const n = smokeTimesMs.length;
+        if (!n) return;
+        let next = (smokeIdx + 1) % n, guard = 0;
+        while (smokeFrames[next]?.state === 'error' && guard++ < n) next = (next + 1) % n;
+        if (!smokeFrames[next] || smokeFrames[next].state === 'error') return;
+        if (smokeFrames[next].state !== 'done'){ smokePump(); return; }
+        smokeSetIndex(next);
       }
       function smokePlay(){
         if (smokeTimer || !smokeTimesMs.length) return;
         smokePlayBtn.textContent = '⏸';
-        smokeTimer = setInterval(() => smokeSetIndex((smokeIdx + 1) % smokeTimesMs.length), SMOKE_FRAME_MS);
+        smokeTimer = setInterval(smokeAdvance, SMOKE_FRAME_MS);
       }
       function smokePause(){ smokePlayBtn.textContent = '▶'; if (smokeTimer){ clearInterval(smokeTimer); smokeTimer = null; } }
       smokePlayBtn.addEventListener('click', () => (smokeTimer ? smokePause() : smokePlay()));
       smokeSlider.addEventListener('input', (e) => { smokePause(); smokeSetIndex(parseInt(e.target.value, 10)); });
 
+      // Layer toggled on/off (called from the shared overlayadd/remove handlers)
+      function smokeOnEnabled(){
+        if (!smokeTimesMs.length) return; // initSmokeTimes will pick it up
+        if (!smokeFrames.length || !smokeExtent || smokeZoom !== map.getZoom() || !smokeExtent.contains(map.getBounds())){
+          smokeRebuildFrames();
+        } else {
+          smokePump();
+          smokeSetIndex(smokeIdx);
+        }
+        if (smokePendingAutoplay || smokeShouldAutoplayNextOn){
+          smokePlay();
+          smokePendingAutoplay = false;
+          smokeShouldAutoplayNextOn = false;
+        }
+      }
+      function smokeOnDisabled(){
+        smokePause();
+        smokeShouldAutoplayNextOn = true;
+      }
+
+      // Re-export frames when the user pans/zooms beyond the fetched extent
+      let _smokeMoveT = null;
+      map.on('moveend', () => {
+        if (!map.hasLayer(smokeLayer) || !smokeTimesMs.length) return;
+        clearTimeout(_smokeMoveT);
+        _smokeMoveT = setTimeout(() => {
+          if (!map.hasLayer(smokeLayer)) return;
+          if (smokeExtent && smokeZoom === map.getZoom() && smokeExtent.contains(map.getBounds())) return;
+          smokeRebuildFrames();
+        }, 500);
+      });
+
       const nearestIndex = (arr, target) => { let bestI = 0, bestD = Infinity; for (let i=0;i<arr.length;i++){ const d = Math.abs(arr[i]-target); if(d<bestD){ bestD=d; bestI=i; } } return bestI; };
 
-      
+
 async function initSmokeTimes(){
   const setLabel = (txt) => smokeTsLabel.textContent = txt;
+
+  // Hourly steps from (now - HOURS_BACK) to the forecast horizon, capped
+  const buildWindow = (extentStart, extentEnd) => {
+    const now = Date.now();
+    const hour = 3_600_000;
+    let start = now - (now % hour) - (CONFIG.SMOKE.HOURS_BACK ?? 6) * hour;
+    let end = now - (now % hour) + (CONFIG.SMOKE.HOURS_FORWARD ?? 48) * hour;
+    if (Number.isFinite(extentStart)) start = Math.max(start, extentStart);
+    if (Number.isFinite(extentEnd))   end = Math.min(end, extentEnd);
+    const times = [];
+    for (let t = start; t <= end && times.length < (CONFIG.SMOKE.MAX_FRAMES || 56); t += hour) times.push(t);
+    return times;
+  };
+
+  const applyTimes = (times) => {
+    smokeTimesMs = times;
+    smokeSlider.max = String(times.length - 1);
+    smokeIdx = nearestIndex(times, Date.now());
+    smokeSlider.value = String(smokeIdx);
+    if (map.hasLayer(smokeLayer)) smokeOnEnabled();
+    else setLabel(smokeFmt(times[smokeIdx]));
+  };
+
   try {
     setLabel('Loading…');
 
@@ -4310,48 +4548,12 @@ async function initSmokeTimes(){
     if (!res.ok) throw new Error(`ImageServer responded ${res.status}`);
     const meta = await res.json();
 
-    let times = [];
-    const ti = meta.timeInfo;
-    if (ti && ti.timeExtent && ti.timeExtent.length === 2) {
-      const [startMs, endMs] = ti.timeExtent;
-      // Service provides 1-hour intervals; generate hourly steps
-      for (let t = startMs; t <= endMs; t += 3_600_000) times.push(t);
-    }
-
-    // Fallback: 48 hourly slots centred on now
-    if (!times.length) {
-      const now = Date.now();
-      const base = now - (now % 3_600_000) - 24 * 3_600_000;
-      for (let i = 0; i < 48; i++) times.push(base + i * 3_600_000);
-    }
-
-    smokeTimesMs = times;
-    smokeSlider.max = String(times.length - 1);
-    smokeIdx = nearestIndex(times, Date.now());
-    smokeSlider.value = String(smokeIdx);
-
-    if (map.hasLayer(smokeLayer)) {
-      smokeSetIndex(smokeIdx);
-      if (smokePendingAutoplay || smokeShouldAutoplayNextOn) {
-        smokePlay();
-        smokePendingAutoplay = false;
-        smokeShouldAutoplayNextOn = false;
-      }
-    } else {
-      setLabel(smokeFmt(times[smokeIdx]));
-    }
+    const te = meta.timeInfo?.timeExtent;
+    const times = (te && te.length === 2) ? buildWindow(te[0], te[1]) : buildWindow();
+    applyTimes(times.length ? times : buildWindow());
   } catch (e) {
     console.error('Smoke timeline init failed:', e);
-    // Emergency fallback — 48 hourly slots centred on now
-    const now = Date.now();
-    const base = now - (now % 3_600_000) - 24 * 3_600_000;
-    const fallback = [];
-    for (let i = 0; i < 48; i++) fallback.push(base + i * 3_600_000);
-    smokeTimesMs = fallback;
-    smokeSlider.max = String(fallback.length - 1);
-    smokeIdx = nearestIndex(fallback, now);
-    smokeSlider.value = String(smokeIdx);
-    setLabel(smokeFmt(fallback[smokeIdx]));
+    applyTimes(buildWindow()); // service metadata unavailable — assume the window
   }
 }
 initSmokeTimes();
@@ -4389,8 +4591,7 @@ initSmokeTimes();
         const rect = legend.getBoundingClientRect();
         const topY = Math.max(0, rect.top);
 
-        // OPTIONAL #4: treat smoke as "external" only if not inline
-        const smokeVisible = (getComputedStyle(smokeControls).display !== 'none') && !smokeControls.classList.contains('inline');
+        const smokeVisible = (getComputedStyle(smokeControls).display !== 'none');
         const smokeH = smokeVisible ? (smokeControls.getBoundingClientRect().height || 0) : 0;
 
         const safeB = getSafeBottom();
@@ -4408,26 +4609,30 @@ initSmokeTimes();
       function onGlobalReflow(){
         requestAnimationFrame(() => {
           sizeLegend();
-          const t = smokeTimesMs[smokeIdx];
-          if (smokeTimesMs.length && t != null) smokeTsLabel.textContent = smokeFmt(t);
+          if (smokeTimesMs.length) smokeUpdateLabel();
         });
       }
       const updateBottomStackAndLegend = ()=>{
         const mobile = isMobile();
         const root = D.documentElement;
+        // Dock the smoke timeline just above the bottom action panel:
+        // measure from the viewport bottom to the panel's top edge
+        const bottomPanel = D.getElementById('bottomPanel');
+        const vpH = (window.visualViewport?.height) || window.innerHeight || 0;
+        const bpTop = bottomPanel ? bottomPanel.getBoundingClientRect().top : vpH;
+        const bpClearance = Math.max(0, Math.ceil(vpH - bpTop));
         if (!mobile){
           root.style.setProperty('--fs-bottom', '86px');
-          root.style.setProperty('--smoke-bottom', '28px');
+          root.style.setProperty('--smoke-bottom', (bpClearance + 12) + 'px');
           root.style.setProperty('--legend-bottom-reserve', '180px');
           sizeLegend(); return;
         }
 
-        // OPTIONAL #4: ignore inline smoke when reserving bottom
-        const smokeVisible = (getComputedStyle(smokeControls).display !== 'none') && !smokeControls.classList.contains('inline');
+        const smokeVisible = (getComputedStyle(smokeControls).display !== 'none');
         const smokeH = smokeVisible ? (smokeControls.getBoundingClientRect().height || 0) : 0;
         const safeB = getSafeBottom();
 
-        const smokeBottom = FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP;
+        const smokeBottom = bpClearance + FOOTER_SMOKE_GAP;
         root.style.setProperty('--smoke-bottom', smokeBottom + 'px');
         root.style.setProperty('--fs-bottom', (FOOTER_SMOKE_GAP + safeB + FOOTER_SMOKE_GAP) + 'px');
 
@@ -5172,6 +5377,7 @@ if (typeof map !== 'undefined' && map && map.on){
         'Active Fire Perimeters': activeFirePerimeters,
         'CWFIS Hotspots (24h)': cwfis24,
         'CWFIS Hotspots (7d)': cwfis7,
+        'Fire Points (Canada)': firePointsLayer,
         'NB Burn Bans': nbBurnBans,
         
         // Fire Weather
@@ -5224,6 +5430,7 @@ if (typeof map !== 'undefined' && map && map.on){
           'Active Fire Perimeters':   'fa-solid fa-vector-square',
           'CWFIS Hotspots (24h)':     'fa-solid fa-location-dot',
           'CWFIS Hotspots (7d)':      'fa-solid fa-location-dot',
+          'Fire Points (Canada)':     'fa-solid fa-fire-flame-simple',
           'NB Burn Bans':             'fa-solid fa-ban',
           'Fire Risk':                'fa-solid fa-gauge-high',
           'Fire Weather':             'fa-solid fa-wind',
@@ -5245,7 +5452,7 @@ if (typeof map !== 'undefined' && map && map.on){
         };
 
         const groups = [
-          { title: 'Fire & Emergency', icon: 'fa-solid fa-fire-flame-curved', items: ['Fire Perimeters', 'Active Fire Perimeters', 'CWFIS Hotspots (24h)', 'CWFIS Hotspots (7d)', 'NB Burn Bans'] },
+          { title: 'Fire & Emergency', icon: 'fa-solid fa-fire-flame-curved', items: ['Fire Perimeters', 'Active Fire Perimeters', 'CWFIS Hotspots (24h)', 'CWFIS Hotspots (7d)', 'Fire Points (Canada)', 'NB Burn Bans'] },
           { title: 'Fire Weather', icon: 'fa-solid fa-temperature-three-quarters', items: ['Fire Risk', 'Fire Weather', 'Fire Behavior', 'Smoke'] },
           { title: 'Weather & Environment', icon: 'fa-solid fa-cloud-sun', items: ['Weather Stations', 'Weather Radar', 'Lightning', 'AQHI Risk'] },
           { title: 'Transportation', icon: 'fa-solid fa-road', items: ['Road Events', 'Winter Roads', 'Ferries', 'Road Webcams', 'Aircraft'] },
@@ -5554,33 +5761,35 @@ if (typeof map !== 'undefined' && map && map.on){
 
       // ---- New UI Button Handlers -------------------------------------------
       function setupNewUIButtons() {
-        // Air Quality (Smoke + AQHI) toggle button
+        // Air Quality (Smoke + AQHI + Fire Points) toggle button — the full
+        // smoke picture in one tap, like firesmoke.ca
         const airQualityBtn = $('#airQualityBtn');
         if (airQualityBtn) {
+          const airLayers = [
+            [smokeLayer, 'Smoke'],
+            [aqhiLayer, 'AQHI Risk'],
+            [firePointsLayer, 'Fire Points (Canada)']
+          ];
           function updateAirQualityBtn() {
-            const on = map.hasLayer(smokeLayer) || map.hasLayer(aqhiLayer);
+            const on = airLayers.some(([lyr]) => map.hasLayer(lyr));
             airQualityBtn.setAttribute('aria-pressed', String(on));
-            airQualityBtn.title = on ? 'Hide Smoke & Air Quality layers' : 'Show Smoke & Air Quality layers';
+            airQualityBtn.title = on ? 'Hide smoke, air quality & fire points' : 'Show smoke, air quality & fire points';
           }
           airQualityBtn.addEventListener('click', () => {
-            const on = map.hasLayer(smokeLayer) || map.hasLayer(aqhiLayer);
+            const on = airLayers.some(([lyr]) => map.hasLayer(lyr));
             // Prevent Leaflet from calling _update() (which destroys custom groups);
             // overlayadd/overlayremove still fires so lazy-loading keeps working.
             layerControl._handlingClick = true;
-            if (on) {
-              if (map.hasLayer(smokeLayer))  map.removeLayer(smokeLayer);
-              if (map.hasLayer(aqhiLayer))   map.removeLayer(aqhiLayer);
-            } else {
-              map.addLayer(smokeLayer);
-              map.addLayer(aqhiLayer);
-            }
+            airLayers.forEach(([lyr]) => {
+              if (on) { if (map.hasLayer(lyr)) map.removeLayer(lyr); }
+              else if (!map.hasLayer(lyr)) map.addLayer(lyr);
+            });
             layerControl._handlingClick = false;
-            syncLayerCheckbox('Smoke', !on);
-            syncLayerCheckbox('AQHI Risk', !on);
+            airLayers.forEach(([, name]) => syncLayerCheckbox(name, !on));
             updateAirQualityBtn();
           });
           map.on('overlayadd overlayremove', (e) => {
-            if (e.layer === smokeLayer || e.layer === aqhiLayer) updateAirQualityBtn();
+            if (airLayers.some(([lyr]) => e.layer === lyr)) updateAirQualityBtn();
           });
           updateAirQualityBtn();
         }
@@ -5839,9 +6048,20 @@ if (typeof map !== 'undefined' && map && map.on){
             imgLayers.sort((a, b) =>
               (paneZIndex[a.candidate.options?.pane] ?? 500) - (paneZIndex[b.candidate.options?.pane] ?? 500)
             );
-            for(const { img, effectiveOpacity } of imgLayers){
+            for(const { candidate, img, effectiveOpacity } of imgLayers){
               ctx.globalAlpha = effectiveOpacity;
-              try { ctx.drawImage(img, 0, 0, mapSize.x, mapSize.y); } catch(e){}
+              // Plain image overlays (e.g. preloaded smoke frames) cover their own
+              // bounds, which may extend beyond the viewport — draw them there.
+              let dx = 0, dy = 0, dw = mapSize.x, dh = mapSize.y;
+              if(candidate instanceof L.ImageOverlay && candidate.getBounds){
+                try {
+                  const b = candidate.getBounds();
+                  const nw = map.latLngToContainerPoint(b.getNorthWest());
+                  const se = map.latLngToContainerPoint(b.getSouthEast());
+                  dx = nw.x; dy = nw.y; dw = se.x - nw.x; dh = se.y - nw.y;
+                } catch(e){}
+              }
+              try { ctx.drawImage(img, dx, dy, dw, dh); } catch(e){}
               ctx.globalAlpha = 1;
             }
 
@@ -7460,8 +7680,11 @@ doc.autoTable({
   // Layers list (match your actual overlays + source links)
   const layersHTML = `
     <ul>
-      <li><b>Smoke (Surface)</b> — NOAA surface smoke forecast. When enabled, a timeline appears under the layer to scrub/play. Source:
+      <li><b>Smoke (Surface)</b> — NOAA surface smoke forecast. When enabled, an animated timeline appears at the bottom of the map — frames preload for smooth playback; scrub or press ▶ to play. Source:
         <a href="https://www.arl.noaa.gov/hysplit/smoke-forecasting/" target="_blank" rel="noopener">NOAA</a>.
+      </li>
+      <li><b>Fire Points (Canada)</b> — Canada-wide active fire locations, sized by fire area. Source:
+        <a href="https://cwfis.cfs.nrcan.gc.ca/" target="_blank" rel="noopener">CWFIS © Natural Resources Canada</a>.
       </li>
       <li><b>CWFIS Hotspots — Last 24 hours</b> — Thermal anomalies (VIIRS/MODIS). Source:
         <a href="https://cwfis.cfs.nrcan.gc.ca/ha/hotspots" target="_blank" rel="noopener">CWFIS</a>,
@@ -7555,7 +7778,7 @@ doc.autoTable({
     <p><strong>⚠️ Important:</strong> <em>This is an unofficial viewer created for educational and informational purposes. For official emergency information, always consult <a href="https://www.gnb.ca/en/topic/laws-safety/emergency-preparedness-alerts/fire-watch.html" target="_blank" rel="noopener">GNB Fire Watch</a>.</em></p>
         
     <p>🖱️ <strong>Navigation:</strong> Drag to move, scroll or use <b>+</b>/<b>−</b> to zoom. The <b>🔗 Overview</b> panel lets you toggle layers.</p>
-    <p>⏰ <strong>Time Controls:</strong> Time-series layers (Smoke, Fire Risk, Fire Weather, Fire Behavior) show inline controls under their row: use ▶ play, the slider, or drag the handle to change the date.</p>
+    <p>⏰ <strong>Time Controls:</strong> The Smoke layer shows an animated timeline at the bottom of the map; Fire Risk, Fire Weather, and Fire Behavior show inline controls under their row. Use ▶ play or the slider to change the time.</p>
     <p>📍 <strong>Nearby Fires:</strong> Click a city/town label or your location to list active fires within 30&nbsp;km, with distance lines; click any entry to zoom to that fire.</p>
     <p>📊 <strong>Fire Summary:</strong> Use the <b>🔥 Summary</b> button in the bottom panel to view current fire statistics for New Brunswick, including total active fires, area burned, and fires by status. The summary updates automatically with the latest data.</p>
     
@@ -7721,7 +7944,10 @@ doc.autoTable({
         });
       }
 
-      // ---- Inline smoke controls mount (NEW) --------------------------------
+      // ---- Smoke timeline visibility ----------------------------------------
+      // The timeline bar lives on the map pane (docked above the bottom panel,
+      // firesmoke.ca-style) and simply shows/hides with the layer. Frame
+      // loading and playback are handled by smokeOnEnabled/smokeOnDisabled.
       function findOverlayLabelRow(name){
         const rows = document.querySelectorAll('.leaflet-control-layers-overlays label');
         for (const row of rows){
@@ -7730,48 +7956,29 @@ doc.autoTable({
         }
         return null;
       }
-      function mountSmokeControlsInline(){
-        const row = findOverlayLabelRow('Smoke');
-        if (!row) return;
-        smokeControls.classList.add('inline');
-        if (smokeControls.parentElement !== row.parentElement || smokeControls.previousElementSibling !== row){
-          row.after(smokeControls);
-        }
-      }
 
-      // NEW handlers that show/hide the inline controls under the layer row
       map.on('overlayadd', (e) => {
         if (e.layer === smokeLayer) {
-          mountSmokeControlsInline();
           smokeControls.style.display = 'flex';
-          smokeTimesMs.length ? smokeSetIndex(smokeIdx) : (smokeTsLabel.textContent = 'Loading…');
-          smokeLayer.bringToBack();
-          if (smokeShouldAutoplayNextOn) {
-            if (smokeTimesMs.length) { smokePlay(); smokeShouldAutoplayNextOn = false; }
-            else { smokePendingAutoplay = true; }
-          }
-          requestAnimationFrame(sizeLegend);
+          if (!smokeTimesMs.length) smokeTsLabel.textContent = 'Loading…';
+          requestAnimationFrame(updateBottomStackAndLegend);
         }
       });
       map.on('overlayremove', (e) => {
         if (e.layer === smokeLayer) {
-          smokePause();
           smokeControls.style.display = 'none';
-          smokeShouldAutoplayNextOn = true;
-          smokePendingAutoplay = false;
-          requestAnimationFrame(sizeLegend);
+          requestAnimationFrame(updateBottomStackAndLegend);
         }
       });
 
-      // If Smoke starts enabled, mount & show inline now
+      // If Smoke starts enabled, show the bar now
       if (map.hasLayer(smokeLayer)) {
-        mountSmokeControlsInline();
         smokeControls.style.display = 'flex';
         smokeTsLabel.textContent = smokeTimesMs.length ? smokeFmt(smokeTimesMs[smokeIdx]) : 'Loading…';
-        requestAnimationFrame(sizeLegend);
+        requestAnimationFrame(updateBottomStackAndLegend);
       }
 
-      
+
   
       // === Inline legend for "Winter Road Conditions" ==============================
       const WINTER_LABEL = 'Winter Road Conditions';
