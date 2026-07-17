@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 75202,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.5142794638151,
-          46.51997950883207
-        ]
-      },
-      "properties": {
-        "OBJECTID": 75202,
-        "FIRE_NAME": "Barbed Wire",
-        "DEGREES_LAT": 46.51997,
-        "DEGREES_LONG": 67.51428,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1784231040000,
-        "FIRE_STAT_DATE": 1784242200000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "312",
-        "FETCHED_FROM_ERD": 1784288897
-      }
-    },
-    {
-      "type": "Feature",
       "id": 75162,
       "geometry": {
         "type": "Point",
@@ -56,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 60,
         "FIRE_NUMBER_SHORT": "310",
-        "FETCHED_FROM_ERD": 1784288897
+        "FETCHED_FROM_ERD": 1784292274
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.5142794638151,
+          46.51997950883207
+        ]
+      },
+      "properties": {
+        "OBJECTID": 75202,
+        "FIRE_NAME": "Barbed Wire",
+        "DEGREES_LAT": 46.51997,
+        "DEGREES_LONG": 67.51428,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1784231040000,
+        "FIRE_STAT_DATE": 1784290620000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "312",
+        "FETCHED_FROM_ERD": 1784292274
       }
     }
   ],
