@@ -21,13 +21,13 @@
         "FIRE_STAT_DESC_F": "Hors contrôle",
         "FIRE_SIZE": 10,
         "TIME_DETECTED": 1784823900000,
-        "FIRE_STAT_DATE": 1784847720000,
+        "FIRE_STAT_DATE": 1784893500000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 10,
         "FIRE_NUMBER_SHORT": "318",
-        "FETCHED_FROM_ERD": 1784890928
+        "FETCHED_FROM_ERD": 1784894132
       }
     }
   ],
