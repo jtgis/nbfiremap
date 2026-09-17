@@ -27,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "346",
-        "FETCHED_FROM_ERD": 1789665940
+        "FETCHED_FROM_ERD": 1789670097
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75982,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0405089286885,
+          46.0604194650972
+        ]
+      },
+      "properties": {
+        "OBJECTID": 75982,
+        "FIRE_NAME": "Avon Upton",
+        "DEGREES_LAT": 46.06041,
+        "DEGREES_LONG": 66.04051,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1789667700000,
+        "FIRE_STAT_DATE": 1789670097000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 0,
+        "FIRE_NUMBER_SHORT": "353",
+        "FETCHED_FROM_ERD": 1789670097
       }
     }
   ],
