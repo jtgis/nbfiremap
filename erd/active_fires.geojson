@@ -21,13 +21,13 @@
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1789667400000,
-        "FIRE_STAT_DATE": 1789731420000,
+        "FIRE_STAT_DATE": 1789823520000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "353",
-        "FETCHED_FROM_ERD": 1789821371
+        "FETCHED_FROM_ERD": 1789824382
       }
     },
     {
@@ -56,7 +56,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "346",
-        "FETCHED_FROM_ERD": 1789821371
+        "FETCHED_FROM_ERD": 1789824382
       }
     }
   ],
