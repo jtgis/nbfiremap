@@ -1,6 +1,36 @@
 {
   "type": "FeatureCollection",
-  "features": [],
+  "features": [
+    {
+      "type": "Feature",
+      "id": 76042,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.18267895085329,
+          45.47193935895495
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76042,
+        "FIRE_NAME": "Britian Road",
+        "DEGREES_LAT": 45.47193,
+        "DEGREES_LONG": 66.18267999999999,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1790186400000,
+        "FIRE_STAT_DATE": 1790189100000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "356",
+        "FETCHED_FROM_ERD": 1790191628
+      }
+    }
+  ],
   "crs": {
     "type": "name",
     "properties": {
