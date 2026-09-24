@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 76062,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71102948976262,
-          45.7325293668331
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76062,
-        "FIRE_NAME": "Spednic",
-        "DEGREES_LAT": 45.73252,
-        "DEGREES_LONG": 67.71103,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 8.399999618530273,
-        "TIME_DETECTED": 1790186880000,
-        "FIRE_STAT_DATE": 1790278260000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "357",
-        "FETCHED_FROM_ERD": 1790281914
-      }
-    },
-    {
-      "type": "Feature",
       "id": 76102,
       "geometry": {
         "type": "Point",
@@ -56,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "359",
-        "FETCHED_FROM_ERD": 1790281914
+        "FETCHED_FROM_ERD": 1790285247
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76062,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71102948976262,
+          45.7325293668331
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76062,
+        "FIRE_NAME": "Spednic",
+        "DEGREES_LAT": 45.73252,
+        "DEGREES_LONG": 67.71103,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 8.399999618530273,
+        "TIME_DETECTED": 1790186880000,
+        "FIRE_STAT_DATE": 1790278260000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "357",
+        "FETCHED_FROM_ERD": 1790285247
       }
     }
   ],
