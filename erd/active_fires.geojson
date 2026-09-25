@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 76122,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.82002919584586,
-          45.99028943487228
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76122,
-        "FIRE_NAME": "Sugar Island",
-        "DEGREES_LAT": 45.99028,
-        "DEGREES_LONG": 66.82003,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1790279280000,
-        "FIRE_STAT_DATE": 1790336880000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "360",
-        "FETCHED_FROM_ERD": 1790340103
-      }
-    },
-    {
-      "type": "Feature",
       "id": 76062,
       "geometry": {
         "type": "Point",
@@ -56,7 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "357",
-        "FETCHED_FROM_ERD": 1790340103
+        "FETCHED_FROM_ERD": 1790343004
       }
     }
   ],
