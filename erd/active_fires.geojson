@@ -1,6 +1,36 @@
 {
   "type": "FeatureCollection",
-  "features": [],
+  "features": [
+    {
+      "type": "Feature",
+      "id": 76202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.51682906937134,
+          45.54703936398204
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76202,
+        "FIRE_NAME": "Eastwood",
+        "DEGREES_LAT": 45.54703,
+        "DEGREES_LONG": 66.51683,
+        "FIRE_STAT_ID": 1,
+        "FIRE_STAT_DESC_E": "Out of Control",
+        "FIRE_STAT_DESC_F": "Hors contrôle",
+        "FIRE_SIZE": 0.30000001192092896,
+        "TIME_DETECTED": 1791661500000,
+        "FIRE_STAT_DATE": 1791672300000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 70,
+        "FIRE_NUMBER_SHORT": "364",
+        "FETCHED_FROM_ERD": 1791683876
+      }
+    }
+  ],
   "crs": {
     "type": "name",
     "properties": {
