@@ -19,44 +19,15 @@
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.20000000298023224,
+        "FIRE_SIZE": 0.10000000149011612,
         "TIME_DETECTED": 1792846800000,
-        "FIRE_STAT_DATE": 1792864800000,
+        "FIRE_STAT_DATE": 1792944000000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "369",
-        "FETCHED_FROM_ERD": 1792928354
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 76282,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.6909691473493,
-          45.906999423300995
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76282,
-        "FIRE_NAME": "Berk",
-        "DEGREES_LAT": 45.90699,
-        "DEGREES_LONG": 66.69097,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1792851600000,
-        "FIRE_STAT_DATE": 1792855800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "368",
-        "FETCHED_FROM_ERD": 1792928354
+        "FETCHED_FROM_ERD": 1792946098
       }
     }
   ],
