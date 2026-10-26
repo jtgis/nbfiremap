@@ -27,7 +27,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "371",
-        "FETCHED_FROM_ERD": 1793020679
+        "FETCHED_FROM_ERD": 1793042591
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76362,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.25999902751747,
+          46.52312954027509
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76362,
+        "FIRE_NAME": "Island",
+        "DEGREES_LAT": 46.52312,
+        "DEGREES_LONG": 66.26,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1793022300000,
+        "FIRE_STAT_DATE": 1793038320000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "373",
+        "FETCHED_FROM_ERD": 1793042591
       }
     },
     {
@@ -56,7 +85,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "369",
-        "FETCHED_FROM_ERD": 1793020679
+        "FETCHED_FROM_ERD": 1793042591
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76342,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.00707892515311,
+          46.21237949249145
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76342,
+        "FIRE_NAME": "North Forks",
+        "DEGREES_LAT": 46.21237,
+        "DEGREES_LONG": 66.00708,
+        "FIRE_STAT_ID": 3,
+        "FIRE_STAT_DESC_E": "Under Control",
+        "FIRE_STAT_DESC_F": "Maîtrisé ",
+        "FIRE_SIZE": 2,
+        "TIME_DETECTED": 1793028600000,
+        "FIRE_STAT_DATE": 1793029980000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "372",
+        "FETCHED_FROM_ERD": 1793042591
       }
     }
   ],
