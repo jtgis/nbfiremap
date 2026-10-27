@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 76342,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.00707892515311,
-          46.21237949249145
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76342,
-        "FIRE_NAME": "North Forks",
-        "DEGREES_LAT": 46.21237,
-        "DEGREES_LONG": 66.00708,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.899999976158142,
-        "TIME_DETECTED": 1793017800000,
-        "FIRE_STAT_DATE": 1793041200000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "372",
-        "FETCHED_FROM_ERD": 1793097534
-      }
-    },
-    {
-      "type": "Feature",
       "id": 76362,
       "geometry": {
         "type": "Point",
@@ -56,36 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "373",
-        "FETCHED_FROM_ERD": 1793097534
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 76283,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.57476947984608,
-          46.42470949102578
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76283,
-        "FIRE_NAME": "Oakland",
-        "DEGREES_LAT": 46.4247,
-        "DEGREES_LONG": 67.57477,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1792846800000,
-        "FIRE_STAT_DATE": 1793014200000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "369",
-        "FETCHED_FROM_ERD": 1793097534
+        "FETCHED_FROM_ERD": 1793119849
       }
     }
   ],
