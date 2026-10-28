@@ -27,7 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "372",
-        "FETCHED_FROM_ERD": 1793203627
+        "FETCHED_FROM_ERD": 1793221703
       }
     },
     {
@@ -56,7 +56,36 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "374",
-        "FETCHED_FROM_ERD": 1793203627
+        "FETCHED_FROM_ERD": 1793221703
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76422,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.52252918476825,
+          47.77924974604847
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76422,
+        "FIRE_NAME": "Princer Trail",
+        "DEGREES_LAT": 47.779239999999994,
+        "DEGREES_LONG": 66.52253,
+        "FIRE_STAT_ID": 2,
+        "FIRE_STAT_DESC_E": "Contained",
+        "FIRE_STAT_DESC_F": "Contenu ",
+        "FIRE_SIZE": 0.10000000149011612,
+        "TIME_DETECTED": 1793205300000,
+        "FIRE_STAT_DATE": 1793213520000,
+        "FIRE_OF_NOTE_INDCTR": 0,
+        "FIRE_NOTE_ENG": "No",
+        "FIRE_NOTE_FR": "Non",
+        "PERCENT_CONTAINED": 100,
+        "FIRE_NUMBER_SHORT": "376",
+        "FETCHED_FROM_ERD": 1793221703
       }
     },
     {
@@ -77,7 +106,7 @@
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
+        "FIRE_SIZE": 0.30000001192092896,
         "TIME_DETECTED": 1793185800000,
         "FIRE_STAT_DATE": 1793190600000,
         "FIRE_OF_NOTE_INDCTR": 0,
@@ -85,7 +114,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "375",
-        "FETCHED_FROM_ERD": 1793203627
+        "FETCHED_FROM_ERD": 1793221703
       }
     }
   ],
