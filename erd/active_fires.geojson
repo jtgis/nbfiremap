@@ -3,35 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": 76342,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.00707892515311,
-          46.21237949249145
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76342,
-        "FIRE_NAME": "North Forks",
-        "DEGREES_LAT": 46.21237,
-        "DEGREES_LONG": 66.00708,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 1.899999976158142,
-        "TIME_DETECTED": 1793017800000,
-        "FIRE_STAT_DATE": 1793188860000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "372",
-        "FETCHED_FROM_ERD": 1793257825
-      }
-    },
-    {
-      "type": "Feature",
       "id": 76382,
       "geometry": {
         "type": "Point",
@@ -56,65 +27,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "374",
-        "FETCHED_FROM_ERD": 1793257825
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 76422,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.52252918476825,
-          47.77924974604847
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76422,
-        "FIRE_NAME": "Princer Trail",
-        "DEGREES_LAT": 47.779239999999994,
-        "DEGREES_LONG": 66.52253,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1793205300000,
-        "FIRE_STAT_DATE": 1793213520000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "376",
-        "FETCHED_FROM_ERD": 1793257825
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 76402,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.59931881941844,
-          47.00027963678869
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76402,
-        "FIRE_NAME": "Anderson Powerline",
-        "DEGREES_LAT": 47.00027,
-        "DEGREES_LONG": 65.59931999999999,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.30000001192092896,
-        "TIME_DETECTED": 1793185800000,
-        "FIRE_STAT_DATE": 1793190600000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "375",
-        "FETCHED_FROM_ERD": 1793257825
+        "FETCHED_FROM_ERD": 1793283897
       }
     },
     {
@@ -132,18 +45,18 @@
         "FIRE_NAME": "KouchiPile",
         "DEGREES_LAT": 46.783139999999996,
         "DEGREES_LONG": 65.05290000000001,
-        "FIRE_STAT_ID": 1,
-        "FIRE_STAT_DESC_E": "Out of Control",
-        "FIRE_STAT_DESC_F": "Hors contrôle",
-        "FIRE_SIZE": 0.10000000149011612,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 0.4000000059604645,
         "TIME_DETECTED": 1793214000000,
-        "FIRE_STAT_DATE": 1793257825000,
+        "FIRE_STAT_DATE": 1793278800000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 0,
+        "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "377",
-        "FETCHED_FROM_ERD": 1793257825
+        "FETCHED_FROM_ERD": 1793283897
       }
     }
   ],
