@@ -3,31 +3,31 @@
   "features": [
     {
       "type": "Feature",
-      "id": 76542,
+      "id": 76522,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -65.68274884262803,
-          46.8560696105305
+          -66.19574907480853,
+          47.890309772622
         ]
       },
       "properties": {
-        "OBJECTID": 76542,
-        "FIRE_NAME": "Mckinley ville",
-        "DEGREES_LAT": 46.85606,
-        "DEGREES_LONG": 65.68275,
-        "FIRE_STAT_ID": 2,
-        "FIRE_STAT_DESC_E": "Contained",
-        "FIRE_STAT_DESC_F": "Contenu ",
-        "FIRE_SIZE": 0.5,
-        "TIME_DETECTED": 1793385000000,
-        "FIRE_STAT_DATE": 1793388840000,
+        "OBJECTID": 76522,
+        "FIRE_NAME": "Dicky Brook",
+        "DEGREES_LAT": 47.8903,
+        "DEGREES_LONG": 66.19575,
+        "FIRE_STAT_ID": 4,
+        "FIRE_STAT_DESC_E": "Being Patrolled",
+        "FIRE_STAT_DESC_F": "Patrouillé ",
+        "FIRE_SIZE": 10,
+        "TIME_DETECTED": 1793357640000,
+        "FIRE_STAT_DATE": 1793441280000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "384",
-        "FETCHED_FROM_ERD": 1793439832
+        "FIRE_NUMBER_SHORT": "383",
+        "FETCHED_FROM_ERD": 1793461560
       }
     },
     {
@@ -56,65 +56,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "374",
-        "FETCHED_FROM_ERD": 1793439832
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 76522,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.19574907480853,
-          47.890309772622
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76522,
-        "FIRE_NAME": "Dicky Brook",
-        "DEGREES_LAT": 47.8903,
-        "DEGREES_LONG": 66.19575,
-        "FIRE_STAT_ID": 3,
-        "FIRE_STAT_DESC_E": "Under Control",
-        "FIRE_STAT_DESC_F": "Maîtrisé ",
-        "FIRE_SIZE": 10,
-        "TIME_DETECTED": 1793357640000,
-        "FIRE_STAT_DATE": 1793387220000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "383",
-        "FETCHED_FROM_ERD": 1793439832
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 76442,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.13793893513589,
-          45.467239358874
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76442,
-        "FIRE_NAME": "Ridgeview",
-        "DEGREES_LAT": 45.46723,
-        "DEGREES_LONG": 66.13794,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.4000000059604645,
-        "TIME_DETECTED": 1793292360000,
-        "FIRE_STAT_DATE": 1793298060000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "378",
-        "FETCHED_FROM_ERD": 1793439832
+        "FETCHED_FROM_ERD": 1793461560
       }
     },
     {
@@ -143,7 +85,7 @@
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
         "FIRE_NUMBER_SHORT": "382",
-        "FETCHED_FROM_ERD": 1793439832
+        "FETCHED_FROM_ERD": 1793461560
       }
     }
   ],
