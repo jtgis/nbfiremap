@@ -3,31 +3,31 @@
   "features": [
     {
       "type": "Feature",
-      "id": 76643,
+      "id": 76662,
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.07807900483267,
-          47.34737968502529
+          -65.81174882552176,
+          45.529219377040114
         ]
       },
       "properties": {
-        "OBJECTID": 76643,
-        "FIRE_NAME": "Pulp Truck",
-        "DEGREES_LAT": 47.34737,
-        "DEGREES_LONG": 66.07808,
+        "OBJECTID": 76662,
+        "FIRE_NAME": "Villa Drive",
+        "DEGREES_LAT": 45.52921,
+        "DEGREES_LONG": 65.81175,
         "FIRE_STAT_ID": 4,
         "FIRE_STAT_DESC_E": "Being Patrolled",
         "FIRE_STAT_DESC_F": "Patrouillé ",
         "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1793707800000,
-        "FIRE_STAT_DATE": 1793715000000,
+        "TIME_DETECTED": 1793825220000,
+        "FIRE_STAT_DATE": 1793880720000,
         "FIRE_OF_NOTE_INDCTR": 0,
         "FIRE_NOTE_ENG": "No",
         "FIRE_NOTE_FR": "Non",
         "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "390",
-        "FETCHED_FROM_ERD": 1793876500
+        "FIRE_NUMBER_SHORT": "392",
+        "FETCHED_FROM_ERD": 1793904437
       }
     }
   ],
