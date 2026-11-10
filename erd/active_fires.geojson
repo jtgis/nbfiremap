@@ -1,36 +1,6 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "id": 76682,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.16950894613116,
-          45.480549360656084
-        ]
-      },
-      "properties": {
-        "OBJECTID": 76682,
-        "FIRE_NAME": "Final Fire",
-        "DEGREES_LAT": 45.48054,
-        "DEGREES_LONG": 66.16951,
-        "FIRE_STAT_ID": 4,
-        "FIRE_STAT_DESC_E": "Being Patrolled",
-        "FIRE_STAT_DESC_F": "Patrouillé ",
-        "FIRE_SIZE": 0.10000000149011612,
-        "TIME_DETECTED": 1794331800000,
-        "FIRE_STAT_DATE": 1794331800000,
-        "FIRE_OF_NOTE_INDCTR": 0,
-        "FIRE_NOTE_ENG": "No",
-        "FIRE_NOTE_FR": "Non",
-        "PERCENT_CONTAINED": 100,
-        "FIRE_NUMBER_SHORT": "393",
-        "FETCHED_FROM_ERD": 1794333282
-      }
-    }
-  ],
+  "features": [],
   "crs": {
     "type": "name",
     "properties": {
