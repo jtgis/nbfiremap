@@ -1,6 +1,10 @@
 {
-  "type": "FeatureCollection",
-  "features": [],
+  "error": {
+    "code": 400,
+    "extendedCode": -2147467261,
+    "message": "Unable to complete operation.",
+    "details": []
+  },
   "crs": {
     "type": "name",
     "properties": {
